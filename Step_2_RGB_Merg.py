@@ -29,5 +29,5 @@ for j in tqdm(pngs, desc='j-loop'):
             imgRGB = cv2.merge((imgR, imgG, imgB))
 
             #Tak skombinowane obrazy pisma (umieszczone na odrębnych kanałach jednego pliku) zapisane zostaną z zachowaniem ich nazw i formatu,
-            #poprzez scalenie nazwy {j} bez określenia formatu, z nazwą {i} które zawiera określenie formatu, oraz znakiem {-} pomiędzy.
+            #poprzez scalenie nazwy {j} bez określenia formatu, z nazwą {i} która zawiera określenie formatu, oraz znakiem {-} pomiędzy.
             cv2.imwrite('/path/' + j[:-4] + '-' + i, imgRGB)
