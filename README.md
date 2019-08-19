@@ -17,7 +17,7 @@
            - Następnie otworzyć - za pomocą danego edytora tekstu - pliki zawierające poszczególne programy i dokonać edycji oznaczonych ścieżek, wskazując foldery gdzie kopiowane/zapisywane mają być obrazy pisma (pliki zapisać należy w formacie `py`);
            - Plik z danym programem umieścić należy w folderze, w którym znajdują się obrazy pisma, jakie mają zostać przez dany program przetworzone (jest to najprostsza metoda);
            - Folder, który zawiera program i obrazy, otworzyć należy za pomocą terminala (metoda zależna od systemu operacyjnego);
-           - Następnie wpisać należy w terminalu komendę `python3 nazwa_programu.py`, stąd wykonany zostanie wskazany program w pożądanym folderze, oraz zapisane zostaną zmodyfikowane obrazy do oznaczonej - w treści programu - lokacji.
+           - Następnie wpisać należy w terminalu komendę `python3 nazwa_programu.py`, stąd wykonany zostanie wskazany program.
    
    * #### 1.3. Oznaczenie danych
   
