@@ -1,4 +1,4 @@
-Train / Test / Validate,Path / Name,Label,Name
+Train / Test / Validate,Path,Label,Name
 Train,path/to/folder/0001-1-0001-2.png,Poz,0001-1-0001-2.png
 Train,path/to/folder/0001-1-0001-3.png,Poz,0001-1-0001-3.png
 Train,path/to/folder/0001-1-0001-4.png,Poz,0001-1-0001-4.png
