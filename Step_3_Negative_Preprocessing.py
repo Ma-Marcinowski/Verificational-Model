@@ -32,4 +32,4 @@ while k < number_of_negative_instances:
 
         continue
       
-pbar.close()      
+pbar.close()
