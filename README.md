@@ -2,7 +2,7 @@
 
 ### 1. Wprowadzenie
   
-   * #### 2.1. Cel, założenia, dane i preprocessing
+   * #### 1.1. Cel, założenia, dane i preprocessing
    
        * 1.1.1. Celem autora niniejszego repozytorium było opracowanie metody preprocesowania obrazów pisma, na potrzeby sztucznych sieci neuronowych do weryfikacji autorstwa dokumentu (poprzez klasyfikację dwóch obrazów pisma do klasy pozytywnej `ten sam autor` albo negatywnej `różni autorzy`).
        
@@ -18,9 +18,9 @@
        * 1.1.4. Preprocesowanie obrazów polegało na:
                
             - krok pierwszy - przekształcenie obrazów do skali szarości, ekstrakcja przestrzeni pisarskiej z obrazów całych dokumentów, przeskalowanie ekstraktów do wymiarów [1000x1000] pikseli, konwersja obrazów z formatu `tif` na `png`;
-            - krok drugi - kombinatoryczna konkatenacja obrazów po dwa (osobno na zbiorze 98 obrazów testowych, osobno na zbiorze 189 obrazów treningowych) w jeden plik graficzny typu RGB (obrazy umieszczane były na odmiennych kanałach przestrzeni barw RGB - jeden na kanale skali czerwieni, drugi na kanale skali zieleni, zaś na kanale skali niebieskiego umieszczany był pusty biały obraz);
-            - krok trzeci - konkatenowane obrazy rozdzielane były na podzbiór instancji negatywnych i pozytywnych, dla zbiorów testowego i treningowego (Treningowe: 1134 instancje pozytywne, 34398 instancji negatywnych; Testowe: 194 pozytywne, 9312 negatywnych);
-            - krok czwarty (opcjonalny) - ponieważ w drugim kroku wykonywane były wszelkie możliwe kombinacje obrazów dla danego zbioru (testowego / treningowego) to liczba instancji negatywnych znacznie przewyższyła instancje pozytywne, stąd autor dokonał losowego wydzielenia (samplingu) 1134 negatywnych instancji treningowych i 194 negatywnych instancji testowych. 
+            ~~- krok drugi - kombinatoryczna konkatenacja obrazów po dwa (osobno na zbiorze 98 obrazów testowych, osobno na zbiorze 189 obrazów treningowych) w jeden plik graficzny typu RGB (obrazy umieszczane były na odmiennych kanałach przestrzeni barw RGB - jeden na kanale skali czerwieni, drugi na kanale skali zieleni, zaś na kanale skali niebieskiego umieszczany był pusty biały obraz);
+            ~~- krok trzeci - konkatenowane obrazy rozdzielane były na podzbiór instancji negatywnych i pozytywnych, dla zbiorów testowego i treningowego (Treningowe: 1134 instancje pozytywne, 34398 instancji negatywnych; Testowe: 194 pozytywne, 9312 negatywnych);
+            ~~- krok czwarty (opcjonalny) - ponieważ w drugim kroku wykonywane były wszelkie możliwe kombinacje obrazów dla danego zbioru (testowego / treningowego) to liczba instancji negatywnych znacznie przewyższyła instancje pozytywne, stąd autor dokonał losowego wydzielenia (samplingu) 1134 negatywnych instancji treningowych i 194 negatywnych instancji testowych. 
             - W każdym wypadku krok drugi wykonać można dla kasy negatywnej (pomijając trzeci), albo krok trzeci wykonać dla klasy pozytywnej (pomijając drugi).                  
   
    * #### 1.2. Zastosowane programy
@@ -53,7 +53,7 @@
             - Odnotować warto, że w przypadku, gdy obrazy różnych klas znajdują się w różnych folderach to oznaczenie ich klas jest niezwykle proste (odbywa się na podstawie ich ścieżki). To samo dotyczy przeznaczenia do treningu / testu / kroswalidacji.
             - Przypomnieć należy, iż w przypadku umieszczenia obrazów na chmurze jest konieczne, aby w pliku `csv` edytować ścieżki do folderów (*e.g.* `C:\database_folder\folder_name\0001-1-0001-2.png` za pomocą `find and replace` zamienić na `gs://google_storage_bucket_name/folder_name/0001-1-0001-2.png`).         
   
-### 2.0. Krok pierwszy
-### 3.0. Krok drugi
-### 4.0. Krok trzeci
+### 2. Krok pierwszy
+### 3. Krok drugi
+### 4. Krok trzeci
 
