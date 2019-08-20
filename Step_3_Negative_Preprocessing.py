@@ -7,9 +7,9 @@ pngs = glob.glob('*.png')
 
 k = 0
 
-pbar = tqdm(total=number_of_negative_instances, initial=k)
+pbar = tqdm(total=number_of_negative_instances)
 
-while k <= number_of_negative_instances:
+while k < number_of_negative_instances:
 
     j = random.choice(pngs)
     i = random.choice(pngs)
@@ -18,7 +18,7 @@ while k <= number_of_negative_instances:
 
         imgR = cv2.imread(j, 0)
         imgG = cv2.imread(i, 0)
-        imgB = cv2.imread('/path/to/the/empty_image.tif', 0) 
+        imgB = cv2.imread('/path/to/the/empty_image.png', 0) 
 
         imgRGB = cv2.merge((imgR, imgG, imgB))
 
@@ -31,3 +31,5 @@ while k <= number_of_negative_instances:
     else:
 
         continue
+      
+pbar.close()      
