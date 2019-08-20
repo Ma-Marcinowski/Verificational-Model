@@ -8,7 +8,7 @@
        
        * 1.1.2. Stąd autor założył iż:
         
-            - Obrazy pisma powinny być konkatenowane i wprowadzane do sieci jednym wejściem albo wprowadzane osobno na dwa odrębne wejścia danej sieci.      
+            - Obrazy pisma powinny być konkatenowane i wprowadzane do sieci jednym wejściem albo wprowadzane symultanicznie na dwa odrębne wejścia danej sieci.      
             - Obrazy powinny być przetworzone bez utraty jakości dla zachowania możliwie największej liczby cech grafizmów.
             
        * 1.1.3. Dane:
