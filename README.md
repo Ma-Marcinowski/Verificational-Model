@@ -2,7 +2,7 @@
 
 ### 1.0. Wprowadzenie
   
-   * #### 1.1. Cel, założenia i dane
+   * #### 1.1. Cel, założenia, dane i preprocessing
    
        * 1.1.1. Celem autora niniejszego repozytorium było opracowanie metody preprocesowania obrazów pisma, na potrzeby sztucznych sieci neuronowych do weryfikacji autorstwa dokumentu (poprzez klasyfikację dwóch obrazów pisma do klasy pozytywnej `ten sam autor` albo negatywnej `różni autorzy`).
        
@@ -14,12 +14,13 @@
        * 1.1.3. Dane:
        
             - Wykorzystane tutaj zostały obrazy pisma z bazy CVL (F. Kleber, S. Fiel, M. Diem, R. Sablatnig, *CVL-Database: An Off-line Database for Writer Retrieval, Writer Identification and Word Spotting*, "In Proc. of the 12th Int. Conference on Document Analysis and Recognition (ICDAR) 2013" 2013, s. 560 - 564.)
-            - Preprocesowanie obrazów polegało na:
+            
+       * 1.1.4. Preprocesowanie obrazów polegało na:
                
-               - krok pierwszy - przekształcenie obrazów do skali szarości, ekstrakcja przestrzeni pisarskiej z dokumentów, przeskalowanie ekstraktów do wymiarów [1000x1000] pikseli, konwersja obrazów z formatu `tif` na `png`;
-               - krok drugi - kombinatoryczna konkatenacja obrazów po dwa (osobno na zbiorze 98 obrazów testowych, osobno na zbiorze 189 obrazów treningowych) w jeden plik graficzny typu RGB (obrazy umieszczane były na odmiennych kanałach przestrzeni barw RGB - jeden na kanale skali czerwieni, drugi na kanale skali zieleni, zaś na kanale skali niebieskiego umieszczany był pusty biały obraz);
-               - krok trzeci - konkatenowane obrazy rozdzielane były na podzbiór instancji negatywnych i pozytywnych, dla zbiorów testowego i treningowego (Treningowe: 1134 instancje pozytywne, 34398 instancji negatywnych; Testowe: 194 pozytywne, 9312 negatywnych);
-               - krok czwarty (opcjonalny) - ponieważ w drugim kroku wykonywane były wszelkie możliwe kombinacje obrazów dla danego zbioru (testowego / treningowego) to liczba instancji negatywnych znacznie przewyższyła instancje pozytywne, stąd autor dokonał losowego wydzielenia (samplingu) 1134 negatywnych instancji treningowych i 194 negatywnych instancji testowych. 
+            - krok pierwszy - przekształcenie obrazów do skali szarości, ekstrakcja przestrzeni pisarskiej z dokumentów, przeskalowanie ekstraktów do wymiarów [1000x1000] pikseli, konwersja obrazów z formatu `tif` na `png`;
+            - krok drugi - kombinatoryczna konkatenacja obrazów po dwa (osobno na zbiorze 98 obrazów testowych, osobno na zbiorze 189 obrazów treningowych) w jeden plik graficzny typu RGB (obrazy umieszczane były na odmiennych kanałach przestrzeni barw RGB - jeden na kanale skali czerwieni, drugi na kanale skali zieleni, zaś na kanale skali niebieskiego umieszczany był pusty biały obraz);
+            - krok trzeci - konkatenowane obrazy rozdzielane były na podzbiór instancji negatywnych i pozytywnych, dla zbiorów testowego i treningowego (Treningowe: 1134 instancje pozytywne, 34398 instancji negatywnych; Testowe: 194 pozytywne, 9312 negatywnych);
+            - krok czwarty (opcjonalny) - ponieważ w drugim kroku wykonywane były wszelkie możliwe kombinacje obrazów dla danego zbioru (testowego / treningowego) to liczba instancji negatywnych znacznie przewyższyła instancje pozytywne, stąd autor dokonał losowego wydzielenia (samplingu) 1134 negatywnych instancji treningowych i 194 negatywnych instancji testowych. 
                  
   
    * #### 1.2. Zastosowane programy
