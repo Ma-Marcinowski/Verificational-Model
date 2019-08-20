@@ -4,7 +4,7 @@
   
    * #### 1.1. Cel, założenia i dane
    
-       * 1.1.1. Celem autora niniejszego repozytorium było opracowanie metody preprocesowania obrazów pisma, na potrzeby sztucznych sieci neuronowych do weryfikacji autorstwa dokumentu (poprzez klasyfikację dwóch obrazów pisma do klasy pozytywnej 'Ten Sam Autor' albo negatywnej 'Różni Autorzy').
+       * 1.1.1. Celem autora niniejszego repozytorium było opracowanie metody preprocesowania obrazów pisma, na potrzeby sztucznych sieci neuronowych do weryfikacji autorstwa dokumentu (poprzez klasyfikację dwóch obrazów pisma do klasy pozytywnej `ten sam autor` albo negatywnej `różni autorzy`).
        
        * 1.1.2. Stąd autor założył iż:
         
