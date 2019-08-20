@@ -17,7 +17,7 @@
             - Preprocesowanie obrazów polegało na:
                
                - krok pierwszy - przekształcenie obrazów do skali szarości, ekstrakcja przestrzeni pisarskiej z dokumentów, przeskalowanie ekstraktów do wymiarów [1000x1000] pikseli, konwersja obrazów z formatu `tif` na `png`;
-               - krok drugi - kombinatoryczna konkatenacja obrazów po dwa (osobno na zbiorze 98 obrazów testowych, osobno na zbiorze 189 obrazów treningowych) w jeden plik graficzny typu RGB (obrazy umieszczane były na odmiennych kanałach przestrzeni barw RGB; jeden na kanale skali czerwieni, drugi na kanale skali zieleni, na kanale skali niebieskiego umieszczany był pusty biały obraz);
+               - krok drugi - kombinatoryczna konkatenacja obrazów po dwa (osobno na zbiorze 98 obrazów testowych, osobno na zbiorze 189 obrazów treningowych) w jeden plik graficzny typu RGB (obrazy umieszczane były na odmiennych kanałach przestrzeni barw RGB - jeden na kanale skali czerwieni, drugi na kanale skali zieleni, zaś na kanale skali niebieskiego umieszczany był pusty biały obraz);
                - krok trzeci - konkatenowane obrazy rozdzielane były na podzbiór instancji negatywnych i pozytywnych, dla zbiorów testowego i treningowego (Treningowe: 1134 instancje pozytywne, 34398 negatywne; Testowe: 194 pozytywne, 9312 negatywne);
                - krok czwarty (opcjonalny) - ponieważ w drugim kroku wykonywane były wszelkie możliwe kombinacje obrazów dla danego zbioru (testowego / treningowego) to liczba instancji negatywnych znacznie przewyższyła instancje pozytywne, stąd autor dokonał losowego wydzielenia (samplingu) 1134 negatywnych instancji treningowych i 194 negatywnych instancji testowych. 
                  
