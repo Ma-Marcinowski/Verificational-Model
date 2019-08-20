@@ -21,13 +21,13 @@
    
    * #### 1.3. Oznaczenie danych
    
-       * 1.3.1. Po ukończeniu preprocesowania obrazów pisma, utworzyć należy ich listę w formacie `csv`, która zawierać będzie (na przykładzie AutoML Vis - autor poleca zapoznać się z dokumentacją dostępną na Google Cloud Platform):
+       * 1.3.1. Po ukończeniu preprocesowania obrazów pisma, utworzyć należy ich listę w formacie `csv`, która zawierać będzie (na przykładzie AutoML Vis):
            - w pierwszej kolumnie oznaczenie przeznaczenia każdego obrazu (trening / test / kroswalidacja), wprowadzone wielkimi literami (`TRAIN` / `TEST` / `VALIDATION`),
            - w drugiej kolumnie ścieżkę obrazu umieszczonego przez użytkownika na Google Cloud Platform (*e.g.* `gs://google_storage_bucket_name/folder_name/0001-1-0001-2.png`),
            - w trzeciej kolumnie klasę (*label*) obrazu (*e.g.* `Pozytywna` / `Negatywna`).
        * 1.3.2. Plik typu `csv` utworzyć można w dowolnym programie typu *spreadsheet* (*e.g.* *calc* / *excel*).
-       * 1.3.3. Metoda symultanicznego uzyskania wszystkich nazw i ścieżek obrazów zależna jest od systemu operacyjnego użytkownika. 
-            - Odnotować warto, że w przypadku, gdy obrazy różnych klas znajdują się w rówżnych folderach to oznaczenie ich klas jest niezwykle proste (odbywa się na podstawie ich ścieżki). To samo dotyczy przeznaczenia do treningu / testu / kroswalidacji.
+       * 1.3.3. Metoda symultanicznego uzyskania wszystkich ścieżek - z nazwami - obrazów zależna jest od systemu operacyjnego użytkownika. 
+            - Odnotować warto, że w przypadku, gdy obrazy różnych klas znajdują się w różnych folderach to oznaczenie ich klas jest niezwykle proste (odbywa się na podstawie ich ścieżki). To samo dotyczy przeznaczenia do treningu / testu / kroswalidacji.
             - Przypomnieć należy, iż w przypadku umieszczenia obrazów na chmurze jest konieczne, aby w pliku `csv` edytować ścieżki do folderów (*e.g.* `C:\database_folder\folder_name\0001-1-0001-2.png` za pomocą `find and replace` zamienić na `gs://google_storage_bucket_name/folder_name/0001-1-0001-2.png`).         
   
 ### 2.0. Krok pierwszy
