@@ -11,7 +11,7 @@ for j in tqdm(pngs, desc='j-loop'):
 
             	imgR = cv2.imread(j, 0)
             	imgG = cv2.imread(i, 0)
-            	imgB = cv2.imread('/path/to/the/empty_image.tif', 0) 
+            	imgB = cv2.imread('/path/to/the/empty_image.png', 0) 
 
             	imgRGB = cv2.merge((imgR, imgG, imgB))
 
