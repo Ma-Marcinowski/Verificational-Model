@@ -17,4 +17,4 @@ for j in tqdm(tifs):
 
     resized = cv2.resize(crop,(1000,1000))
 
-    cv2.imwrite('/path/to/the/folder/' + j[:-4] + '.png', resized)
+    cv2.imwrite('/path/to/the/folder/' + j[:-4] + '.png', resized)   
