@@ -21,7 +21,7 @@
             - krok drugi - kombinatoryczna konkatenacja obrazów po dwa (osobno na zbiorze 98 obrazów testowych, osobno na zbiorze 189 obrazów treningowych) w jeden plik graficzny typu RGB (obrazy umieszczane były na odmiennych kanałach przestrzeni barw RGB - jeden na kanale skali czerwieni, drugi na kanale skali zieleni, zaś na kanale skali niebieskiego umieszczany był pusty biały obraz);
             - krok trzeci - konkatenowane obrazy rozdzielane były na podzbiór instancji negatywnych i pozytywnych, dla zbiorów testowego i treningowego (Treningowe: 1134 instancje pozytywne, 34398 instancji negatywnych; Testowe: 194 pozytywne, 9312 negatywnych);
             - krok czwarty (opcjonalny) - ponieważ w drugim kroku wykonywane były wszelkie możliwe kombinacje obrazów dla danego zbioru (testowego / treningowego) to liczba instancji negatywnych znacznie przewyższyła instancje pozytywne, stąd autor dokonał losowego wydzielenia (samplingu) 1134 negatywnych instancji treningowych i 194 negatywnych instancji testowych. 
-                 
+            - W każdym wypadku krok drugi wykonać można dla kasy negatywnej (pomijając trzeci), albo krok trzeci wykonać dla klasy pozytywnej (pomijając drugi).                  
   
    * #### 1.2. Zastosowane programy
    		
@@ -56,4 +56,4 @@
 ### 2.0. Krok pierwszy
 ### 3.0. Krok drugi
 ### 4.0. Krok trzeci
-### 5.0. Krok czwarty (opcjonalny)
+
