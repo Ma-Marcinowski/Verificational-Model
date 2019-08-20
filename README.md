@@ -1,6 +1,6 @@
 ## Verificational Model / Data Preprocessing
 
-### 0.0. Wprowadzenie
+### 0. Wprowadzenie
   
    * #### 0.1. Cel, założenia, dane i preprocessing
    
