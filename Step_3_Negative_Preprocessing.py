@@ -26,7 +26,7 @@ while len(rgbs) < k:
 
         rgbs = os.listdir('/path/to/the/folder/')
 
-        print('%.2f%%'%(100*len(rgbs)/k), end="\r")
+        print('%.2f%%'%(100*len(rgbs)/k), ' | ', len(rgbs),'/',k, end="\r")
 
 
     else:
@@ -35,4 +35,4 @@ while len(rgbs) < k:
 
 else:
     
-    print('Done:', len(rgbs), '/', k)
+    print('Done:  100%  | ', len(rgbs), '/', k)
