@@ -26,7 +26,7 @@ while len(rgbs) < k:
 
         rgbs = os.listdir('/path/to/the/folder/')
 
-        print(len(rgbs), '/', k, end="\r")
+        print('%.2f%%'%(100*len(rgbs)/k), end="\r")
 
 
     else:
