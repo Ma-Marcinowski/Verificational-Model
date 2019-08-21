@@ -7,7 +7,7 @@ pngs = glob.glob('*.png')
 
 rgbs = []
 
-k = number_of_intended_negative_instances
+k = number_of_positive_instances_created_in_the_second_step
 
 while len(rgbs) < k:
 
