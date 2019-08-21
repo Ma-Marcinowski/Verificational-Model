@@ -40,7 +40,7 @@
    
    * #### 1.3. Oznaczenie danych
    
-       * 1.3.1. Po ukończeniu preprocesowania obrazów pisma, utworzyć należy ich listę w formacie `csv`, która zawierać będzie (na przykładzie AutoML Vis Beta):
+       * 1.3.1. Po ukończeniu preprocesowania obrazów pisma, utworzyć należy ich listę w formacie `csv`, która zawierać będzie (na przykładzie AutoML Vision Beta):
        
            - w pierwszej kolumnie oznaczenie przeznaczenia każdego obrazu (trening / test / kroswalidacja), wprowadzone wielkimi literami (`TRAIN` / `TEST` / `VALIDATION`),
            - w drugiej kolumnie ścieżkę obrazu umieszczonego przez użytkownika na Google Cloud Platform (*e.g.* `gs://google_storage_bucket_name/folder_name/0001-1-0001-2.png`),
