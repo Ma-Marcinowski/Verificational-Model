@@ -1,15 +1,15 @@
 import glob
 import cv2
 import random
-from tqdm import tqdm
+import os
 
 pngs = glob.glob('*.png')
 
-k = 0
+rgbs = []
 
-pbar = tqdm(total=number_of_negative_instances)
+k = number_of_intended_negative_instances
 
-while k < number_of_negative_instances:
+while len(rgbs) < k:
 
     j = random.choice(pngs)
     i = random.choice(pngs)
@@ -24,12 +24,15 @@ while k < number_of_negative_instances:
 
         cv2.imwrite('/path/to/the/folder/' + j[:-4] + '-' + i, imgRGB)
 
-        k += 1
+        rgbs = os.listdir('/path/to/the/folder/')
 
-        pbar.update(1)
+        print(len(rgbs), '/', k, end="\r")
+
 
     else:
 
         continue
-      
-pbar.close()
+
+else:
+    
+    print('Done:', len(rgbs), '/', k)
