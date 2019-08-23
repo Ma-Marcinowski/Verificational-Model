@@ -9,13 +9,13 @@ for j in tqdm(pngs, desc='j-loop'):
 
             if j[:4] == i[:4] and j != i:
 
-            	imgR = cv2.imread(j, 0)
+            	imgB = cv2.imread(j, 0)
             	imgG = cv2.imread(i, 0)
-            	imgB = cv2.imread('/path/to/the/empty_image.png', 0) 
+            	imgR = cv2.imread('/path/to/the/empty_image.png', 0) 
 
-            	imgRGB = cv2.merge((imgR, imgG, imgB))
+            	imgBGR = cv2.merge((imgB, imgG, imgR))
 
-            	cv2.imwrite('/path/to/the/folder/' + j[:-4] + '-' + i, imgRGB)
+            	cv2.imwrite('/path/to/the/folder/' + j[:-4] + '-' + i, imgBGR)
 
             else:
 
