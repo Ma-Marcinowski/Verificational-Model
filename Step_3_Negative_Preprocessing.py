@@ -5,28 +5,28 @@ import os
 
 pngs = glob.glob('*.png')
 
-rgbs = []
+bgrs = []
 
 k = number_of_positive_instances_created_in_the_second_step
 
-while len(rgbs) < k:
+while len(bgrs) < k:
 
     j = random.choice(pngs)
     i = random.choice(pngs)
 
     if j[:4] != i[:4]:
 
-        imgR = cv2.imread(j, 0)
+        imgB = cv2.imread(j, 0)
         imgG = cv2.imread(i, 0)
-        imgB = cv2.imread('/path/to/the/empty_image.png', 0) 
+        imgR = cv2.imread('/path/to/the/empty_image.png', 0) 
 
-        imgRGB = cv2.merge((imgR, imgG, imgB))
+        imgBGR = cv2.merge((imgB, imgG, imgR))
 
-        cv2.imwrite('/path/to/the/folder/' + j[:-4] + '-' + i, imgRGB)
+        cv2.imwrite('/path/to/the/folder/' + j[:-4] + '-' + i, imgBGR)
 
-        rgbs = os.listdir('/path/to/the/folder/')
+        bgrs = os.listdir('/path/to/the/folder/')
 
-        print('%.2f%%'%(100*len(rgbs)/k), ' | ', len(rgbs),'/',k, end="\r")
+        print('%.2f%%'%(100*len(bgrs)/k), ' | ', len(bgrs),'/',k, end="\r")
 
 
     else:
@@ -35,4 +35,4 @@ while len(rgbs) < k:
 
 else:
     
-    print('Done:  100%  | ', len(rgbs), '/', k)
+    print('Done:  100%  | ', len(bgrs), '/', k)
