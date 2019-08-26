@@ -8,7 +8,7 @@
        
        * 1.1.2. Stąd autor założył iż:
         
-            - Obrazy pisma powinny być albo konkatenowane i wprowadzane do sieci jednym wejściem albo wprowadzane symultanicznie na dwa odrębne wejścia danej sieci.      
+            - Obrazy pisma powinny być wprowadzane symultanicznie na dwa odrębne wejścia danej sieci.      
             - Obrazy powinny być przetworzone bez znaczącej utraty jakości dla zachowania możliwie największej liczby cech grafizmów.
             
        * 1.1.3. Dane:
@@ -53,7 +53,6 @@
             - Odnotować warto, że w przypadku, gdy obrazy różnych klas znajdują się w różnych folderach to oznaczenie ich klas jest niezwykle proste (odbywa się na podstawie ich ścieżki). To samo dotyczy przeznaczenia do treningu / testu / kroswalidacji.
             - Przypomnieć należy, iż w przypadku umieszczenia obrazów na chmurze jest konieczne, aby w pliku `csv` edytować ścieżki do folderów (*e.g.* `C:\database_folder\folder_name\0001-1-0001-2.png` za pomocą `find and replace` zamienić na `gs://google_storage_bucket_name/folder_name/0001-1-0001-2.png`).         
   
-### 2. Krok pierwszy
-### 3. Krok drugi
-### 4. Krok trzeci
+### 2. Model Weryfikacyjny
+### 3. Ewaluacja Modelu
 
