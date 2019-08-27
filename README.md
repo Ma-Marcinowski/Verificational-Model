@@ -26,7 +26,7 @@
    		
        * 1.2.1. Programy umieszczone w niniejszym repozytorium napisane zostały w języku Python 3.7.3.
   
-       * 1.2.2. Wykorzystano biblioteki: OpenCV 4.1.0; tqdm 4.33.0; Pandas 0.25.1; ; oraz standardowe biblioteki języka.
+       * 1.2.2. Wykorzystano biblioteki: OpenCV 4.1.0; tqdm 4.33.0; Pandas 0.25.1; Image Slicer 0.3.0; oraz standardowe biblioteki języka.
   
        * 1.2.3. Aby wykorzystać programy, które autor opracował do preprocesowania obrazów pisma:
   
