@@ -18,13 +18,13 @@ for j in tqdm(tifs):
 
     resized = cv2.resize(cropped,(1024,1024))
 
-    horizontal = np.split(resized, 4, axis=1)
+    horizontal_split = np.split(resized, 4, axis=1)
 
-    for idx, h in enumerate(horizontal, start=1):
+    for idx, h in enumerate(horizontal_split, start=1):
 
-        vertical = np.split(h, 4, axis=0)
+        vertical_split = np.split(h, 4, axis=0)
 
-        for idn, v in enumerate(vertical, start=1):
+        for idn, v in enumerate(vertical_split, start=1):
 
             mean = v.mean()
 
