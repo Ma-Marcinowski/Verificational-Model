@@ -13,7 +13,7 @@
             
        * 1.1.3. Dane:
        
-            - Wykorzystane tutaj zostały obrazy pisma z bazy CVL (F. Kleber, S. Fiel, M. Diem, R. Sablatnig, *CVL-Database: An Off-line Database for Writer Retrieval, Writer Identification and Word Spotting*, "In Proc. of the 12th Int. Conference on Document Analysis and Recognition (ICDAR) 2013" 2013, s. 560 - 564).
+            - Wykorzystane tutaj zostały obrazy pisma (skany całych dokumentów) z bazy CVL (F. Kleber, S. Fiel, M. Diem, R. Sablatnig, *CVL-Database: An Off-line Database for Writer Retrieval, Writer Identification and Word Spotting*, "In Proc. of the 12th Int. Conference on Document Analysis and Recognition (ICDAR) 2013" 2013, s. 560 - 564). Gdzie zbiór treningowy zawiera 1415 obrazów pisma, testowy zaś 189.
             
        * 1.1.4. Preprocesowanie obrazów polegało na:
                
