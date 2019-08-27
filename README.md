@@ -2,7 +2,7 @@
 
 ### 1. Preprocessing
   
-   * #### 1.1. Cel, założenia, dane i preprocessing
+   * #### 1.1. Cel, założenia, dane i kroki preprocessingu
    
        * 1.1.1. Celem autora niniejszego repozytorium było opracowanie metody preprocesowania obrazów pisma, na potrzeby sztucznych sieci neuronowych do weryfikacji autorstwa dokumentu (poprzez klasyfikację dwóch obrazów pisma do klasy pozytywnej `ten sam autor` albo negatywnej `różni autorzy`).
        
