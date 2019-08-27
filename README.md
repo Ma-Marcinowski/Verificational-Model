@@ -17,41 +17,26 @@
             
        * 1.1.4. Preprocesowanie obrazów polegało na:
                
-            - Krok pierwszy - przekształcenie obrazów (skany całych dokumentów) do skali szarości, ekstrakcja przestrzeni pisarskiej z obrazów, przeskalowanie ekstraktów do wymiarów [1000x1000] pikseli, konwersja obrazów z formatu `tif` na `png`;
-            - Krok drugi - **kombinatoryczna konkatenacja** obrazów po dwa (osobno na zbiorze obrazów testowych, osobno na zbiorze obrazów treningowych) w jeden plik graficzny typu BGR (obrazy umieszczane były na odmiennych kanałach przestrzeni barw BGR - jeden na kanale skali niebieskiego, drugi na kanale skali zieleni, zaś na kanale skali czerwieni umieszczany był pusty biały obraz). Pary tworzone w kroku drugim należą do klasy pozytywnej (`ten sam autor`), ponieważ warunkiem konkatenacji jest zbieżność identyfikatorów (cztery pierwsze cyfry nazwy obrazu oznaczające jego autora);
-            - Krok trzeci - ponieważ liczba możliwych kombinacji w pary jest znacznie większa dla klasy negatywnej, niż dla klasy pozytywnej (*e.g.* na zbiorze testowym bazy CVL - 189 obrazów - będą to 1134 instancje pozytywne i 34398 instancji negatywnych), stąd łączenie obrazów w pary należące do klasy negatywnej (`różni autorzy`) odbywa się jako proces **losowej konkatenacji** obrazów w pary negatywne (warunkiem utworzenia pary jest rozbieżność identyfikatorów), aż do utworzenia danej `k` liczby par, którą określić należy w treści programu (najbardziej pożądana jest liczba `k` równa liczbie utworzonych dotąd instancji pozytywnych);
-            - W każdym wypadku krok drugi wykonać można dla kasy negatywnej (zamiast trzeciego), albo krok trzeci wykonać dla klasy pozytywnej (zamiast drugiego).                   
+            - Krok pierwszy `Step_1_Preprocessing.py` - przekształcenie obrazów (skany całych dokumentów) do skali szarości, ekstrakcja przestrzeni pisarskiej z obrazów, przeskalowanie ekstraktów do wymiarów [1024x1024] piksele, podział ekstraktów na komórki o wymiarach [256x256] pikseli, konwersja z formatu `tif` na `png`;
+            - Krok drugi `Step_2_Dataframe.py` - utworzenie *dataframe* (plik typu `csv`, który edytować można w dowolnym programie typu *spreadsheet* (*e.g.* *calc* / *excel*).) rozłącznie dla zbioru testowego i treningowego, poprzez kombinatoryczne zestawienie nazw obrazów pisma w pary, które należą do klasy pozytywnej, oraz losowe zestawienie nazw obrazów pisma w pary, które należą do klasy negatywnej (liczba możliwych kombinacji negatywnych jest znacznie większa niż pozytywnych, zatem tworzone są najpierw wszystkie instancje pozytywne, a następnie losowane są instancje negatywne, których liczba jest równa liczbie instancji pozytywnych). Zestawienie nazw obrazów odbywa się wierszami, według kolumn `lewy kanał sieci, prawy kanał sieci, klasa` (o przynależności do klasy `ten sam autor` lub `różni autorzy` przesądza zbieżność lub rozbieżność identyfikatorów - cztery pierwsze cyfry nazwy obrazu oznaczające jego autora). Metoda wymaga aby: obrazy testowe znajdowały się w odmiennym folderze niż obrazy treningowe, a do nazw obrazów dołączyć (aktualne lub zamieżone) ścieżki ich folderów (wystarczy wskazać je w treści programu, a w każdym razie edytować je można za pomocą `find and replace` w dowolnym programi typu *spreadsheet*). Nie jest natomiast konieczne aby utworzyć uprzednio plik `csv`, gdyby bowiem nie istniał, zostanie utworzony przez program (gdyby zaś taki plik uprzednio utworzyć, naley wskazać w treści programu jego nazwę);
+            - Krok trzeci - ponieważ opracowany model polega na sekwencyjnym wprowadzeniu do ANN obrazów parami (*de facto* wierszami), to wczytywanie ich powinno odbywać się sekwencyjnie, *ergo* według kolejności określonej wierszami *dataframe*, dlatego też przetasowanie par i wylosowanie zbioru walidacyjnego przeprowadzić należy w ramach *dataframe*. Plik `csv` otworzyć należy danym programem typu *spreadsheet*, następnie wypełnić należy komórki dodatkowej (czwartej) kolumny formułą `=Rand()` (która wygeneruje w komórkach dodatkowej kolumny liczby pseudolosowe z przedziału [0, 1]) i zaznaczyć wszystkie cztery kolumny, a następnie przesortować je wierszami. Sortowanie (od największego do najmniejszego lub odwrotnie) zapewni losowe przetasowanie wierszy trzech pierwszych kolumn, ze względu na pseudolosowe liczby w czwartej kolumnie (którą należy potem usunąć). Ostatecznie dodać należy nagółwki kolumn (*e.g.* `lewy kanał sieci, prawy kanał sieci, klasa`). Krok trzeci przeprowadzić należy dla *dataframe* zbioru treningowego i testowego;
+            - Krok czwarty - po przeprowadzeniu kroku trzeciego, przystąpić można do utworzenia *dataframe* zbioru walidacyjnego. Otóż, utworzyć należy nowy plik typu `csv`, a następnie przenieść do niego dowolną liczbę wierszy z *dataframe* zbioru **treningowego** - zazwyczaj 10% do 20% całkowitej liczby instancji treningowych - chociażby daną liczbę wierszy od końca, gdyż zostały już losowo przetasowane. Należy jednak zwrócić uwagę, aby liczba instancji pozytywnych zblilżona była do liczby instancji negatywnych. Nie należy tworzyć następnie osobnego folderu obrazów walidacyjnych, ani nie jest konieczne, aby zachować dalej odrębne foldery dla obrazów testowych i treningowych - jeżeli preprocesowanie przeprowadzone zostało według lub analogicznie do kroków poprzednich - bowiem przynależność danej pary obrazów do danego zbioru określa na obecnym etapie *dataframe* danego zbioru. 
   
    * #### 1.2. Zastosowane programy
    		
        * 1.2.1. Programy umieszczone w niniejszym repozytorium napisane zostały w języku Python 3.7.3.
   
-       * 1.2.2. Wykorzystano biblioteki: OpenCV 4.1.0; tqdm 4.33.0; oraz standardowe biblioteki języka.
+       * 1.2.2. Wykorzystano biblioteki: OpenCV 4.1.0; tqdm 4.33.0; Pandas 0.25.1; ; oraz standardowe biblioteki języka.
   
        * 1.2.3. Aby wykorzystać programy, które autor opracował do preprocesowania obrazów pisma:
   
            - Należy zainstalować Python oraz wskazane biblioteki (metoda instalacji zależy od systemu operacyjnego użytkownika);
            - Należy pobrać programy z niniejszego repozytorium;
-           - Następnie otworzyć - za pomocą danego edytora tekstu - pliki zawierające poszczególne programy i dokonać edycji oznaczonych ścieżek, wskazując foldery gdzie kopiowane/zapisywane mają być obrazy pisma (pliki zapisać należy w formacie `py`);
+           - Następnie otworzyć - za pomocą danego edytora tekstu - pliki zawierające poszczególne programy i dokonać edycji oznaczonych ścieżek, wskazując foldery gdzie zapisywane mają być obrazy pisma / dataframe (pliki zapisać należy w formacie `py`);
            - Plik z danym programem umieścić należy w folderze, w którym znajdują się obrazy pisma, jakie mają zostać przez dany program przetworzone (jest to najprostsza metoda);
            - Folder, który zawiera program i obrazy, otworzyć należy za pomocą terminala / interpretera poleceń (metoda zależna od systemu operacyjnego);
            - Następnie wpisać należy w terminalu komendę `python3 nazwa_programu.py`, stąd wykonany zostanie wskazany program;
-           - Gdyby zaistniała taka konieczność: aby przerwać wykonywanie programu wykorzystać można w terminalu kombinację klawiszy `Ctrl + C`, aby zawiesić wykonywanie programu `Ctrl + Z`, aby zaś przywrócić wykonywanie zawieszonego programu wpisać należy komendę `fg` (dla terminalów większości systemów operacyjnych, *e.g.* macOS, Linux).  
-   
-   * #### 1.3. Oznaczenie danych
-   
-       * 1.3.1. Po ukończeniu preprocesowania obrazów pisma, utworzyć należy ich listę w formacie `csv`, która zawierać będzie (na przykładzie AutoML Vision Beta):
-       
-           - w pierwszej kolumnie oznaczenie przeznaczenia każdego obrazu (trening / test / kroswalidacja), wprowadzone wielkimi literami (`TRAIN` / `TEST` / `VALIDATION`),
-           - w drugiej kolumnie ścieżkę obrazu umieszczonego przez użytkownika na Google Cloud Platform (*e.g.* `gs://google_storage_bucket_name/folder_name/0001-1-0001-2.png`),
-           - w trzeciej kolumnie klasę (*label*) obrazu (*e.g.* `Pozytywna` / `Negatywna`).
-           
-       * 1.3.2. Plik typu `csv` utworzyć można w dowolnym programie typu *spreadsheet* (*e.g.* *calc* / *excel*).
-       
-       * 1.3.3. Metoda symultanicznego uzyskania wszystkich ścieżek - z nazwami - obrazów zależna jest od systemu operacyjnego użytkownika. 
-       
-            - Odnotować warto, że w przypadku, gdy obrazy różnych klas znajdują się w różnych folderach to oznaczenie ich klas jest niezwykle proste (odbywa się na podstawie ich ścieżki). To samo dotyczy przeznaczenia do treningu / testu / kroswalidacji.
-            - Przypomnieć należy, iż w przypadku umieszczenia obrazów na chmurze jest konieczne, aby w pliku `csv` edytować ścieżki do folderów (*e.g.* `C:\database_folder\folder_name\0001-1-0001-2.png` za pomocą `find and replace` zamienić na `gs://google_storage_bucket_name/folder_name/0001-1-0001-2.png`).         
+           - Gdyby zaistniała taka konieczność: aby przerwać wykonywanie programu wykorzystać można w terminalu kombinację klawiszy `Ctrl + C`, aby zawiesić wykonywanie programu `Ctrl + Z`, aby zaś przywrócić wykonywanie zawieszonego programu wpisać należy komendę `fg` (dla terminalów większości systemów operacyjnych, *e.g.* macOS, Linux).      
   
 ### 2. Model Weryfikacyjny
 ### 3. Ewaluacja Modelu
