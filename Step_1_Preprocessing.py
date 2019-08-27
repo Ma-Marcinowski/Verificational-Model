@@ -5,7 +5,7 @@ from tqdm import tqdm
 
 tifs = glob.glob('*.tif')
 
-for j in tqdm(tifs, desc='j-loop'):
+for j in tqdm(tifs):
 
     img = cv2.imread(j, 0)
 
