@@ -24,13 +24,13 @@ for j in tqdm(tifs):
 
         vertical_split = np.split(h, 4, axis=0)
 
-        for idn, v in enumerate(vertical_split, start=1):
+        for ind, v in enumerate(vertical_split, start=1):
 
             mean = v.mean()
 
             if mean < 253:
 
-                cv2.imwrite('/path/' + j[:-4] + '-' + str(idx) + str(idn) + '.png', v)
+                cv2.imwrite('/path/' + j[:-4] + '-' + str(idx) + str(ind) + '.png', v)
 
             else:
 
