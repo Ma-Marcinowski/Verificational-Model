@@ -10,8 +10,8 @@ with open('/path/Dataframe.csv', 'a+') as f:
 
     writer = csv.writer(f)
 
-    for j in tqdm(pngs, desc='j-loop'):
-        for i in tqdm(pngs, desc='i-loop', leave=False):
+    for j in tqdm(pngs):
+        for i in pngs:
 
             if j[:4] == i[:4] and j != i:
 
