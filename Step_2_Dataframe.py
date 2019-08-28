@@ -1,6 +1,8 @@
 import glob
 import os
+import csv
 import random
+from tqdm import tqdm
 
 pngs = glob.glob('*.png')
 
@@ -8,8 +10,8 @@ with open('/path/Dataframe.csv', 'a+') as f:
 
     writer = csv.writer(f)
 
-    for j in pngs:
-        for i in pngs:
+    for j in tqdm(pngs, desc='j-loop'):
+        for i in tqdm(pngs, desc='i-loop', leave=False):
 
             if j[:4] == i[:4] and j != i:
 
@@ -36,6 +38,8 @@ with open('/path/Dataframe.csv', 'a+') as f:
             writer.writerow(pair)
 
             g = f.tell()
+            
+            print('%.2f%%'%(100*g/k), end="\r")
 
         else:
 
@@ -43,4 +47,4 @@ with open('/path/Dataframe.csv', 'a+') as f:
 
     else:
 
-        print('Done.')
+        print('Done: 100%')
