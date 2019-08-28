@@ -5,7 +5,7 @@ from tqdm import tqdm
 
 tifs = glob.glob('*.tif')
 
-for j in tqdm(tifs, desc='j-loop'):
+for j in tqdm(tifs):
 
     img = cv2.imread(j, 0)
 
@@ -20,11 +20,11 @@ for j in tqdm(tifs, desc='j-loop'):
 
     horizontal_split = np.split(resized, 4, axis=1)
 
-    for idx, h in enumerate(tqdm(horizontal, desc='h-loop', leave=False), start=1):
+    for idx, h in enumerate(horizontal_split, start=1):
         
         vertical_split = np.split(h, 4, axis=0)
 
-        for ind, v in enumerate(tqdm(vertical, desc='v-loop', leave=False), start=1):
+        for ind, v in enumerate(vertical_split, start=1):
 
             mean = v.mean()
 
