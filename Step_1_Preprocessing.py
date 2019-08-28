@@ -28,7 +28,7 @@ for j in tqdm(tifs):
 
             mean = v.mean()
 
-            if mean < 253:
+            if mean < 252:
 
                 cv2.imwrite('/path/' + j[:-4] + '-' + str(idx) + str(ind) + '.png', v)
 
