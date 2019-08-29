@@ -98,4 +98,4 @@ model.fit_generator(generator=generator(train_data),
                     epochs=9,
                     initial_epoch=0)
 
-model.save('/path/VM_SNN.h5', overwrite=True, include_optimizer=True,)
+model.save('/path/VM_SNN.h5', overwrite=True, include_optimizer=True)
