@@ -53,7 +53,7 @@ tensorboard = keras.callbacks.TensorBoard(log_dir='/path/logs',
                                           update_freq='epoch')
 
 model.evaluate_generator(generator=generator(test_data),
-                        steps=testsize//batchsize
+                        steps=testsize//batchsize,
                         callbacks=[TensorBoard],
                         max_queue_size=10,
                         workers=1,
