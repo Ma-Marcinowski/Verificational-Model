@@ -1,7 +1,7 @@
 import pandas as pd
 import keras
 from keras import optimizers, losses
-from keras.models import Model, load_model,
+from keras.models import Model, load_model
 from keras.layers import Input, Activation, Dense, Conv2D, MaxPooling2D, Dropout, Flatten
 
 train_data = pd.read_csv('/path/TrainDataframe.csv')
