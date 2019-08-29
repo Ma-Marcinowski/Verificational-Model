@@ -94,6 +94,7 @@ model.fit_generator(generator=generator(train_data),
                     use_multiprocessing=False,
                     shuffle=False,
                     #validation_freq=1, #?
+                    verbose=1,
                     epochs=9,
                     initial_epoch=0)
 
