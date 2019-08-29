@@ -8,13 +8,14 @@ tifs = glob.glob('*.tif')
 for j in tqdm(tifs):
 
     img = cv2.imread(j, 0)
+    inv = np.bitwise_not(img)
 
     y=890
     x=323
     h=2280
     w=2280
 
-    cropped = img[y:y+h, x:x+w]
+    cropped = inv[y:y+h, x:x+w]
 
     resized = cv2.resize(cropped,(1024,1024))
 
@@ -28,7 +29,7 @@ for j in tqdm(tifs):
 
             mean = v.mean()
 
-            if mean <= 251:
+            if mean >= 3:
 
                 cv2.imwrite('/path/' + j[:-4] + '-' + str(idx) + str(ind) + '.png', v)
 
