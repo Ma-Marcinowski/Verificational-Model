@@ -58,4 +58,4 @@ model.evaluate_generator(generator=generator(test_data),
                         max_queue_size=10,
                         workers=1,
                         use_multiprocessing=False,
-                        verbose=0)
+                        verbose=1)
