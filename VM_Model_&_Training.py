@@ -41,7 +41,6 @@ class DataSequence(Sequence):
         batch_x1 = self.get_batch_leftnames(idx)
         batch_x2 = self.get_batch_rightnames(idx)
         batch_y = self.get_batch_labels(idx)
-        batch_x = [batch_x1, batch_x2]
         return ({'left_input': batch_x1, 'right_input': batch_x2}, {'output': batch_y})
 
 BatchSize = 0
