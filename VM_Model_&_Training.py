@@ -1,4 +1,3 @@
-import math
 import keras
 import numpy as np
 import pandas as pd
@@ -23,7 +22,7 @@ class DataSequence(Sequence):
         self.rightnames = self.df['Rightname'].tolist()
 
     def __len__(self):
-        return int(math.ceil(len(self.df) / float(self.batch_size)))
+        return int(np.ceil(len(self.df) / float(self.batch_size)))
 
     def get_batch_labels(self, idx):
         batch_labels = self.labels[idx * self.batch_size: (idx + 1) * self.batch_size]
