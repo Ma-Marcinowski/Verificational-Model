@@ -101,7 +101,7 @@ tensorboard = keras.callbacks.TensorBoard(log_dir='/path/logs',
 history = model.fit_generator(generator=TrainSeq,
                               validation_data=ValidSeq,
                               callbacks=[tensorboard],
-                              use_multiprocessing=False, #True
+                              use_multiprocessing=False, 
                               shuffle=False,
                               verbose=1,
                               epochs=0,
