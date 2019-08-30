@@ -94,7 +94,7 @@ tensorboard = keras.callbacks.TensorBoard(log_dir='/path/logs',
                                           histogram_freq=0,
                                           batch_size=BatchSize,
                                           write_graph=True,
-                                          write_grads=True,
+                                          write_grads=False,
                                           write_images=True,
                                           update_freq='epoch')
 
