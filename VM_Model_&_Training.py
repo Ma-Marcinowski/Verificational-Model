@@ -73,7 +73,7 @@ right_out = Flatten()(xr)
 x = keras.layers.concatenate([left_out, right_out], axis=1)
 x = Dense(25088, activation='relu', name='FirstFCL')(x)
 x = Dropout(0.4)(x)
-x = Dense(25088, activation='relu', name='SecondFCL')(x)
+x = Dense(12544, activation='relu', name='SecondFCL')(x)
 x = Dropout(0.4)(x)
 output = Dense(1, activation='sigmoid', name='output')(x)
 
