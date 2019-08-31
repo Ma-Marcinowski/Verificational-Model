@@ -15,7 +15,7 @@ with open('/path/Dataframe.csv', 'a+') as f:
 
             if j[:4] == i[:4] and j != i:
 
-                pair = ['/path/' + j, '/path/' + i, 'Poz']
+                pair = ['/path/' + j, '/path/' + i, 1]
 
                 writer.writerow(pair)
 
@@ -33,7 +33,7 @@ with open('/path/Dataframe.csv', 'a+') as f:
 
         if j[:4] != i[:4]:
 
-            pair = ['/path/' + j, '/path/' + i, 'Neg']
+            pair = ['/path/' + j, '/path/' + i, 0]
 
             writer.writerow(pair)
 
