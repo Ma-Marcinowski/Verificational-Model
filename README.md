@@ -43,7 +43,7 @@
   
 ### 2. Model Weryfikacyjny
 
-   * #### 2.1. 
+   * #### 2.1. Model
    
       * 2.1.1. Architektura modelu:
       
@@ -53,15 +53,36 @@
         
         - 
         
-   * #### 2.1. Implementacja modelu:
+   * #### 2.2. Implementacja modelu
    
-      * 2.1.1. Google Colaboratory:
+      * 2.2.1. Google Colaboratory:
        
         -       
        
-      * 2.1.2. Google Cloud Platform:
+      * 2.2.2. Google Cloud Platform:
         
         -           
+        
+   * #### 2.3. Nauka modelu
+   
+      * 2.3.1. Baza danych:
+       
+        - Dane treningowe -
+        - Dane walidacyjne -
+        - Dane testowe -
+   
+      * 2.3.2. Callbacks:
+       
+        - Tensorboard -
+        - 
+      * 2.3.3. Kontrola:
+      
+        - Model save / load -
+        - Weights save / load -
+               
+      * 2.3.4. Parametry uczenia:
+        
+        -                
 
 ### 3. Ewaluacja Modelu
 
