@@ -86,11 +86,11 @@ right_out = Flatten()(xr)
 
 x = keras.layers.concatenate([left_out, right_out], axis=1)
 x = Dense(4096, activation='relu', name='1stFCL')(x)
-x = Dropout(0.4)(x)
+x = Dropout(rate=0.4)(x)
 x = Dense(4096, activation='relu', name='2ndFCL')(x)
-x = Dropout(0.4)(x)
+x = Dropout(rate=0.4)(x)
 x = Dense(1000, activation='relu', name='3rdFCL')(x)
-x = Dropout(0.4)(x)
+x = Dropout(rate=0.4)(x)
 output = Dense(1, activation='sigmoid', name='output')(x)
 
 model = Model(inputs=[left_input, right_input], outputs=[output])
@@ -98,7 +98,7 @@ model = Model(inputs=[left_input, right_input], outputs=[output])
 #model.load_weights('/path/VM_SNN_W.h5')
 #model = load_model('/path/VM_SNN_M.h5')
 
-model.compile(optimizers.SGD(), loss='binary_crossentropy', metrics=['accuracy'])
+model.compile(optimizer='SGD', loss='binary_crossentropy', metrics=['accuracy'])
 
 tensorboard = keras.callbacks.TensorBoard(log_dir='/path/logs',
                                           histogram_freq=0,
