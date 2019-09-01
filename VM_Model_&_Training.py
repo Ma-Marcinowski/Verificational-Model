@@ -79,15 +79,6 @@ x = Dense(1024, activation='relu', name='3rdFCL')(x)
 #x = Dropout(rate=0.4)(x)
 output = Dense(1, activation='sigmoid', name='output')(x)
 
-x = keras.layers.concatenate([left_out, right_out], axis=1)
-x = Dense(16384, activation='relu', name='1stFCL')(x) 
-#x = Dropout(rate=0.4)(x)
-x = Dense(4096, activation='relu', name='2ndFCL')(x) 
-#x = Dropout(rate=0.4)(x)
-x = Dense(1024, activation='relu', name='3rdFCL')(x)
-#x = Dropout(rate=0.4)(x)
-output = Dense(1, activation='sigmoid', name='output')(x)
-
 model = Model(inputs=[left_input, right_input], outputs=[output])
 
 #model.load_weights('/path/VM_SNN_W.h5')
