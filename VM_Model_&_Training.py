@@ -98,7 +98,9 @@ model = Model(inputs=[left_input, right_input], outputs=[output])
 #model.load_weights('/path/VM_SNN_W.h5')
 #model = load_model('/path/VM_SNN_M.h5')
 
-model.compile(optimizer='SGD', loss='binary_crossentropy', metrics=['accuracy'])
+model.compile(optimizer='sgd', loss='binary_crossentropy', metrics=['accuracy'])
+
+sgd = keras.optimizers.SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 
 tensorboard = keras.callbacks.TensorBoard(log_dir='/path/logs',
                                           histogram_freq=0,
@@ -108,9 +110,17 @@ tensorboard = keras.callbacks.TensorBoard(log_dir='/path/logs',
                                           write_images=True,
                                           update_freq='epoch')
 
+checkpoint = keras.callbacks.ModelCheckpoint(filepath='/path/checkpoint', 
+                                             monitor='val_loss', 
+                                             verbose=1, 
+                                             save_best_only=True, 
+                                             save_weights_only=True, 
+                                             mode='auto',
+                                             period=1)
+
 history = model.fit_generator(generator=TrainSeq,
                               validation_data=ValidSeq,
-                              callbacks=[tensorboard],
+                              callbacks=[tensorboard, checkpoint],
                               use_multiprocessing=False, 
                               shuffle=False,
                               verbose=1,
