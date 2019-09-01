@@ -2,7 +2,7 @@ import keras
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from keras import optimizers, losses
+from keras import losses
 from keras.utils import Sequence
 from keras.models import Model, load_model
 from keras.preprocessing.image import load_img, img_to_array
@@ -98,9 +98,9 @@ model = Model(inputs=[left_input, right_input], outputs=[output])
 #model.load_weights('/path/VM_SNN_W.h5')
 #model = load_model('/path/VM_SNN_M.h5')
 
-model.compile(optimizer='sgd', loss='binary_crossentropy', metrics=['accuracy'])
-
 sgd = keras.optimizers.SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+
+model.compile(optimizer='sgd', loss='binary_crossentropy', metrics=['accuracy'])
 
 tensorboard = keras.callbacks.TensorBoard(log_dir='/path/logs',
                                           histogram_freq=0,
