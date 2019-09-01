@@ -124,6 +124,7 @@ history = model.fit_generator(generator=TrainSeq,
                               use_multiprocessing=False, 
                               shuffle=False,
                               verbose=1,
+                              validation_freq=1,
                               epochs=0,
                               initial_epoch=0)
 
