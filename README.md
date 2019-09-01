@@ -52,37 +52,30 @@
       * 2.1.2. Język, biblioteki i framework / API:
         
         - 
-        
-   * #### 2.2. Implementacja modelu
    
-      * 2.2.1. Google Colaboratory:
+      * 2.1.3. Implementacja:
        
-        -       
-       
-      * 2.2.2. Google Cloud Platform:
+        -  Google Colaboratory -
         
-        -           
-        
-   * #### 2.3. Nauka modelu
+   * #### 2.2. Nauka modelu
    
-      * 2.3.1. Baza danych:
+      * 2.2.1. Baza danych:
        
         - Dane treningowe -
+        
         - Dane walidacyjne -
+        
         - Dane testowe -
    
-      * 2.3.2. Callbacks:
+      * 2.2.2. Callbacks:
        
         - Tensorboard -
-        - 
-      * 2.3.3. Kontrola:
-      
-        - Model save / load -
-        - Weights save / load -
-               
-      * 2.3.4. Parametry uczenia:
+        
+        - ModelCheckpoint -
+
+      * 2.2.3. Parametry uczenia:
         
         -                
 
-### 3. Ewaluacja Modelu
+   * #### 2.3. Ewaluacja modelu:
 
