@@ -61,7 +61,7 @@
    
       * 2.1.3. Implementation:
        
-        - Google Colaboratory - GPU, Python 3, Jupyter Notebook.
+        - Google Colaboratory - GPU, Python 3, Jupyter Notebook;
         
         - Time - 170ms/step for Alexnet, XXXms/step for VGG.
         
@@ -79,16 +79,28 @@
         
         - ModelCheckpoint -
 
-      * 2.2.3.  Hyperparameters:
+      * 2.2.3. Hyperparameters:
         
-        - Epochs - 9
-        - Batchsize - 64
-        - Optimizer - SGD (Stochastic Gradient Descent)
-        - Learning rate - 0.01
-        - LR Decay - 0.000001 
-        - Momentum - 0.9
-        - Nestrov - True
-
+        - Epochs - X;
+        - Batchsize - 64;
+        - Loss - Binary Crossentropy;
+        - Metrics - Accuracy;
+        - Optimizer - SGD (Stochastic Gradient Descent);
+        - Learning rate - 0.01;
+        - LR Decay - 0.000001;
+        - Momentum - 0.9;
+        - Nestrov - True.
+     
+     * 2.2.3. Training evaluation (9 epochs):
+        
+        - Alexnet (FCL: 4096, 1024, 256, 1) - loss(), acc(), val_loss(), val_acc();
+        
+        - Alexnet (FCL: 4096, 4096, 1) - loss(), acc(), val_loss(), val_acc();
+        
+        - VGG13 (FCL: 4096, 1024, 256, 1) - loss(), acc(), val_loss(), val_acc();
+        
+        - VGG13 (FCL: 4096, 4096, 1) - loss(), acc(), val_loss(), val_acc().
+        
    * #### 2.3. Model evaluation:
    
       * 2.3.1. Database:
@@ -96,14 +108,20 @@
         - CVL Test dataset -
         
         - IAM Test dataset -
+
+      * 2.3.2. Metrics:
         
-      * 2.3.2. CVL evaluation:
+        - 
+        
+        - 
+        
+      * 2.3.3. CVL evaluation:
       
         - Alexnet (FCL:) -
         
         - VGG13 (FCL:) -
        
-      * 2.3.3. IAM evaluation:
+      * 2.3.4. IAM evaluation:
       
         - Alexnet (FCL:) -
         
