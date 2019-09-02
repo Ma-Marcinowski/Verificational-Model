@@ -96,12 +96,12 @@ tensorboard = keras.callbacks.TensorBoard(log_dir='/path/logs/',
                                           write_images=False,
                                           update_freq='epoch')
 
-checkpoint = keras.callbacks.ModelCheckpoint(filepath='/path/checkpoint/VM_SNN_W.hdf5', 
+checkpoint = keras.callbacks.ModelCheckpoint(filepath='/path/checkpoint/', 
                                              monitor='val_loss', 
                                              verbose=1, 
                                              save_best_only=True, 
                                              save_weights_only=True, 
-                                             mode='auto',
+                                             mode='min',
                                              period=1)
 
 history = model.fit_generator(generator=TrainSeq,
