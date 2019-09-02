@@ -54,4 +54,4 @@ keras.utils.print_summary(model,
                           line_length=None,
                           positions=None,
                           print_fn=None)
-keras.utils.plot_model(model, to_file='/path/SNN_VGG16.png', show_shapes=True, show_layer_names=True, rankdir='TB')
+keras.utils.plot_model(model, to_file='/path/SNN_VGG13.png', show_shapes=True, show_layer_names=True, rankdir='TB')
