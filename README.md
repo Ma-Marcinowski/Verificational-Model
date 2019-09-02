@@ -55,9 +55,11 @@
         
         - Fully Connected Layers -
       
-      * 2.1.2. Language, libraries and framework / API:
+      * 2.1.2. Language, libraries and API:
         
+        - Python3;
         - 
+        - Keras API (TensorFlow Backend).
    
       * 2.1.3. Implementation:
        
@@ -86,9 +88,9 @@
         - Loss - Binary Crossentropy;
         - Metrics - Accuracy;
         - Optimizer - SGD (Stochastic Gradient Descent);
-        - Learning rate - 0.01;
-        - LR Decay - 0.000001;
-        - Momentum - 0.9;
+        - Learning rate - 0.01 (1e-2);
+        - LR Decay - 0.000001 (1e-6);
+        - Momentum - 0.9 (9e-1);
         - Nestrov - True.
      
      * 2.2.3. Training evaluation (9 epochs):
@@ -111,9 +113,9 @@
 
       * 2.3.2. Metrics:
         
-        - 
-        
-        - 
+        - Accuracy;        
+        - Binary Crossentropy;
+        -
         
       * 2.3.3. CVL evaluation:
       
