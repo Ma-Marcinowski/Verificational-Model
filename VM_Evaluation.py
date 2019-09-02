@@ -46,8 +46,7 @@ BatchSize = 0
 
 TestSeq = DataSequence(dataframe='/path/TestDataframe.csv', batch_size = BatchSize)
 
-#model.load_weights('/path/VM_SNN_W.h5')
-#model = load_model('/path/VM_SNN_M.h5')
+model = load_model('/path/VM_SNN_M.h5')
 
 tensorboard = keras.callbacks.TensorBoard(log_dir='/content/logs',
                                           histogram_freq=1,
