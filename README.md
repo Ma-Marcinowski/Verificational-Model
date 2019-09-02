@@ -49,9 +49,9 @@
       
         - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two seperate ConvNets (either AlexNets or VGG13s), which outputs are flattend, concatenated and then passed to the fully connected layers for binary classification.
       
-        - AlexNet Core Network -
+        - AlexNet Core Network - {as desc in paper}
         
-        - VGG13 Core Network -
+        - VGG13 Core Network - {as desc in pap except for 2nd pool}
         
         - Fully Connected Layers - either three [4096, 1024, 256] or two layers [4096, 4096] and one output neuron (sigmoid activation) - for both core networks;
         
