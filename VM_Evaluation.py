@@ -48,7 +48,7 @@ TestSeq = DataSequence(dataframe='/path/TestDataframe.csv', batch_size = BatchSi
 
 model = load_model('/path/VM_SNN_M.h5')
 
-tensorboard = keras.callbacks.TensorBoard(log_dir='/path/logs',
+tensorboard = keras.callbacks.TensorBoard(log_dir='/path/logs/',
                                           histogram_freq=1,
                                           batch_size=BatchSize,
                                           write_graph=True,
