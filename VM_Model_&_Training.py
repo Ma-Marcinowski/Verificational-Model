@@ -81,7 +81,7 @@ output = Dense(1, activation='sigmoid', name='output')(x)
 
 model = Model(inputs=[left_input, right_input], outputs=[output])
 
-#model.load_weights('/path/VM_SNN_W.h5')
+#model.load_weights('/path/checkpoint/VM_SNN_W.h5')
 #model = load_model('/path/VM_SNN_M.h5')
 
 sgd = keras.optimizers.SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
@@ -114,7 +114,6 @@ history = model.fit_generator(generator=TrainSeq,
                               epochs=0,
                               initial_epoch=0)
 
-#model.save_weights('/path/VM_SNN_W.h5', overwrite=True)
 #model.save('/path/VM_SNN_M.h5', overwrite=True, include_optimizer=True)
 
 plt.plot(history.history['acc'])
