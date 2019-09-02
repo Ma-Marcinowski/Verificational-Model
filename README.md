@@ -47,7 +47,7 @@
    
       * 2.1.1. Model architecture:
       
-        - Siamese -
+        - Siamese CNN -
       
         - Alexnet core -
         
