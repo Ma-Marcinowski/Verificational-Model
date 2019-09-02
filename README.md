@@ -47,17 +47,17 @@
    
       * 2.1.1. Model architecture:
       
-        - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two seperate ConvNets (either AlexNets or VGG13s), which outputs are flattend, concatenated and then passed to the fully connected layers for binary classification.
+        - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two same and seperate ConvNets (either AlexNets or VGG13s), which outputs are flattend, concatenated and then passed to the fully connected layers for binary classification.
       
         - AlexNet Core Network - {as desc in paper}
         
         - VGG13 Core Network - {as desc in pap except for 2nd pool}
         
-        - Fully Connected Layers - either three [4096, 1024, 256] or two layers [4096, 4096] and one output neuron (sigmoid activation) - for both core networks;
+        - Fully Connected Layers - either three [4096, 1024, 256] or two layers [4096, 4096] and one output neuron (sigmoid activation) - for both core network variants;
         
-        - Batch Normalization (BN) Layers - before activation layers;
+        - Batch Normalization (BN) Layers - applied before activation layers;
         
-        - Dropout Layers - after activation layers;
+        - Dropout Layers - applied after activation layers;
         
         - Activation - ReLU for all layers, sigmoid for the output neuron.
         
@@ -114,13 +114,13 @@
         
      * 2.2.4. Training evaluation (18 epochs / batch normalization layers / ReduceLROnPlateau callback):
         
-        - AlexNet (FCL: ) - loss(), acc(), val_loss(), val_acc ();
+        - AlexNet (FCL: 4096, 1024, 256, 1) - loss(), acc(), val_loss(), val_acc ();
         
-        - AlexNet (FCL: ) - loss(), acc(), val_loss(), val_acc();
+        - AlexNet (FCL: 4096, 4096, 1) - loss(), acc(), val_loss(), val_acc();
         
-        - VGG13 (FCL: ) - loss(), acc(), val_loss(), val_acc();
+        - VGG13 (FCL: 4096, 1024, 256, 1) - loss(), acc(), val_loss(), val_acc();
         
-        - VGG13 (FCL: ) - loss(), acc(), val_loss(), val_acc().
+        - VGG13 (FCL: 4096, 4096, 1) - loss(), acc(), val_loss(), val_acc().
         
    * #### 2.3. Model evaluation:
    
@@ -144,12 +144,20 @@
         
       * 2.3.4. CVL evaluation:
       
-        - AlexNet -
+        - AlexNet (FCL: 4096, 1024, 256, 1) - ();
         
-        - VGG13 -
+        - AlexNet (FCL: 4096, 4096, 1) - ();
+        
+        - VGG13 (FCL: 4096, 1024, 256, 1) - ();
+        
+        - VGG13 (FCL: 4096, 4096, 1) - ().
        
       * 2.3.5. IAM evaluation:
       
-        - AlexNet -
+        - AlexNet (FCL: 4096, 1024, 256, 1) - ();
         
-        - VGG13 -       
+        - AlexNet (FCL: 4096, 4096, 1) - ();
+        
+        - VGG13 (FCL: 4096, 1024, 256, 1) - ();
+        
+        - VGG13 (FCL: 4096, 4096, 1) - ().
