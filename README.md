@@ -58,7 +58,7 @@
       * 2.1.2. Language, libraries and API:
         
         - Python3;
-        - 
+        - Numpy, Pandas, Matplotlib;
         - Keras API (TensorFlow Backend).
    
       * 2.1.3. Implementation:
