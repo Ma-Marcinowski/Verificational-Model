@@ -47,7 +47,7 @@
    
       * 2.1.1. Model architecture:
       
-        - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two same and seperate ConvNets (either AlexNets or VGG13s), which outputs are flattend, concatenated and then passed to the fully connected layers for binary classification.
+        - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two separate ConvNets (either AlexNets or VGG13s), which outputs are flattend, concatenated and then passed to the fully connected layers for binary classification. Inputs to both conv-paths are identical in shape, dataset and preprocessing.
       
         - AlexNet Core Network - {as desc in paper}
         
