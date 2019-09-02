@@ -130,7 +130,7 @@
         
         - VGG13 -
    
-      * 2.3.2. Database:
+      * 2.3.2. Database (excluded pairs - both negative and positive - of patches containing identical content):
       
         - CVL Test dataset -
         
