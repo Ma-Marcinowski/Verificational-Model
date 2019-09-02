@@ -42,7 +42,7 @@ class DataSequence(Sequence):
         batch_y = self.get_batch_labels(idx)
         return ({'left_input': batch_x1, 'right_input': batch_x2}, {'output': batch_y})
 
-BatchSize = 0
+BatchSize = 64
 
 TrainSeq = DataSequence(dataframe='/path/TrainDataframe.csv', batch_size = BatchSize)
 ValidSeq = DataSequence(dataframe='/path/ValidDataframe.csv', batch_size = BatchSize)
@@ -72,11 +72,11 @@ right_out = Flatten()(xr)
 
 x = keras.layers.concatenate([left_out, right_out], axis=1)
 x = Dense(4096, activation='relu', name='1stFCL')(x) 
-x = Dropout(rate=0.0)(x)
+x = Dropout(rate=0.5)(x)
 x = Dense(1024, activation='relu', name='2ndFCL')(x) 
-x = Dropout(rate=0.0)(x)
+x = Dropout(rate=0.5)(x)
 x = Dense(256, activation='relu', name='3rdFCL')(x)
-x = Dropout(rate=0.0)(x)
+x = Dropout(rate=0.5)(x)
 output = Dense(1, activation='sigmoid', name='output')(x) 
 
 model = Model(inputs=[left_input, right_input], outputs=[output])
@@ -93,7 +93,7 @@ tensorboard = keras.callbacks.TensorBoard(log_dir='/path/logs',
                                           batch_size=BatchSize,
                                           write_graph=True,
                                           write_grads=False,
-                                          write_images=True,
+                                          write_images=False,
                                           update_freq='epoch')
 
 checkpoint = keras.callbacks.ModelCheckpoint(filepath='/path/checkpoint', 
@@ -111,8 +111,8 @@ history = model.fit_generator(generator=TrainSeq,
                               shuffle=False,
                               verbose=1,
                               validation_freq=1,
-                              epochs=0,
-                              initial_epoch=0)
+                              initial_epoch=0,
+                              epochs=9)
 
 #model.save('/path/VM_SNN_M.h5', overwrite=True, include_optimizer=True)
 
