@@ -40,4 +40,4 @@ keras.utils.print_summary(model,
                           line_length=None,
                           positions=None,
                           print_fn=None)
-keras.utils.plot_model(model, to_file='/content/SNN-AlexNet.png', show_shapes=True, show_layer_names=True, rankdir='TB')
+keras.utils.plot_model(model, to_file='/path/SNN-AlexNet.png', show_shapes=True, show_layer_names=True, rankdir='TB')
