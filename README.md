@@ -49,7 +49,7 @@
       
         - Siamese CNN -
       
-        - Alexnet core -
+        - AlexNet core -
         
         - VGG13 core -
         
@@ -95,9 +95,9 @@
      
      * 2.2.3. Training evaluation (9 epochs):
         
-        - Alexnet (FCL: 4096, 1024, 256, 1) - loss(), acc(), val_loss(), val_acc();
+        - AlexNet (FCL: 4096, 1024, 256, 1) - loss(), acc(), val_loss(), val_acc();
         
-        - Alexnet (FCL: 4096, 4096, 1) - loss(), acc(), val_loss(), val_acc();
+        - AlexNet (FCL: 4096, 4096, 1) - loss(), acc(), val_loss(), val_acc();
         
         - VGG13 (FCL: 4096, 1024, 256, 1) - loss(), acc(), val_loss(), val_acc();
         
@@ -119,12 +119,12 @@
         
       * 2.3.3. CVL evaluation:
       
-        - Alexnet (FCL:) -
+        - AlexNet (FCL:) -
         
         - VGG13 (FCL:) -
        
       * 2.3.4. IAM evaluation:
       
-        - Alexnet (FCL:) -
+        - AlexNet (FCL:) -
         
         - VGG13 (FCL:) -       
