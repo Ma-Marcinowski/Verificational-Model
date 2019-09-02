@@ -41,31 +41,37 @@
         - Następnie wpisać należy w terminalu komendę `python3 nazwa_programu.py`, stąd wykonany zostanie wskazany program;
         - Gdyby zaistniała taka konieczność: aby przerwać wykonywanie programu wykorzystać można w terminalu kombinację klawiszy `Ctrl + C`, aby zawiesić wykonywanie programu `Ctrl + Z`, aby zaś przywrócić wykonywanie zawieszonego programu wpisać należy komendę `fg` (dla terminalów większości systemów operacyjnych, *e.g.* macOS, Linux).      
   
-### 2. Model Weryfikacyjny
+### 2. Verificational Model
 
    * #### 2.1. Model
    
-      * 2.1.1. Architektura modelu:
+      * 2.1.1. Model architecture:
       
-        -      
+        - Dual path -
       
-      * 2.1.2. Język, biblioteki i framework / API:
+        - Alexnet core -
+        
+        - VGG13 core -
+        
+        - Fully Connected Layers -
+      
+      * 2.1.2. Language, libraries and framework / API:
         
         - 
    
-      * 2.1.3. Implementacja:
+      * 2.1.3. Implementation:
        
-        -  Google Colaboratory -
+        - Google Colaboratory - GPU, Python 3, Jupyter Notebook.
         
-   * #### 2.2. Nauka modelu
+        - Time - 170ms/step for Alexnet, XXXms/step for VGG.
+        
+   * #### 2.2. Training
    
-      * 2.2.1. Baza danych:
+      * 2.2.1. Database:
        
-        - Dane treningowe -
+        - Training dataset -
         
-        - Dane walidacyjne -
-        
-        - Dane testowe -
+        - Validation dataset -
    
       * 2.2.2. Callbacks:
        
@@ -73,9 +79,32 @@
         
         - ModelCheckpoint -
 
-      * 2.2.3. Parametry uczenia:
+      * 2.2.3.  Hyperparameters:
         
-        -                
+        - Epochs - 9
+        - Batchsize - 64
+        - Optimizer - SGD (Stochastic Gradient Descent)
+        - Learning rate - 0.01
+        - LR Decay - 0.000001 
+        - Momentum - 0.9
+        - Nestrov - True
 
-   * #### 2.3. Ewaluacja modelu:
-
+   * #### 2.3. Model evaluation:
+   
+      * 2.3.1. Database:
+      
+        - CVL Test dataset -
+        
+        - IAM Test dataset -
+        
+      * 2.3.2. CVL evaluation:
+      
+        - Alexnet (FCL:) -
+        
+        - VGG13 (FCL:) -
+       
+      * 2.3.3. IAM evaluation:
+      
+        - Alexnet (FCL:) -
+        
+        - VGG13 (FCL:) -       
