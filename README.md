@@ -49,12 +49,18 @@
       
         - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two seperate ConvNets (either AlexNets or VGG13s), which outputs are flattend, concatenated and then passed to the fully connected layers for binary classification.
       
-        - AlexNet core -
+        - AlexNet Core Network -
         
-        - VGG13 core -
+        - VGG13 Core Network -
         
-        - Fully Connected Layers - either three [4096, 1024, 256] or two layers [4096, 4096] and one output neuron (sigmoid activation) - for both core networks.
-      
+        - Fully Connected Layers - either three [4096, 1024, 256] or two layers [4096, 4096] and one output neuron (sigmoid activation) - for both core networks;
+        
+        - Batch Normalization (BN) Layers - before activation layers;
+        
+        - Dropout Layers - after activation layers;
+        
+        - Activation - ReLU for all layers, sigmoid for the output neuron.
+        
       * 2.1.2. Language, libraries and API:
         
         - Python3;
@@ -80,10 +86,12 @@
         - Tensorboard -
         
         - ModelCheckpoint -
+        
+        - ReduceLROnPlateau -
 
       * 2.2.3. Hyperparameters:
-        
-        - Epochs - X;
+      
+        - Epochs - [9, 18];
         - Batchsize - 64;
         - Dropout rate - 0.5;
         - Loss - Binary Crossentropy;
@@ -94,7 +102,7 @@
         - Momentum - 0.9 (9e-1);
         - Nestrov - True.
      
-     * 2.2.3. Training evaluation (9 epochs):
+     * 2.2.3. Training evaluation (9 epochs / without BN layers / without ReduceLROnPlateau callback):
         
         - AlexNet (FCL: 4096, 1024, 256, 1) - loss(0.1661), acc(0.9390), val_loss(0.2729), val_acc (0.8975);
         
@@ -104,28 +112,44 @@
         
         - VGG13 (FCL: 4096, 4096, 1) - loss(), acc(), val_loss(), val_acc().
         
+     * 2.2.4. Training evaluation (18 epochs / batch normalization layers / ReduceLROnPlateau callback):
+        
+        - AlexNet (FCL: ) - loss(), acc(), val_loss(), val_acc ();
+        
+        - AlexNet (FCL: ) - loss(), acc(), val_loss(), val_acc();
+        
+        - VGG13 (FCL: ) - loss(), acc(), val_loss(), val_acc();
+        
+        - VGG13 (FCL: ) - loss(), acc(), val_loss(), val_acc().
+        
    * #### 2.3. Model evaluation:
    
-      * 2.3.1. Database:
+      * 2.3.1. Models:
+      
+        - AlexNet -
+        
+        - VGG13 -
+   
+      * 2.3.2. Database:
       
         - CVL Test dataset -
         
         - IAM Test dataset -
 
-      * 2.3.2. Metrics:
+      * 2.3.3. Metrics:
         
         - Accuracy;        
         - Binary Crossentropy;
         -
         
-      * 2.3.3. CVL evaluation:
+      * 2.3.4. CVL evaluation:
       
-        - AlexNet (FCL:) -
+        - AlexNet -
         
-        - VGG13 (FCL:) -
+        - VGG13 -
        
-      * 2.3.4. IAM evaluation:
+      * 2.3.5. IAM evaluation:
       
-        - AlexNet (FCL:) -
+        - AlexNet -
         
-        - VGG13 (FCL:) -       
+        - VGG13 -       
