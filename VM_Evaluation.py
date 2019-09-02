@@ -42,13 +42,13 @@ class DataSequence(Sequence):
         batch_y = self.get_batch_labels(idx)
         return ({'left_input': batch_x1, 'right_input': batch_x2}, {'output': batch_y})
 
-BatchSize = 0
+BatchSize = 64
 
 TestSeq = DataSequence(dataframe='/path/TestDataframe.csv', batch_size = BatchSize)
 
 model = load_model('/path/VM_SNN_M.h5')
 
-tensorboard = keras.callbacks.TensorBoard(log_dir='/content/logs',
+tensorboard = keras.callbacks.TensorBoard(log_dir='/path/logs',
                                           histogram_freq=1,
                                           batch_size=BatchSize,
                                           write_graph=True,
@@ -58,9 +58,9 @@ tensorboard = keras.callbacks.TensorBoard(log_dir='/content/logs',
 
 evaluation = model.evaluate_generator(generator=TestSeq,
                                       callbacks=[tensorboard],
-                                      max_queue_size=10,
-                                      workers=1,
                                       use_multiprocessing=False,
+                                      max_queue_size=10,
+                                      workers=1,                                      
                                       verbose=1)
 print(evaluation)
 print(model.metrics_names)
