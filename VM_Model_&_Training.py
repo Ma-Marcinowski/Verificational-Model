@@ -81,7 +81,7 @@ output = Dense(1, activation='sigmoid', name='output')(x)
 
 model = Model(inputs=[left_input, right_input], outputs=[output])
 
-#model.load_weights('/path/checkpoint/VM_SNN_W.h5')
+#model.load_weights('/path/checkpoint/VM_SNN_W.hdf5')
 #model = load_model('/path/VM_SNN_M.h5')
 
 sgd = keras.optimizers.SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
@@ -96,12 +96,12 @@ tensorboard = keras.callbacks.TensorBoard(log_dir='/path/logs/',
                                           write_images=False,
                                           update_freq='epoch')
 
-checkpoint = keras.callbacks.ModelCheckpoint(filepath='/path/checkpoint/', 
-                                             monitor='val_loss', 
+checkpoint = keras.callbacks.ModelCheckpoint(filepath='/path/checkpoint/VM_SNN_W.hdf5', 
+                                             monitor='val_acc', 
                                              verbose=1, 
                                              save_best_only=True, 
                                              save_weights_only=True, 
-                                             mode='auto',
+                                             mode='max',
                                              period=1)
 
 history = model.fit_generator(generator=TrainSeq,
