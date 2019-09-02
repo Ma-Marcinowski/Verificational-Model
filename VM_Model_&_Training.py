@@ -88,7 +88,7 @@ sgd = keras.optimizers.SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 
 model.compile(optimizer='sgd', loss='binary_crossentropy', metrics=['accuracy'])
 
-tensorboard = keras.callbacks.TensorBoard(log_dir='/path/logs',
+tensorboard = keras.callbacks.TensorBoard(log_dir='/path/logs/',
                                           histogram_freq=0,
                                           batch_size=BatchSize,
                                           write_graph=True,
@@ -96,7 +96,7 @@ tensorboard = keras.callbacks.TensorBoard(log_dir='/path/logs',
                                           write_images=False,
                                           update_freq='epoch')
 
-checkpoint = keras.callbacks.ModelCheckpoint(filepath='/path/checkpoint', 
+checkpoint = keras.callbacks.ModelCheckpoint(filepath='/path/checkpoint/', 
                                              monitor='val_loss', 
                                              verbose=1, 
                                              save_best_only=True, 
