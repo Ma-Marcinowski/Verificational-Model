@@ -106,7 +106,7 @@
         
         - AlexNet (FCL: 4096, 1024, 256, 1) - loss(0.1661), acc(0.9390), val_loss(0.2729), val_acc (0.8975);
         
-        - AlexNet (FCL: 4096, 4096, 1) - loss(), acc(), val_loss(), val_acc();
+        - AlexNet (FCL: 4096, 4096, 1) - loss(0.2116), acc(0.9197), val_loss(0.2933), val_acc(0.8811);
         
         - VGG13 (FCL: 4096, 1024, 256, 1) - loss(), acc(), val_loss(), val_acc();
         
