@@ -53,13 +53,13 @@
         
         - VGG13 core -
         
-        - Fully Connected Layers -
+        - Fully Connected Layers - either three [4096, 1024, 256] or two layers [4096, 4096] and one output neuron (sigmoid activation) - for both core networks.
       
       * 2.1.2. Language, libraries and API:
         
         - Python3;
-        - Numpy, Pandas, Matplotlib;
-        - Keras API (TensorFlow Backend).
+        - Numpy (data sequence), Pandas (dataframe), Matplotlib (metrics plot), Pydot and GraphViz (model plot);
+        - Keras API with TensorFlow Backend (model).
    
       * 2.1.3. Implementation:
        
@@ -85,6 +85,7 @@
         
         - Epochs - X;
         - Batchsize - 64;
+        - Dropout rate - 0.5;
         - Loss - Binary Crossentropy;
         - Metrics - Accuracy;
         - Optimizer - SGD (Stochastic Gradient Descent);
