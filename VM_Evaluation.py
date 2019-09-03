@@ -1,12 +1,12 @@
-import keras
+import tensorflow as tf
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-from keras import optimizers, losses
-from keras.utils import Sequence
-from keras.models import Model, load_model
-from keras.preprocessing.image import load_img, img_to_array
-from keras.layers import Input, Activation, Dense, Conv2D, MaxPooling2D, Dropout, Flatten
+
+from tensorflow.keras import losses
+from tensorflow.keras.utils import Sequence
+from tensorflow.keras.models import Model, load_model
+from tensorflow.keras.preprocessing.image import load_img, img_to_array
+from tensorflow.keras.layers import Input, Activation, Dense, Conv2D, MaxPooling2D, Dropout, Flatten
 
 def load_image(img):
     return img_to_array(load_img(img, color_mode='grayscale')) / 255.
@@ -48,13 +48,13 @@ TestSeq = DataSequence(dataframe='/path/TestDataframe.csv', batch_size = BatchSi
 
 model = load_model('/path/VM_SNN_M.h5')
 
-tensorboard = keras.callbacks.TensorBoard(log_dir='/path/logs/',
-                                          histogram_freq=1,
-                                          batch_size=BatchSize,
-                                          write_graph=True,
-                                          write_grads=True,
-                                          write_images=True,
-                                          update_freq='epoch')
+tensorboard = tf.keras.callbacks.TensorBoard(log_dir='/path/logs/',
+                                             histogram_freq=1,
+                                             batch_size=BatchSize,
+                                             write_graph=True,
+                                             write_grads=True,
+                                             write_images=True,
+                                             update_freq='epoch')
 
 evaluation = model.evaluate_generator(generator=TestSeq,
                                       callbacks=[tensorboard],
