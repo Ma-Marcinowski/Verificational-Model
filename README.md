@@ -134,12 +134,11 @@
         
      * 2.3.3. CVL evaluation:
        
-       | Core Network | AlexNet | AlexNet | VGG13 | VGG13 |
-       | --- | --- | --- | --- | --- | 
-       | Epochs of Training | --- | x | x | x | x | x | x |
-       | Fully Connected Layers | --- | x | x | x | x | x | x |
-       | Accuracy | --- | x | x | x | x | x | x |
-       | Accuracy | --- | x | x | x | x | x | x |
+       | Core Network | --- | AlexNet | AlexNet | VGG13 | VGG13 |
+       | Epochs of Training | --- | x | x | x | x |
+       | Fully Connected Layers | --- | x | x | x | x |
+       | Accuracy | --- | x | x | x | x |
+       | Accuracy | --- | x | x | x | x |
        
        - Epochs of Training (EofT) by the best training result. 
        - Fully Connected Layers (FCL) - [4096, 1024, 256] (3) or 4096, 4096 (2) 
