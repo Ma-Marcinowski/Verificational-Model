@@ -1,12 +1,13 @@
-import keras
+import tensorflow as tf
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from keras import losses
-from keras.utils import Sequence
-from keras.models import Model, load_model
-from keras.preprocessing.image import load_img, img_to_array
-from keras.layers import Input, Activation, Dense, Conv2D, MaxPooling2D, Dropout, Flatten
+
+from tensorflow.keras import losses
+from tensorflow.keras.utils import Sequence
+from tensorflow.keras.models import Model, load_model
+from tensorflow.keras.preprocessing.image import load_img, img_to_array
+from tensorflow.keras.layers import Input, Activation, Dense, Conv2D, MaxPooling2D, Dropout, Flatten
 
 def load_image(img):
     return img_to_array(load_img(img, color_mode='grayscale')) / 255.
@@ -70,7 +71,7 @@ xr = Conv2D(256, (3, 3), strides=1, padding='same', activation='relu', name='5th
 xr = MaxPooling2D(pool_size=(3, 3), strides=2, padding='valid', name='3rdPoolRight')(xr)
 right_out = Flatten()(xr)
 
-x = keras.layers.concatenate([left_out, right_out], axis=1)
+x = tf.keras.layers.concatenate([left_out, right_out], axis=1)
 x = Dense(4096, activation='relu', name='1stFCL')(x) 
 x = Dropout(rate=0.5)(x)
 x = Dense(1024, activation='relu', name='2ndFCL')(x) 
@@ -84,29 +85,38 @@ model = Model(inputs=[left_input, right_input], outputs=[output])
 #model.load_weights('/path/checkpoint/VM_SNN_W.hdf5')
 #model = load_model('/path/VM_SNN_M.h5')
 
-sgd = keras.optimizers.SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+sgd = tf.keras.optimizers.SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 
 model.compile(optimizer='sgd', loss='binary_crossentropy', metrics=['accuracy'])
 
-tensorboard = keras.callbacks.TensorBoard(log_dir='/path/logs/',
-                                          histogram_freq=0,
-                                          batch_size=BatchSize,
-                                          write_graph=True,
-                                          write_grads=False,
-                                          write_images=False,
-                                          update_freq='epoch')
+tensorboard = tf.keras.callbacks.TensorBoard(log_dir='/path/logs/',
+                                            histogram_freq=0,
+                                            batch_size=BatchSize,
+                                            write_graph=True,
+                                            write_grads=False,
+                                            write_images=False,
+                                            update_freq='epoch')
 
-checkpoint = keras.callbacks.ModelCheckpoint(filepath='/path/checkpoint/', 
-                                             monitor='val_loss', 
-                                             verbose=1, 
-                                             save_best_only=True, 
-                                             save_weights_only=True, 
-                                             mode='min',
-                                             period=1)
+checkpoint = tf.keras.callbacks.ModelCheckpoint(filepath='/path/checkpoint/', 
+                                                monitor='val_loss', 
+                                                verbose=1, 
+                                                save_best_only=True, 
+                                                save_weights_only=True, 
+                                                mode='min',
+                                                period=1)
+
+reduceLR = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_loss', 
+                                               factor=0.1, 
+                                               patience=1, 
+                                               verbose=1, 
+                                               mode='min', 
+                                               min_delta=0.0001, 
+                                               cooldown=3, 
+                                               min_lr=0.000001)
 
 history = model.fit_generator(generator=TrainSeq,
                               validation_data=ValidSeq,
-                              callbacks=[tensorboard, checkpoint],
+                              callbacks=[tensorboard, checkpoint, reduceLR],
                               use_multiprocessing=False, 
                               shuffle=False,
                               verbose=1,
