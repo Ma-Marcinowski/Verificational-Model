@@ -108,7 +108,7 @@
      * 2.2.3. Training evaluation:
         
         - AlexNet (FCL: 4096, 1024, 256, 1) - loss(), acc(), val_loss(), val_acc ();
-                   - Best result (x epochs) - loss(), acc(), val_loss(), val_acc ();
+                 * - Best result (x epochs) - loss(), acc(), val_loss(), val_acc ();
         - AlexNet (FCL: 4096, 4096, 1) - loss(), acc(), val_loss(), val_acc();
         
         - VGG13 (FCL: 4096, 1024, 256, 1) - loss(), acc(), val_loss(), val_acc();
