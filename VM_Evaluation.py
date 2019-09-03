@@ -54,7 +54,7 @@ tensorboard = tf.keras.callbacks.TensorBoard(log_dir='/path/logs/',
                                              write_graph=True,
                                              write_grads=True,
                                              write_images=True,
-                                             update_freq='epoch')
+                                             update_freq='batch')
 
 evaluation = model.evaluate_generator(generator=TestSeq,
                                       callbacks=[tensorboard],
