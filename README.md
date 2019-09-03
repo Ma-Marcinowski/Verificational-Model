@@ -93,7 +93,7 @@
 
       * 2.2.3. Hyperparameters:
       
-        - Epochs - 18;
+        - Epochs - 9;
         - Batchsize - 64;
         - Batch normalization - axis=-1, scale=False;
         - Dropout rate - 0.2;
