@@ -107,17 +107,20 @@
         
      * 2.2.3. Training evaluation:
         
-        - AlexNet (FCL: 4096, 1024, 256, 1) - loss(), acc(), val_loss(), val_acc();
-        - Best result (x epochs)            - loss(), acc(), val_loss(), val_acc();
+        - AlexNet     (FCL: 4096, 1024, 256, 1) - loss(), acc(), val_loss(), val_acc();
+        - Best result (x epochs)                - loss(), acc(), val_loss(), val_acc();
         
-        - AlexNet (FCL: 4096, 4096, 1) - loss(), acc(), val_loss(), val_acc();
-        - Best result (x epochs)       - loss(), acc(), val_loss(), val_acc();
         
-        - VGG13 (FCL: 4096, 1024, 256, 1) - loss(), acc(), val_loss(), val_acc();
-        - Best result (x epochs)          - loss(), acc(), val_loss(), val_acc();
+        - AlexNet     (FCL: 4096, 4096, 1)      - loss(), acc(), val_loss(), val_acc();
+        - Best result (x epochs)                - loss(), acc(), val_loss(), val_acc();
         
-        - VGG13 (FCL: 4096, 4096, 1) - loss(), acc(), val_loss(), val_acc();
-        - Best result (x epochs)     - loss(), acc(), val_loss(), val_acc().
+        
+        - VGG13       (FCL: 4096, 1024, 256, 1) - loss(), acc(), val_loss(), val_acc();
+        - Best result (x epochs)                - loss(), acc(), val_loss(), val_acc();
+        
+        
+        - VGG13       (FCL: 4096, 4096, 1)      - loss(), acc(), val_loss(), val_acc();
+        - Best result (x epochs)                - loss(), acc(), val_loss(), val_acc().
         
    * #### 2.3. Model evaluation:
    
@@ -135,20 +138,21 @@
         
       * 2.3.3. CVL evaluation:
       
-        - AlexNet (FCL: 4096, 1024, 256, 1) - ();
+        - AlexNet (FCL: 4096, 1024, 256, 1, x epochs training) - ();
         
-        - AlexNet (FCL: 4096, 4096, 1) - ();
+        - AlexNet (FCL: 4096, 4096, 1, x epochs training)      - ();
         
-        - VGG13 (FCL: 4096, 1024, 256, 1) - ();
+        - VGG13   (FCL: 4096, 1024, 256, 1, x epochs training) - ();
         
-        - VGG13 (FCL: 4096, 4096, 1) - ().
+        - VGG13   (FCL: 4096, 4096, 1, x epochs training)      - ().
        
       * 2.3.4. IAM evaluation:
       
-        - AlexNet (FCL: 4096, 1024, 256, 1) - ();
+
+        - AlexNet (FCL: 4096, 1024, 256, 1, x epochs training) - ();
         
-        - AlexNet (FCL: 4096, 4096, 1) - ();
+        - AlexNet (FCL: 4096, 4096, 1, x epochs training)      - ();
         
-        - VGG13 (FCL: 4096, 1024, 256, 1) - ();
+        - VGG13   (FCL: 4096, 1024, 256, 1, x epochs training) - ();
         
-        - VGG13 (FCL: 4096, 4096, 1) - ().
+        - VGG13   (FCL: 4096, 4096, 1, x epochs training)      - ().
