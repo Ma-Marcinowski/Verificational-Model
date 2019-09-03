@@ -109,13 +109,13 @@
         
        | | Core Network | Epochs | Fully Connected Layers | Loss | Acc | Val Loss | Val Acc |
        | --- | --- | --- | --- | --- | --- | --- | --- | 
-       | | AlexNet | 9 | 4096, 1024, 256 | x | x | x | x |
+       | Result | AlexNet | 9 | 4096, 1024, 256 | x | x | x | x |
        |Best Result | AlexNet | x | 4096, 1024, 256 | x | x | x | x |
-       | | AlexNet | 9 | 4096, 4096 | x | x | x | x |
+       | Result | AlexNet | 9 | 4096, 4096 | x | x | x | x |
        |Best Result | AlexNet | x | 4096, 4096 | x | x | x | x |
-       | | VGG13 | 9 | 4096, 1024, 256 | x | x | x | x |
+       | Result | VGG13 | 9 | 4096, 1024, 256 | x | x | x | x |
        |Best Result | VGG13 | x | 4096, 1024, 256 | x | x | x | x |
-       | | VGG13 | 9 | 4096, 4096 | x | x | x | x |
+       | Result | VGG13 | 9 | 4096, 4096 | x | x | x | x |
        |Best Result | VGG13 | x | 4096, 4096 | x | x | x | x |
         
    * #### 2.3. Model evaluation:
@@ -134,21 +134,18 @@
         
       * 2.3.3. CVL evaluation:
       
-        - AlexNet (FCL: 4096, 1024, 256, 1, x epochs training) - ();
-        
-        - AlexNet (FCL: 4096, 4096, 1, x epochs training)      - ();
-        
-        - VGG13   (FCL: 4096, 1024, 256, 1, x epochs training) - ();
-        
-        - VGG13   (FCL: 4096, 4096, 1, x epochs training)      - ().
+       | Core Network | Epochs of Training | Fully Connected Layers | Val Loss | Val Acc |
+       | --- | --- | --- | --- | --- | 
+       | AlexNet | x | 4096, 1024, 256 | x | x | x | x |
+       | AlexNet | x | 4096, 4096 | x | x | x | x |
+       | VGG13 | x | 4096, 1024, 256 | x | x | x | x |
+       | VGG13 | x | 4096, 4096 | x | x | x | x |
        
       * 2.3.4. IAM evaluation:
       
-
-        - AlexNet (FCL: 4096, 1024, 256, 1, x epochs training) - ();
-        
-        - AlexNet (FCL: 4096, 4096, 1, x epochs training)      - ();
-        
-        - VGG13   (FCL: 4096, 1024, 256, 1, x epochs training) - ();
-        
-        - VGG13   (FCL: 4096, 4096, 1, x epochs training)      - ().
+       | Core Network | Epochs of Training | Fully Connected Layers | Val Loss | Val Acc |
+       | --- | --- | --- | --- | --- | 
+       | AlexNet | x | 4096, 1024, 256 | x | x | x | x |
+       | AlexNet | x | 4096, 4096 | x | x | x | x |
+       | VGG13 | x | 4096, 1024, 256 | x | x | x | x |
+       | VGG13 | x | 4096, 4096 | x | x | x | x |
