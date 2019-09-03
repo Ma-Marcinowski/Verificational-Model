@@ -65,7 +65,7 @@
         
         - Python3;
         - Numpy (data sequence), Pandas (dataframe), Matplotlib (metrics plot), Pydot and GraphViz (model plot);
-        - Keras API with TensorFlow Backend (model).
+        - TensorFlow's implementation of the Keras API (model).
    
       * 2.1.3. Implementation:
        
@@ -91,7 +91,7 @@
 
       * 2.2.3. Hyperparameters:
       
-        - Epochs - [9, 18];
+        - Epochs - 18;
         - Batchsize - 64;
         - Dropout rate - 0.5;
         - Loss - Binary Crossentropy;
@@ -101,18 +101,8 @@
         - LR Decay - 0.000001 (1e-6);
         - Momentum - 0.9 (9e-1);
         - Nestrov - True.
-     
-     * 2.2.3. Training evaluation (9 epochs / without BN layers / without ReduceLROnPlateau callback):
         
-        - AlexNet (FCL: 4096, 1024, 256, 1) - loss(0.1661), acc(0.9390), val_loss(0.2729), val_acc (0.8975);
-        
-        - AlexNet (FCL: 4096, 4096, 1) - loss(0.2116), acc(0.9197), val_loss(0.2933), val_acc(0.8811);
-        
-        - VGG13 (FCL: 4096, 1024, 256, 1) - loss(), acc(), val_loss(), val_acc();
-        
-        - VGG13 (FCL: 4096, 4096, 1) - loss(), acc(), val_loss(), val_acc().
-        
-     * 2.2.4. Training evaluation (18 epochs / batch normalization layers / ReduceLROnPlateau callback):
+     * 2.2.3. Training evaluation:
         
         - AlexNet (FCL: 4096, 1024, 256, 1) - loss(), acc(), val_loss(), val_acc ();
         
@@ -124,25 +114,19 @@
         
    * #### 2.3. Model evaluation:
    
-      * 2.3.1. Models:
-      
-        - AlexNet -
-        
-        - VGG13 -
-   
-      * 2.3.2. Database (excluded pairs - both negative and positive - of patches containing identical content):
+      * 2.3.1. Database (excluded pairs - both negative and positive - of patches containing identical content):
       
         - CVL Test dataset -
         
         - IAM Test dataset -
 
-      * 2.3.3. Metrics:
+      * 2.3.2. Metrics:
         
         - Accuracy;        
         - Binary Crossentropy;
         -
         
-      * 2.3.4. CVL evaluation:
+      * 2.3.3. CVL evaluation:
       
         - AlexNet (FCL: 4096, 1024, 256, 1) - ();
         
@@ -152,7 +136,7 @@
         
         - VGG13 (FCL: 4096, 4096, 1) - ().
        
-      * 2.3.5. IAM evaluation:
+      * 2.3.4. IAM evaluation:
       
         - AlexNet (FCL: 4096, 1024, 256, 1) - ();
         
