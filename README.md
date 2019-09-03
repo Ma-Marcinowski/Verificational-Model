@@ -128,13 +128,13 @@
 
      * 2.3.2. Metrics:
         
-        - Accuracy;        
-        - Binary Crossentropy;
+        - Accuracy (Acc);        
+        - Binary Crossentropy (BC);
         -
         
      * 2.3.3. CVL evaluation:
        
-       | Core Network | Epochs of Training | FCL | Binary Crossentropy | Accuracy |
+       | Core Network | Epochs of Training | FCL | Acc | BC |
        | --- | --- | --- | --- | --- | 
        | AlexNet | x | 3 | x | x | x | x |
        | AlexNet | x | 2 | x | x | x | x |
@@ -143,7 +143,7 @@
        
      * 2.3.4. IAM evaluation:
        
-       | Core Network | Epochs of Training | FCL | Binary Crossentropy | Accuracy |
+       | Core Network | Epochs of Training | FCL | Acc | BC |
        | --- | --- | --- | --- | --- | 
        | AlexNet | x | 3 | x | x | x | x |
        | AlexNet | x | 2 | x | x | x | x |
