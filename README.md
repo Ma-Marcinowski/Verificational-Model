@@ -107,16 +107,16 @@
         
      * 2.2.3. Training evaluation:
        
-       | | Core Network | Epochs | Fully Connected Layers | Loss | Acc | Val Loss | Val Acc |
+       | | Core Network | Epochs | FCL | Loss | Accuracy | Validatio Loss | Validation Accuracy |
        | --- | --- | --- | --- | --- | --- | --- | --- | 
-       | Result | AlexNet | 9 | 4096, 1024, 256, 1 | x | x | x | x |
-       |Best Result | AlexNet | x | 4096, 1024, 256, 1 | x | x | x | x |
-       | Result | AlexNet | 9 | 4096, 4096, 1 | x | x | x | x |
-       |Best Result | AlexNet | x | 4096, 4096, 1 | x | x | x | x |
-       | Result | VGG13 | 9 | 4096, 1024, 256, 1 | x | x | x | x |
-       |Best Result | VGG13 | x | 4096, 1024, 256, 1 | x | x | x | x |
-       | Result | VGG13 | 9 | 4096, 4096, 1 | x | x | x | x |
-       |Best Result | VGG13 | x | 4096, 4096, 1 | x | x | x | x |
+       | Result | AlexNet | 9 | 3 | x | x | x | x |
+       |Best Result | AlexNet | x | 3 | x | x | x | x |
+       | Result | AlexNet | 9 | 2 | x | x | x | x |
+       |Best Result | AlexNet | x | 2 | x | x | x | x |
+       | Result | VGG13 | 9 | 3 | x | x | x | x |
+       |Best Result | VGG13 | x | 3 | x | x | x | x |
+       | Result | VGG13 | 9 | 2 | x | x | x | x |
+       |Best Result | VGG13 | x | 2 | x | x | x | x |
        
    * #### 2.3. Model evaluation:
    
@@ -129,16 +129,16 @@
      * 2.3.2. Metrics:
         
         - Accuracy;        
-        - Accuracy;
+        - Binary Crossentropy;
         -
         
      * 2.3.3. CVL evaluation:
        
-       | Core Network | --- | AlexNet | AlexNet | VGG13 | VGG13 |
-       | Epochs of Training | --- | x | x | x | x |
-       | Fully Connected Layers | --- | x | x | x | x |
-       | Accuracy | --- | x | x | x | x |
-       | Accuracy | --- | x | x | x | x |
+       | Core Network | AlexNet | AlexNet | VGG13 | VGG13 |
+       | Epochs of Training |  x | x | x | x |
+       | Fully Connected Layers |  x | x | x | x |
+       | Accuracy | x | x | x | x |
+       | Binary Crossentropy | x | x | x | x |
        
        - Epochs of Training (EofT) by the best training result. 
        - Fully Connected Layers (FCL) - [4096, 1024, 256] (3) or 4096, 4096 (2) 
