@@ -4,18 +4,18 @@
   
    * #### 1.1. Cel, założenia, dane i kroki preprocessingu
    
-      * 1.1.1. Celem autora niniejszego repozytorium było opracowanie metody preprocesowania obrazów pisma, na potrzeby sztucznych sieci neuronowych do weryfikacji autorstwa dokumentu (poprzez klasyfikację dwóch obrazów pisma do klasy pozytywnej `ten sam autor` albo negatywnej `różni autorzy`).
+     * 1.1.1. Celem autora niniejszego repozytorium było opracowanie metody preprocesowania obrazów pisma, na potrzeby sztucznych sieci neuronowych do weryfikacji autorstwa dokumentu (poprzez klasyfikację dwóch obrazów pisma do klasy pozytywnej `ten sam autor` albo negatywnej `różni autorzy`).
        
-      * 1.1.2. Stąd autor założył iż:
+     * 1.1.2. Stąd autor założył iż:
         
          - Obrazy pisma powinny być wprowadzane parami / symultanicznie na dwa odrębne wejścia danej sieci.      
          - Obrazy powinny być przetworzone bez znaczącej utraty jakości dla zachowania możliwie największej liczby cech grafizmów.
             
-      * 1.1.3. Dane:
+     * 1.1.3. Dane:
        
         - Wykorzystane tutaj zostały obrazy pisma (skany całych dokumentów) z bazy CVL (F. Kleber, S. Fiel, M. Diem, R. Sablatnig, *CVL-Database: An Off-line Database for Writer Retrieval, Writer Identification and Word Spotting*, "In Proc. of the 12th Int. Conference on Document Analysis and Recognition (ICDAR) 2013" 2013, s. 560 - 564). Gdzie zbiór treningowy zawiera 1415 obrazów pisma, testowy zaś 189.
             
-      * 1.1.4. Preprocesowanie obrazów polegało na:
+     * 1.1.4. Preprocesowanie obrazów polegało na:
                
         - Krok pierwszy - `Step_1_Preprocessing.py` - przekształcenie obrazów (skany całych dokumentów) do skali szarości (skala od czarny=0 do biały=255), inwersja kolorów, ekstrakcja przestrzeni pisarskiej z obrazów, przeskalowanie ekstraktów do wymiarów [1024x1024] piksele, dalszy podział ekstraktów na komórki o wymiarach [256x256] pikseli, konwersja z formatu `tif` na `png`. Ostateczne ekstrakty, które nie zawierają lub zawierają nieznaczą ilość tekstu, pomijane są przez program na podstawie progu średniej wartości pikseli - w każdym razie posortować można utworzone pliki według ich rozmiaru i na tej podstawie usunąć;
             
@@ -27,11 +27,11 @@
   
    * #### 1.2. Zastosowane programy
    		
-      * 1.2.1. Programy umieszczone w niniejszym repozytorium napisane zostały w języku Python 3.7.3.
+     * 1.2.1. Programy umieszczone w niniejszym repozytorium napisane zostały w języku Python 3.7.3.
   
-      * 1.2.2. Wykorzystano biblioteki: OpenCV 4.1.0; Numpy 1.16.4; tqdm 4.33.0; oraz standardowe biblioteki języka.
+     * 1.2.2. Wykorzystano biblioteki: OpenCV 4.1.0; Numpy 1.16.4; tqdm 4.33.0; oraz standardowe biblioteki języka.
   
-      * 1.2.3. Aby wykorzystać programy, które autor opracował do preprocesowania obrazów pisma:
+     * 1.2.3. Aby wykorzystać programy, które autor opracował do preprocesowania obrazów pisma:
   
         - Należy zainstalować Python oraz wskazane biblioteki (metoda instalacji zależy od systemu operacyjnego użytkownika);
         - Należy pobrać programy z niniejszego repozytorium;
@@ -45,7 +45,7 @@
 
    * #### 2.1. Model
    
-      * 2.1.1. Model architecture:
+     * 2.1.1. Model architecture:
       
         - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two separate ConvNets (either AlexNets or VGG13s), which outputs are flattend, concatenated and then passed to the fully connected layers for binary classification. Inputs to both conv-paths are identical in shape, dataset and preprocessing.
       
@@ -63,13 +63,13 @@
         
         - Layers order - as suggested in: G. Chen, *et al.*, *Rethinking the Usage of Batch Normalization and Dropout in the Training ofDeep Neural Networks*, arXiv:1905.05928;
         
-      * 2.1.2. Language, libraries and API:
+     * 2.1.2. Language, libraries and API:
         
         - Python3;
         - Numpy (data sequence), Pandas (dataframe), Matplotlib (metrics plot), Pydot and GraphViz (model plot);
         - TensorFlow's implementation of the Keras API (model).
    
-      * 2.1.3. Implementation:
+     * 2.1.3. Implementation:
        
         - Google Colaboratory - Python 3 Jupyter Notebook, GPU type runtime;
         
@@ -77,13 +77,13 @@
         
    * #### 2.2. Training
    
-      * 2.2.1. Database:
+     * 2.2.1. Database:
        
         - Training dataset -
         
         - Validation dataset -
    
-      * 2.2.2. Callbacks:
+     * 2.2.2. Callbacks:
        
         - Tensorboard -
         
@@ -91,7 +91,7 @@
         
         - ReduceLROnPlateau -
 
-      * 2.2.3. Hyperparameters:
+     * 2.2.3. Hyperparameters:
       
         - Epochs - 9;
         - Batchsize - 64;
@@ -120,19 +120,19 @@
        
    * #### 2.3. Model evaluation:
    
-      * 2.3.1. Database (excluded pairs - both negative and positive - of patches containing identical content):
+     * 2.3.1. Database (excluded pairs - both negative and positive - of patches containing identical content):
       
         - CVL Test dataset -
         
         - IAM Test dataset -
 
-      * 2.3.2. Metrics:
+     * 2.3.2. Metrics:
         
         - Accuracy;        
         - Binary Crossentropy;
         -
         
-      * 2.3.3. CVL evaluation:
+     * 2.3.3. CVL evaluation:
        
        | Core Network | Epochs of Training | Fully Connected Layers | Binary Crossentropy | Accuracy |
        | --- | --- | --- | --- | --- | 
@@ -141,7 +141,7 @@
        | VGG13 | x | 4096, 1024, 256 | x | x | x | x |
        | VGG13 | x | 4096, 4096 | x | x | x | x |
        
-      * 2.3.4. IAM evaluation:
+     * 2.3.4. IAM evaluation:
        
        | Core Network | Epochs of Training | Fully Connected Layers | Binary Crossentropy | Accuracy |
        | --- | --- | --- | --- | --- | 
