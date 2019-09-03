@@ -1,6 +1,7 @@
-import keras
-from keras.models import Model
-from keras.layers import Input, Activation, Dense, Conv2D, MaxPooling2D, Dropout, Flatten
+import tensorflow as tf
+
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Input, Activation, Dense, Conv2D, MaxPooling2D, Dropout, Flatten
 
 left_input = Input(shape=(256, 256, 1), name='left_input')
 right_input = Input(shape=(256, 256, 1), name='right_input')
@@ -39,7 +40,7 @@ xr = Conv2D(512, (3, 3), strides=1, padding='same', activation='relu', name='10t
 xr = MaxPooling2D(pool_size=(2, 2), strides=2, padding='valid', name='5thPoolRight')(xr)
 right_out = Flatten()(xr)
 
-x = keras.layers.concatenate([left_out, right_out], axis=1)
+x = tf.keras.layers.concatenate([left_out, right_out], axis=1)
 x = Dense(4096, activation='relu', name='1stFCL')(x)
 x = Dropout(rate=0.5)(x)
 x = Dense(1024, activation='relu', name='2ndFCL')(x)
@@ -50,8 +51,4 @@ output = Dense(1, activation='sigmoid', name='output')(x)
 
 model = Model(inputs=[left_input, right_input], outputs=[output])
 
-keras.utils.print_summary(model,
-                          line_length=None,
-                          positions=None,
-                          print_fn=None)
-keras.utils.plot_model(model, to_file='/path/SNN_VGG13.png', show_shapes=True, show_layer_names=True, rankdir='TB')
+tf.keras.utils.plot_model(model, to_file='/path/SNN_VGG13.png', show_shapes=True, show_layer_names=True, rankdir='TB')
