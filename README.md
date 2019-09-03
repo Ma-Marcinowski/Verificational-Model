@@ -106,6 +106,7 @@
         - Nestrov - True.
         
      * 2.2.3. Training evaluation:
+     
         
        | | Core Network | Epochs | Fully Connected Layers | Loss | Acc | Val Loss | Val Acc |
        | --- | --- | --- | --- | --- | --- | --- | --- | 
@@ -117,6 +118,7 @@
        |Best Result | VGG13 | x | 4096, 1024, 256 | x | x | x | x |
        | Result | VGG13 | 9 | 4096, 4096 | x | x | x | x |
        |Best Result | VGG13 | x | 4096, 4096 | x | x | x | x |
+        
         
    * #### 2.3. Model evaluation:
    
@@ -134,6 +136,7 @@
         
       * 2.3.3. CVL evaluation:
       
+      
        | Core Network | Epochs of Training | Fully Connected Layers | Val Loss | Val Acc |
        | --- | --- | --- | --- | --- | 
        | AlexNet | x | 4096, 1024, 256 | x | x | x | x |
@@ -141,7 +144,9 @@
        | VGG13 | x | 4096, 1024, 256 | x | x | x | x |
        | VGG13 | x | 4096, 4096 | x | x | x | x |
        
+       
       * 2.3.4. IAM evaluation:
+      
       
        | Core Network | Epochs of Training | Fully Connected Layers | Val Loss | Val Acc |
        | --- | --- | --- | --- | --- | 
