@@ -106,7 +106,7 @@
         - Nestrov - True.
         
      * 2.2.3. Training evaluation:
-       ## \newline
+       \
        | | Core Network | Epochs | Fully Connected Layers | Loss | Acc | Val Loss | Val Acc |
        | --- | --- | --- | --- | --- | --- | --- | --- | 
        | Result | AlexNet | 9 | 4096, 1024, 256 | x | x | x | x |
@@ -117,7 +117,7 @@
        |Best Result | VGG13 | x | 4096, 1024, 256 | x | x | x | x |
        | Result | VGG13 | 9 | 4096, 4096 | x | x | x | x |
        |Best Result | VGG13 | x | 4096, 4096 | x | x | x | x |
-       ## \newline 
+       \
    * #### 2.3. Model evaluation:
    
       * 2.3.1. Database (excluded pairs - both negative and positive - of patches containing identical content):
