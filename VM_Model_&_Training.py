@@ -107,7 +107,7 @@ tensorboard = tf.keras.callbacks.TensorBoard(log_dir='/path/logs/',
                                             write_graph=True,
                                             write_grads=False,
                                             write_images=False,
-                                            update_freq='epoch')
+                                            update_freq='batch')
 
 checkpoint = tf.keras.callbacks.ModelCheckpoint(filepath='/path/checkpoint/', 
                                                 monitor='val_loss', 
