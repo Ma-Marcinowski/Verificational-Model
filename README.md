@@ -107,16 +107,16 @@
         
      * 2.2.3. Training evaluation:
         
-        | Core Network | Epochs | Fully Connected Layers | Loss | Acc | Val Loss | Val Acc |
-        | --- | --- | --- | --- | --- | --- | --- | 
-        | AlexNet | 9 | 4096, 1024, 256 | x | x | x | x |
-        | AlexNet | x | 4096, 1024, 256 | x | x | x | x |
-        | AlexNet | 9 | 4096, 4096 | x | x | x | x |
-        | AlexNet | x | 4096, 4096 | x | x | x | x |
-        | VGG13 | 9 | 4096, 1024, 256 | x | x | x | x |
-        | VGG13 | x | 4096, 1024, 256 | x | x | x | x |
-        | VGG13 | 9 | 4096, 4096 | x | x | x | x |
-        | VGG13 | x | 4096, 4096 | x | x | x | x |
+       | | Core Network | Epochs | Fully Connected Layers | Loss | Acc | Val Loss | Val Acc |
+       | --- | --- | --- | --- | --- | --- | --- | --- | 
+       | | AlexNet | 9 | 4096, 1024, 256 | x | x | x | x |
+       |Best Result | AlexNet | x | 4096, 1024, 256 | x | x | x | x |
+       | | AlexNet | 9 | 4096, 4096 | x | x | x | x |
+       |Best Result | AlexNet | x | 4096, 4096 | x | x | x | x |
+       | | VGG13 | 9 | 4096, 1024, 256 | x | x | x | x |
+       |Best Result | VGG13 | x | 4096, 1024, 256 | x | x | x | x |
+       | | VGG13 | 9 | 4096, 4096 | x | x | x | x |
+       |Best Result | VGG13 | x | 4096, 4096 | x | x | x | x |
         
    * #### 2.3. Model evaluation:
    
