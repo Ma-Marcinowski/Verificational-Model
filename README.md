@@ -109,22 +109,14 @@
         
         | Core Network | Epochs | Fully Connected Layers | Loss | Acc | Val Loss | Val Acc |
         | --- | --- | --- | --- | --- | --- | --- | 
-        | AlexNet | 9 | 4096, 1024, 256, 1 | x | x | x | x |
-        | AlexNet | x | 4096, 1024, 256, 1 | x | x | x | x |
-        - AlexNet     (FCL: 4096, 1024, 256, 1) - loss(), acc(), val_loss(), val_acc();
-        - Best result (x epochs)                - loss(), acc(), val_loss(), val_acc();
-        
-        
-        - AlexNet     (FCL: 4096, 4096, 1)      - loss(), acc(), val_loss(), val_acc();
-        - Best result (x epochs)                - loss(), acc(), val_loss(), val_acc();
-        
-        
-        - VGG13       (FCL: 4096, 1024, 256, 1) - loss(), acc(), val_loss(), val_acc();
-        - Best result (x epochs)                - loss(), acc(), val_loss(), val_acc();
-        
-        
-        - VGG13       (FCL: 4096, 4096, 1)      - loss(), acc(), val_loss(), val_acc();
-        - Best result (x epochs)                - loss(), acc(), val_loss(), val_acc().
+        | AlexNet | 9 | 4096, 1024, 256 | x | x | x | x |
+        | AlexNet | x | 4096, 1024, 256 | x | x | x | x |
+        | AlexNet | 9 | 4096, 4096 | x | x | x | x |
+        | AlexNet | x | 4096, 4096 | x | x | x | x |
+        | VGG13 | 9 | 4096, 1024, 256 | x | x | x | x |
+        | VGG13 | x | 4096, 1024, 256 | x | x | x | x |
+        | VGG13 | 9 | 4096, 4096 | x | x | x | x |
+        | VGG13 | x | 4096, 4096 | x | x | x | x |
         
    * #### 2.3. Model evaluation:
    
