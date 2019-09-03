@@ -141,7 +141,7 @@
        | VGG13 | x | 3 | x | x | x | x |
        | VGG13 | x | 2 | x | x | x | x |
        
-       - Epochs of Training (EofT) by the best training result. 
+       - Epochs of Training (EofT) by the best validation result. 
               
      * 2.3.4. IAM evaluation:
        
@@ -151,4 +151,6 @@
        | AlexNet | x | 2 | x | x | x | x |
        | VGG13 | x | 3 | x | x | x | x |
        | VGG13 | x | 2 | x | x | x | x |
+       
+       - Epochs of Training (EofT) by the best validation result.
        
