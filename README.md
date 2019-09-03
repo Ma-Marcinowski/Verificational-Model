@@ -55,11 +55,11 @@
         
         - Fully Connected Layers - either three [4096, 1024, 256] or two layers [4096, 4096] and one output neuron (sigmoid activation) - for both core network variants;
         
-        - Batch Normalization (BN) Layers - applied before activation layers;
+        - Activation - ReLU for all layers, sigmoid for the output neuron;
         
-        - Dropout Layers - applied after activation layers;
+        - Batch Normalization (BN) Layers - applied after ReLU activation;
         
-        - Activation - ReLU for all layers, sigmoid for the output neuron.
+        - Dropout Layers - applied after BN layers (as suggested in: G. Chen, *et al.*, *Rethinking the Usage of Batch Normalization and Dropout in the Training ofDeep Neural Networks*, arXiv:1905.05928; benchmark: https://github.com/ducha-aiki/caffenet-benchmark/blob/master/batchnorm.md).
         
       * 2.1.2. Language, libraries and API:
         
@@ -93,7 +93,8 @@
       
         - Epochs - 18;
         - Batchsize - 64;
-        - Dropout rate - 0.5;
+        - Batch normalization - axis=-1, scale=False;
+        - Dropout rate - 0.2;
         - Loss - Binary Crossentropy;
         - Metrics - Accuracy;
         - Optimizer - SGD (Stochastic Gradient Descent);
