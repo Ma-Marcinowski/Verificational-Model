@@ -107,10 +107,10 @@
         
      * 2.2.3. Training evaluation:
         
-         Core Network | Epochs | Fully Connected Layers | Loss | Acc | Val Loss | Val Acc
-         --- | --- | --- | --- | --- | ---
-         AlexNet | 9 | 4096, 1024, 256, 1 | x | x | x | x 
-         AlexNet | x | 4096, 1024, 256, 1 | x | x | x | x 
+        | Core Network | Epochs | Fully Connected Layers | Loss | Acc | Val Loss | Val Acc |
+        | --- | --- | --- | --- | --- | --- | --- | 
+        | AlexNet | 9 | 4096, 1024, 256, 1 | x | x | x | x |
+        | AlexNet | x | 4096, 1024, 256, 1 | x | x | x | x |
         - AlexNet     (FCL: 4096, 1024, 256, 1) - loss(), acc(), val_loss(), val_acc();
         - Best result (x epochs)                - loss(), acc(), val_loss(), val_acc();
         
