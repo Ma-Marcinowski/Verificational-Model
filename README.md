@@ -59,7 +59,11 @@
         
         - Batch Normalization (BN) Layers - applied after ReLU activation;
         
-        - Dropout Layers - applied after BN layers (as suggested in: G. Chen, *et al.*, *Rethinking the Usage of Batch Normalization and Dropout in the Training ofDeep Neural Networks*, arXiv:1905.05928; benchmark: https://github.com/ducha-aiki/caffenet-benchmark/blob/master/batchnorm.md).
+        - Dropout Layers - applied after BN layers;
+        
+        - Layers order - as suggested in: G. Chen, *et al.*, *Rethinking the Usage of Batch Normalization and Dropout in the Training ofDeep Neural Networks*, arXiv:1905.05928;
+        
+        - Rates benchmark: https://github.com/ducha-aiki/caffenet-benchmark/blob/master/batchnorm.md
         
       * 2.1.2. Language, libraries and API:
         
