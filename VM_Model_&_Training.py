@@ -115,7 +115,7 @@ checkpoint = tf.keras.callbacks.ModelCheckpoint(filepath='/path/checkpoint/',
                                                 save_best_only=True, 
                                                 save_weights_only=True, 
                                                 mode='min',
-                                                period=1)
+                                                save_freq=1)
 
 reduceLR = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_loss', 
                                                factor=0.1, 
