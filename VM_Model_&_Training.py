@@ -93,7 +93,7 @@ x = Dropout(rate=0.2)(x)
 output = Dense(1, activation='sigmoid', name='output')(x)  
 model = Model(inputs=[left_input, right_input], outputs=[output])
 
-#model = load_model('/path/VM_SNNvl.h5')
+#model = load_model('/path/VM_SNN-{epoch:02d}-{val_loss:.2f}.h5')
 #model = load_model('/path/VM_SNN.h5')
 
 SGD = tf.keras.optimizers.SGD(learning_rate=0.01, momentum=0.0, decay=0.0, nesterov=False)
@@ -108,7 +108,7 @@ tensorboard = tf.keras.callbacks.TensorBoard(log_dir='/path/logs/',
                                             write_images=False,
                                             update_freq='batch')
 
-checkpoint = tf.keras.callbacks.ModelCheckpoint(filepath='/path/VM_SNNvl.h5',
+checkpoint = tf.keras.callbacks.ModelCheckpoint(filepath='/path/VM_SNN-{epoch:02d}-{val_loss:.2f}.h5',
                                                 load_weights_on_restart=False,
                                                 monitor='val_loss', 
                                                 verbose=1, 
