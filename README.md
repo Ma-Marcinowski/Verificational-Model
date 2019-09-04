@@ -98,7 +98,7 @@
         - Batch normalization - axis=-1, scale=False;
         - Dropout rate - 0.2;
         - Loss - Binary Crossentropy;
-        - Metrics - Accuracy;
+        - Metrics - Accuracy; 
         - Optimizer - SGD (Stochastic Gradient Descent);
         - Learning rate - 0.01 (1e-2);
         - LR Decay - 0.000001 (1e-6);
@@ -128,20 +128,20 @@
 
      * 2.3.2. Metrics:
         
-        - Area under the curve - AUC;
         - Binary Crossentropy - Loss;
         - Accuracy - Acc;
         - True Positive - TP;
         - True Negative - TN;
         - False Positive - FP;
         - False Negative - FN;        
-        - Specificity `(TN/(TN+FP))` at a given Sensitivity `(TP/(TP+FN))` - SatS;
         - Recall or Sensitivity `(TP/(TP+FN))` - Rec;
         - Precision `(TP/(TP+FP))` - Prec;
-
+        - Specificity `(TN/(TN+FP))` at a given Sensitivity `(TP/(TP+FN))` - SatS;
+        - Area under the ROC curve - AUC;
+      
      * 2.3.3. CVL evaluation:
      
-       | Core Network | EofT | FCL | AUC | Loss | Acc | TP | TN | FP | FN | SatS | Rec | Prec |
+       | Core Network | EofT | FCL | Loss | Acc | TP | TN | FP | FN | Rec | Prec | SatS | AUC |
        | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
        | AlexNet | x | 3 | x | x | x | x | x | x | x | x | x | x |
        | AlexNet | x | 2 | x | x | x | x | x | x | x | x | x | x |
@@ -153,7 +153,7 @@
      * 2.3.4. IAM evaluation:
        
 
-       | Core Network | EofT | FCL | AUC | Loss | Acc | TP | TN | FP | FN | SatS | Rec | Prec |
+       | Core Network | EofT | FCL | Loss | Acc | TP | TN | FP | FN | Rec | Prec | SatS | AUC |
        | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
        | AlexNet | x | 3 | x | x | x | x | x | x | x | x | x | x |
        | AlexNet | x | 2 | x | x | x | x | x | x | x | x | x | x |
