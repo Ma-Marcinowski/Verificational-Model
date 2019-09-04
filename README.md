@@ -135,9 +135,9 @@
         - True Negative - TN;
         - False Positive - FP;
         - False Negative - FN;        
-        - Specificity (TN/(TN+FP)) at a given Sensitivity (TP/(TP+FN)) - SatS;
-        - Recall or Sensitivity (TP/(TP+FN)) - Rec;
-        - Precision (TP/(TP+FP)) - Prec;
+        - Specificity `(TN/(TN+FP))` at a given Sensitivity `(TP/(TP+FN))` - SatS;
+        - Recall or Sensitivity `(TP/(TP+FN))` - Rec;
+        - Precision `(TP/(TP+FP))` - Prec;
 
      * 2.3.3. CVL evaluation:
      
