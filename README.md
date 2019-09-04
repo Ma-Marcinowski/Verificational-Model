@@ -99,12 +99,11 @@
         - Dropout rate - 0.2;
         - Loss - Binary Crossentropy;
         - Metrics - Accuracy; 
-        - Optimizer - SGD (Stochastic Gradient Descent);
+        - Optimizer - SGD (Stochastic Gradient Descent), NAG variant (Nesterov Accelerated Gradient);
         - Learning rate - 0.01 (1e-2);
         - LR Decay - 0.000001 (1e-6);
-        - Momentum - 0.9 (9e-1);
-        - Nestrov - True.
-        
+        - Momentum - 0.9 (9e-1).
+                
      * 2.2.3. Training evaluation:
        
        | | Core Network | Epochs | FCL | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
@@ -134,15 +133,14 @@
         - True Negative - TN;
         - False Positive - FP;
         - False Negative - FN;        
-        - Recall or Sensitivity `(TP/(TP+FN))` - Rec;
-        - Precision `(TP/(TP+FP))` - Prec;
-        - Specificity `(TN/(TN+FP))` at a given Sensitivity `(TP/(TP+FN))` - SatS;
+        - Recall `(TP/(TP+FN))` - Rec;
+        - Precision `(TP/(TP+FP))` - Pre;
         - Area under the ROC curve - AUC;
       
      * 2.3.3. CVL evaluation:
      
-       | Core Network | EofT | FCL | Loss | Acc | TP | TN | FP | FN | Rec | Prec | SatS | AUC |
-       | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+       | Core Network | EofT | FCL | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
+       | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
        | AlexNet | x | 3 | x | x | x | x | x | x | x | x | x | x |
        | AlexNet | x | 2 | x | x | x | x | x | x | x | x | x | x |
        | VGG13 | x | 3 | x | x | x | x | x | x | x | x | x | x |
@@ -153,8 +151,8 @@
      * 2.3.4. IAM evaluation:
        
 
-       | Core Network | EofT | FCL | Loss | Acc | TP | TN | FP | FN | Rec | Prec | SatS | AUC |
-       | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+       | Core Network | EofT | FCL | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
+       | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
        | AlexNet | x | 3 | x | x | x | x | x | x | x | x | x | x |
        | AlexNet | x | 2 | x | x | x | x | x | x | x | x | x | x |
        | VGG13 | x | 3 | x | x | x | x | x | x | x | x | x | x |
