@@ -136,8 +136,10 @@
      
        | Core Network | EofT | FCL | Acc | BC |
        | --- | --- | --- | --- | --- | 
-       | AlexNet | x | x | x | x | x | x |
-       | VGG13 | x | x | x | x | x | x |
+       | AlexNet | x | 3 | x | x | x | x |
+       | AlexNet | x | 2 | x | x | x | x |
+       | VGG13 | x | 3 | x | x | x | x |
+       | VGG13 | x | 2 | x | x | x | x |
        
        - Epochs of Training (EofT) by the best validation loss result. 
               
@@ -145,8 +147,10 @@
        
        | Core Network | EofT | FCL | Acc | BC |
        | --- | --- | --- | --- | --- | 
-       | AlexNet | x | x | x | x | x | x |
-       | VGG13 | x | x | x | x | x | x |
+       | AlexNet | x | 3 | x | x | x | x |
+       | AlexNet | x | 2 | x | x | x | x |
+       | VGG13 | x | 3 | x | x | x | x |
+       | VGG13 | x | 2 | x | x | x | x |
        
        - Epochs of Training (EofT) by the best validation loss result.
        
