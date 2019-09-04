@@ -10,7 +10,7 @@
      
         - Document images ought to be processed simultaneously by two separate convolutional neural networks and classified by one multilayer perceptron (fully connected layers);
         
-        - Preprocessing shouldn't affect images quality to preserve most of the graphism features.
+        - Preprocessing shouldn't affect images quality to preserve most graphisms features.
             
      * 1.1.3. Database:
        
