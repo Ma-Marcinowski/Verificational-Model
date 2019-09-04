@@ -2,20 +2,21 @@
 
 ### 1. Preprocessing
   
-   * #### 1.1. Cel, założenia, dane i kroki preprocessingu
+   * #### 1.1. Objective, assumptions, database and steps of preprocessing
    
-     * 1.1.1. Celem autora niniejszego repozytorium było opracowanie metody preprocesowania obrazów pisma, na potrzeby sztucznych sieci neuronowych do weryfikacji autorstwa dokumentu (poprzez klasyfikację dwóch obrazów pisma do klasy pozytywnej `ten sam autor` albo negatywnej `różni autorzy`).
+     * 1.1.1. Repository author's objective was to prepare a method of image preprocessing for verification of handwritten documents authorship by artificial neural network (through ANN classification of image pairs to positive `same author` or negative `different authors` class).
        
-     * 1.1.2. Stąd autor założył iż:
+     * 1.1.2. Author's assumptions were that:
+     
+        - Document images ought to be processed simultaneously by two separate convolutional neural networks and classified by one multilayer perceptron (fully connected layers);
         
-         - Obrazy pisma powinny być wprowadzane parami / symultanicznie na dwa odrębne wejścia danej sieci.      
-         - Obrazy powinny być przetworzone bez znaczącej utraty jakości dla zachowania możliwie największej liczby cech grafizmów.
+        - Preprocessing shouldn't affect images quality to preserve most of the graphism features.
             
-     * 1.1.3. Dane:
+     * 1.1.3. Database:
        
-        - Wykorzystane tutaj zostały obrazy pisma (skany całych dokumentów) z bazy CVL (F. Kleber, S. Fiel, M. Diem, R. Sablatnig, *CVL-Database: An Off-line Database for Writer Retrieval, Writer Identification and Word Spotting*, "In Proc. of the 12th Int. Conference on Document Analysis and Recognition (ICDAR) 2013" 2013, s. 560 - 564). Gdzie zbiór treningowy zawiera 1415 obrazów pisma, testowy zaś 189.
+        - Full page scans (subsets of 1415 training documents and 189 test documents) from CVL database (F. Kleber, S. Fiel, M. Diem, R. Sablatnig, *CVL-Database: An Off-line Database for Writer Retrieval, Writer Identification and Word Spotting*, "In Proc. of the 12th Int. Conference on Document Analysis and Recognition (ICDAR) 2013" 2013, p. 560 - 564). 
             
-     * 1.1.4. Preprocesowanie obrazów polegało na:
+     * 1.1.4. Steps of preprocessing:
                
         - Krok pierwszy - `Step_1_Preprocessing.py` - przekształcenie obrazów (skany całych dokumentów) do skali szarości (skala od czarny=0 do biały=255), inwersja kolorów, ekstrakcja przestrzeni pisarskiej z obrazów, przeskalowanie ekstraktów do wymiarów [1024x1024] piksele, dalszy podział ekstraktów na komórki o wymiarach [256x256] pikseli, konwersja z formatu `tif` na `png`. Ostateczne ekstrakty, które nie zawierają lub zawierają nieznaczą ilość tekstu, pomijane są przez program na podstawie progu średniej wartości pikseli - w każdym razie posortować można utworzone pliki według ich rozmiaru i na tej podstawie usunąć;
             
