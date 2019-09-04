@@ -107,7 +107,7 @@
         
      * 2.2.3. Training evaluation:
        
-       | | Core Network | Epochs | FCL | Loss | Accuracy | Validation Loss | Validation Accuracy |
+       | | Core Network | Epochs | FCL | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
        | --- | --- | --- | --- | --- | --- | --- | --- | 
        | Result | AlexNet | 9 | 3 | x | x | x | x |
        | Checkpoint | AlexNet | x | 3 | x | x | x | x |
