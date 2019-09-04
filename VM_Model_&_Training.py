@@ -109,13 +109,14 @@ tensorboard = tf.keras.callbacks.TensorBoard(log_dir='/path/logs/',
                                             write_images=False,
                                             update_freq='batch')
 
-checkpoint = tf.keras.callbacks.ModelCheckpoint(filepath='/path/checkpoint/', 
+checkpoint = tf.keras.callbacks.ModelCheckpoint(filepath='/path/checkpoint/',
+                                                #load_weights_on_restart=True,
                                                 monitor='val_loss', 
                                                 verbose=1, 
                                                 save_best_only=True, 
                                                 save_weights_only=True, 
                                                 mode='min',
-                                                save_freq=1)
+                                                save_freq='epoch')
 
 reduceLR = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_loss', 
                                                factor=0.1, 
@@ -136,7 +137,7 @@ history = model.fit_generator(generator=TrainSeq,
                               initial_epoch=0,
                               epochs=9)
 
-#model.save('/path/VM_SNN_M.h5', overwrite=True, include_optimizer=True)
+model.save('/path/VM_SNN_M.h5', overwrite=True, include_optimizer=True)
 
 plt.plot(history.history['acc'])
 plt.plot(history.history['val_acc'])
