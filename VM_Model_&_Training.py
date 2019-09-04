@@ -4,7 +4,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 from tensorflow.keras import losses
-from tensorflow.keras.utils import Sequence
 from tensorflow.keras.models import Model, load_model
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, Dense, Flatten, BatchNormalization, Dropout 
@@ -12,7 +11,7 @@ from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, Dense, Flatten,
 def load_image(img):
     return img_to_array(load_img(img, color_mode='grayscale')) / 255.
 
-class DataSequence(Sequence):
+class DataSequence(tf.keras.utils.Sequence):
 
     def __init__(self, dataframe, batch_size):
         self.df = pd.read_csv(dataframe)
@@ -94,12 +93,12 @@ x = Dropout(rate=0.2)(x)
 output = Dense(1, activation='sigmoid', name='output')(x)  
 model = Model(inputs=[left_input, right_input], outputs=[output])
 
-#model = load_model('/path/checkpoint/VM_SNN.h5')
+#model = load_model('/path/VM_SNNvl.h5')
 #model = load_model('/path/VM_SNN.h5')
 
-sgd = tf.keras.optimizers.SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+SGD = tf.keras.optimizers.SGD(learning_rate=0.01, momentum=0.0, decay=0.0, nesterov=False)
 
-model.compile(optimizer='sgd', loss='binary_crossentropy', metrics=['accuracy'])
+model.compile(optimizer=SGD, loss='binary_crossentropy', metrics=['accuracy'])
 
 tensorboard = tf.keras.callbacks.TensorBoard(log_dir='/path/logs/',
                                             histogram_freq=0,
@@ -109,7 +108,7 @@ tensorboard = tf.keras.callbacks.TensorBoard(log_dir='/path/logs/',
                                             write_images=False,
                                             update_freq='batch')
 
-checkpoint = tf.keras.callbacks.ModelCheckpoint(filepath='/path/checkpoint/',
+checkpoint = tf.keras.callbacks.ModelCheckpoint(filepath='/path/VM_SNNvl.h5',
                                                 load_weights_on_restart=False,
                                                 monitor='val_loss', 
                                                 verbose=1, 
@@ -137,7 +136,7 @@ history = model.fit_generator(generator=TrainSeq,
                               initial_epoch=0,
                               epochs=9)
 
-model.save('/path/VM_SNN_M.h5', overwrite=True, include_optimizer=True)
+model.save('/path/VM_SNN.h5', overwrite=True, include_optimizer=True)
 
 plt.plot(history.history['acc'])
 plt.plot(history.history['val_acc'])
