@@ -99,10 +99,11 @@
         - Dropout rate - 0.2;
         - Loss - Binary Crossentropy;
         - Metrics - Accuracy; 
-        - Optimizer - SGD (Stochastic Gradient Descent), NAG variant (Nesterov Accelerated Gradient);
+        - Optimizer - SGD (Stochastic Gradient Descent);
         - Learning rate - 0.01 (1e-2);
-        - LR Decay - 0.000001 (1e-6);
-        - Momentum - 0.9 (9e-1).
+        - LR Decay - 0.0;
+        - Momentum - 0.0
+        - Nestrov - False.
                 
      * 2.2.3. Training evaluation:
        
