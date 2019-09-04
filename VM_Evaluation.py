@@ -45,7 +45,7 @@ BatchSize = 64
 
 TestSeq = DataSequence(dataframe='/path/TestDataframe.csv', batch_size = BatchSize)
 
-model = load_model('/path/VM_SNNvl.h5')
+model = load_model('/path/VM_SNN-{epoch:02d}-{val_loss:.2f}.h5')
 #model = load_model('/path/VM_SNN.h5')
 
 SGD = tf.keras.optimizers.SGD(learning_rate=0.01, momentum=0.0, decay=0.0, nesterov=False)
