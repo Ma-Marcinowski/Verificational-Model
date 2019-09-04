@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 
 from tensorflow.keras import losses
-from tensorflow.keras.utils import Sequence
 from tensorflow.keras.models import Model, load_model
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, Dense, Flatten, BatchNormalization, Dropout 
@@ -11,7 +10,7 @@ from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, Dense, Flatten,
 def load_image(img):
     return img_to_array(load_img(img, color_mode='grayscale')) / 255.
 
-class DataSequence(Sequence):
+class DataSequence(tf.keras.utils.Sequence):
 
     def __init__(self, dataframe, batch_size):
         self.df = pd.read_csv(dataframe)
@@ -46,7 +45,20 @@ BatchSize = 64
 
 TestSeq = DataSequence(dataframe='/path/TestDataframe.csv', batch_size = BatchSize)
 
-model = load_model('/path/VM_SNN_M.h5')
+model = load_model('/path/VM_SNNvl.h5')
+#model = load_model('/path/VM_SNN.h5')
+
+SGD = tf.keras.optimizers.SGD(learning_rate=0.01, momentum=0.0, decay=0.0, nesterov=False)
+
+TP  = tf.keras.metrics.TruePositives()
+TN  = tf.keras.metrics.TrueNegatives()
+FN  = tf.keras.metrics.FalseNegatives()
+FP  = tf.keras.metrics.FalsePositives()
+Rec = tf.keras.metrics.Recall()
+Pre = tf.keras.metrics.Precision()
+AUC = tf.keras.metrics.AUC()
+
+model.compile(optimizer=SGD, loss='binary_crossentropy', metrics=['accuracy', TP, TN, FN, FP, Rec, Pre, AUC])
 
 tensorboard = tf.keras.callbacks.TensorBoard(log_dir='/path/logs/',
                                              histogram_freq=1,
