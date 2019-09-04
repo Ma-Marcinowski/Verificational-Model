@@ -127,7 +127,7 @@
 
      * 2.3.2. Metrics:
         
-        - Binary Crossentropy - Loss;
+        - Binary Crossentropy - BN;
         - Accuracy - Acc;
         - True Positive - TP;
         - True Negative - TN;
