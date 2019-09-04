@@ -53,7 +53,7 @@
         
         - VGG13 Core Network - {as desc in pap except for 2nd pool}
         
-        - Fully Connected Layers - either three [4096, 1024, 256], two [4096, 4096] or no FCL layers, and one output neuron (sigmoid activation) - for both core network variants;
+        - Fully Connected Layers - either three [4096, 1024, 256] or two [4096, 4096] FCL layers, and one output neuron (sigmoid activation) - for both core network variants;
         
         - Activation - ReLU for all layers, sigmoid for the output neuron;
         
@@ -113,14 +113,10 @@
        | Checkpoint | AlexNet | x | 3 | x | x | x | x |
        | Result | AlexNet | 9 | 2 | x | x | x | x |
        | Checkpoint | AlexNet | x | 2 | x | x | x | x |
-       | Result | AlexNet | 9 | 0 | x | x | x | x |
-       | Checkpoint | AlexNet | x | 0 | x | x | x | x |
-       | Result | VGG13 | 9 | 3 | x | x | x | x |
+        | Result | VGG13 | 9 | 3 | x | x | x | x |
        | Checkpoint | VGG13 | x | 3 | x | x | x | x |
        | Result | VGG13 | 9 | 2 | x | x | x | x |
        | Checkpoint | VGG13 | x | 2 | x | x | x | x |
-       | Result | VGG13 | 9 | 0 | x | x | x | x |
-       | Checkpoint | VGG13 | x | 0 | x | x | x | x |
        
    * #### 2.3. Model evaluation:
    
