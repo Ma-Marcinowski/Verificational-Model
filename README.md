@@ -4,7 +4,7 @@
   
    * #### 1.1. Objective, assumptions, database and steps of preprocessing
    
-     * 1.1.1. Objective of repository author's was to prepare a method of image preprocessing for verification of offline handwritten documents authorship by artificial neural network (through classification of image pairs to positive `same author` or negative `different authors` class).
+     * 1.1.1. Objective of repository author's was to prepare a method of image preprocessing for verification of offline handwritten documents authorship by artificial neural network (through classification of preprocessed image pairs to positive `same author` or negative `different authors` class).
        
      * 1.1.2. Author's assumptions were that:
      
