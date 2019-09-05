@@ -81,16 +81,14 @@ xr = MaxPooling2D(pool_size=(3, 3), strides=2, padding='valid', name='3rdPoolRig
 right_out = Flatten()(xr)
 
 x = tf.keras.layers.concatenate([left_out, right_out], axis=1)
-x = Dense(4096, activation='relu', name='1stFCL')(x) 
-x = BatchNormalization(axis=-1, scale=False)(x)
+x = Dense(4096, activation='relu', name='1stFCL')(x)                           
+x = Dropout(rate=0.2)(x)                                                       
+x = Dense(1024, activation='relu', name='2ndFCL')(x)
 x = Dropout(rate=0.2)(x) 
-x = Dense(1024, activation='relu', name='2ndFCL')(x) 
-x = BatchNormalization(axis=-1, scale=False)(x)
-x = Dropout(rate=0.2)(x)
-x = Dense(256, activation='relu', name='3rdFCL')(x) 
-x = BatchNormalization(axis=-1, scale=False)(x)
-x = Dropout(rate=0.2)(x)
-output = Dense(1, activation='sigmoid', name='output')(x)  
+x = Dense(256, activation='relu', name='3rdFCL')(x)
+x = Dropout(rate=0.2)(x) 
+output = Dense(1, activation='sigmoid', name='output')(x)                       
+
 model = Model(inputs=[left_input, right_input], outputs=[output])
 
 #model = load_model('/path/VM_SNN-{epoch:02d}-{val_loss:.2f}.h5')
@@ -130,7 +128,7 @@ history = model.fit_generator(generator=TrainSeq,
                               validation_data=ValidSeq,
                               callbacks=[tensorboard, checkpoint, reduceLR],
                               use_multiprocessing=False, 
-                              shuffle=False,
+                              shuffle=True,
                               verbose=1,
                               validation_freq=1,
                               initial_epoch=0,
