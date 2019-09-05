@@ -53,7 +53,7 @@
         
         - VGG13 Core Network - {as desc in pap except for 2nd pool}. Hovever the output size of the first convolutional block (1st and 2nd conv layer followed by 1st max pooling layer) is reduced by pooling of size [3x3] and stride [3x3] - as opposed to vanilla 1st max pooling layer where pool size is [2x2] and stride is [2x2]. Therefore (flattend and concatenated outputs of core nets) input to FCL is of size [none, 25000] as opposed to [none, 65000].
         
-        - Fully Connected Layers - either three [4096, 1024, 256] or two [4096, 4096] FC layers, and one output neuron (sigmoid activation) - for both core network variants;
+        - Fully Connected Layers - three [4096, 1024, 256] FC layers, and one output neuron (sigmoid activation) AlexNet core network;
         
         - Activation - ReLU for all layers, sigmoid for the output neuron;
         
@@ -71,7 +71,7 @@
        
         - Google Colaboratory - Python 3 Jupyter Notebook, GPU type runtime;
         
-        - Time - 500ms/step for Alexnet, XXXms/step for VGG.
+        - Time - 500ms/step for Alexnet, XXXms/step for VGG. ???
         
    * #### 2.2. Training
    
@@ -93,7 +93,7 @@
       
         - Epochs - 9;
         - Batchsize - 64;
-        - Batch normalization - Scale=True;
+        - Batch normalization - Scale=False;
         - Dropout rate - 0.2;
         - Loss - Binary Crossentropy;
         - Metrics - Accuracy; 
@@ -106,16 +106,12 @@
                 
      * 2.2.4. Training:
        
-       | | Core Network | Epochs | FCL | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
-       | --- | --- | --- | --- | --- | --- | --- | --- | 
-       | Result | AlexNet | 9 | 3 | x | x | x | x |
-       | Checkpoint | AlexNet | x | 3 | x | x | x | x |
-       | Result | AlexNet | 9 | 2 | x | x | x | x |
-       | Checkpoint | AlexNet | x | 2 | x | x | x | x |
-        | Result | VGG13 | 9 | 3 | x | x | x | x |
-       | Checkpoint | VGG13 | x | 3 | x | x | x | x |
-       | Result | VGG13 | 9 | 2 | x | x | x | x |
-       | Checkpoint | VGG13 | x | 2 | x | x | x | x |
+       | | Core Network | Epochs | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
+       | --- | --- | --- | --- | --- | --- | --- | 
+       | Result | AlexNet | 9 |  x | x | x | x |
+       | Checkpoint | AlexNet | x | x | x | x | x |     
+       | Result | VGG13 | 9 | x | x | x | x |
+       | Checkpoint | VGG13 | x | x | x | x | x |
        
    * #### 2.3. Model evaluation:
    
@@ -139,24 +135,20 @@
       
      * 2.3.3. CVL evaluation:
      
-       | Core Network | EofT | FCL | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
-       | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-       | AlexNet | x | 3 | x | x | x | x | x | x | x | x | x | x |
-       | AlexNet | x | 2 | x | x | x | x | x | x | x | x | x | x |
-       | VGG13 | x | 3 | x | x | x | x | x | x | x | x | x | x |
-       | VGG13 | x | 2 | x | x | x | x | x | x | x | x | x | x |
-       
+       | Core Network | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
+       | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+       | AlexNet | x | x | x | x | x | x | x | x | x | x | x |
+       | VGG13 | x | x | x | x | x | x | x | x | x | x | x |
+              
        - Epochs of Training (EofT) by the best validation loss result. 
               
      * 2.3.4. IAM evaluation:
        
 
-       | Core Network | EofT | FCL | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
-       | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-       | AlexNet | x | 3 | x | x | x | x | x | x | x | x | x | x |
-       | AlexNet | x | 2 | x | x | x | x | x | x | x | x | x | x |
-       | VGG13 | x | 3 | x | x | x | x | x | x | x | x | x | x |
-       | VGG13 | x | 2 | x | x | x | x | x | x | x | x | x | x |
+       | Core Network | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
+       | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+       | AlexNet | x | x | x | x | x | x | x | x | x | x | x |
+       | VGG13 | x | x | x | x | x | x | x | x | x | x | x |
        
        - Epochs of Training (EofT) by the best validation loss result.
        
