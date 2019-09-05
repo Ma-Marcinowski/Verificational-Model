@@ -141,14 +141,35 @@
         - Batchsize - 4;
         - Loss - Binary Crossentropy;
         - Metrics - Accuracy; 
-        - Optimizer - 
-        - Learning rate - ;
-        - LR Decay - ;
-        - Momentum - 
-        - Nestrov - ;
+        - Optimizer - SGD;
+        - Learning rate - 0.01;
+        - LR Decay - 0.0;
+        - Momentum - 0.0;
+        - Nestrov - False;
         - Shuffle - False.
         - Dropout - either 05, 0.2 or 0.0;
         - Batch normalization - either scale True or False;
+        
+        BN after conv and dense layers, dropout after BN on dense layers:
+        drop 0.0, scale False = loss: 8.1596e-04 - acc: 1.0000 - val_loss: 7.6140 - val_acc: 0.5000
+        drop 0.2, scale False = loss: 0.0036 - acc: 1.0000 - val_loss: 3.9437 - val_acc: 0.7500
+        drop 0.5, scale False = loss: 0.0148 - acc: 1.0000 - val_loss: 4.8924 - val_acc: 0.5000
+        drop 0.0, scale True = loss: 8.6930e-04 - acc: 1.0000 - val_loss: 12.8015 - val_acc: 0.5000
+        drop 0.2, scale True = loss: 0.0035 - acc: 1.0000 - val_loss: 11.3666 - val_acc: 0.7500
+        drop 0.5, scale True = loss: 0.0058 - acc: 1.0000 - val_loss: 40.0480 - val_acc: 0.5000
+        
+        BN after conv layers, dropout after dense layers:
+        drop 0.0, scale False = loss: 0.0016 - acc: 1.0000 - val_loss: 0.6021 - val_acc: 0.5000
+        drop **0.2**, **scale=False** = loss: **0.0024** - acc: **1.0000** - val_loss: **0.1770** - val_acc: **1.0000**
+        drop 0.5, scale False = loss: 4341.1938 - acc: 0.5000 - val_loss: 2847396.5000 - val_acc: 0.5000
+        drop 0.0, scale True = loss: 0.0020 - acc: 1.0000 - val_loss: 0.5843 - val_acc: 1.0000
+        drop 0.2, scale True = loss: 0.0013 - acc: 1.0000 - val_loss: 0.4065 - val_acc: 1.0000
+        drop 0.5, scale True = loss: 736.3784 - acc: 0.5000 - val_loss: 7517.8545 - val_acc: 0.5000
+        
+        No BN layers, dropout after dense layers:
+        drop 0.0 = loss: 0.6557 - acc: 1.0000 - val_loss: 0.6530 - val_acc: 1.0000
+        drop 0.2 = loss: 0.6676 - acc: 1.0000 - val_loss: 0.6575 - val_acc: 1.0000
+        drop 0.5 = loss: 0.6926 - acc: 0.7500 - val_loss: 0.6823 - val_acc: 1.0000
         
      * 2.2.7. Training:
        
