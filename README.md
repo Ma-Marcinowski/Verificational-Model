@@ -91,8 +91,9 @@
 
      * 2.2.3. Hyperparameters:
       
-        - Epochs - 6; 
+        - Epochs - 9; 
         - Batchsize - 64;
+        - Shuffle - True;
         - Batch normalization - Scale=False;
         - Dropout rate - 0.2;
         - Loss - Binary Crossentropy;
@@ -101,14 +102,13 @@
         - Learning rate - 0.01;
         - LR Decay - 0.0;
         - Momentum - 0.0;
-        - Nestrov - False;
-        - Shuffle - True.
+        - Nestrov - False.
                 
      * 2.2.4. Training:
        
        | | Core Network | Epochs | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
        | --- | --- | --- | --- | --- | --- | --- | 
-       | Result | AlexNet | 6 |  x | x | x | x |
+       | Result | AlexNet | 9 |  x | x | x | x |
        | Checkpoint | AlexNet | x | x | x | x | x |     
        | Result | VGG13 | x | x | x | x | x |
        | Checkpoint | VGG13 | x | x | x | x | x |
@@ -140,7 +140,7 @@
        | AlexNet | x | x | x | x | x | x | x | x | x | x | x |
        | VGG13 | x | x | x | x | x | x | x | x | x | x | x |
               
-       - Epochs of Training (EofT) by the best validation loss result. 
+       - Epochs of Training (EofT) by the best validation result. 
               
      * 2.3.4. IAM evaluation:
        
@@ -150,5 +150,5 @@
        | AlexNet | x | x | x | x | x | x | x | x | x | x | x |
        | VGG13 | x | x | x | x | x | x | x | x | x | x | x |
        
-       - Epochs of Training (EofT) by the best validation loss result.
+       - Epochs of Training (EofT) by the best validation result.
        
