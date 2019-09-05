@@ -91,7 +91,7 @@
 
      * 2.2.3. Hyperparameters:
       
-        - Epochs - 9; ???
+        - Epochs - 6; 
         - Batchsize - 64;
         - Batch normalization - Scale=False;
         - Dropout rate - 0.2;
@@ -108,9 +108,9 @@
        
        | | Core Network | Epochs | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
        | --- | --- | --- | --- | --- | --- | --- | 
-       | Result | AlexNet | 9 |  x | x | x | x |
+       | Result | AlexNet | 6 |  x | x | x | x |
        | Checkpoint | AlexNet | x | x | x | x | x |     
-       | Result | VGG13 | 9 | x | x | x | x |
+       | Result | VGG13 | x | x | x | x | x |
        | Checkpoint | VGG13 | x | x | x | x | x |
        
    * #### 2.3. Model evaluation:
