@@ -93,8 +93,8 @@
       
         - Epochs - 9; 
         - Batchsize - 64;
-        - Shuffle - True;
-        - Batch normalization - Scale=False;
+        - Shuffle - True for fit_generator;
+        - Batch normalization - Default;
         - Dropout rate - 0.2;
         - Loss - Binary Crossentropy;
         - Metrics - Accuracy; 
