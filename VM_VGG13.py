@@ -62,13 +62,10 @@ right_out = Flatten()(xr)
 
 x = tf.keras.layers.concatenate([left_out, right_out], axis=1)
 x = Dense(4096, activation='relu', name='1stFCL')(x) 
-x = BatchNormalization(axis=-1, scale=False)(x)
 x = Dropout(rate=0.2)(x) 
 x = Dense(1024, activation='relu', name='2ndFCL')(x) 
-x = BatchNormalization(axis=-1, scale=False)(x)
 x = Dropout(rate=0.2)(x)
 x = Dense(256, activation='relu', name='3rdFCL')(x) 
-x = BatchNormalization(axis=-1, scale=False)(x)
 x = Dropout(rate=0.2)(x)
 output = Dense(1, activation='sigmoid', name='output')(x)  
 
