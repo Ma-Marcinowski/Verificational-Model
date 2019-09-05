@@ -95,7 +95,7 @@
       
         - Epochs - 9;
         - Batchsize - 64;
-        - Batch normalization - scale=False;
+        - Batch normalization - scale=; ???
         - Dropout rate - 0.2; ???
         - Loss - Binary Crossentropy;
         - Metrics - Accuracy; 
