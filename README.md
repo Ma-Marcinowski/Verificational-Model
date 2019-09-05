@@ -59,9 +59,9 @@
         
         - Batch Normalization (BN) Layers - applied after ReLU activation;
         
-        - Dropout Layers - applied after BN layers;
+        - Dropout Layers - applied after BN layers; ???
         
-        - Layers order - as suggested in: G. Chen, *et al.*, *Rethinking the Usage of Batch Normalization and Dropout in the Training ofDeep Neural Networks*, arXiv:1905.05928;
+        - Layers order - as suggested in: G. Chen, *et al.*, *Rethinking the Usage of Batch Normalization and Dropout in the Training ofDeep Neural Networks*, arXiv:1905.05928; 
         
      * 2.1.2. Language, libraries and framework / API:
         
@@ -96,21 +96,21 @@
         - Epochs - 9;
         - Batchsize - 64;
         - Batch normalization - scale=False;
-        - Dropout rate - 0.2;
+        - Dropout rate - 0.2; ???
         - Loss - Binary Crossentropy;
         - Metrics - Accuracy; 
-        - Optimizer - SGD (Stochastic Gradient Descent);
-        - Learning rate - 0.01 (1e-2);
-        - LR Decay - 0.0;
-        - Momentum - 0.0
-        - Nestrov - False;
+        - Optimizer - ;
+        - Learning rate - ;
+        - LR Decay - ;
+        - Momentum - ;
+        - Nestrov - ;
         - Shuffle - .
         
      * 2.2.4 Optimizers evaluation:
         
         - Core network - AlexNet;
         - FCL - 3 (4096, 1024, 256);
-        - Epochs - 3(6?);
+        - Epochs - 6;
         - Batchsize - 64;
         - Batch normalization - scale=False;
         - Dropout rate - 0.2;
