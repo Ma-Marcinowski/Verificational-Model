@@ -3,10 +3,11 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-from tensorflow.keras import losses
+from tensorflow.keras.losses import binary_crossentropy 
 from tensorflow.keras.models import Model, load_model
+from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, Dense
+from tensorflow.keras.layers import Flatten, BatchNormalization, Dropout 
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
-from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, Dense, Flatten, BatchNormalization, Dropout 
 
 def load_image(img):
     return img_to_array(load_img(img, color_mode='grayscale')) / 255.
