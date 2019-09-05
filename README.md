@@ -57,12 +57,10 @@
         
         - Activation - ReLU for all layers, sigmoid for the output neuron;
         
-        - Batch Normalization (BN) Layers - applied after ReLU activation;
+        - Batch Normalization (BN) Layers - applied after ReLU activations of convolutional layers;
         
-        - Dropout Layers - applied after BN layers; ???
-        
-        - Layers order - as suggested in: G. Chen, *et al.*, *Rethinking the Usage of Batch Normalization and Dropout in the Training ofDeep Neural Networks*, arXiv:1905.05928; 
-        
+        - Dropout Layers - applied after dense FCL layers;
+               
      * 2.1.2. Language, libraries and framework / API:
         
         - Python3;
@@ -82,9 +80,7 @@
         - Training dataset -
         
         - Validation dataset -
-        
-        - Hyperparameters evaluation - dataset of two [256x256] images (one black, one white). Training and validation dataframe consisting of two positive instances (one white images pair, and one black images pair) and two negative instances (left image white, right image black and left image black, right image white).
-   
+          
      * 2.2.2. Callbacks:
        
         - Tensorboard -
@@ -97,81 +93,18 @@
       
         - Epochs - 9;
         - Batchsize - 64;
-        - Batch normalization - scale=; ???
-        - Dropout rate - 0.2; ???
-        - Loss - Binary Crossentropy;
-        - Metrics - Accuracy; 
-        - Optimizer - ;
-        - Learning rate - ;
-        - LR Decay - ;
-        - Momentum - ;
-        - Nestrov - ;
-        - Shuffle - .
-        
-     * 2.2.4 Optimizers evaluation v1.0:
-        
-        - Database - CVL
-        - Core network - AlexNet;
-        - FCL - 3 (4096, 1024, 256);
-        - Epochs - 3 (6 for SGD);
-        - Batchsize - 64;
-        - Batch normalization - scale=False;
+        - Batch normalization - Scale=True;
         - Dropout rate - 0.2;
         - Loss - Binary Crossentropy;
-        - Metrics - Accuracy;
-        - Shuffle - False.
-        - N - NAG (Nesterov Accelerated Gradient) variant of SGD, Learning rate(0.01), Decay(1e-6), Momentum(0.9), Nestrov(True);
-        - M - Momentum SGD, Learning rate(0.01), Decay(5e-4), Momentum(0.9), Nestrov(False);
-        - S - SGD (Stochastic Gradient Descent), Learning rate(0.01), Decay(0.0), Momentum(0.0), Nestrov(False);
-        
-     * 2.2.5 Optimizers evaluation v2.0:
-        - Database - black and white images negative and positive pairs;
-        - Epochs - 20;
-        - Batchsize - 4.
-     nag=loss: 0.0011 - acc: 1.0000 - val_loss: 24141.2871 - val_acc: 0.5000
-     momentum= loss: 8.3735e-04 - acc: 1.0000 - val_loss: 14726.2324 - val_acc: 0.5000
-     sgd = loss: 0.0036 - acc: 1.0000 - val_loss: 3.9437 - val_acc: 0.7500
-     
-     * 2.2.6 Dropout and normalization evaluation:
-        
-        - Database - black and white images negative and positive pairs;
-        - Core network - AlexNet;
-        - FCL - 3 (4096, 1024, 256);
-        - Epochs - 20;
-        - Batchsize - 4;
-        - Loss - Binary Crossentropy;
         - Metrics - Accuracy; 
-        - Optimizer - SGD;
+        - Optimizer - SGD (Stochastic Gradient Descent);
         - Learning rate - 0.01;
         - LR Decay - 0.0;
         - Momentum - 0.0;
         - Nestrov - False;
-        - Shuffle - False.
-        - Dropout - either 05, 0.2 or 0.0;
-        - Batch normalization - either scale True or False;
-        
-        BN after conv and dense layers, dropout after BN on dense layers:
-        drop 0.0, scale False = loss: 8.1596e-04 - acc: 1.0000 - val_loss: 7.6140 - val_acc: 0.5000
-        drop 0.2, scale False = loss: 0.0036 - acc: 1.0000 - val_loss: 3.9437 - val_acc: 0.7500
-        drop 0.5, scale False = loss: 0.0148 - acc: 1.0000 - val_loss: 4.8924 - val_acc: 0.5000
-        drop 0.0, scale True = loss: 8.6930e-04 - acc: 1.0000 - val_loss: 12.8015 - val_acc: 0.5000
-        drop 0.2, scale True = loss: 0.0035 - acc: 1.0000 - val_loss: 11.3666 - val_acc: 0.7500
-        drop 0.5, scale True = loss: 0.0058 - acc: 1.0000 - val_loss: 40.0480 - val_acc: 0.5000
-        
-        BN after conv layers, dropout after dense layers:
-        drop 0.0, scale False = loss: 0.0016 - acc: 1.0000 - val_loss: 0.6021 - val_acc: 0.5000
-        drop **0.2**, **scale=False** = loss: **0.0024** - acc: **1.0000** - val_loss: **0.1770** - val_acc: **1.0000**
-        drop 0.5, scale False = loss: 4341.1938 - acc: 0.5000 - val_loss: 2847396.5000 - val_acc: 0.5000
-        drop 0.0, scale True = loss: 0.0020 - acc: 1.0000 - val_loss: 0.5843 - val_acc: 1.0000
-        drop 0.2, scale True = loss: 0.0013 - acc: 1.0000 - val_loss: 0.4065 - val_acc: 1.0000
-        drop 0.5, scale True = loss: 736.3784 - acc: 0.5000 - val_loss: 7517.8545 - val_acc: 0.5000
-        
-        No BN layers, dropout after dense layers:
-        drop 0.0 = loss: 0.6557 - acc: 1.0000 - val_loss: 0.6530 - val_acc: 1.0000
-        drop 0.2 = loss: 0.6676 - acc: 1.0000 - val_loss: 0.6575 - val_acc: 1.0000
-        drop 0.5 = loss: 0.6926 - acc: 0.7500 - val_loss: 0.6823 - val_acc: 1.0000
-        
-     * 2.2.7. Training:
+        - Shuffle - True.
+                
+     * 2.2.4. Training:
        
        | | Core Network | Epochs | FCL | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
        | --- | --- | --- | --- | --- | --- | --- | --- | 
