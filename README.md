@@ -82,6 +82,8 @@
         - Training dataset -
         
         - Validation dataset -
+        
+        - Hyperparameters evaluation - dataset of two [256x256] images (one black, one white). Training and validation dataframe consisting of two positive instances (one white images pair, and one black images pair) and two negative instances (left image white, right image black and left image black, right image white).
    
      * 2.2.2. Callbacks:
        
@@ -106,8 +108,9 @@
         - Nestrov - ;
         - Shuffle - .
         
-     * 2.2.4 Optimizers evaluation:
+     * 2.2.4 Optimizers evaluation v1.0:
         
+        - Database - CVL
         - Core network - AlexNet;
         - FCL - 3 (4096, 1024, 256);
         - Epochs - 3 (6 for SGD);
@@ -121,12 +124,21 @@
         - M - Momentum SGD, Learning rate(0.01), Decay(5e-4), Momentum(0.9), Nestrov(False);
         - S - SGD (Stochastic Gradient Descent), Learning rate(0.01), Decay(0.0), Momentum(0.0), Nestrov(False);
         
-     * 2.2.5 Dropout and normalization evaluation:
+     * 2.2.5 Optimizers evaluation v2.0:
+        - Database - black and white images negative and positive pairs;
+        - Epochs - 20;
+        - Batchsize - 4.
+     nag=
+     momentum=
+     sgd = loss: 0.0036 - acc: 1.0000 - val_loss: 3.9437 - val_acc: 0.7500
+     
+     * 2.2.6 Dropout and normalization evaluation:
         
+        - Database - black and white images negative and positive pairs;
         - Core network - AlexNet;
         - FCL - 3 (4096, 1024, 256);
-        - Epochs - 3;
-        - Batchsize - 64;
+        - Epochs - 20;
+        - Batchsize - 4;
         - Loss - Binary Crossentropy;
         - Metrics - Accuracy; 
         - Optimizer - 
@@ -135,10 +147,10 @@
         - Momentum - 
         - Nestrov - ;
         - Shuffle - False.
-        - Dropout - either 0.2 or 0.0;
+        - Dropout - either 05, 0.2 or 0.0;
         - Batch normalization - either scale True or False;
         
-     * 2.2.6. Training evaluation:
+     * 2.2.7. Training:
        
        | | Core Network | Epochs | FCL | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
        | --- | --- | --- | --- | --- | --- | --- | --- | 
