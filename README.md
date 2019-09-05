@@ -110,7 +110,7 @@
         
         - Core network - AlexNet;
         - FCL - 3 (4096, 1024, 256);
-        - Epochs - 6;
+        - Epochs - 3 (6 for SGD);
         - Batchsize - 64;
         - Batch normalization - scale=False;
         - Dropout rate - 0.2;
