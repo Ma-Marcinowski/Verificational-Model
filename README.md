@@ -110,13 +110,13 @@
        | | Core Network | Epochs | FCL | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
        | --- | --- | --- | --- | --- | --- | --- | --- | 
        | Result | AlexNet | 9 | 3 | x | x | x | x |
-       | Best Result | AlexNet | x | 3 | x | x | x | x |
+       | Checkpoint | AlexNet | x | 3 | x | x | x | x |
        | Result | AlexNet | 9 | 2 | x | x | x | x |
-       | Best Result | AlexNet | x | 2 | x | x | x | x |
+       | Checkpoint | AlexNet | x | 2 | x | x | x | x |
         | Result | VGG13 | 9 | 3 | x | x | x | x |
-       | Best Result | VGG13 | x | 3 | x | x | x | x |
+       | Checkpoint | VGG13 | x | 3 | x | x | x | x |
        | Result | VGG13 | 9 | 2 | x | x | x | x |
-       | Best Result | VGG13 | x | 2 | x | x | x | x |
+       | Checkpoint | VGG13 | x | 2 | x | x | x | x |
        
    * #### 2.3. Model evaluation:
    
