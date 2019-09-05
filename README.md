@@ -103,9 +103,42 @@
         - Learning rate - 0.01 (1e-2);
         - LR Decay - 0.0;
         - Momentum - 0.0
-        - Nestrov - False.
-                
-     * 2.2.3. Training evaluation:
+        - Nestrov - False;
+        - Shuffle - .
+        
+     * 2.2.4 Optimizers evaluation:
+        
+        - Core network - AlexNet;
+        - FCL - 3 (4096, 1024, 256);
+        - Epochs - 3 (6 for SGD);
+        - Batchsize - 64;
+        - Batch normalization - scale=False;
+        - Dropout rate - 0.2;
+        - Loss - Binary Crossentropy;
+        - Metrics - Accuracy;
+        - Shuffle - False.
+        - N - NAG (Nesterov Accelerated Gradient) variant of SGD, Learning rate(0.01), Decay(1e-6), Momentum(0.9), Nestrov(True);
+        - M - Momentum SGD, Learning rate(0.01), Decay(5e-4), Momentum(0.9), Nestrov(False);
+        - S - SGD (Stochastic Gradient Descent), Learning rate(0.01), Decay(0.0), Momentum(0.0), Nestrov(False);
+        
+     * 2.2.5 Dropout and normalization evaluation:
+        
+        - Core network - AlexNet;
+        - FCL - 3 (4096, 1024, 256);
+        - Epochs - 3 (6 for SGD);
+        - Batchsize - 64;
+        - Loss - Binary Crossentropy;
+        - Metrics - Accuracy; 
+        - Optimizer - 
+        - Learning rate - ;
+        - LR Decay - ;
+        - Momentum - 
+        - Nestrov - ;
+        - Shuffle - False.
+        - Dropout - either 0.2 or 0.0;
+        - Batch normalization - either scale True or False;
+        
+     * 2.2.6. Training evaluation:
        
        | | Core Network | Epochs | FCL | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
        | --- | --- | --- | --- | --- | --- | --- | --- | 
