@@ -128,8 +128,8 @@
         - Database - black and white images negative and positive pairs;
         - Epochs - 20;
         - Batchsize - 4.
-     nag=
-     momentum=
+     nag=loss: 0.0011 - acc: 1.0000 - val_loss: 24141.2871 - val_acc: 0.5000
+     momentum= loss: 8.3735e-04 - acc: 1.0000 - val_loss: 14726.2324 - val_acc: 0.5000
      sgd = loss: 0.0036 - acc: 1.0000 - val_loss: 3.9437 - val_acc: 0.7500
      
      * 2.2.6 Dropout and normalization evaluation:
