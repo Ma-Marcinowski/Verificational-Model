@@ -51,7 +51,7 @@
       
         - AlexNet Core Network - {as desc in paper}
         
-        - VGG13 Core Network - {as desc in pap except for 2nd pool}. Hovever the output size of the first convolutional block (1st and 2nd conv layer followed by 1st max pooling layer) is reduced by pooling of size [3x3] and stride [3x3] - as opposed to vanilla 1st max pooling layer where pool size is [2x2] and stride is [2x2]. Therefore (flattend and concatenated outputs of core nets) input to FCL is of size [none, 25000] as opposed to [none, 65000].
+        - VGG13 Core Network - {as desc in pap except for 2nd pool}. Hovever the output size of the first convolutional block (1st and 2nd conv layer followed by 1st max pooling layer) is reduced by pooling of size [3x3] and stride [3x3] - as opposed to vanilla 1st max pooling layer where pool size is [2x2] and stride is [2x2]. Therefore (flattend and concatenated outputs of VGG core nets) input to FCL is of size [none, 25000] as opposed to [none, 65000].
         
         - Fully Connected Layers - three [4096, 1024, 256] FC layers, and one output neuron (sigmoid activation) AlexNet core network;
         
@@ -71,7 +71,7 @@
        
         - Google Colaboratory - Python 3 Jupyter Notebook, GPU type runtime;
         
-        - Time - 500ms/step for Alexnet, XXXms/step for VGG. ???
+        - Time - 500ms/step for Alexnet, 000ms/step for VGG. ???
         
    * #### 2.2. Training
    
