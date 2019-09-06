@@ -70,7 +70,7 @@
      
        - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two separate ConvNets (of a given variant), which outputs are globally average pooled and passed to the output neuron for binary classification. Inputs to both conv-paths are identical in shape, dataset and preprocessing;
            
-        - AlexNet Core Network variant 1.2 - {as desc in paper};
+        - AlexNet Core Network variant 2.1 - {as desc in paper};
         
         - Global Average Pooling Layer - applied instead of fully connected layers. 
         
