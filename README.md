@@ -25,19 +25,20 @@
             
         - Krok czwarty - po przeprowadzeniu kroku trzeciego, przystąpić można do utworzenia *dataframe* zbioru walidacyjnego (który przeznaczony jest do testowania modelu podczas jego nauki). Otóż, utworzyć należy nowy plik typu `csv`, a następnie skopiować do niego dowolną liczbę wierszy z *dataframe* zbioru **testowego** (zazwyczaj 10% do 20% całkowitej liczby instancji testowych) chociażby daną liczbę wierszy od końca, gdyż zostały już losowo przetasowane. Należy jednak zwrócić uwagę, aby liczba instancji pozytywnych zblilżona była do liczby instancji negatywnych. Nie należy tworzyć następnie osobnego folderu obrazów walidacyjnych, ani nie jest konieczne, aby zachować dalej odrębne foldery dla obrazów testowych i treningowych - jeżeli preprocesowanie przeprowadzone zostało według lub analogicznie do kroków poprzednich - bowiem przynależność danej pary obrazów do danego zbioru określa na obecnym etapie *dataframe* danego zbioru. 
   
-   * #### 1.2. Zastosowane programy
+   * #### 1.2. Preprocessing programs:
    		
-     * 1.2.1. Programy umieszczone w niniejszym repozytorium napisane zostały w języku Python 3.7.3.
+     * 1.2.1. Programming language - Python 3.7.3.
   
-     * 1.2.2. Wykorzystano biblioteki: OpenCV 4.1.0; Numpy 1.16.4; tqdm 4.33.0; oraz standardowe biblioteki języka.
+     * 1.2.2. Libraries - OpenCV 4.1.0, Numpy 1.16.4, tqdm 4.33.0, and other common python libraries.
   
-     * 1.2.3. Aby wykorzystać programy, które autor opracował do preprocesowania obrazów pisma:
+     * 1.2.3. To utilize above preprocessing programs:
   
-        - Należy zainstalować Python oraz wskazane biblioteki (metoda instalacji zależy od systemu operacyjnego użytkownika);
-        - Należy pobrać programy z niniejszego repozytorium;
-        - Następnie otworzyć - za pomocą danego edytora tekstu - pliki zawierające poszczególne programy i dokonać edycji oznaczonych ścieżek, wskazując foldery gdzie zapisywane mają być obrazy pisma / dataframe (pliki programów zapisać należy w formacie `py`);
-        - Plik z danym programem umieścić należy w folderze, w którym znajdują się obrazy pisma, jakie mają zostać przez dany program przetworzone (jest to najprostsza metoda);
-        - Folder, który zawiera program i obrazy, otworzyć należy za pomocą terminala / interpretera poleceń (metoda zależna od systemu operacyjnego);
+        - Install Python and listed libraries (installation method depends on user's operating system);
+        - Download the repository;
+        - Using any given text editor, access programs code and edit image/dataframe save directories (save the program files in 'py' format); 
+        - Place a given preprocessing program file in a directory of images to be preprocessed by that given program (that's the simplest method);
+        - Access the directory - which contains a given preprocessing program file and images to be preprocessed - by the terminal / command-line interpreter (method of terminal access to directory depends on user's operating system)
+        - 
         - Następnie wpisać należy w terminalu komendę `python3 nazwa_programu.py`, stąd wykonany zostanie wskazany program;
         - Gdyby zaistniała taka konieczność: aby przerwać wykonywanie programu wykorzystać można w terminalu kombinację klawiszy `Ctrl + C`, aby zawiesić wykonywanie programu `Ctrl + Z`, aby zaś przywrócić wykonywanie zawieszonego programu wpisać należy komendę `fg` (dla terminalów większości systemów operacyjnych, *e.g.* macOS, Linux).      
   
