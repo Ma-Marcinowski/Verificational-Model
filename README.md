@@ -62,9 +62,9 @@
         
         - Batch Normalization (BN) Layers - applied after ReLU activations of convolutional layers;
         
-        - Dropout Layers - applied before each dense FCL layer and after each MaxPooling Layer;
+        - Dropout Layers - applied before each dense layer and after each MaxPooling Layer;
         
-        - L2 regularizer - applied on all FCL layers. 
+        - L2 regularizer - applied on all FC layers. 
      
      * 2.1.2. Model architecture variant 2.0:
      
