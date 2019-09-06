@@ -41,7 +41,7 @@ class DataSequence(tf.keras.utils.Sequence):
         batch_y = self.get_batch_labels(idx)
         return ({'left_input': batch_x1, 'right_input': batch_x2}, {'output': batch_y})
 
-BatchSize = 64
+BatchSize = 16
 
 TestSeq = DataSequence(dataframe='/path/TestDataframe.csv', batch_size = BatchSize)
 
