@@ -12,11 +12,13 @@ xl = Conv2D(96, (11, 11), strides=4, padding='same', activation='relu', input_sh
 xl = BatchNormalization(axis=-1, scale=True, trainable=True)(xl)
 xl = MaxPooling2D(pool_size=(3, 3), strides=2, padding='valid', name='1stPoolLeft')(xl)
 xl = SpatialDropout2D(rate=0.2)(xl)
+
 xl = Conv2D(256, (5, 5), strides=1, padding='same', activation='relu', name='2ndConvLeft')(xl)
 xl = BatchNormalization(axis=-1, scale=True, trainable=True)(xl)
 xl = MaxPooling2D(pool_size=(3, 3), strides=2, padding='valid', name='2ndPoolLeft')(xl)
 xl = Conv2D(384, (3, 3), strides=1, padding='same', activation='relu', name='3rdConvLeft')(xl)
 xl = SpatialDropout2D(rate=0.2)(xl)
+
 xl = BatchNormalization(axis=-1, scale=True, trainable=True)(xl)
 xl = Conv2D(384, (3, 3), strides=1, padding='same', activation='relu', name='4thConvLeft')(xl)
 xl = BatchNormalization(axis=-1, scale=True, trainable=True)(xl)
@@ -30,10 +32,12 @@ xr = Conv2D(96, (11, 11), strides=4, padding='same', activation='relu', input_sh
 xr = BatchNormalization(axis=-1, scale=True, trainable=True)(xr)
 xr = MaxPooling2D(pool_size=(3, 3), strides=2, padding='valid', name='1stPoolRight')(xr)
 xr = SpatialDropout2D(rate=0.2)(xr)
+
 xr = Conv2D(256, (5, 5), strides=1, padding='same', activation='relu', name='2ndConvRight')(xr)
 xr = BatchNormalization(axis=-1, scale=True, trainable=True)(xr)
 xr = MaxPooling2D(pool_size=(3, 3), strides=2, padding='valid', name='2ndPoolRight')(xr)
 xr = SpatialDropout2D(rate=0.2)(xr)
+
 xr = Conv2D(384, (3, 3), strides=1, padding='same', activation='relu', name='3rdConvRight')(xr)
 xr = BatchNormalization(axis=-1, scale=True, trainable=True)(xr)
 xr = Conv2D(384, (3, 3), strides=1, padding='same', activation='relu', name='4thConvRight')(xr)
