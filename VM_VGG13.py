@@ -40,11 +40,11 @@ xl = MaxPooling2D(pool_size=(2, 2), strides=2, padding='valid', name='5thPoolLef
 xl = SpatialDropout2D(rate=0.2)(xl)
 left_out = Flatten()(xl)
 
-xr = Conv2D(64, (3, 3), strides=1, padding='same', activation='relu', input_shape=(256, 256, 1), name='1stConvRight')(right_input)
+xr = Conv2D(64, (3, 3), strides=2, padding='same', activation='relu', input_shape=(256, 256, 1), name='1stConvRight')(right_input)
 xr = BatchNormalization(axis=-1, scale=True, trainable=True)(xr)
 xr = Conv2D(64, (3, 3), strides=1, padding='same', activation='relu', name='2ndConvRight')(xr)
 xr = BatchNormalization(axis=-1, scale=True, trainable=True)(xr)
-xr = MaxPooling2D(pool_size=(3, 3), strides=3, padding='valid', name='1stPoolRight')(xr)
+xr = MaxPooling2D(pool_size=(2, 2), strides=2, padding='valid', name='1stPoolRight')(xr)
 xr = SpatialDropout2D(rate=0.2)(xr)
 xr = Conv2D(128, (3, 3), strides=1, padding='same', activation='relu', name='3rdConvRight')(xr)
 xr = BatchNormalization(axis=-1, scale=True, trainable=True)(xr)
