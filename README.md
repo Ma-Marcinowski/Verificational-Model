@@ -56,13 +56,13 @@
         
         - VGG13 Core Network - {as desc in pap except for 2nd pool}. Hovever the output size of the first convolutional block (1st and 2nd conv layer followed by 1st max pooling layer) is reduced by pooling of size [3x3] and stride [3x3] - as opposed to vanilla 1st max pooling layer where pool size is [2x2] and stride is [2x2]. Therefore (flattend and concatenated outputs of VGG core nets) input to FCL is of size [none, 25000] as opposed to [none, 65000].
         
-        - Fully Connected Layers - three FC layers [4096, 1024, 256] and one output neuron (sigmoid activation) for AlexNet core network;
+        - Fully Connected Layers - three FC layers [4096, 1024, 256] and one output neuron (sigmoid activation) for both core network variants;
         
         - Activation - ReLU for all layers, sigmoid for the output neuron;
         
         - Batch Normalization (BN) Layers - applied after ReLU activations of convolutional layers;
         
-        - Dropout Layers - applied before dense FCL layers;
+        - Dropout Layers - applied before each dense FCL layer and after each MaxPooling Layer;
                
      * 2.1.2. Language, libraries and framework / API:
         
@@ -74,7 +74,7 @@
        
         - Google Colaboratory - Python 3 Jupyter Notebook, GPU type runtime - 2019;
         
-        - Time - 500ms/step for Alexnet, 000ms/step for VGG. 
+        - Time - 300ms/step for Alexnet, 000ms/step for VGG. 
         
    * #### 2.2. Training
    
@@ -95,7 +95,7 @@
      * 2.2.3. Hyperparameters:
       
         - Epochs - 9; 
-        - Batchsize - 64;
+        - Batchsize - 13;
         - Dropout rate - 0.2;
         - Loss - Binary Crossentropy;
         - Metrics - Accuracy; 
