@@ -69,7 +69,7 @@
    
      * 2.1.3. Implementation:
        
-        - Google Colaboratory - Python 3 Jupyter Notebook, GPU type runtime;
+        - Google Colaboratory - Python 3 Jupyter Notebook, GPU type runtime - 2019;
         
         - Time - 500ms/step for Alexnet, 000ms/step for VGG. 
         
