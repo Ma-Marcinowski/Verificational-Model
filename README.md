@@ -56,7 +56,7 @@
         
         - VGG13 Core Network var1.0 - {as desc in paper}. However, the size of the output of the network is reduced by kernel stride [2x2] on the first convolutional layer - as opposed to vanilla kernel stride [1x1] on the first conv layer. Therefore (flattend and concatenated outputs of VGG core nets) input to FCL is of size [none, 16384] as opposed to [none, 65536];
         
-        - Fully Connected Layers - three FC layers [4096, 1024, 256] and one output neuron (sigmoid activation) for both core network variants;
+        - Fully Connected Layers - three FC layers [4096, 1024, 256] and one output neuron (sigmoid activation) for both core network types;
         
         - Activation - ReLU for all layers, sigmoid for the output neuron;
         
