@@ -35,12 +35,12 @@
   
         - Install Python and listed libraries (installation method depends on user's operating system);
         - Download the repository;
-        - Using any given text editor, access programs code and edit image/dataframe save directories (save the program files in 'py' format); 
+        - Using any given text editor, access programs code and edit image/dataframe save directories paths (save the program files in `py` format); 
         - Place a given preprocessing program file in a directory of images to be preprocessed by that given program (that's the simplest method);
-        - Access the directory - which contains a given preprocessing program file and images to be preprocessed - by the terminal / command-line interpreter (method of terminal access to directory depends on user's operating system)
-        - 
-        - Następnie wpisać należy w terminalu komendę `python3 nazwa_programu.py`, stąd wykonany zostanie wskazany program;
-        - Gdyby zaistniała taka konieczność: aby przerwać wykonywanie programu wykorzystać można w terminalu kombinację klawiszy `Ctrl + C`, aby zawiesić wykonywanie programu `Ctrl + Z`, aby zaś przywrócić wykonywanie zawieszonego programu wpisać należy komendę `fg` (dla terminalów większości systemów operacyjnych, *e.g.* macOS, Linux).      
+        - Access the directory - which contains a given preprocessing program file and images to be preprocessed - through the terminal / command-line interpreter (method  of access depends on user's operating system);
+        - In the terminal type the command `python3 program_name.py` to run the named program;
+        - If it were necessary: to force quit (terminate) a running program use a keyboard shortcut `Ctrl + C` in an opened terminal window, or `Ctrl + Z` to suspend the running program, to resume the paused run type the command `fg` (works in terminals of most operating systems, *e.g.* macOS, Linux).
+             
   
 ### 2. Verificational Model
 
