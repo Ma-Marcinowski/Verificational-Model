@@ -68,7 +68,7 @@
      
      * 2.1.2. Model architecture variant 2.0:
      
-       - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two separate ConvNets (of a given variant), which outputs are globally average pooled and passed to the output neuron for binary classification. Inputs to both conv-paths are identical in shape, dataset and preprocessing;
+       - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two separate ConvNets, which outputs are globally average pooled and passed to the output neuron for binary classification. Inputs to both conv-paths are identical in shape, dataset and preprocessing;
            
         - AlexNet Core Network var2.0 - {as desc in paper};
         
