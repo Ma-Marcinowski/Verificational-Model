@@ -14,24 +14,28 @@ xl = Conv2D(64, (3, 3), strides=1, padding='same', activation='relu', name='2ndC
 xl = BatchNormalization(axis=-1, scale=True, trainable=True)(xl)
 xl = MaxPooling2D(pool_size=(2, 2), strides=2, padding='valid', name='1stPoolLeft')(xl)
 xl = SpatialDropout2D(rate=0.2)(xl)
+
 xl = Conv2D(128, (3, 3), strides=1, padding='same', activation='relu', name='3rdConvLeft')(xl)
 xl = BatchNormalization(axis=-1, scale=True, trainable=True)(xl)
 xl = Conv2D(128, (3, 3), strides=1, padding='same', activation='relu', name='4thConvLeft')(xl)
 xl = BatchNormalization(axis=-1, scale=True, trainable=True)(xl)
 xl = MaxPooling2D(pool_size=(2, 2), strides=2, padding='valid', name='2ndPoolLeft')(xl)
 xl = SpatialDropout2D(rate=0.2)(xl)
+
 xl = Conv2D(256, (3, 3), strides=1, padding='same', activation='relu', name='5thConvLeft')(xl)
 xl = BatchNormalization(axis=-1, scale=True, trainable=True)(xl)
 xl = Conv2D(256, (3, 3), strides=1, padding='same', activation='relu', name='6thConvLeft')(xl)
 xl = BatchNormalization(axis=-1, scale=True, trainable=True)(xl)
 xl = MaxPooling2D(pool_size=(2, 2), strides=2, padding='valid', name='3rdPoolLeft')(xl)
 xl = SpatialDropout2D(rate=0.2)(xl)
+
 xl = Conv2D(512, (3, 3), strides=1, padding='same', activation='relu', name='7thConvLeft')(xl)
 xl = BatchNormalization(axis=-1, scale=True, trainable=True)(xl)
 xl = Conv2D(512, (3, 3), strides=1, padding='same', activation='relu', name='8thConvLeft')(xl)
 xl = BatchNormalization(axis=-1, scale=True, trainable=True)(xl)
 xl = MaxPooling2D(pool_size=(2, 2), strides=2, padding='valid', name='4thPoolLeft')(xl)
 xl = SpatialDropout2D(rate=0.2)(xl)
+
 xl = Conv2D(512, (3, 3), strides=1, padding='same', activation='relu', name='9thConvLeft')(xl)
 xl = BatchNormalization(axis=-1, scale=True, trainable=True)(xl)
 xl = Conv2D(512, (3, 3), strides=1, padding='same', activation='relu', name='10thConvLeft')(xl)
@@ -46,24 +50,28 @@ xr = Conv2D(64, (3, 3), strides=1, padding='same', activation='relu', name='2ndC
 xr = BatchNormalization(axis=-1, scale=True, trainable=True)(xr)
 xr = MaxPooling2D(pool_size=(2, 2), strides=2, padding='valid', name='1stPoolRight')(xr)
 xr = SpatialDropout2D(rate=0.2)(xr)
+
 xr = Conv2D(128, (3, 3), strides=1, padding='same', activation='relu', name='3rdConvRight')(xr)
 xr = BatchNormalization(axis=-1, scale=True, trainable=True)(xr)
 xr = Conv2D(128, (3, 3), strides=1, padding='same', activation='relu', name='4thConvRight')(xr)
 xr = BatchNormalization(axis=-1, scale=True, trainable=True)(xr)
 xr = MaxPooling2D(pool_size=(2, 2), strides=2, padding='valid', name='2ndPoolRight')(xr)
 xr = SpatialDropout2D(rate=0.2)(xr)
+
 xr = Conv2D(256, (3, 3), strides=1, padding='same', activation='relu', name='5thConvRight')(xr)
 xr = BatchNormalization(axis=-1, scale=True, trainable=True)(xr)
 xr = Conv2D(256, (3, 3), strides=1, padding='same', activation='relu', name='6thConvRight')(xr)
 xr = BatchNormalization(axis=-1, scale=True, trainable=True)(xr)
 xr = MaxPooling2D(pool_size=(2, 2), strides=2, padding='valid', name='3rdPoolRight')(xr)
 xr = SpatialDropout2D(rate=0.2)(xr)
+
 xr = Conv2D(512, (3, 3), strides=1, padding='same', activation='relu', name='7thConvRight')(xr)
 xr = BatchNormalization(axis=-1, scale=True, trainable=True)(xr)
 xr = Conv2D(512, (3, 3), strides=1, padding='same', activation='relu', name='8thConvRight')(xr)
 xr = BatchNormalization(axis=-1, scale=True, trainable=True)(xr)
 xr = MaxPooling2D(pool_size=(2, 2), strides=2, padding='valid', name='4thPoolRight')(xr)
 xr = SpatialDropout2D(rate=0.2)(xr)
+
 xr = Conv2D(512, (3, 3), strides=1, padding='same', activation='relu', name='9thConvRight')(xr)
 xr = BatchNormalization(axis=-1, scale=True, trainable=True)(xr)
 xr = Conv2D(512, (3, 3), strides=1, padding='same', activation='relu', name='10thConvRight')(xr)
@@ -87,4 +95,4 @@ model = Model(inputs=[left_input, right_input], outputs=[output])
 model.summary(line_length=None, 
               positions=None,
               print_fn=None)
-tf.keras.utils.plot_model(model, to_file='/content/VM_VGG13.png', show_shapes=True, show_layer_names=True, rankdir='TB')
+tf.keras.utils.plot_model(model, to_file='/content/VM_VGG13_v12.png', show_shapes=True, show_layer_names=True, rankdir='TB')
