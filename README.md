@@ -25,7 +25,7 @@
         
         - Fourth step - to create a validation dataframe (utilized only for testing of the model during its training, mostly after each epoch) simply create a `csv` file in any given spreadsheet program, then copy about 10-20% of already randomized instances from the test dataframe (it is most probable that the number of copied positive and negative instances will be effectively equal);
         
-        - Fifth step - add headers to columns of each dataframe, *e.g.* `left convolutional path, right convolutional path, labels` for names and labels of image pairs.  
+        - Fifth step - add column headers to each dataframe, *e.g.* `left convolutional path, right convolutional path, labels` for columns of names and labels of image pairs.  
         
    * #### 1.2. Preprocessing programs:
    		
