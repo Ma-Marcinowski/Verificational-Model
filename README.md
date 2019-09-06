@@ -52,9 +52,9 @@
       
         - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two separate ConvNets (of a given variant), which outputs are flattend, concatenated and then passed to the fully connected layers for binary classification. Inputs to both conv-paths are identical in shape, dataset and preprocessing;
            
-        - AlexNet Core Network variant 1.1 - {as desc in paper};
+        - AlexNet Core Network variant 1.0 - {as desc in paper};
         
-        - VGG13 Core Network variant 1.2 - {as desc in paper}. However, size of the output of the network is reduced by stride [2x2] on the first convolutional layer - as opposed to vanilla stride [1x1] on the first conv layer. Therefore (flattend and concatenated outputs of VGG core nets) input to FCL is of size [none, 16384] as opposed to [none, 65536];
+        - VGG13 Core Network variant 1.0 - {as desc in paper}. However, size of the output of the network is reduced by stride [2x2] on the first convolutional layer - as opposed to vanilla stride [1x1] on the first conv layer. Therefore (flattend and concatenated outputs of VGG core nets) input to FCL is of size [none, 16384] as opposed to [none, 65536];
         
         - Fully Connected Layers - three FC layers [4096, 1024, 256] and one output neuron (sigmoid activation) for both core network variants;
         
@@ -70,7 +70,7 @@
      
        - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two separate ConvNets (of a given variant), which outputs are globally average pooled and passed to the output neuron for binary classification. Inputs to both conv-paths are identical in shape, dataset and preprocessing;
            
-        - AlexNet Core Network variant 2.1 - {as desc in paper};
+        - AlexNet Core Network variant 2.0 - {as desc in paper};
         
         - Global Average Pooling Layer - applied instead of fully connected layers. 
         
@@ -88,7 +88,7 @@
        
         - Google Colaboratory - Python 3 Jupyter Notebook, GPU type runtime - 2019;
         
-        - Time - 300ms/step for Alexnet v1.1, 000ms/step for VGG v1.2, 450ms/step for Alexnet v2.1.
+        - Time - 300ms/step for Alexnet v1.0, 000ms/step for VGG v1.0, 450ms/step for Alexnet v2.0.
         
    * #### 2.2. Training
    
@@ -136,12 +136,12 @@
        
        | | Core Network | Epochs | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
        | --- | --- | --- | --- | --- | --- | --- | 
-       | Result | AlexNet v1.1 | x |  x | x | x | x |
-       | Checkpoint | AlexNet v1.1 | x | x | x | x | x |     
-       | Result | VGG13 v1.2 | x | x | x | x | x |
-       | Checkpoint | VGG13 v1.2 | x | x | x | x | x |
-       | Result | AlexNet v2.1 | x |  x | x | x | x |
-       | Checkpoint | AlexNet v2.1 | x | x | x | x | x |
+       | Result | AlexNet v1.0 | x |  x | x | x | x |
+       | Checkpoint | AlexNet v1.0 | x | x | x | x | x |     
+       | Result | VGG13 v1.0 | x | x | x | x | x |
+       | Checkpoint | VGG13 v1.0 | x | x | x | x | x |
+       | Result | AlexNet v2.0 | x |  x | x | x | x |
+       | Checkpoint | AlexNet v2.0 | x | x | x | x | x |
        
    * #### 2.3. Model evaluation:
    
@@ -167,9 +167,9 @@
      
        | Core Network | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
        | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-       | AlexNet v1.1 | x | x | x | x | x | x | x | x | x | x | x |
-       | VGG13 v1.2 | x | x | x | x | x | x | x | x | x | x | x |
-       | AlexNet v2.1 | x | x | x | x | x | x | x | x | x | x | x |
+       | AlexNet v1.0 | x | x | x | x | x | x | x | x | x | x | x |
+       | VGG13 v1.0 | x | x | x | x | x | x | x | x | x | x | x |
+       | AlexNet v2.0 | x | x | x | x | x | x | x | x | x | x | x |
        
        - Epochs of Training (EofT) by the best validation result. 
               
@@ -178,9 +178,9 @@
 
        | Core Network | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
        | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-       | AlexNet v1.1 | x | x | x | x | x | x | x | x | x | x | x |
-       | VGG13 v1.2 | x | x | x | x | x | x | x | x | x | x | x |
-       | AlexNet v2.1 | x | x | x | x | x | x | x | x | x | x | x |
+       | AlexNet v1.0 | x | x | x | x | x | x | x | x | x | x | x |
+       | VGG13 v1.0 | x | x | x | x | x | x | x | x | x | x | x |
+       | AlexNet v2.0 | x | x | x | x | x | x | x | x | x | x | x |
        
        - Epochs of Training (EofT) by the best validation result.
        
