@@ -33,7 +33,7 @@
   
      * 1.2.2. Libraries - OpenCV 4.1.0, Numpy 1.16.4, tqdm 4.33.0, and other common python libraries.
   
-     * 1.2.3. To utilize above preprocessing programs:
+     * 1.2.3. To utilize preprocessing programs:
   
         - Install Python and listed libraries (installation method depends on user's operating system);
         - Download the repository;
