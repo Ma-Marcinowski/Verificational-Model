@@ -62,7 +62,7 @@
         
         - Batch Normalization (BN) Layers - applied after ReLU activations of convolutional layers;
         
-        - Dropout Layers - applied after dense FCL layers;
+        - Dropout Layers - applied before dense FCL layers;
                
      * 2.1.2. Language, libraries and framework / API:
         
