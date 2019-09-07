@@ -6,7 +6,7 @@ from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, Dense, BatchNor
 left_input = Input(shape=(256, 256, 1), name='left_input')
 right_input = Input(shape=(256, 256, 1), name='right_input')
 
-xl = Conv2D(64, (3, 3), strides=1, padding='same', activation='relu', input_shape=(256, 256, 1), name='1stConvLeft')(left_input)
+xl = Conv2D(64, (3, 3), strides=2, padding='same', activation='relu', input_shape=(256, 256, 1), name='1stConvLeft')(left_input)
 xl = BatchNormalization(axis=-1, scale=True, trainable=True)(xl)
 xl = MaxPooling2D(pool_size=(2, 2), strides=2, padding='valid', name='1stPoolLeft')(xl)
 
@@ -23,7 +23,7 @@ xl = BatchNormalization(axis=-1, scale=True, trainable=True)(xl)
 left_out = MaxPooling2D(pool_size=(2, 2), strides=2, padding='valid', name='4thPoolLeft')(xl)
 
 
-xr = Conv2D(64, (3, 3), strides=1, padding='same', activation='relu', input_shape=(256, 256, 1), name='1stConvRight')(right_input)
+xr = Conv2D(64, (3, 3), strides=2, padding='same', activation='relu', input_shape=(256, 256, 1), name='1stConvRight')(right_input)
 xr = BatchNormalization(axis=-1, scale=True, trainable=True)(xr)
 xr = MaxPooling2D(pool_size=(2, 2), strides=2, padding='valid', name='1stPoolRight')(xr)
 
