@@ -118,7 +118,7 @@
         - LR Decay - 0.0;
         - Momentum - 0.0;
         - Nestrov - False.
-        - ReduceLROnPlateau - factor 0.1 - no reduction. 
+        - ReduceLROnPlateau - factor 0.1 - no reductions. 
                 
      * 2.2.3. Hyperparameters - GAP (VGG4 CoreNet) variant:
                 
@@ -130,9 +130,9 @@
         - Optimizer - SGDM (Stochastic Gradient Descent with Momentum);
         - Learning rate - 0.01;
         - LR Decay - 0.0005 (5e-4);
-        - Momentum - 0.9;
+        - Momentum - 0.99;
         - Nestrov - False.
-        - ReduceLROnPlateau - factor 0.1 - reduced learning rate after third epoch.
+        - ReduceLROnPlateau - factor 0.1 - reduced learning rate after epochs: third.
                 
      * 2.2.4. Training:
        
