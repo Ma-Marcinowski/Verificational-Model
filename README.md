@@ -106,7 +106,7 @@
 
      * 2.2.3. Hyperparameters - FCL (AlexNet CoreNet) variant:
       
-        - Epochs - 6; 
+        - Epochs - 9; 
         - Batchsize - 16;
         - Dropout rate - 0.2;
         - Loss - Binary Crossentropy;
