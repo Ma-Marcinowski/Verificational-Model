@@ -132,9 +132,9 @@ reduceLR = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_loss',
                                                patience=1, 
                                                verbose=1, 
                                                mode='min', 
-                                               min_delta=0.0001, 
-                                               cooldown=3, 
-                                               min_lr=0.000001)
+                                               min_delta=1e-4, 
+                                               cooldown=1, 
+                                               min_lr=1e-6)
 
 history = model.fit_generator(generator=TrainSeq,
                               validation_data=ValidSeq,
@@ -144,7 +144,7 @@ history = model.fit_generator(generator=TrainSeq,
                               verbose=1,
                               validation_freq=1,
                               initial_epoch=0,
-                              epochs=6)
+                              epochs=9)
 
 model.save('/path/VM_SNN.h5', overwrite=True, include_optimizer=True)
 
