@@ -100,11 +100,11 @@
           
      * 2.2.2. Callbacks:
        
-        - Tensorboard -
+        - Tensorboard - logs events for TensorBoard visualization tool;
         
-        - ModelCheckpoint -
+        - ModelCheckpoint - saves the model after every epoch of validation loss improvement;
         
-        - ReduceLROnPlateau -
+        - ReduceLROnPlateau - reduces learning rate by a factor 0.1 after every epoch of validation loss deterioration.
 
      * 2.2.3. Hyperparameters - FCL (AlexNet CoreNet) variant:
       
