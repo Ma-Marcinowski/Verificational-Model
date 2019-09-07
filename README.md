@@ -48,15 +48,13 @@
 
    * #### 2.1. Model
    
-     * 2.1.1. Model architecture variant 1.0:
+     * 2.1.1. Model architecture FCL variant:
       
-        - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two separate ConvNets (either AlexNet or VGG13), which outputs are flattend, concatenated and then passed to the fully connected layers for binary classification. Inputs to both conv-paths are identical in shape, dataset and preprocessing;
+        - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two separate ConvNets (AlexNets), which outputs are flattend, concatenated and then passed to the fully connected layers for binary classification. Inputs to both conv-paths are identical in shape, dataset and preprocessing;
            
-        - AlexNet Core Network var1.0 - {as desc in paper};
+        - AlexNet Core Network - as described by {paper}. Differences from AlexNet: added batch normalization layers, dropout layers, L2 regularizers and applied SGD optimizer;
         
-        - VGG13 Core Network var1.0 - {as desc in paper}. However, the size of the output of the network is reduced by kernel stride [2x2] on the first convolutional layer - as opposed to vanilla kernel stride [1x1] on the first conv layer. Therefore (flattend and concatenated outputs of VGG core nets) input to FCL is of size [none, 16384] as opposed to [none, 65536];
-        
-        - Fully Connected Layers - three FC layers [4096, 1024, 256] and one output neuron (sigmoid activation) for both core network types;
+        - Fully Connected Layers - three FC layers [4096, 1024, 256] and one output neuron (sigmoid activation);
         
         - Activation - ReLU for all layers, sigmoid for the output neuron;
         
@@ -66,13 +64,13 @@
         
         - L2 regularizer - applied on all FC layers. 
      
-     * 2.1.2. Model architecture variant 2.0:
+     * 2.1.2. Model architecture GAP variant:
      
-       - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two separate ConvNets, which outputs are globally average pooled and passed to the output neuron for binary classification. Inputs to both conv-paths are identical in shape, dataset and preprocessing;
+       - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two separate ConvNets (VGG like networks), which outputs are concatenated, globally average pooled and then passed to the output neuron for binary classification. Inputs to both conv-paths are identical in shape, dataset and preprocessing;
            
-        - AlexNet Core Network var2.0 - {as desc in paper};
+        - VGG4 Core Network - VGG like custom network, based on {paperVGG} and {paperPooling}. Differences from VGG are that: the network consists only of four convolutional layers and no FC layers; and the size of the output of the network is reduced by kernel stride [2x2] on the first convolutional layer - as opposed to vanilla kernel stride [1x1] on the first conv layer;
         
-        - Global Average Pooling Layer - applied instead of fully connected layers. 
+        - Global Average Pooling Layer - applied instead of fully connected layers, as advised in {paperNIN}. 
         
         - Activation - ReLU for all layers, sigmoid for the output neuron;
         
@@ -88,7 +86,9 @@
        
         - Google Colaboratory - Python 3 Jupyter Notebook, GPU type runtime - 2019;
         
-        - Time - 300ms/step for Alexnet var1.0, 000ms/step for VGG var1.0, 450ms/step for Alexnet var2.0.
+        - Google Drive - for streaming data to Colab;
+        
+        - Runtime - 230ms/step for Alexnet (27732 steps per epoch), 470ms/step for VGG4 (3467 steps per epoch).
         
    * #### 2.2. Training
    
@@ -106,7 +106,7 @@
         
         - ReduceLROnPlateau -
 
-     * 2.2.3. Hyperparameters var1.0:
+     * 2.2.3. Hyperparameters - FCL (AlexNet CoreNet) variant:
       
         - Epochs - 6; 
         - Batchsize - 16;
@@ -119,10 +119,10 @@
         - Momentum - 0.0;
         - Nestrov - False.
                 
-     * 2.2.3. Hyperparameters var2.0:
+     * 2.2.3. Hyperparameters - GAP (VGG4 CoreNet) variant:
                 
         - Epochs - 12; 
-        - Batchsize - 64;
+        - Batchsize - 128;
         - Dropout rate - 0.0;
         - Loss - Binary Crossentropy;
         - Metrics - Accuracy; 
@@ -136,12 +136,10 @@
        
        | | Core Network | Epochs | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
        | --- | --- | --- | --- | --- | --- | --- | 
-       | Result | AlexNet var1.0 | x |  x | x | x | x |
-       | Checkpoint | AlexNet var1.0 | x | x | x | x | x |     
-       | Result | VGG13 var1.0 | x | x | x | x | x |
-       | Checkpoint | VGG13 var1.0 | x | x | x | x | x |
-       | Result | AlexNet var2.0 | x |  x | x | x | x |
-       | Checkpoint | AlexNet var2.0 | x | x | x | x | x |
+       | Result | AlexNet | x |  x | x | x | x |
+       | Checkpoint | AlexNet | x | x | x | x | x |     
+       | Result | VGG4 | x | x | x | x | x |
+       | Checkpoint | VGG4 | x | x | x | x | x |
        
    * #### 2.3. Model evaluation:
    
@@ -167,20 +165,17 @@
      
        | Core Network | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
        | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-       | AlexNet var1.0 | x | x | x | x | x | x | x | x | x | x | x |
-       | VGG13 var1.0 | x | x | x | x | x | x | x | x | x | x | x |
-       | AlexNet var2.0 | x | x | x | x | x | x | x | x | x | x | x |
+       | AlexNet | x | x | x | x | x | x | x | x | x | x | x |
+       | VGG4 | x | x | x | x | x | x | x | x | x | x | x |
        
        - Epochs of Training (EofT) by the best validation result. 
               
      * 2.3.4. IAM evaluation:
        
-
        | Core Network | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
        | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-       | AlexNet var1.0 | x | x | x | x | x | x | x | x | x | x | x |
-       | VGG13 var1.0 | x | x | x | x | x | x | x | x | x | x | x |
-       | AlexNet var2.0 | x | x | x | x | x | x | x | x | x | x | x |
+       | AlexNet | x | x | x | x | x | x | x | x | x | x | x |
+       | VGG4 | x | x | x | x | x | x | x | x | x | x | x |
        
        - Epochs of Training (EofT) by the best validation result.
        
