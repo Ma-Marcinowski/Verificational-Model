@@ -104,7 +104,7 @@
         
         - ModelCheckpoint - saves the model after every epoch of validation loss improvement;
         
-        - ReduceLROnPlateau - reduces learning rate by a factor 0.1 after every epoch of validation loss deterioration.
+        - ReduceLROnPlateau - reduces learning rate by a given factor after every epoch of validation loss deterioration.
 
      * 2.2.3. Hyperparameters - FCL (AlexNet CoreNet) variant:
       
@@ -118,6 +118,7 @@
         - LR Decay - 0.0;
         - Momentum - 0.0;
         - Nestrov - False.
+        - ReduceLROnPlateau - factor 0.1 - no reduction. 
                 
      * 2.2.3. Hyperparameters - GAP (VGG4 CoreNet) variant:
                 
@@ -131,6 +132,7 @@
         - LR Decay - 0.0005 (5e-4);
         - Momentum - 0.9;
         - Nestrov - False.
+        - ReduceLROnPlateau - factor 0.1 - reduced learning rate after third epoch.
                 
      * 2.2.4. Training:
        
