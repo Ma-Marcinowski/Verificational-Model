@@ -130,7 +130,7 @@
         - LR Decay - ;
         - Momentum - ;
         - Nestrov - ;
-        - ReduceLROnPlateau - .
+        - ReduceLROnPlateau - factor 0.1 - .
                 
      * 2.2.4. Training:
        
