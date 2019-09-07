@@ -84,9 +84,9 @@
    
      * 2.1.4. Implementation:
        
-        - Google Colaboratory - Python 3 Jupyter Notebook, GPU type runtime (2019), 230ms/step for Alexnet (27732 steps per epoch)
+        - Google Colaboratory - Python 3 Jupyter Notebook, GPU type runtime (2019), 230ms/step for AlexNet (27732 steps per epoch);
         
-        - Kaggle - Python 3 Jupyter Notebook, GPU type runtime (2019), 470ms/step for VGG4 (3467 steps per epoch).
+        - Kaggle - Python 3 Jupyter Notebook, GPU type runtime (2019), 50ms/step for AlexNet (27732 steps per epoch)
         
    * #### 2.2. Training
    
@@ -115,22 +115,22 @@
         - Learning rate - 0.01;
         - LR Decay - 0.0;
         - Momentum - 0.0;
-        - Nestrov - False.
+        - Nestrov - False;
         - ReduceLROnPlateau - factor 0.1 - no reductions. 
                 
      * 2.2.3. Hyperparameters - GAP (VGG4 CoreNet) variant:
                 
-        - Epochs - 12; 
-        - Batchsize - 128;
+        - Epochs - ; 
+        - Batchsize - ;
         - Dropout rate - 0.0;
         - Loss - Binary Crossentropy;
         - Metrics - Accuracy; 
-        - Optimizer - SGDM (Stochastic Gradient Descent with Momentum);
-        - Learning rate - 0.01;
-        - LR Decay - 0.0005 (5e-4);
-        - Momentum - 0.99;
-        - Nestrov - False.
-        - ReduceLROnPlateau - factor 0.1 - reduced learning rate after epochs: third.
+        - Optimizer - ;
+        - Learning rate - ;
+        - LR Decay - ;
+        - Momentum - ;
+        - Nestrov - ;
+        - ReduceLROnPlateau - .
                 
      * 2.2.4. Training:
        
