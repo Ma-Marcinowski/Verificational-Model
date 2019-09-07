@@ -49,7 +49,6 @@ xr = SpatialDropout2D(rate=0.2)(xr)
 right_out = Flatten()(xr)
 
 x = tf.keras.layers.concatenate([left_out, right_out], axis=1)
-x = GaussianDropout(rate=0.2)(x)
 x = Dense(4096, activation='relu', kernel_regularizer=l2(l=0.01), name='1stFCL')(x)
 x = GaussianDropout(rate=0.2)(x)                       
 x = Dense(1024, activation='relu', kernel_regularizer=l2(l=0.01), name='2ndFCL')(x)
