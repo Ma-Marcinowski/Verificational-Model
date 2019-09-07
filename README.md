@@ -84,11 +84,9 @@
    
      * 2.1.4. Implementation:
        
-        - Google Colaboratory - Python 3 Jupyter Notebook, GPU type runtime - 2019;
+        - Google Colaboratory - Python 3 Jupyter Notebook, GPU type runtime (2019), 230ms/step for Alexnet (27732 steps per epoch)
         
-        - Google Drive - for streaming data into Colab;
-        
-        - Runtime - 230ms/step for Alexnet (27732 steps per epoch), 470ms/step for VGG4 (3467 steps per epoch).
+        - Kaggle - Python 3 Jupyter Notebook, GPU type runtime (2019), 470ms/step for VGG4 (3467 steps per epoch).
         
    * #### 2.2. Training
    
