@@ -84,9 +84,9 @@
    
      * 2.1.4. Implementation:
        
-        - Google Colaboratory - Python 3 Jupyter Notebook, GPU type runtime (2019), 230ms/step for AlexNet (27732 steps per epoch);
+        - Google Colaboratory - Python 3 Jupyter Notebook, GPU type runtime (2019), 230ms/step for AlexNet [v1.1] (27732 steps per epoch);
         
-        - Kaggle - Python 3 Jupyter Notebook, GPU type runtime (2019), 50ms/step for AlexNet (27732 steps per epoch)
+        - Kaggle - Python 3 Jupyter Notebook, GPU type runtime (2019), 50ms/step for AlexNet [v1.2] (27732 steps per epoch)
         
    * #### 2.2. Training
    
@@ -100,9 +100,9 @@
        
         - Tensorboard - logs events for TensorBoard visualization tool;
         
-        - ModelCheckpoint - saves the model after every epoch of validation loss improvement;
+        - Model Checkpoint - saves the model after every epoch of validation loss improvement;
         
-        - ReduceLROnPlateau - reduces learning rate by a given factor after every epoch of validation loss deterioration.
+        - Reduce LR On Plateau - reduces learning rate by a given factor after every epoch of validation loss deterioration.
 
      * 2.2.3. Hyperparameters - FCL (AlexNet CoreNet) variant:
       
@@ -116,7 +116,16 @@
         - LR Decay - 0.0;
         - Momentum - 0.0;
         - Nestrov - False;
-        - ReduceLROnPlateau - factor 0.1 - no reductions. 
+        - ReduceLROnPlateau - factor 0.1. 
+        
+     * 2.2.3. Training- FCL (AlexNet CoreNet) variant:
+     
+       | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Reduce LR On Plateau |
+       | --- | --- | --- | --- | --- |  --- |
+       | x |  x | x | x | x | x |
+       | x |  x | x | x | x | x |     
+       | x |  x | x | x | x | x |
+       | x |  x | x | x | x | x |
                 
      * 2.2.3. Hyperparameters - GAP (VGG4 CoreNet) variant:
                 
@@ -130,16 +139,16 @@
         - LR Decay - ;
         - Momentum - ;
         - Nestrov - ;
-        - ReduceLROnPlateau - factor 0.1 - .
+        - ReduceLROnPlateau - factor 0.1.
                 
-     * 2.2.4. Training:
+     * 2.2.4. Training - GAP (VGG4 CoreNet) variant:
        
-       | | Core Network | Epochs | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
-       | --- | --- | --- | --- | --- | --- | --- | 
-       | Result | AlexNet | x |  x | x | x | x |
-       | Checkpoint | AlexNet | x | x | x | x | x |     
-       | Result | VGG4 | x | x | x | x | x |
-       | Checkpoint | VGG4 | x | x | x | x | x |
+       | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Reduce LR On Plateau |
+       | --- | --- | --- | --- | --- |  --- |
+       | x |  x | x | x | x | x |
+       | x |  x | x | x | x | x |     
+       | x |  x | x | x | x | x |
+       | x |  x | x | x | x | x |
        
    * #### 2.3. Model evaluation:
    
