@@ -107,7 +107,6 @@ model = Model(inputs=[left_input, right_input], outputs=[output])
 #model = load_model('/path/VM_SNN.h5')
 
 SGD = tf.keras.optimizers.SGD(learning_rate=0.01, momentum=0.0, decay=0.0, nesterov=False)
-#SGDM = tf.keras.optimizers.SGD(learning_rate=0.01, momentum=0.9, decay=5e-4, nesterov=False) 
 
 model.compile(optimizer=SGD, loss='binary_crossentropy', metrics=['accuracy'])
 
@@ -145,7 +144,7 @@ history = model.fit_generator(generator=TrainSeq,
                               verbose=1,
                               validation_freq=1,
                               initial_epoch=0,
-                              epochs=9)
+                              epochs=6)
 
 model.save('/path/VM_SNN.h5', overwrite=True, include_optimizer=True)
 
