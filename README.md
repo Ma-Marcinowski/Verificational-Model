@@ -48,7 +48,7 @@
 
    * #### 2.1. Model
    
-     * 2.1.1. Model architecture FCL variant:
+     * 2.1.1. Model architecture - FCL variant:
       
         - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two separate ConvNets (AlexNets), which outputs are flattend, concatenated and then passed to the fully connected layers for binary classification. Inputs to both conv-paths are identical in shape, dataset and preprocessing;
            
@@ -64,7 +64,7 @@
         
         - L2 regularizer - applied on all FC layers. 
      
-     * 2.1.2. Model architecture GAP variant:
+     * 2.1.2. Model architecture - GAP variant:
      
        - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two separate ConvNets (VGG like networks), which outputs are concatenated, globally average pooled and then passed to the output neuron for binary classification. Inputs to both conv-paths are identical in shape, dataset and preprocessing;
            
