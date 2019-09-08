@@ -106,7 +106,7 @@
 
      * 2.2.3. Hyperparameters - FCL (AlexNet CoreNet) variant:
       
-        - Epochs - 9; 
+        - Epochs - 5; 
         - Batchsize - 16;
         - Dropout rate - 0.2;
         - Loss - Binary Crossentropy;
@@ -122,10 +122,12 @@
      
        | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Reduce LR On Plateau |
        | --- | --- | --- | --- | --- |  --- |
-       | x |  x | x | x | x | x |
-       | x |  x | x | x | x | x |     
-       | x |  x | x | x | x | x |
-       | x |  x | x | x | x | x |
+       | 1 |  8.7137 | 0.7607 | 0.4280 | 0.8292 | None |
+       | 2 |  0.3954 | 0.8456 | 0.4073 | 0.8406 | None |     
+       **| 3 |  0.3359 | 0.8809 | 0.3635 | 0.8702 | None |**
+       | 4 |  0.2986 | 0.8999 | 0.3701 | 0.8602 | LR reduction to 0.001 |
+       | 5 |  0.2309 | 0.9252 | 0.3166 | 0.8806 | None |
+
                 
      * 2.2.3. Hyperparameters - GAP (VGG4 CoreNet) variant:
                 
