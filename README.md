@@ -122,9 +122,9 @@
      
        | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Reduce LR On Plateau |
        | --- | --- | --- | --- | --- |  --- |
-       | 1 |  8.7137 | 0.7607 | 0.4280 | 0.8292 | None |
-       | 2 |  0.3954 | 0.8456 | 0.4073 | 0.8406 | None |     
-       | **3** |  0.3359 | 0.8809 | 0.3635 | 0.8702 | None |
+       | 1 | 8.7137 | 0.7607 | 0.4280 | 0.8292 | None |
+       | 2 | 0.3954 | 0.8456 | 0.4073 | 0.8406 | None |     
+       | **3** | 0.3359 | 0.8809 | 0.3635 | 0.8702 | None |
        | 4 | 0.2213 | 0.9304 | 0.3085 | 0.8848 | None |
        | 5 | 0.2026 | 0.9358 | 0.3041 | 0.8860 | None |
        | **6** | x | x | x | x | x |
@@ -148,12 +148,12 @@
        
        | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Reduce LR On Plateau |
        | --- | --- | --- | --- | --- |  --- |
-       | x |  x | x | x | x | x |
-       | x |  x | x | x | x | x |     
-       | x |  x | x | x | x | x |
-       | x |  x | x | x | x | x |
-       | x |  x | x | x | x | x |
-       | x |  x | x | x | x | x |
+       | 1 | 0.8966 | 0.5268 | 0.6852 | 0.5687 | None |
+       | 2 | 0.6952 | 0.5567 | 0.6842 | 0.5858 | None |     
+       | 3 | 0.6870 | 0.5677 | 0.6854 | 0.5884 | LR Reduced to 0.01 |
+       | 4 | 0.6781 | 0.5824 | 0.6869 | 0.6192 | LR Reduced to 0.001 |
+       | 5 | x | x | x | x | x |
+       | 6 | x | x | x | x | x |
        
    * #### 2.3. Model evaluation:
    
