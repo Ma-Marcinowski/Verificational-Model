@@ -84,9 +84,9 @@
    
      * 2.1.4. Implementation:
        
-        - Google Colaboratory - Python 3 Jupyter Notebook, GPU type runtime (2019), 230ms/step for AlexNet [v1.1] (27732 steps per epoch);
+        - Google Colaboratory - Python 3 Jupyter Notebook, GPU type runtime (2019), 230ms/step for AlexNet (27732 steps per epoch);
         
-        - Kaggle - Python 3 Jupyter Notebook, GPU type runtime (2019), 50ms/step for AlexNet [v1.2] (27732 steps per epoch)
+        - Kaggle - Python 3 Jupyter Notebook, GPU type runtime (2019), 000ms/step for VGG4 (000 steps per epoch)
         
    * #### 2.2. Training
    
@@ -106,15 +106,15 @@
 
      * 2.2.3. Hyperparameters - FCL (AlexNet CoreNet) variant:
       
-        - Epochs - 5; 
-        - Batchsize - 16;
+        - Epochs - 3, then 3;
+        - Batchsize - 16, then 64;
         - Dropout rate - 0.2;
         - Loss - Binary Crossentropy;
         - Metrics - Accuracy; 
-        - Optimizer - SGD (Stochastic Gradient Descent);
-        - Learning rate - 0.01;
-        - LR Decay - 0.0;
-        - Momentum - 0.0;
+        - Optimizer - SGD (Stochastic Gradient Descent), then SGDM (SGD with Momentum);
+        - Learning rate - 0.01, then 0.0001;
+        - LR Decay - 0.0, then 0.001;
+        - Momentum - 0.0, then 0.99;
         - Nestrov - False;
         - ReduceLROnPlateau - factor 0.1. 
         
@@ -125,8 +125,9 @@
        | 1 |  8.7137 | 0.7607 | 0.4280 | 0.8292 | None |
        | 2 |  0.3954 | 0.8456 | 0.4073 | 0.8406 | None |     
        | **3** |  **0.3359** | **0.8809** | **0.3635** | **0.8702** | **None** |
-       | 4 |  0.2986 | 0.8999 | 0.3701 | 0.8602 | LR reduction to 0.000999 |
-       | 5 |  0.2309 | 0.9252 | 0.3166 | 0.8806 | None |
+       | x | x | x | x | x | x |
+       | x | x | x | x | x | x |
+       | x | x | x | x | x | x |
 
                 
      * 2.2.3. Hyperparameters - GAP (VGG4 CoreNet) variant:
