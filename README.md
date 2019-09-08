@@ -106,15 +106,15 @@
 
      * 2.2.3. Hyperparameters - FCL (AlexNet CoreNet) variant:
       
-        - Epochs - 3, then 3;
-        - Batchsize - 16, then 64;
+        - Epochs - 3, and then 3;
+        - Batchsize - 16, and then 64;
         - Dropout rate - 0.2;
         - Loss - Binary Crossentropy;
         - Metrics - Accuracy; 
-        - Optimizer - SGD (Stochastic Gradient Descent), then SGDM (SGD with Momentum);
-        - Learning rate - 0.01, then 0.0001;
-        - LR Decay - 0.0, then 0.001;
-        - Momentum - 0.0, then 0.99;
+        - Optimizer - SGD (Stochastic Gradient Descent), and then SGDM (SGD with Momentum);
+        - Learning rate - 0.01, and then 0.0001;
+        - LR Decay - 0.0, and then 0.001;
+        - Momentum - 0.0, and then 0.99;
         - Nestrov - False;
         - ReduceLROnPlateau - factor 0.1. 
         
