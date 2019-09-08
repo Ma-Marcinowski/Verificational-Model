@@ -84,7 +84,7 @@
    
      * 2.1.4. Implementation:
        
-        - Google Colaboratory - Python 3 Jupyter Notebook, GPU type runtime (2019), 230ms/step for AlexNet (27732 steps per epoch);
+        - Google Colaboratory - Python 3 Jupyter Notebook, GPU type runtime (2019), 230ms/step (epochs 1/3) and 560ms/step (epochs 4/6) for AlexNet (27732 steps per epoch and 6933 steps per epoch);
         
         - Kaggle - Python 3 Jupyter Notebook, GPU type runtime (2019), 000ms/step for VGG4 (000 steps per epoch)
         
@@ -125,9 +125,9 @@
        | 1 |  8.7137 | 0.7607 | 0.4280 | 0.8292 | None |
        | 2 |  0.3954 | 0.8456 | 0.4073 | 0.8406 | None |     
        | **3** |  **0.3359** | **0.8809** | **0.3635** | **0.8702** | **None** |
-       | x | x | x | x | x | x |
-       | x | x | x | x | x | x |
-       | x | x | x | x | x | x |
+       | 4 | 0.2213 | 0.9304 | 0.3085 | 0.8848 | None |
+       | 5 | x | x | x | x | x |
+       | 6 | x | x | x | x | x |
 
                 
      * 2.2.3. Hyperparameters - GAP (VGG4 CoreNet) variant:
