@@ -29,7 +29,7 @@ for j in tqdm(tifs):
 
             mean = v.mean()
 
-            if mean >= 4: #Arbitrary threshold of mean image pixel values, to exclude empty and half-empty images.
+            if mean >= 4: #Arbitrary threshold of mean image pixel values to exclude empty and half-empty images.
 
                 cv2.imwrite('/path/' + j[:-4] + '-' + str(idx) + str(ind) + '.png', v)
 
