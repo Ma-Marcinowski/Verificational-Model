@@ -70,11 +70,11 @@
            
         - VGG4 Core Network - VGG like custom network, based on {paperVGG} and {paperPooling}. Differences from VGG are that: the network consists only of four convolutional layers and no FC layers; and the size of the output of the network is reduced by kernel stride [2x2] on the first convolutional layer - as opposed to vanilla kernel stride [1x1] on the first conv layer;
         
-        - Global Average Pooling Layer - applied instead of fully connected layers, as advised in {paperNIN}. 
+        - Global Average Pooling Layer - applied instead of fully connected layers, as advised in {paperNIN}; 
+               
+        - Batch Normalization (BN) Layers - applied after convolutional layers;
         
-        - Activation - ReLU for all layers, sigmoid for the output neuron;
-        
-        - Batch Normalization (BN) Layers - applied after ReLU activations of convolutional layers;
+        - Activation - ReLU applied after BN for all convolutional layers, sigmoid for the output neuron.
                
      * 2.1.3. Language, libraries and framework / API:
         
@@ -86,7 +86,7 @@
        
         - Google Colaboratory - Python 3 Jupyter Notebook, GPU type runtime (2019), 230ms/step (epochs 1/3) and 560ms/step (epochs 4/6) for AlexNet (27732 and 6933 steps per epoch);
         
-        - Kaggle - Python 3 Jupyter Notebook, GPU type runtime (2019), 000ms/step for VGG4 (000 steps per epoch)
+        - Kaggle - Python 3 Jupyter Notebook, GPU type runtime (2019), 1s/step for VGG4 (1734 steps per epoch)
         
    * #### 2.2. Training
    
@@ -132,16 +132,16 @@
                 
      * 2.2.3. Hyperparameters - GAP (VGG4 CoreNet) variant:
                 
-        - Epochs - ; 
-        - Batchsize - ;
+        - Epochs - 6; 
+        - Batchsize - 256;
         - Dropout rate - 0.0;
         - Loss - Binary Crossentropy;
         - Metrics - Accuracy; 
-        - Optimizer - ;
-        - Learning rate - ;
-        - LR Decay - ;
-        - Momentum - ;
-        - Nestrov - ;
+        - Optimizer - SGDM (Stochastic Gradient Descent with Momentum);
+        - Learning rate - 0.1;
+        - LR Decay - 0.0001 (1e-4);
+        - Momentum - 0.9;
+        - Nestrov - False;
         - ReduceLROnPlateau - factor 0.1.
                 
      * 2.2.4. Training - GAP (VGG4 CoreNet) variant:
