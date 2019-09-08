@@ -47,4 +47,4 @@ with open('/path/Dataframe.csv', 'a+') as f:
 
     else:
 
-        print('Done: 100%')
+        print('Done 100%')
