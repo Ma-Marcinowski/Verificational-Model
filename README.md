@@ -48,45 +48,31 @@
 
    * #### 2.1. Model
    
-     * 2.1.1. Model architecture - FCL variant:
+     * 2.1.1. Model architecture:
       
-        - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two separate ConvNets (AlexNets), which outputs are flattend, concatenated and then passed to the fully connected layers for binary classification. Inputs to both conv-paths are identical in shape, dataset and preprocessing;
+        - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two separate ConvNets (Core Networks), which outputs are concatenated, globally average pooled and then passed to the fully connected layers for binary classification. Inputs to both conv-paths are identical in shape, dataset and preprocessing;
            
-        - AlexNet Core Network - as described by {paper}. Differences from AlexNet: added batch normalization layers, dropout layers, L2 regularizers and applied SGD optimizer;
+        - Core Network - inspired by {paper};
         
-        - Fully Connected Layers - three FC layers [4096, 1024, 256] and one output neuron (sigmoid activation);
+        - Fully Connected Layers - three FC layers [1024, 512, 256] and one output neuron (sigmoid activation);
         
         - Activation - ReLU for all layers, sigmoid for the output neuron;
         
-        - Batch Normalization (BN) Layers - applied after ReLU activations of convolutional layers;
+        - Batch Normalization (BN) Layers - applied after ReLU activations of convolutional and dense layers;
         
-        - Dropout Layers - applied before each dense layer and after each MaxPooling Layer;
-        
-        - L2 regularizer - applied on all FC layers. 
-     
-     * 2.1.2. Model architecture - GAP variant:
-     
-       - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two separate ConvNets (VGG like networks), which outputs are concatenated, globally average pooled and then passed to the output neuron for binary classification. Inputs to both conv-paths are identical in shape, dataset and preprocessing;
-           
-        - VGG4 Core Network - VGG like custom network, based on {paperVGG} and {paperPooling}. Differences from VGG are that: the network consists only of four convolutional layers and no FC layers; and the size of the output of the network is reduced by kernel stride [2x2] on the first convolutional layer - as opposed to vanilla kernel stride [1x1] on the first conv layer;
-        
-        - Global Average Pooling Layer - applied instead of fully connected layers, as advised in {paperNIN}; 
-               
-        - Batch Normalization (BN) Layers - applied after convolutional layers;
-        
-        - Activation - ReLU applied after BN for all convolutional layers, sigmoid for the output neuron.
-               
-     * 2.1.3. Language, libraries and framework / API:
+        - Dropout Layers - applied before each dense layer.
+                    
+     * 2.1.2. Language, libraries and framework / API:
         
         - Python3;
         - Numpy (data sequence), Pandas (dataframe), Matplotlib (metrics plot), Pydot and GraphViz (model plot);
         - TensorFlow's implementation of the Keras API (model).
    
-     * 2.1.4. Implementation:
+     * 2.1.3. Implementation:
        
-        - Google Colaboratory - Python 3 Jupyter Notebook, GPU type runtime (2019), 230ms/step (epochs 1/3) and 560ms/step (epochs 4/6) for AlexNet (27732 and 6933 steps per epoch);
+        - Google Colaboratory - Python 3 Jupyter Notebook, GPU type runtime (2019)- 000ms/step (000 steps per epoch);
         
-        - Kaggle - Python 3 Jupyter Notebook, GPU type runtime (2019), 1s/step for VGG4 (1734 steps per epoch)
+        - Kaggle - Python 3 Jupyter Notebook, GPU type runtime (2019) - 210ms/step (6933 steps per epoch).
         
    * #### 2.2. Training
    
@@ -104,57 +90,29 @@
         
         - Reduce LR On Plateau - reduces learning rate by a given factor after every epoch of validation loss deterioration.
 
-     * 2.2.3. Hyperparameters - FCL (AlexNet CoreNet) variant:
+     * 2.2.3. Hyperparameters:
       
-        - Epochs - 3, and then 3;
-        - Batchsize - 16, and then 64;
+        - Epochs - 4;
+        - Batchsize - 64;
         - Dropout rate - 0.2;
         - Loss - Binary Crossentropy;
         - Metrics - Accuracy; 
-        - Optimizer - SGD (Stochastic Gradient Descent), and then SGDM (SGD with Momentum);
-        - Learning rate - 0.01, and then 0.0001;
-        - LR Decay - 0.0, and then 0.001;
-        - Momentum - 0.0, and then 0.99;
+        - Optimizer - SGD (Stochastic Gradient Descent);
+        - Learning rate - 0.01;
+        - LR Decay - 0.001;
+        - Momentum - 0.0;
         - Nestrov - False;
         - ReduceLROnPlateau - factor 0.1. 
         
-     * 2.2.3. Training- FCL (AlexNet CoreNet) variant:
+     * 2.2.4. Training:
      
        | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Reduce LR On Plateau |
        | --- | --- | --- | --- | --- |  --- |
-       | 1 | 8.7137 | 0.7607 | 0.4280 | 0.8292 | None |
-       | 2 | 0.3954 | 0.8456 | 0.4073 | 0.8406 | None |     
-       | **3** | 0.3359 | 0.8809 | 0.3635 | 0.8702 | None |
-       | 4 | 0.2213 | 0.9304 | 0.3085 | 0.8848 | None |
-       | 5 | 0.2026 | 0.9358 | **0.3041** | **0.8860** | None |
-       | **6** | 0.1968 | 0.9372 | 0.3046 | 0.8844 | LR reduced to 0.00001 |
+       | 1 | 0.3535 | 0.8481 | 0.3071 | 0.8763 | None |
+       | 2 | 0.2461 | 0.9063 | 0.3074 | 0.8748 | LR reduced to 0.001 |     
+       | **3** | 0.2313 | 0.9130 | **0.2773** | **0.8872** | None |
+       | 4 | 0.2302 | 0.9134 | 0.2801 | 0.8872 | LR reduced to 0.0001 |
 
-                
-     * 2.2.3. Hyperparameters - GAP (VGG4 CoreNet) variant:
-                
-        - Epochs - 6; 
-        - Batchsize - 256;
-        - Dropout rate - 0.0;
-        - Loss - Binary Crossentropy;
-        - Metrics - Accuracy; 
-        - Optimizer - SGDM (Stochastic Gradient Descent with Momentum);
-        - Learning rate - 0.1;
-        - LR Decay - 0.0001 (1e-4);
-        - Momentum - 0.9;
-        - Nestrov - False;
-        - ReduceLROnPlateau - factor 0.1.
-                
-     * 2.2.4. Training - GAP (VGG4 CoreNet) variant:
-       
-       | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Reduce LR On Plateau |
-       | --- | --- | --- | --- | --- |  --- |
-       | 1 | 0.8966 | 0.5268 | 0.6852 | 0.5687 | None |
-       | 2 | 0.6952 | 0.5567 | **0.6842** | 0.5858 | None |     
-       | 3 | 0.6870 | 0.5677 | 0.6854 | 0.5884 | LR Reduced to 0.01 |
-       | 4 | 0.6781 | 0.5824 | 0.6869 | 0.6192 | LR Reduced to 0.001 |
-       | 5 | 0.6775 | 0.5843 | 0.6868 | 0.6217 | LR Recuded to 0.0001 |
-       | 6 | 0.6774 | 0.5840 | 0.6863 | **0.6221** | LR Reduced to 0.00001 |
-       
    * #### 2.3. Model evaluation:
    
      * 2.3.1. Database (excluded pairs - both negative and positive - of patches containing identical content):
@@ -177,19 +135,19 @@
       
      * 2.3.3. CVL evaluation:
      
-       | Core Network | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
-       | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-       | AlexNet | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
-       | VGG4 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+       | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
+       | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+       | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+       | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
        
        - Epochs of Training (EofT) by the best validation result. 
               
      * 2.3.4. IAM evaluation:
        
-       | Core Network | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
-       | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-       | AlexNet | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
-       | VGG4 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+       | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
+       | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+       | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+       | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
        
        - Epochs of Training (EofT) by the best validation result.
        
