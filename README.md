@@ -149,11 +149,11 @@
        | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Reduce LR On Plateau |
        | --- | --- | --- | --- | --- |  --- |
        | 1 | 0.8966 | 0.5268 | 0.6852 | 0.5687 | None |
-       | 2 | 0.6952 | 0.5567 | 0.6842 | 0.5858 | None |     
+       | 2 | 0.6952 | 0.5567 | **0.6842** | 0.5858 | None |     
        | 3 | 0.6870 | 0.5677 | 0.6854 | 0.5884 | LR Reduced to 0.01 |
        | 4 | 0.6781 | 0.5824 | 0.6869 | 0.6192 | LR Reduced to 0.001 |
        | 5 | 0.6775 | 0.5843 | 0.6868 | 0.6217 | LR Recuded to 0.0001 |
-       | 6 | 0.6774 | 0.5840 | 0.6863 | 0.6221 | LR Reduced to 0.00001 |
+       | 6 | 0.6774 | 0.5840 | 0.6863 | **0.6221** | LR Reduced to 0.00001 |
        
    * #### 2.3. Model evaluation:
    
