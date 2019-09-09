@@ -126,8 +126,8 @@
        | 2 | 0.3954 | 0.8456 | 0.4073 | 0.8406 | None |     
        | **3** | 0.3359 | 0.8809 | 0.3635 | 0.8702 | None |
        | 4 | 0.2213 | 0.9304 | 0.3085 | 0.8848 | None |
-       | 5 | 0.2026 | 0.9358 | 0.3041 | 0.8860 | None |
-       | **6** | x | x | x | x | x |
+       | 5 | 0.2026 | 0.9358 | **0.3041** | **0.8860** | None |
+       | **6** | 0.1968 | 0.9372 | 0.3046 | 0.8844 | LR reduced to 0.00001 |
 
                 
      * 2.2.3. Hyperparameters - GAP (VGG4 CoreNet) variant:
@@ -152,8 +152,8 @@
        | 2 | 0.6952 | 0.5567 | 0.6842 | 0.5858 | None |     
        | 3 | 0.6870 | 0.5677 | 0.6854 | 0.5884 | LR Reduced to 0.01 |
        | 4 | 0.6781 | 0.5824 | 0.6869 | 0.6192 | LR Reduced to 0.001 |
-       | 5 | x | x | x | x | x |
-       | 6 | x | x | x | x | x |
+       | 5 | 0.6775 | 0.5843 | 0.6868 | 0.6217 | LR Recuded to 0.0001 |
+       | 6 | 0.6774 | 0.5840 | 0.6863 | 0.6221 | LR Reduced to 0.00001 |
        
    * #### 2.3. Model evaluation:
    
@@ -179,8 +179,8 @@
      
        | Core Network | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
        | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-       | AlexNet | x | x | x | x | x | x | x | x | x | x | x |
-       | VGG4 | x | x | x | x | x | x | x | x | x | x | x |
+       | AlexNet | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+       | VGG4 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
        
        - Epochs of Training (EofT) by the best validation result. 
               
@@ -188,8 +188,8 @@
        
        | Core Network | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
        | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-       | AlexNet | x | x | x | x | x | x | x | x | x | x | x |
-       | VGG4 | x | x | x | x | x | x | x | x | x | x | x |
+       | AlexNet | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+       | VGG4 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
        
        - Epochs of Training (EofT) by the best validation result.
        
