@@ -52,7 +52,7 @@
       
         - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two separate ConvNets (Core Networks), which outputs are concatenated, globally average pooled and then passed to the fully connected layers for binary classification. Inputs to both conv-paths are identical in shape, dataset and preprocessing;
            
-        - Core Network - inspired by {paper};
+        - Core Network - inspired by {Alex paper};
         
         - Fully Connected Layers - three FC layers [1024, 512, 256] and one output neuron (sigmoid activation);
         
