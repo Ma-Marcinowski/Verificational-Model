@@ -121,7 +121,7 @@
       
         - CVL Test dataset - 82476 image pairs (41238 positive and 41238 negative instances);
         
-        - IAM Test dataset - (excluded pairs - both negative and positive - of patches containing identical content) -
+        - IAM Test dataset - (excluded pairs - both negative and positive - of patches containing identical content) - .
 
      * 2.3.2. Metrics:
         
@@ -133,7 +133,7 @@
         - False Negative - FN;        
         - Recall `(TP/(TP+FN))` - Rec;
         - Precision `(TP/(TP+FP))` - Pre;
-        - Area under the ROC curve - AUC;
+        - Area under the ROC curve - AUC.
       
      * 2.3.3. CVL evaluation:
      
