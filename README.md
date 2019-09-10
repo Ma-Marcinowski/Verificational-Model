@@ -121,9 +121,9 @@
       
         - CVL Test dataset - 82476 image pairs (41238 positive and 41238 negative instances);
         
-        - IAM Test dataset v1.0 - x image pairs (y positive and z negative instances).
+        - IAM Test dataset v1.0 - x image pairs (x positive and x negative instances).
         
-        - IAM Test dataset v2.0 - (excluded both negative and positive pairs of documents containing identical text) - x image pairs (y positive and z negative instances).
+        - IAM Test dataset v2.0 - (excluded both negative and positive pairs of documents containing identical text) - x image pairs (x positive and x negative instances).
 
      * 2.3.2. Metrics:
         
