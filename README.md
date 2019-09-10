@@ -66,7 +66,7 @@
         
         - Python3;
         - Numpy (data sequence), Pandas (dataframe), Matplotlib (metrics plot), Pydot and GraphViz (model plot);
-        - TensorFlow's implementation of the Keras API (model).
+        - TensorFlow's implementation of the Keras API (model) v1.14.
    
      * 2.1.3. Implementation:
        
@@ -78,11 +78,13 @@
    
      * 2.2.1. Database:
        
-        - Training dataset -
+        - Training dataset - 443704 image pairs (221852 positive and 221852 negative instances);
         
-        - Validation dataset -
+        - Validation dataset - 12478 image pairs (6300 positive and 6178 negative instances).
           
      * 2.2.2. Callbacks:
+     
+        - CSVLogger - streams epoch results to a csv file;
        
         - Tensorboard - logs events for TensorBoard visualization tool;
         
@@ -115,11 +117,11 @@
 
    * #### 2.3. Model evaluation:
    
-     * 2.3.1. Database (excluded pairs - both negative and positive - of patches containing identical content):
+     * 2.3.1. Database:
       
-        - CVL Test dataset -
+        - CVL Test dataset - 82476 image pairs (41238 positive and 41238 negative instances);
         
-        - IAM Test dataset -
+        - IAM Test dataset - (excluded pairs - both negative and positive - of patches containing identical content) -
 
      * 2.3.2. Metrics:
         
