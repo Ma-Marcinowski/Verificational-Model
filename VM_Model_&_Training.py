@@ -97,6 +97,8 @@ SGD = tf.keras.optimizers.SGD(learning_rate=0.01, momentum=0.0, decay=0.001, nes
 
 model.compile(optimizer=SGD, loss='binary_crossentropy', metrics=['accuracy'])
 
+csv_logger = tf.keras.callbacks.CSVLogger('/path/TrainLog.csv', separator=',', append=False)
+
 tensorboard = tf.keras.callbacks.TensorBoard(log_dir='/path/TrainLogs/',
                                              histogram_freq=0,
                                              batch_size=BatchSize,
@@ -123,7 +125,7 @@ reduceLR = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_loss',
 
 history = model.fit_generator(generator=TrainSeq,
                               validation_data=ValidSeq,
-                              callbacks=[tensorboard,checkpoint, reduceLR],
+                              callbacks=[csv_logger, tensorboard, checkpoint, reduceLR],
                               use_multiprocessing=False,
                               shuffle=True,
                               max_queue_size=10,
