@@ -53,13 +53,13 @@ SGD = tf.keras.optimizers.SGD(learning_rate=0.01, momentum=0.0, decay=0.001, nes
 
 TP  = tf.keras.metrics.TruePositives()
 TN  = tf.keras.metrics.TrueNegatives()
-FN  = tf.keras.metrics.FalseNegatives()
 FP  = tf.keras.metrics.FalsePositives()
+FN  = tf.keras.metrics.FalseNegatives()
 Rec = tf.keras.metrics.Recall()
 Pre = tf.keras.metrics.Precision()
 AUC = tf.keras.metrics.AUC()
 
-model.compile(optimizer=SGD, loss='binary_crossentropy', metrics=['accuracy', TP, TN, FN, FP, Rec, Pre, AUC])
+model.compile(optimizer=SGD, loss='binary_crossentropy', metrics=['accuracy', TP, TN, FP, FN, Rec, Pre, AUC])
 
 csv_logger = tf.keras.callbacks.CSVLogger('/path/TestLog.csv', separator=',', append=False)
 
