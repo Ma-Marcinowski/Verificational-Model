@@ -61,6 +61,8 @@ AUC = tf.keras.metrics.AUC()
 
 model.compile(optimizer=SGD, loss='binary_crossentropy', metrics=['accuracy', TP, TN, FN, FP, Rec, Pre, AUC])
 
+csv_logger = tf.keras.callbacks.CSVLogger('/path/TestLog.csv', separator=',', append=False)
+
 tensorboard = tf.keras.callbacks.TensorBoard(log_dir='/path/TestLogs/',
                                              histogram_freq=1,
                                              batch_size=BatchSize,
@@ -70,7 +72,7 @@ tensorboard = tf.keras.callbacks.TensorBoard(log_dir='/path/TestLogs/',
                                              update_freq='batch')
 
 evaluation = model.evaluate_generator(generator=TestSeq,
-                                      callbacks=[tensorboard],
+                                      callbacks=[csv_logger, tensorboard],
                                       use_multiprocessing=False,
                                       max_queue_size=10,
                                       workers=1,
