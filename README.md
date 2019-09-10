@@ -123,7 +123,7 @@
         
         - IAM Test dataset v1.0 - x image pairs (y positive and z negative instances).
         
-        - IAM Test dataset v2.0 - (excluded both negative and positive pairs of patches containing identical content) - x image pairs (y positive and z negative instances).
+        - IAM Test dataset v2.0 - (excluded both negative and positive pairs of documents containing identical text) - x image pairs (y positive and z negative instances).
 
      * 2.3.2. Metrics:
         
@@ -141,7 +141,7 @@
      
        | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
        | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-       | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+       | x | 0. | 0. | 0 | 0 | 0 | 0 | 0. | 0. | 0. |
               
        - Epochs of Training (EofT) by the best validation result. 
               
