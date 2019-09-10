@@ -121,7 +121,9 @@
       
         - CVL Test dataset - 82476 image pairs (41238 positive and 41238 negative instances);
         
-        - IAM Test dataset - (excluded pairs - both negative and positive - of patches containing identical content) - x image pairs (y positive and z negative instances).
+        - IAM Test dataset v1.0 - x image pairs (y positive and z negative instances).
+        
+        - IAM Test dataset v2.0 - (excluded both negative and positive pairs of patches containing identical content) - x image pairs (y positive and z negative instances).
 
      * 2.3.2. Metrics:
         
@@ -143,7 +145,7 @@
               
        - Epochs of Training (EofT) by the best validation result. 
               
-     * 2.3.4. IAM evaluation:
+     * 2.3.4. IAM v1.0 evaluation:
        
        | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
        | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -151,3 +153,10 @@
               
        - Epochs of Training (EofT) by the best validation result.
        
+     * 2.3.4. IAM v2.0 evaluation:
+       
+       | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
+       | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+       | x | x | x | x | x | x | x | x | x | x |
+              
+       - Epochs of Training (EofT) by the best validation result.
