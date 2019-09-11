@@ -38,7 +38,7 @@
         
     * Fifth step - add column headers to each dataframe, *e.g.* `left convolutional path, right convolutional path, labels` for columns containing names and labels of image pairs.  
         
-* #### 1.2. Preprocessing programs:
+* #### 1.2. Preprocessing programs
    		
   * 1.2.1. Programming language - Python 3.7.3.
   
@@ -93,7 +93,7 @@
         
     * Google Kaggle - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Telsa P100), 65ms/step (27732 steps per epoch).
         
-* #### 2.2. Training
+* #### 2.2. Model training
    
   * 2.2.1. Database:
        
@@ -139,7 +139,7 @@
      
 ![loss](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/Model_Loss.png "Model Loss") ![acc](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/Model_Accuracy.png "Model Accuracy")
 
-* #### 2.3. Model evaluation:
+* #### 2.3. Model evaluation
    
   * 2.3.1. Database:
       
@@ -169,19 +169,15 @@
     * Precision `(TP/(TP+FP))` - Pre;
     * Area under the ROC curve - AUC.
       
-  * 2.3.3. CVL (soft criterion) evaluation:
+  * 2.3.3. CVL evaluation (epochs of model training - EofT - by the best validation result):
      
     | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | x | 0. | 0. | 0 | 0 | 0 | 0 | 0. | 0. | 0. |
               
-    * Epochs of Training (EofT) by the best validation result. 
-              
-  * 2.3.4. IAM evaluation:
+  * 2.3.4. IAM evaluation (epochs of model training - EofT - by the best validation result):
        
     | Criterion | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | Soft | x | x | x | x | x | x | x | x | x | x |
     | Hard | x | x | x | x | x | x | x | x | x | x |
-              
-    * Epochs of Training (EofT) by the best validation result.
