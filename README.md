@@ -38,7 +38,7 @@
         
     * Fifth step - add column headers to each dataframe, *e.g.* `left convolutional path, right convolutional path, labels` for columns containing names and labels of image pairs.  
         
-  * #### 1.2. Preprocessing programs:
+* #### 1.2. Preprocessing programs:
    		
   * 1.2.1. Programming language - Python 3.7.3.
   
