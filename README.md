@@ -11,17 +11,17 @@
         - Document images ought to be processed simultaneously by two separate convolutional neural networks and classified by one multilayer perceptron (fully connected layers);       
         - Preprocessing shouldn't affect image quality to preserve most of handwriting features.
             
-     * 1.1.3. Database (7847 documents by 2535 writers):
+     * 1.1.3. Database (9455 documents by 2911 writers):
        
-        - Dataset of 1604 documents - subsets of 1415 training and 189 test documents by 283 and 27 writers (full page scans) - from CVL database (310 writers), by: F. Kleber, S. Fiel, M. Diem, R. Sablatnig, *CVL-Database: An Off-line Database for Writer Retrieval, Writer Identification and Word Spotting*, "In Proc. of the 12th Int. Conference on Document Analysis and Recognition (ICDAR) 2013" 2013, p. 560 - 564;
+        - Dataset of 1604 documents (full page scans) from CVL database (310 writers), by: F. Kleber, S. Fiel, M. Diem, R. Sablatnig, *CVL-Database: An Off-line Database for Writer Retrieval, Writer Identification and Word Spotting*, "In Proc. of the 12th Int. Conference on Document Analysis and Recognition (ICDAR) 2013" 2013, p. 560 - 564;
         
         - Dataset of 4704 documents (full page scans) from CEDAR (Center of Excellence for Document Analysis and Recognition) database (1568 writers), by: S. Srihari, S. Cha, H. Arora, S. Lee, *Individuality of Handwriting*, "Journal of Forensic Sciences" 2002, No. 4 (Vol. 47), p. 1 - 17;
         
         - Dataset of 1539 documents (full page scans) from IAM (offline handwritten documents) database (657 writers), by: U. Marti, H. Bunke, *The IAM-database: An English Sentence Database for Off-line Handwriting Recognition*, "Int'l Journal on Document Analysis and Recognition" 2002, No. 5, p. 39 - 46;
         
-        - Dataset of X documents (cropped page scans) from ICDAR 2011 Writer Identification Contest databese (X writers), by:
+        - Dataset of 208 documents (full page scans) from ICDAR 2011 Writer Identification Contest databese (26 writers), by:
         
-        - Dataset of X documents (cropped page scans) from ICFHR 2012 Writer Identification Contest (X writers), by:
+        - Dataset of 400 documents (cropped page scans) from ICFHR 2012 Writer Identification Contest (100 writers), by:
         
         - Dataset of 1000 documents (cropped page scans) from ICDAR 2013 Competition on Writer Identification databese (250 writers), by:
             
@@ -88,9 +88,9 @@
    
      * 2.2.1. Database:
        
-        - Training dataset - 443704 image pairs (221852 positive and 221852 negative instances);
+        - Training dataset - CVL databese subset of 1415 training images by 283 writers - 443704 image pairs (221852 positive and 221852 negative instances);
         
-        - Validation dataset - 12478 image pairs (6300 positive and 6178 negative instances).
+        - Validation dataset - CVL databese subset of 189 training images by 27 writers - 12478 image pairs (6300 positive and 6178 negative instances).
           
      * 2.2.2. Callbacks:
      
@@ -128,11 +128,11 @@
    
      * 2.3.1. Database:
       
-        - CVL Test dataset - soft criterion (excluded pairs of identical patches) - 82476 image pairs (41238 positive and 41238 negative instances);
+        - CVL database test subset of 189 test images by 27 writers - soft criterion (excluded pairs of identical patches) - 82476 image pairs (41238 positive and 41238 negative instances);
         
-        - IAM Test dataset - soft criterion (excluded pairs of identical patches) - x image pairs (x positive and x negative instances).
+        - IAM database as a test dataset - soft criterion (excluded pairs of identical patches) - x image pairs (x positive and x negative instances).
         
-        - IAM Test dataset - hard criterion (excluded both negative and positive pairs of documents containing identical sample text) - x image pairs (x positive and x negative instances).
+        - IAM database as a test dataset - hard criterion (excluded both negative and positive pairs of documents containing identical sample text) - x image pairs (x positive and x negative instances).
 
      * 2.3.2. Metrics:
         
