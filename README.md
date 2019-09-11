@@ -126,7 +126,7 @@
         
   * 2.2.4. Training:
      
-    | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Reduce LR On Plateau |
+    | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
     | --- | --- | --- | --- | --- |  --- |
     | 1 | 0.4500 | 0.7960 | 0.3918 | 0.8279 | None |
     | 2 | 0.2830 | 0.8916 | 0.3544 | 0.8529 | None |
