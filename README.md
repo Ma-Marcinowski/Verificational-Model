@@ -19,7 +19,11 @@
         
         - Dataset of 1539 documents (full page scans) from IAM (offline handwritten documents) database (657 writers), by: U. Marti, H. Bunke, *The IAM-database: An English Sentence Database for Off-line Handwriting Recognition*, "Int'l Journal on Document Analysis and Recognition" 2002, No. 5, p. 39 - 46;
         
-        - Dataset of 
+        - Dataset of X documents (cropped page scans) from ICDAR 2011 Writer Identification Contest databese (X writers), by:
+        
+        - Dataset of X documents (cropped page scans) from ICFHR 2012 Writer Identification Contest (X writers), by:
+        
+        - Dataset of 1000 documents (cropped page scans) from ICDAR 2013 Competition on Writer Identification databese (250 writers), by:
             
      * 1.1.4. Steps of preprocessing:
                
