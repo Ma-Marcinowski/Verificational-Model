@@ -119,7 +119,7 @@
     * Loss - Binary Crossentropy;
     * Metrics - Accuracy; 
     * Optimizer - Adam (Adaptive Moment Estimation);
-      * Learning rate \(alpha\) - epochs 1/4 - 0.001;
+      * Learning rate \\(alpha\\) - epochs 1/4 - 0.001;
       * Learning rate ($\alpha$) - epochs 5/8 - 0.0001;
       * $\beta$_1 , $\beta$_2, $\epsilon$ - as reccomended by: D. Kingma, J. Ba, *Adam: A Method for Stochastic Optimization*,  arXiv:1412.6980v9 [cs.LG] 2017, p. 2;
     * ReduceLROnPlateau - factor 0.1. 
