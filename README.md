@@ -97,9 +97,9 @@
    
   * 2.2.1. Database:
        
-    * Training dataset - CVL databese subset of 1415 training document images by 283 writers - 443704 image pairs (221852 positive and 221852 negative instances);
+    * Training dataset - CVL databese subset of 1415 document images by 283 writers - 443704 image pairs (221852 positive and 221852 negative instances);
         
-    * Validation dataset - CVL databese subset of 189 training document images by 27 writers - 12478 image pairs (6300 positive and 6178 negative instances).
+    * Validation dataset - CVL databese subset of 189 document images by 27 writers - 12478 image pairs (6300 positive and 6178 negative instances).
           
   * 2.2.2. Callbacks:
      
@@ -139,7 +139,7 @@
       
     * CVL database:
       
-      * Test subset of 189 test document images by 27 writers;
+      * Test subset of 189 document images by 27 writers;
       
       * Custom soft criterion (excluded pairs of identical patches) - 82476 image pairs (41238 positive and 41238 negative instances);
         
