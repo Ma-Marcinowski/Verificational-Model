@@ -42,14 +42,18 @@ class DataSequence(tf.keras.utils.Sequence):
         batch_y = self.get_batch_labels(idx)
         return ({'left_input': batch_x1, 'right_input': batch_x2}, {'output': batch_y})
 
-BatchSize = 64
+BatchSize = 16
 
 TestSeq = DataSequence(dataframe='/path/TestDataframe.csv', batch_size = BatchSize)
 
 #model = load_model('/path/VM-{epoch:02d}-{val_loss:.2f}.h5')
 #model = load_model('/path/VM.h5')
 
-SGD = tf.keras.optimizers.SGD(learning_rate=0.01, momentum=0.0, decay=0.001, nesterov=False)
+Adam = tf.keras.optimizers.Adam(learning_rate=0.001,
+                                beta_1=0.9, 
+                                beta_2=0.999, 
+                                epsilon=1e-07, 
+                                amsgrad=False)
 
 TP  = tf.keras.metrics.TruePositives()
 TN  = tf.keras.metrics.TrueNegatives()
@@ -59,7 +63,7 @@ Rec = tf.keras.metrics.Recall()
 Pre = tf.keras.metrics.Precision()
 AUC = tf.keras.metrics.AUC()
 
-model.compile(optimizer=SGD, loss='binary_crossentropy', metrics=['accuracy', TP, TN, FP, FN, Rec, Pre, AUC])
+model.compile(optimizer=Adam, loss='binary_crossentropy', metrics=['accuracy', TP, TN, FP, FN, Rec, Pre, AUC])
 
 csv_logger = tf.keras.callbacks.CSVLogger('/path/TestLog.csv', separator=',', append=False)
 
