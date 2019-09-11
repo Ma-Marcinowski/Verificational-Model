@@ -136,8 +136,7 @@
     | 7 | 0. | 0. | 0. | 0. |  |
     | 8 | 0. | 0. | 0. | 0. |  |
     
-    ![loss](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/ModelLoss.png "Model Loss") 
-    ![acc](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/ModelAccuracy.png "Model Accuracy")
+    ![loss](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/Model_Loss.png "Model Loss") ![acc](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/Model_Accuracy.png "Model Accuracy")
 
 * #### 2.3. Model evaluation:
    
