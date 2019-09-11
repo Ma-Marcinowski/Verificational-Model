@@ -94,36 +94,35 @@
 
      * 2.2.3. Hyperparameters:
       
-        - Epochs - 4;
-        - Batchsize - 64;
-        - Dropout rate - 0.2;
+        - Epochs - 6;
+        - Batchsize - 16;
+        - Dropout rate - 0.5;
         - Loss - Binary Crossentropy;
         - Metrics - Accuracy; 
-        - Optimizer - SGD (Stochastic Gradient Descent);
-        - Learning rate - 0.01;
-        - LR Decay - 0.001;
-        - Momentum - 0.0;
-        - Nestrov - False;
+        - Optimizer - Adam (Adaptive Moment Estimation);
+        - Learning rate - 0.001;
         - ReduceLROnPlateau - factor 0.1. 
         
      * 2.2.4. Training:
      
        | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Reduce LR On Plateau |
        | --- | --- | --- | --- | --- |  --- |
-       | 1 | 0.3535 | 0.8481 | 0.3071 | 0.8763 | None |
-       | 2 | 0.2461 | 0.9063 | 0.3074 | 0.8748 | LR reduced to 0.001 |     
-       | **3** | 0.2313 | 0.9130 | **0.2773** | **0.8872** | None |
-       | 4 | 0.2302 | 0.9134 | 0.2801 | 0.8872 | LR reduced to 0.0001 |
+       | 1 | 0.4500 | 0.7960 | 0.3918 | 0.8279 | None |
+       | 2 | 0.2830 | 0.8916 | 0.3544 | 0.8529 | None |
+       | 3 | 0.2125 | 0.9229 | 0.2547 | 0.9007 | None |
+       | 4 | 0. | 0. | 0. | 0. |  |
+       | 5 | 0. | 0. | 0. | 0. |  |
+       | 6 | 0. | 0. | 0. | 0. |  |
 
    * #### 2.3. Model evaluation:
    
      * 2.3.1. Database:
       
-        - CVL Test dataset - 82476 image pairs (41238 positive and 41238 negative instances);
+        - CVL Test dataset - soft criterion (excluded pairs of identical patches) - 82476 image pairs (41238 positive and 41238 negative instances);
         
-        - IAM Test dataset v1.0 - x image pairs (x positive and x negative instances).
+        - IAM Test dataset - soft criterion (excluded pairs of identical patches) - x image pairs (x positive and x negative instances).
         
-        - IAM Test dataset v2.0 - (excluded both negative and positive pairs of documents containing identical text) - x image pairs (x positive and x negative instances).
+        - IAM Test dataset - hard criterion (excluded both negative and positive pairs of documents containing identical sample text) - x image pairs (x positive and x negative instances).
 
      * 2.3.2. Metrics:
         
@@ -137,7 +136,7 @@
         - Precision `(TP/(TP+FP))` - Pre;
         - Area under the ROC curve - AUC.
       
-     * 2.3.3. CVL evaluation:
+     * 2.3.3. CVL (soft criterion) evaluation:
      
        | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
        | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -145,7 +144,7 @@
               
        - Epochs of Training (EofT) by the best validation result. 
               
-     * 2.3.4. IAM v1.0 evaluation:
+     * 2.3.4. IAM (soft criterion) evaluation:
        
        | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
        | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -153,7 +152,7 @@
               
        - Epochs of Training (EofT) by the best validation result.
        
-     * 2.3.4. IAM v2.0 evaluation:
+     * 2.3.4. IAM (hard criterion) evaluation:
        
        | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
        | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
