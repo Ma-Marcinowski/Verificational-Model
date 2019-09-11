@@ -119,7 +119,7 @@
     * Loss - Binary Crossentropy;
     * Metrics - Accuracy; 
     * Optimizer - Adam (Adaptive Moment Estimation);
-    * Learning rate - 0.001;
+      * Learning rate - 0.001;
     * ReduceLROnPlateau - factor 0.1. 
         
   * 2.2.4. Training:
