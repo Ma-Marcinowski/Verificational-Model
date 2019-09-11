@@ -67,7 +67,7 @@
     
       * G. Chen, P. Chen, Y. Shi, C. Hsieh, B. Liao, S. Zhang, *Rethinking the Usage of Batch Normalization and Dropout in the Training of Deep Neural Networks*, arXiv:1905.05928v1 [cs.LG] 2019, p. 1 - 10; 
       
-      * M. Lin, Q. Chen, S. Yan, *Network In Network*, arXiv:1312.4400v3 (cs.NE) 2014, p. 1 - 10; 
+      * M. Lin, Q. Chen, S. Yan, *Network In Network*, arXiv:1312.4400v3 [cs.NE] 2014, p. 1 - 10; 
       
       * A. Krizhevsky, I. Sutskever, G. Hinton, *ImageNet Classification with Deep Convolutional Neural Networks*, "Advances in Neural Information Processing Systems" 2012, No. 1 (Vol. 25), p. 1097 - 1105;
     
@@ -136,7 +136,8 @@
     | 7 | 0. | 0. | 0. | 0. |  |
     | 8 | 0. | 0. | 0. | 0. |  |
     
-    ![loss](https://raw.githubusercontent.com/Ma-Marcinowski/Verificational-Model/master/ModelLoss.png "Model Loss") ![acc](https://raw.githubusercontent.com/Ma-Marcinowski/Verificational-Model/master/ModelAccuracy.png "Model Accuracy")
+    ![loss](https://raw.githubusercontent.com/Ma-Marcinowski/Verificational-Model/master/ModelLoss.png "Model Loss") 
+    ![acc](https://raw.githubusercontent.com/Ma-Marcinowski/Verificational-Model/master/ModelAccuracy.png "Model Accuracy")
 
 * #### 2.3. Model evaluation:
    
