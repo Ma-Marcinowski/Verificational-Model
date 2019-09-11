@@ -52,8 +52,7 @@ TestSeq = DataSequence(dataframe='/path/TestDataframe.csv', batch_size = BatchSi
 Adam = tf.keras.optimizers.Adam(learning_rate=0.001,
                                 beta_1=0.9, 
                                 beta_2=0.999, 
-                                epsilon=1e-08, 
-                                amsgrad=False)
+                                epsilon=1e-08)
 
 TP  = tf.keras.metrics.TruePositives()
 TN  = tf.keras.metrics.TrueNegatives()
