@@ -43,7 +43,7 @@ class DataSequence(tf.keras.utils.Sequence):
         batch_y = self.get_batch_labels(idx)
         return ({'left_input': batch_x1, 'right_input': batch_x2}, {'output': batch_y})
 
-BatchSize = 64
+BatchSize = 16
 
 TrainSeq = DataSequence(dataframe='/path/TrainDataframe.csv', batch_size = BatchSize)
 ValidSeq = DataSequence(dataframe='/path/ValidDataframe.csv', batch_size = BatchSize)
@@ -73,19 +73,19 @@ right_out = CoreNet(ix=right_input, path='Right')
 x = tf.keras.layers.concatenate([left_out, right_out], axis=-1)
 x = tf.keras.layers.GlobalAveragePooling2D()(x)
 
-x = GaussianDropout(rate=0.2)(x)
+x = GaussianDropout(rate=0.5)(x)
 x = Dense(1024, activation='relu', name='1stFCL')(x)
 x = BatchNormalization(axis=-1, scale=True, trainable=True)(x)
 
-x = GaussianDropout(rate=0.2)(x)
+x = GaussianDropout(rate=0.5)(x)
 x = Dense(512, activation='relu', name='2ndFCL')(x)
 x = BatchNormalization(axis=-1, scale=True, trainable=True)(x)
 
-x = GaussianDropout(rate=0.2)(x)
+x = GaussianDropout(rate=0.5)(x)
 x = Dense(256, activation='relu', name='3rdFCL')(x)
 x = BatchNormalization(axis=-1, scale=True, trainable=True)(x)
 
-x = GaussianDropout(rate=0.2)(x)
+x = GaussianDropout(rate=0.5)(x)
 output = Dense(1, activation='sigmoid', name='output')(x)
 
 model = Model(inputs=[left_input, right_input], outputs=[output])
@@ -93,9 +93,13 @@ model = Model(inputs=[left_input, right_input], outputs=[output])
 #model = load_model('/path/VM/VM-{epoch:02d}-{val_loss:.2f}.h5')
 #model = load_model('/path/VM/VM.h5')
 
-SGD = tf.keras.optimizers.SGD(learning_rate=0.01, momentum=0.0, decay=0.001, nesterov=False)
+Adam = tf.keras.optimizers.Adam(learning_rate=0.001,
+                                beta_1=0.9, 
+                                beta_2=0.999, 
+                                epsilon=1e-07, 
+                                amsgrad=False)
 
-model.compile(optimizer=SGD, loss='binary_crossentropy', metrics=['accuracy'])
+model.compile(optimizer=Adam, loss='binary_crossentropy', metrics=['accuracy'])
 
 csv_logger = tf.keras.callbacks.CSVLogger('/path/TrainLog.csv', separator=',', append=False)
 
