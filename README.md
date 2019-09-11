@@ -8,7 +8,7 @@
        
   * 1.1.2. Author's assumptions were that:
      
-    * Document images will be processed simultaneously by two separate convolutional neural networks and classified by one multilayer perceptron (fully connected layers);       
+    * Document images will be best processed simultaneously by two separate convolutional neural networks and classified by one multilayer perceptron (fully connected layers);       
     
     * Preprocessing shouldn't affect image quality to preserve most of handwriting features.
             
