@@ -10,7 +10,7 @@
      
     * Document images will be best processed simultaneously by two separate convolutional neural networks and classified by one multilayer perceptron (fully connected layers);       
     
-    * Preprocessing shouldn't affect image quality to preserve most of handwriting features.
+    * Preprocessing shouldn't drastically affect image quality (*e.g* by image binarization) to preserve most of handwriting features.
             
   * 1.1.3. Database (9455 documents by 2911 writers):
        
