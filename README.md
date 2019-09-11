@@ -89,9 +89,9 @@
    
   * 2.1.3. Implementation:
        
-    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80)- 290ms/step (27732 steps per epoch);
+    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 290 ms/step (27732 steps per epoch);
         
-    * Kaggle - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Telsa P100) - 65ms/step (27732 steps per epoch).
+    * Kaggle - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Telsa P100), 65 ms/step (27732 steps per epoch).
         
 * #### 2.2. Training
    
