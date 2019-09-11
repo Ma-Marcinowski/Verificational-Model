@@ -113,13 +113,14 @@
 
   * 2.2.3. Hyperparameters:
       
-    * Epochs - 6;
+    * Epochs - 8 (two runs, 4 epochs each);
     * Batchsize - 16;
     * Dropout rate - 0.5;
     * Loss - Binary Crossentropy;
     * Metrics - Accuracy; 
     * Optimizer - Adam (Adaptive Moment Estimation);
-      * Learning rate - 0.001;
+      * Learning rate - epochs 1/4 - 0.001;
+      * Learning rate - epochs 5/8 - 0.0001;
     * ReduceLROnPlateau - factor 0.1. 
         
   * 2.2.4. Training:
@@ -129,9 +130,11 @@
     | 1 | 0.4500 | 0.7960 | 0.3918 | 0.8279 | None |
     | 2 | 0.2830 | 0.8916 | 0.3544 | 0.8529 | None |
     | 3 | 0.2125 | 0.9229 | 0.2547 | 0.9007 | None |
-    | 4 | 0.1828 | 0.9353 | 0.2458 | 0.9050 | None |
+    | 4 | 0.1828 | 0.9353 | 0.2458 | 0.9050 | Manual LR reduction to 0.0001 |
     | 5 | 0. | 0. | 0. | 0. |  |
     | 6 | 0. | 0. | 0. | 0. |  |
+    | 7 | 0. | 0. | 0. | 0. |  |
+    | 8 | 0. | 0. | 0. | 0. |  |
 
 * #### 2.3. Model evaluation:
    
