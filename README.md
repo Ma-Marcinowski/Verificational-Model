@@ -61,7 +61,7 @@
    
   * 2.1.1. Model architecture:
       
-    * Siamese CNN - dual path convolutional network, where both paths (left and right path) are two separate ConvNets (Core Networks), which outputs are concatenated, globally average pooled and then passed to the fully connected layers for binary classification. Inputs to both conv-paths are identical in shape, dataset and preprocessing;
+    * Siamese CNN - dual path convolutional neural network, where both paths (left and right path) are two separate ConvNets (Core Networks), which outputs are concatenated, globally average pooled and then passed to the fully connected layers for binary classification. Inputs to both conv-paths are identical in shape, dataset and preprocessing;
            
     * Core Network - inspired mainly by papers: 
     
@@ -70,8 +70,10 @@
       * M. Lin, Q. Chen, S. Yan, *Network In Network*, arXiv:1312.4400v3 [cs.NE] 2014, p. 1 - 10; 
       
       * A. Krizhevsky, I. Sutskever, G. Hinton, *ImageNet Classification with Deep Convolutional Neural Networks*, "Advances in Neural Information Processing Systems" 2012, No. 1 (25), p. 1097 - 1105;
-        
-    * Fully Connected Layers - three FC layers [1024, 512, 256] and one output neuron (sigmoid activation);
+    
+    * Globally Average Pooling Layer - applied instead of flattening layer;
+    
+    * Fully Connected Layers - three dense layers [1024, 512, 256] and one output neuron;
         
     * Activation - ReLU for all layers, sigmoid for the output neuron;
         
