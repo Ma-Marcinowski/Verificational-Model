@@ -56,30 +56,30 @@
   
 ### 2. Verificational Model
 
-   * #### 2.1. Model
+* #### 2.1. Model
    
      * 2.1.1. Model architecture:
       
-        - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two separate ConvNets (Core Networks), which outputs are concatenated, globally average pooled and then passed to the fully connected layers for binary classification. Inputs to both conv-paths are identical in shape, dataset and preprocessing;
+       - Siamese CNN - dual path convolutional network, where both paths (left and right path) are two separate ConvNets (Core Networks), which outputs are concatenated, globally average pooled and then passed to the fully connected layers for binary classification. Inputs to both conv-paths are identical in shape, dataset and preprocessing;
            
-        - Core Network - inspired mainly by papers: 
-                + G. Chen, P. Chen, Y. Shi, C. Hsieh, B. Liao, S. Zhang, *Rethinking the Usage of Batch Normalization and Dropout in the Training of Deep Neural Networks*, arXiv:1905.05928v1 [cs.LG] 2019, p. 1 - 10; 
-                + M. Lin, Q. Chen, S. Yan, *Network In Network*, arXiv:1312.4400v3 [cs.NE] 2014, p. 1 - 10; 
-                + A. Krizhevsky, I. Sutskever, G. Hinton, *ImageNet Classification with Deep Convolutional Neural Networks*, "Advances in Neural Information Processing Systems" 2012, No. 1 (25), p. 1097 - 1105.
+       - Core Network - inspired mainly by papers: 
+             + G. Chen, P. Chen, Y. Shi, C. Hsieh, B. Liao, S. Zhang, *Rethinking the Usage of Batch Normalization and Dropout in the Training of Deep Neural Networks*, arXiv:1905.05928v1 [cs.LG] 2019, p. 1 - 10; 
+             + M. Lin, Q. Chen, S. Yan, *Network In Network*, arXiv:1312.4400v3 [cs.NE] 2014, p. 1 - 10; 
+             + A. Krizhevsky, I. Sutskever, G. Hinton, *ImageNet Classification with Deep Convolutional Neural Networks*, "Advances in Neural Information Processing Systems" 2012, No. 1 (25), p. 1097 - 1105.
         
-        - Fully Connected Layers - three FC layers [1024, 512, 256] and one output neuron (sigmoid activation);
+       - Fully Connected Layers - three FC layers [1024, 512, 256] and one output neuron (sigmoid activation);
         
-        - Activation - ReLU for all layers, sigmoid for the output neuron;
+       - Activation - ReLU for all layers, sigmoid for the output neuron;
         
-        - Batch Normalization (BN) Layers - applied after ReLU activations of convolutional and dense layers;
+       - Batch Normalization (BN) Layers - applied after ReLU activations of convolutional and dense layers;
         
-        - Dropout Layers - Gaussian dropout applied before each dense layer.
+       - Dropout Layers - Gaussian dropout applied before each dense layer.
                     
      * 2.1.2. Language, libraries and framework / API:
         
-        - Python3;
-        - Numpy (data sequence), Pandas (dataframe), Matplotlib (metrics plot), Pydot and GraphViz (model plot);
-        - TensorFlow's implementation of the Keras API (model) v1.14.
+       - Python3;
+       - Numpy (data sequence), Pandas (dataframe), Matplotlib (metrics plot), Pydot and GraphViz (model plot);
+       - TensorFlow's implementation of the Keras API (model) v1.14.
    
      * 2.1.3. Implementation:
        
