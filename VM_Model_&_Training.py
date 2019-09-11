@@ -96,8 +96,7 @@ model = Model(inputs=[left_input, right_input], outputs=[output])
 Adam = tf.keras.optimizers.Adam(learning_rate=0.001,
                                 beta_1=0.9, 
                                 beta_2=0.999, 
-                                epsilon=1e-08, 
-                                amsgrad=False)
+                                epsilon=1e-08)
 
 model.compile(optimizer=Adam, loss='binary_crossentropy', metrics=['accuracy'])
 
