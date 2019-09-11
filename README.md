@@ -97,9 +97,9 @@
    
   * 2.2.1. Database:
        
-    * Training dataset - CVL databese subset of 1415 training images by 283 writers - 443704 image pairs (221852 positive and 221852 negative instances);
+    * Training dataset - CVL databese subset of 1415 training document images by 283 writers - 443704 image pairs (221852 positive and 221852 negative instances);
         
-    * Validation dataset - CVL databese subset of 189 training images by 27 writers - 12478 image pairs (6300 positive and 6178 negative instances).
+    * Validation dataset - CVL databese subset of 189 training document images by 27 writers - 12478 image pairs (6300 positive and 6178 negative instances).
           
   * 2.2.2. Callbacks:
      
@@ -137,11 +137,19 @@
    
   * 2.3.1. Database:
       
-    * CVL database test subset of 189 test images by 27 writers - soft criterion (excluded pairs of identical patches) - 82476 image pairs (41238 positive and 41238 negative instances);
+    * CVL database:
+      
+      * Test subset of 189 test document images by 27 writers;
+      
+      * Custom soft criterion (excluded pairs of identical patches) - 82476 image pairs (41238 positive and 41238 negative instances);
         
-    * IAM database as a test dataset - soft criterion (excluded pairs of identical patches) - x image pairs (x positive and x negative instances).
-        
-    * IAM database as a test dataset - hard criterion (excluded both negative and positive pairs of documents containing identical sample text) - x image pairs (x positive and x negative instances).
+    * IAM database:
+      
+      * Whole databese as a test set of 1539 document images by 657 writers;
+      
+      * Custom soft criterion (excluded pairs of identical patches) - x image pairs (x positive and x negative instances).
+      
+      * Custom hard criterion (excluded both negative and positive pairs of documents containing identical sample text) - x image pairs (x positive and x negative instances).
         
   * 2.3.2. Metrics:
         
@@ -163,18 +171,11 @@
               
     * Epochs of Training (EofT) by the best validation result. 
               
-  * 2.3.4. IAM (soft criterion) evaluation:
+  * 2.3.4. IAM evaluation:
        
-    | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
-    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | x | x | x | x | x | x | x | x | x | x |
-              
-    * Epochs of Training (EofT) by the best validation result.
-       
-  * 2.3.4. IAM (hard criterion) evaluation:
-       
-    | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
-    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | x | x | x | x | x | x | x | x | x | x |
+    | Criterion | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | Soft | x | x | x | x | x | x | x | x | x | x |
+    | Hard | x | x | x | x | x | x | x | x | x | x |
               
     * Epochs of Training (EofT) by the best validation result.
