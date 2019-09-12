@@ -173,11 +173,11 @@
      
     | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | x | 0. | 0. | 0 | 0 | 0 | 0 | 0. | 0. | 0. |
+    | 5 | 0. | 0. | 0 | 0 | 0 | 0 | 0. | 0. | 0. |
               
   * 2.3.4. IAM evaluation (epochs of model training - EofT - by the best validation result):
        
     | Criterion | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | Soft | x | x | x | x | x | x | x | x | x | x |
-    | Hard | x | x | x | x | x | x | x | x | x | x |
+    | Soft | 5 | x | x | x | x | x | x | x | x | x |
+    | Hard | 5 | x | x | x | x | x | x | x | x | x |
