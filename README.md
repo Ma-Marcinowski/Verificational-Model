@@ -71,7 +71,7 @@
       
       * A. Krizhevsky, I. Sutskever, G. Hinton, *ImageNet Classification with Deep Convolutional Neural Networks*, "Advances in Neural Information Processing Systems" 2012, No. 1 (Vol. 25), p. 1097 - 1105;
     
-    * Globally Average Pooling Layer - applied instead of flattening layer;
+    * Globally Average Pooling Layer - applied instead of flattening layers;
     
     * Fully Connected Layers - three dense layers [1024, 512, 256] and one output neuron;
         
