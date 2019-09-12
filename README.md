@@ -134,8 +134,8 @@
     | 4 | 0.1828 | 0.9353 | 0.2458 | 0.9050 | Manual LR reduction to 0.0001 (1e-4) |
     | **5** | **0.1348** | **0.9540** | **0.2320** | **0.9110** | None |
     | 6 | 0.1165 | 0.9614 | 0.2336 | 0.9140 | Callback LR reduction to 0.00001 (1e-5) |
-    | 7 | 0.1061 | 0.9653 | 0.2328 | 0.9134 | None |
-    | 8 | 0.1037 | 0.9657 | 0.2347 | 0.9130 | Callback LR reduction to 0.000001 (1e-6) |
+    | 7 | 0.1061 | 0.9653 | 0.2328 | 0.9134 | Callback LR reduction to 0.000001 (1e-6) |
+    | 8 | 0.1037 | 0.9657 | 0.2347 | 0.9130 | Callback LR reduction to 0.0000001 (1e-7) |
      
 ![loss](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/Model_Loss.png "Model Loss") ![acc](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/Model_Accuracy.png "Model Accuracy")
 
@@ -171,9 +171,9 @@
       
   * 2.3.3. CVL evaluation (epochs of model training - EofT - by the best validation result):
      
-    | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
-    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | 5 | 0. | 0. | 0 | 0 | 0 | 0 | 0. | 0. | 0. |
+    | Criterion | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | Soft | 5 | 0. | 0. | 0 | 0 | 0 | 0 | 0. | 0. | 0. |
               
   * 2.3.4. IAM evaluation (epochs of model training - EofT - by the best validation result):
        
