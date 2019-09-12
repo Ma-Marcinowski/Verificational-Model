@@ -52,7 +52,7 @@
     * Place a given preprocessing program file in a directory of images to be preprocessed by that given program (that's the simplest method);
     * Access the directory - which contains a given preprocessing program file and images to be preprocessed - through the terminal / command-line interpreter (method  of access depends on user's operating system);
     * In the terminal type the command `python3 program_name.py` to run the named program;
-    * If it were necessary: to force quit (terminate) a running program use a keyboard shortcut `Ctrl + C` in an opened terminal window, or `Ctrl + Z` to suspend the running program, to resume the paused run type the command `fg` (works in terminals of most operating systems, *e.g.* macOS, Linux).
+    * If it were necessary: to force quit (terminate) a running program use a keyboard shortcut `Ctrl + C` in an opened terminal window, or `Ctrl + Z` to suspend a running program, to resume paused run, type the command `fg` (works in terminals of most operating systems, *e.g.* macOS, Linux).
              
   
 ### 2. Verificational Model
