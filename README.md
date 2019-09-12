@@ -161,23 +161,23 @@
         
     * Binary Crossentropy - BN;
     * Accuracy - Acc;
-    * True Positive - TP;
-    * True Negative - TN;
-    * False Positive - FP;
-    * False Negative - FN;        
+    * True Positive Rate `(TP/P)` - TPR;
+	  * True Negative Rate `(TN/N)` - TNR;
+	  * False Positive Rate `(FP/N)` - FPR;
+	  * False Negative Rate `(FN/P)` - FNR;         
     * Recall `(TP/(TP+FN))` - Rec;
     * Precision `(TP/(TP+FP))` - Pre;
     * Area under the ROC curve - AUC.
       
   * 2.3.3. CVL evaluation (epochs of model training - EofT - by the best validation result):
      
-    | Criterion | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
+    | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | Rec | Pre | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | Soft | 5 | 0. | 0. | 0 | 0 | 0 | 0 | 0. | 0. | 0. |
               
   * 2.3.4. IAM evaluation (epochs of model training - EofT - by the best validation result):
        
-    | Criterion | EofT | Loss | Acc | TP | TN | FP | FN | Rec | Pre | AUC |
+    | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | Rec | Pre | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | Soft | 5 | x | x | x | x | x | x | x | x | x |
     | Hard | 5 | x | x | x | x | x | x | x | x | x |
