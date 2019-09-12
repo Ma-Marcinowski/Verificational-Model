@@ -131,11 +131,11 @@
     | 1 | 0.4500 | 0.7960 | 0.3918 | 0.8279 | None |
     | 2 | 0.2830 | 0.8916 | 0.3544 | 0.8529 | None |
     | 3 | 0.2125 | 0.9229 | 0.2547 | 0.9007 | None |
-    | 4 | 0.1828 | 0.9353 | 0.2458 | 0.9050 | Manual LR reduction to 0.0001 |
+    | 4 | 0.1828 | 0.9353 | 0.2458 | 0.9050 | Manual LR reduction to 0.0001 (1e-4) |
     | **5** | 0.1348 | 0.9540 | **0.2320** | **0.9110** | None |
-    | 6 | 0.1165 | 0.9614 | 0.2336 | 0.9140 | Callback LR reduction to 0.00001 |
+    | 6 | 0.1165 | 0.9614 | 0.2336 | 0.9140 | Callback LR reduction to 0.00001 (1e-5) |
     | 7 | 0.1061 | 0.9653 | 0.2328 | 0.9134 | None |
-    | 8 | 0.1037 | 0.9657 | 0.2347 | 0.9130 | Callback LR reduction to 0.000001 |
+    | 8 | 0.1037 | 0.9657 | 0.2347 | 0.9130 | Callback LR reduction to 0.000001 (1e-6) |
      
 ![loss](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/Model_Loss.png "Model Loss") ![acc](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/Model_Accuracy.png "Model Accuracy")
 
