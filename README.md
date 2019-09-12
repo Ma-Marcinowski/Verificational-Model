@@ -162,9 +162,9 @@
     * Binary Crossentropy - BN;
     * Accuracy - Acc;
     * True Positive Rate `(TP/P)` - TPR;
-	  * True Negative Rate `(TN/N)` - TNR;
-	  * False Positive Rate `(FP/N)` - FPR;
-	  * False Negative Rate `(FN/P)` - FNR;         
+    * True Negative Rate `(TN/N)` - TNR;
+    * False Positive Rate `(FP/N)` - FPR;
+    * False Negative Rate `(FN/P)` - FNR;         
     * Recall `(TP/(TP+FN))` - Rec;
     * Precision `(TP/(TP+FP))` - Pre;
     * Area under the ROC curve - AUC.
@@ -173,7 +173,7 @@
      
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | Rec | Pre | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | Soft | 5 | 0. | 0. | 0 | 0 | 0 | 0 | 0. | 0. | 0. |
+    | Soft | 5 | 0.2331 | 0.9124 | 0. | 0. | 0. | 0. | 0.9207 | 0.9056 | 0.9676 |
               
   * 2.3.4. IAM evaluation (epochs of model training - EofT - by the best validation result):
        
