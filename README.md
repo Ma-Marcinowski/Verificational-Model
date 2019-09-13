@@ -149,7 +149,7 @@
       
       * 82476 image pairs (41238 positive and 41238 negative instances);
       
-      * Custom hard criterion - excluded documents containing the same samlpe text as training documents (*ergo* included documents containing only samlpe text no. 5, 7 and 8) - x image pairs (x positive and x negative instances).
+      * Custom hard criterion - excluded documents containing the same samlpe text as training documents (*ergo* included documents containing only samlpe texts no. 5, 7 and 8) - x image pairs (x positive and x negative instances).
       
     * IAM database:
       
