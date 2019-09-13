@@ -147,8 +147,10 @@
       
       * Test subset of 189 document images by 27 writers;
       
-      * 82476 image pairs (41238 positive and 41238 negative instances).
-        
+      * 82476 image pairs (41238 positive and 41238 negative instances);
+      
+      * Custom hard criterion - excluded documents containing the same samlpe text as training documents (*ergo* included documents containing only samlpe text no. 5, 7 and 8) - x image pairs (x positive and x negative instances).
+      
     * IAM database:
       
       * Whole database as a test set of 1539 document images by 657 writers;
@@ -169,13 +171,14 @@
       
   * 2.3.3. CVL evaluation (epochs of model training - EofT - by the best validation result):
      
-    | EofT | Loss | Acc | TPR | TNR | FPR | FNR | Rec | Pre | AUC |
-    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | 5 | 0.2331 | 0.9124 | 0.9207 | 0.9040 | 0.0959 | 0.0792 | 0.9207 | 0.9056 | 0.9676 |
+ | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | Rec | Pre | AUC |
+ | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+ | None | 5 | 0.2331 | 0.9124 | 0.9207 | 0.9040 | 0.0959 | 0.0792 | 0.9207 | 0.9056 | 0.9676 |
+ | Hard | 5 | x | x | x | x | x | x | x | x | x |
               
   * 2.3.4. IAM evaluation (epochs of model training - EofT - by the best validation result):
        
-    | EofT | Loss | Acc | TPR | TNR | FPR | FNR | Rec | Pre | AUC |
-    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | 5 | x | x | x | x | x | x | x | x | x |
+ | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | Rec | Pre | AUC |
+ | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+ | None | 5 | x | x | x | x | x | x | x | x | x |
 
