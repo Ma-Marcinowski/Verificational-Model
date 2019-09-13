@@ -147,7 +147,7 @@
       
       * Test subset of 189 document images by 27 writers;
       
-      * 82476 image pairs (41238 positive and 41238 negative instances);
+      * 82476 image pairs (41238 positive and 41238 negative instances).
         
     * IAM database:
       
