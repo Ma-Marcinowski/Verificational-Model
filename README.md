@@ -155,7 +155,9 @@
       
       * Whole database as a test set of 1539 document images by 657 writers;
       
-      * 589274 image pairs only, due to a high background noise and thefore threshold of mean pixel value >= 16 (294013 positive and 295261 negative instances).
+      * 589274 image pairs only, due to a high background noise and thefore threshold of mean pixel value >= 16 (294013 positive and 295261 negative instances);
+      
+      * x denoised images pairs (x positive and x negative instances).
         
   * 2.3.2. Metrics:
         
@@ -178,7 +180,9 @@
               
   * 2.3.4. IAM evaluation (epochs of model training - EofT - by the best validation result):
        
-  | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | Rec | Pre | AUC |
+  | Images | EofT | Loss | Acc | TPR | TNR | FPR | FNR | Rec | Pre | AUC |
   | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-  | None | 5 | x | x | x | x | x | x | x | x | x |
+  | Original | 5 | x | x | x | x | x | x | x | x | x |
+  | Denoised | 5 | x | x | x | x | x | x | x | x | x |
+
 
