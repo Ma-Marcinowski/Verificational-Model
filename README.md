@@ -147,15 +147,13 @@
       
       * Test subset of 189 document images by 27 writers;
       
-      * Custom soft criterion (excluded pairs of identical patches) - 82476 image pairs (41238 positive and 41238 negative instances);
+      * 82476 image pairs (41238 positive and 41238 negative instances);
         
     * IAM database:
       
       * Whole database as a test set of 1539 document images by 657 writers;
       
-      * Custom soft criterion (excluded pairs of identical patches) - x image pairs (x positive and x negative instances).
-      
-      * Custom hard criterion (excluded both negative and positive pairs of documents containing identical sample text) - x image pairs (x positive and x negative instances).
+      * x image pairs (x positive and x negative instances).
         
   * 2.3.2. Metrics:
         
@@ -171,13 +169,13 @@
       
   * 2.3.3. CVL evaluation (epochs of model training - EofT - by the best validation result):
      
-  | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | Rec | Pre | AUC |
-  | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-  | Soft | 5 | 0.2331 | 0.9124 | 0.9207 | 0.9040 | 0.0959 | 0.0792 | 0.9207 | 0.9056 | 0.9676 |
+    | EofT | Loss | Acc | TPR | TNR | FPR | FNR | Rec | Pre | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | 5 | 0.2331 | 0.9124 | 0.9207 | 0.9040 | 0.0959 | 0.0792 | 0.9207 | 0.9056 | 0.9676 |
               
   * 2.3.4. IAM evaluation (epochs of model training - EofT - by the best validation result):
        
-  | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | Rec | Pre | AUC |
-  | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-  | Soft | 5 | x | x | x | x | x | x | x | x | x |
-  | Hard | 5 | x | x | x | x | x | x | x | x | x |
+    | EofT | Loss | Acc | TPR | TNR | FPR | FNR | Rec | Pre | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | 5 | x | x | x | x | x | x | x | x | x |
+
