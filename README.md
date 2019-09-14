@@ -159,26 +159,25 @@
         
     * Binary Crossentropy - BN;
     * Accuracy - Acc;
-    * True Positive Rate `(TP/P)` - TPR;
-    * True Negative Rate `(TN/N)` - TNR;
-    * False Positive Rate `(FP/N)` - FPR;
-    * False Negative Rate `(FN/P)` - FNR;         
-    * Recall `(TP/(TP+FN))` - Rec;
     * Precision `(TP/(TP+FP))` - Pre;
+    * True Positive Rate / Sensitivity / Recall - `(TP/P)` - TPR;
+    * True Negative Rate / Specificity - `(TN/N)` - TNR;
+    * False Positive Rate - `(FP/N)` - FPR;
+    * False Negative Rate - `(FN/P)` - FNR;         
     * Area under the ROC curve - AUC.
       
   * 2.3.3. CVL evaluation (epochs of model training - EofT - by the best validation result):
      
-  | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | Rec | Pre | AUC |
-  | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-  | False | 5 | 0.2331 | 0.9124 | 0.9207 | 0.9040 | 0.0959 | 0.0792 | 0.9207 | 0.9056 | 0.9676 |
-  | True | 5 | 0.1795 | 0.9370 | 0.9617 | 0.9123 | 0.0876 | 0.0382 | 0.9617 | 0.9164 | 0.9781 |
+  | Criterion | EofT | Loss | Acc |  Pre | TPR | TNR | FPR | FNR | AUC |
+  | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+  | False | 5 | 0.2331 | 0.9124 | 0.9056 | 0.9207 | 0.9040 | 0.0959 | 0.0792 | 0.9676 |
+  | True | 5 | 0.1795 | 0.9370 | 0.9164 | 0.9617 | 0.9123 | 0.0876 | 0.0382 | 0.9781 |
               
   * 2.3.4. IAM evaluation (epochs of model training - EofT - by the best validation result):
        
-  | Denoised | EofT | Loss | Acc | TPR | TNR | FPR | FNR | Rec | Pre | AUC |
-  | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-  | False | 5 | 389.7830 | 0.5047 | 0.0082 | 0.9991 | 0.0008 | 0.9917 | 0.0082 | 0.9100 | 0.5046 |
-  | True | 5 | 0.3629 | 0.8835 | 0.9661 | 0.8009 | 0.1990 | 0.0338 | 0.9661 | 0.8291 | 0.9603 |
+  | Denoised | EofT | Loss | Acc | Pre | TPR | TNR | FPR | FNR | AUC |
+  | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+  | False | 5 | 389.7830 | 0.5047 | 0.9100 | 0.0082 | 0.9991 | 0.0008 | 0.9917 | 0.5046 |
+  | True | 5 | 0.3629 | 0.8835 | 0.8291 | 0.9661 | 0.8009 | 0.1990 | 0.0338 | 0.9603 |
 
 
