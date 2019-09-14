@@ -163,7 +163,7 @@
     * True Negative Rate / Specificity - `(TN/N)` - TNR;
     * False Positive Rate - `(FP/N)` - FPR;
     * False Negative Rate - `(FN/P)` - FNR;
-    * Precision / Positive Predictive Value - `(TP/(TP+FP))` - PPV;
+    * Positive Predictive Value / Precision - `(TP/(TP+FP))` - PPV;
     * Area under the ROC curve - AUC.
       
   * 2.3.3. CVL evaluation (epochs of model training - EofT - by the best validation result):
@@ -177,7 +177,7 @@
        
   | Denoised | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | AUC |
   | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-  | False | 5 | 389.7830 | 0.5047 | 0.0082 | 0.9991 | 0.0008 | 0.9917 | 0.9100 | 0.5046 |
+  | False | 5 | 265.3726 | 0.5047 | 0.0113 | 0.9979 | 0.0020 | 0.9886 | 0.8478 | 0.5058 |
   | True | 5 | 0.3629 | 0.8835 | 0.9661 | 0.8009 | 0.1990 | 0.0338 | 0.8291 | 0.9603 |
 
 
