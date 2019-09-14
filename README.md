@@ -153,7 +153,7 @@
       
       * 589274 image pairs only, due to a high background noise and thefore a threshold of mean pixel value >= 16 (294013 positive and 295261 negative instances);
       
-      * 590000 roughly denoised (by thresholding of pixel values lower than 105 to 0) images pairs (295000 positive and 295000 negative instances).
+      * 590000 roughly denoised (by thresholding of pixel values lower than 55 to 0) images pairs (295000 positive and 295000 negative instances).
         
   * 2.3.2. Metrics:
         
@@ -179,6 +179,6 @@
   | Denoised | EofT | Loss | Acc | TPR | TNR | FPR | FNR | Rec | Pre | AUC |
   | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
   | False | 5 | 389.7830 | 0.5047 | 0.0082 | 0.9991 | 0.0008 | 0.9917 | 0.0082 | 0.9100 | 0.5046 |
-  | True | 5 | 0.5474 | 0.8430 | 0.9356 | 0.7503 | 0.2496 | 0.0643 | 0.9357 | 0.7894 | 0.9271 |
+  | True | 5 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
 
 
