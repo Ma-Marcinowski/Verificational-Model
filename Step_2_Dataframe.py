@@ -13,7 +13,7 @@ with open('/path/Dataframe.csv', 'a+') as f:
     for j in tqdm(pngs):
         for i in pngs:
 
-            if j[:4] == i[:4]:
+            if j[:4] == i[:4] and j != i:
 
                 pair = ['/path/' + j, '/path/' + i, 1]
 
