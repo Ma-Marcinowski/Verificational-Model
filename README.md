@@ -157,7 +157,7 @@
         
   * 2.3.2. Metrics:
         
-    * Binary Crossentropy - BN;
+    * Binary Crossentropy - Loss;
     * Accuracy - Acc;
     * Precision `(TP/(TP+FP))` - Pre;
     * True Positive Rate / Sensitivity / Recall - `(TP/P)` - TPR;
