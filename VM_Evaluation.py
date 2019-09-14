@@ -54,14 +54,14 @@ Adam = tf.keras.optimizers.Adam(learning_rate=0.001,
                                 beta_2=0.999, 
                                 epsilon=1e-08)
 
-Pre = tf.keras.metrics.Precision()
-Rec = tf.keras.metrics.Recall()
+TPR = tf.keras.metrics.Recall()
 TN  = tf.keras.metrics.TrueNegatives()
 FP  = tf.keras.metrics.FalsePositives()
 FN  = tf.keras.metrics.FalseNegatives()
+PPV = tf.keras.metrics.Precision()
 AUC = tf.keras.metrics.AUC()
 
-model.compile(optimizer=Adam, loss='binary_crossentropy', metrics=['accuracy', Pre, Rec, TN, FP, FN, AUC])
+model.compile(optimizer=Adam, loss='binary_crossentropy', metrics=['accuracy', TPR, TN, FP, FN, PPV, AUC])
 
 csv_logger = tf.keras.callbacks.CSVLogger('/path/TestLog.csv', separator=',', append=False)
 
