@@ -157,7 +157,7 @@
       
       * 589274 image pairs only, due to a high background noise and thefore a threshold of mean pixel value >= 16 (294013 positive and 295261 negative instances);
       
-      * 590000 denoised images pairs (295000 positive and 295000 negative instances).
+      * 590000 roughly denoised (by thresholding of pixel values lower than 105 to zero) images pairs (295000 positive and 295000 negative instances).
         
   * 2.3.2. Metrics:
         
