@@ -149,7 +149,7 @@
       
       * 82476 image pairs (41238 positive and 41238 negative instances);
       
-      * Custom hard criterion - excluded documents containing the same samlpe text as training documents (*ergo* included documents containing only samlpe texts no. 7 and 8) - x image pairs (x positive and x negative instances).
+      * Custom hard criterion - excluded documents containing the same samlpe text as training documents (*ergo* included documents containing only samlpe texts no. 7 and 8) - 7572 image pairs (3786 positive and 3786 negative instances).
       
     * IAM database:
       
@@ -157,7 +157,7 @@
       
       * 589274 image pairs only, due to a high background noise and thefore a threshold of mean pixel value >= 16 (294013 positive and 295261 negative instances);
       
-      * x denoised images pairs (x positive and x negative instances).
+      * 590000 denoised images pairs (295000 positive and 295000 negative instances).
         
   * 2.3.2. Metrics:
         
@@ -176,13 +176,13 @@
   | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | Rec | Pre | AUC |
   | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
   | False | 5 | 0.2331 | 0.9124 | 0.9207 | 0.9040 | 0.0959 | 0.0792 | 0.9207 | 0.9056 | 0.9676 |
-  | True | 5 | x | x | x | x | x | x | x | x | x |
+  | True | 5 | 0.1795 | 0.9370 | 0.9617 | 0.9123 | 0.0876 | 0.0382 | 0.9617 | 0.9164 | 0.9781 |
               
   * 2.3.4. IAM evaluation (epochs of model training - EofT - by the best validation result):
        
   | Denoised | EofT | Loss | Acc | TPR | TNR | FPR | FNR | Rec | Pre | AUC |
   | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-  | False | 5 | x | x | x | x | x | x | x | x | x |
+  | False | 5 | 389.7830 | 0.5047 | 0.0082 | 0.9991 | 0.0008 | 0.9917 | 0.0082 | 0.9100 | 0.5046 |
   | True | 5 | x | x | x | x | x | x | x | x | x |
 
 
