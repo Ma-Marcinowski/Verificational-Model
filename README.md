@@ -155,7 +155,7 @@
       
       * Whole database as a test set of 1539 document images by 657 writers;
       
-      * 589274 image pairs only, due to a high background noise and thefore threshold of mean pixel value >= 16 (294013 positive and 295261 negative instances);
+      * 589274 image pairs only, due to a high background noise and thefore a threshold of mean pixel value >= 16 (294013 positive and 295261 negative instances);
       
       * x denoised images pairs (x positive and x negative instances).
         
