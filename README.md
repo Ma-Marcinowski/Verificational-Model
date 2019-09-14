@@ -32,12 +32,8 @@
             
     * `Step_2_Dataframe.py` - creation of a dataframe (a `csv` file which can be edited in any spreadsheet program, *e.g.* calc / excel) separately for the test and training subset, by combinatorial paring of image names into the positive class (except for identical patches), and a random combinatorial paring of image names into the negative class (the number of possible negative combinations is much greater than the number positive ones, so all positive instances are created first and then the negative instances are randomly combinated until their number is equal to the number of positive instances). Image name pairs and their labels are ordered by rows, according to columns `left convolutional path`, `right convolutional path`, and `label` (labels are determined by the convergence or divergence of author's identifiers - *e.g.* first four digits of an image name in the case of a CVL database). Above method requires that the test and training images will be kept in different directories (during preprocessing). However, it is not necessary to create a `csv` file, *i.e.* it will be created by the program (and if such a file was already created manually, its directory and name has to be indicated in the program code);
         
-    * Third step - it is crucial to shuffle rows in dataframes, because `tf.keras.Model.fit_generator` shuffles only the batch order (between epochs), however the method of randomization by rows depends on a given spreadsheet program (most commonly an additional column of random numbers is generated - by a use of `=Rand()` function - and utilized as a Sort Key for Data Sorting in selected columns);
-        
-    * Fourth step - to create a validation dataframe (utilized only for testing of the model during its training, mostly after each epoch) simply create a `csv` file in any given spreadsheet program, then copy about 10-20% of already randomized instances from the test dataframe (it is most probable that the number of copied positive and negative instances will be effectively equal);
-        
-    * Fifth step - add column headers to each dataframe, *e.g.* `left convolutional path, right convolutional path, labels` for columns containing names and labels of image pairs.  
-        
+    * Third step - to create a validation dataframe (utilized only for testing of the model during its training, generally after each epoch) simply create a `csv` file in any given spreadsheet program, then copy about 10-20% of (already shuffled by the `Step_2_Dataframe.py` program) instances from the test dataframe (it is most probable that the number of copied positive and negative instances will be effectively equal). Then add column headers to validation dataframe, *e.g.* `left convolutional path, right convolutional path, labels` for columns containing names and labels of image pairs.  
+               
 * #### 1.2. Preprocessing programs
    		
   * 1.2.1. Programming language - Python 3.7.3.
