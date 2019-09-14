@@ -2,6 +2,8 @@ import glob
 import os
 import csv
 import random
+import sklearn
+import pandas as pd
 from tqdm import tqdm
 
 pngs = glob.glob('*.png')
@@ -10,7 +12,7 @@ with open('/path/Dataframe.csv', 'a+') as f:
 
     writer = csv.writer(f)
 
-    for j in tqdm(pngs):
+    for j in tqdm(pngs, leave=False):
         for i in pngs:
 
             if j[:4] == i[:4] and j != i:
@@ -22,7 +24,8 @@ with open('/path/Dataframe.csv', 'a+') as f:
             else:
 
                 continue
-
+    
+    print('Done positive: 100%')
     g = f.tell()
     k = 2 * f.tell()
 
@@ -47,4 +50,14 @@ with open('/path/Dataframe.csv', 'a+') as f:
 
     else:
 
-        print('Done: 100%')
+        print('Done negative: 100%')
+
+df = pd.read_csv('/path/Dataframe.csv', header=None, names = ['Leftname', 'Rightname', 'Label'])
+
+df = sklearn.utils.shuffle(df)
+
+df.columns = ["Leftname", "Rightname", "Label"]
+
+df.to_csv('/path/Dataframe.csv', index=False)
+
+print('Dataframe done.') 
