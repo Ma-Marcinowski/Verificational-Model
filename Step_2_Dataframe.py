@@ -6,9 +6,11 @@ import sklearn
 import pandas as pd
 from tqdm import tqdm
 
+os.chdir('/preprocessed/images/directory/')
+
 pngs = glob.glob('*.png')
 
-with open('/path/Dataframe.csv', 'a+') as f:
+with open('/dataframe/directory/Dataframe.csv', 'a+') as f:
 
     writer = csv.writer(f)
 
@@ -17,15 +19,16 @@ with open('/path/Dataframe.csv', 'a+') as f:
 
             if j[:4] == i[:4] and j != i:
 
-                pair = ['/path/' + j, '/path/' + i, 1]
+                pair = ['/preprocessed/images/directory/' + j, '/preprocessed/images/directory/' + i, 1]
 
                 writer.writerow(pair)
 
             else:
 
                 continue
-    
-    print('Done positive: 100%')
+
+    print('Done positives: 100%')
+
     g = f.tell()
     k = 2 * f.tell()
 
@@ -36,7 +39,7 @@ with open('/path/Dataframe.csv', 'a+') as f:
 
         if j[:4] != i[:4]:
 
-            pair = ['/path/' + j, '/path/' + i, 0]
+            pair = ['/preprocessed/images/directory/' + j, '/preprocessed/images/directory/' + i, 0]
 
             writer.writerow(pair)
 
@@ -50,14 +53,14 @@ with open('/path/Dataframe.csv', 'a+') as f:
 
     else:
 
-        print('Done negative: 100%')
+        print('Done negatives: 100%')
 
-df = pd.read_csv('/path/Dataframe.csv', header=None, names = ['Leftname', 'Rightname', 'Label'])
+df = pd.read_csv('/dataframe/directory/Dataframe.csv', header=None, names = ['Leftname', 'Rightname', 'Label'])
 
 df = sklearn.utils.shuffle(df)
 
 df.columns = ["Leftname", "Rightname", "Label"]
 
-df.to_csv('/path/Dataframe.csv', index=False)
+df.to_csv('/dataframe/directory/Dataframe.csv', index=False)
 
 print('Dataframe done.') 
