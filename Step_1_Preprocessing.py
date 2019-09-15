@@ -1,7 +1,10 @@
 import glob
+import os 
 import cv2
 import numpy as np
 from tqdm import tqdm
+
+os.chdir('/raw/images/directory/')
 
 tifs = glob.glob('*.tif')
 
@@ -31,7 +34,7 @@ for j in tqdm(tifs):
 
             if mean >= 4: 
 
-                cv2.imwrite('/path/' + j[:-4] + '-' + str(idx) + str(ind) + '.png', v)
+                cv2.imwrite('/preprocessed/images/directory/' + j[:-4] + '-' + str(idx) + str(ind) + '.png', v)
 
             else:
 
