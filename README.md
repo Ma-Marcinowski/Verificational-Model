@@ -44,7 +44,7 @@
   
     * Install Python and listed libraries (installation method depends on user's operating system);
     * Download the repository;
-    * Using any given text editor, access programs code and edit images/dataframes input/output paths (save the program files in a `py` format); 
+    * Using any given text editor, access programs code and edit image/dataframe input/output paths (save the program files in a `py` format); 
     * Access the directory - which contains a given preprocessing program file - through the terminal / command-line interpreter (method  of access depends on user's operating system);
     * In the terminal type the command `python3 program_name.py` to run the named program;
     * If it were necessary: to force quit (terminate) a running program use a keyboard shortcut `Ctrl + C` in an opened terminal window, or `Ctrl + Z` to suspend a running program, then to resume a paused run, type the command `fg` (works in terminals of most operating systems, *e.g.* macOS, Linux).
