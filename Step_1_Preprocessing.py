@@ -7,8 +7,8 @@ tifs = glob.glob('*.tif')
 
 for j in tqdm(tifs):
 
-    img = cv2.imread(j, 0) #Load image in grayscale.
-    inv = np.bitwise_not(img) #Invert image colours (because of high white background value, i.e. white=255 to black=0).
+    img = cv2.imread(j, 0) 
+    inv = np.bitwise_not(img) 
 
     y=890
     x=323
@@ -29,7 +29,7 @@ for j in tqdm(tifs):
 
             mean = v.mean()
 
-            if mean >= 4: #Arbitrary threshold of mean image pixel values, to exclude empty and half-empty images.
+            if mean >= 4: 
 
                 cv2.imwrite('/path/' + j[:-4] + '-' + str(idx) + str(ind) + '.png', v)
 
