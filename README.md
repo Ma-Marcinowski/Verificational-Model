@@ -208,5 +208,5 @@
     | 7 | 0.3359 | 0.8638 | **0.2973** | **0.8838** | None |
     | 8 | 0.3336 | 0.8646 | 0.3033 | 0.8785 | Callback LR reduction to 0.000001 (1e-6) |
     
-* #### 2.5. Model training and evaluation on [1024x1024] grayscale segments
-* #### 2.6. Model training and evaluation on [1024x1024] binarized segments
+* #### 2.5. Model training and evaluation on [1024x1024] grayscale extracts
+* #### 2.6. Model training and evaluation on [1024x1024] binarized extracts
