@@ -179,4 +179,34 @@
   | False | 5 | 265.3726 | 0.5047 | 0.0113 | 0.9979 | 0.0020 | 0.9886 | 0.8478 | 0.5058 |
   | True | 5 | 0.3629 | 0.8835 | 0.9661 | 0.8009 | 0.1990 | 0.0338 | 0.8291 | 0.9603 |
 
+* #### 2.4. Model training on [512x512] patches
+  
+  * 2.4.1. Database:
+       
+    * Training dataset - CVL database subset of 1415 document images by 283 writers - 59868 image pairs (29934 positive and 29934 negative instances);
+        
+    * Validation dataset - CVL database subset of 189 document images by 27 writers - 2436 image pairs (6300 positive and 6178 negative instances).
 
+  * 2.4.2. Callbacks: 
+  
+    * *Vide* 2.2.2. Callbacks.
+  
+  * 2.4.3. Hyperparameters: 
+    
+    * *Vide* 2.2.3. Hyperparameters;
+   
+  * 2.2.4. Training:
+     
+    | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
+    | --- | --- | --- | --- | --- |  --- |
+    | 1 | 0.5774 | 0.7126 | 0.5133 | 0.7389 | None |
+    | 2 | 0.5340 | 0.7412 | 0.4941 | 0.7525 | None |
+    | 3 | 0.4665 | 0.7849 | 0.3565 | 0.8432 | None |
+    | 4 | 0.3943 | 0.8322 | 0.4770 | 0.7570 | None |
+    | 5 | 0.3507 | 0.8546 | 0.2973 | 0.8822 | None |
+    | 6 | 0.3354 | 0.8631 | 0.3052 | 0.8744 | Callback LR reduction to 0.00001 (1e-5) |
+    | 7 | 0.3359 | 0.8638 | **0.2973** | **0.8838** | None |
+    | 8 | 0.3336 | 0.8646 | 0.3033 | 0.8785 | Callback LR reduction to 0.000001 (1e-6) |
+    
+* #### 2.5. Model training and evaluation on [1024x1024] grayscale segments
+* #### 2.6. Model training and evaluation on [1024x1024] binarized segments
