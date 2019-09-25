@@ -185,7 +185,7 @@
        
     * Training dataset - CVL database subset of 1415 document images by 283 writers - 59868 image pairs (29934 positive and 29934 negative instances);
         
-    * Validation dataset - CVL database subset of 189 document images by 27 writers - 2436 image pairs (6300 positive and 6178 negative instances).
+    * Validation dataset - CVL database subset of 189 document images by 27 writers - 2436 image pairs (1201 positive and 1235 negative instances).
 
   * 2.4.2. Callbacks: 
   
