@@ -52,7 +52,7 @@
   
 ### 2. Verificational Model
 
-* #### 2.1. Model
+* #### 2.1. Model v3.0
    
   * 2.1.1. Model architecture:
       
@@ -134,7 +134,7 @@
      
 ![loss](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/Model_Loss.png "Model Loss") ![acc](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/Model_Accuracy.png "Model Accuracy")
 
-* #### 2.3. Model evaluation
+* #### 2.3. Model v3.0 evaluation
    
   * 2.3.1. Database:
       
@@ -179,7 +179,7 @@
   | False | 5 | 265.3726 | 0.5047 | 0.0113 | 0.9979 | 0.0020 | 0.9886 | 0.8478 | 0.5058 |
   | True | 5 | 0.3629 | 0.8835 | 0.9661 | 0.8009 | 0.1990 | 0.0338 | 0.8291 | 0.9603 |
 
-* #### 2.4. Model training on [512x512] patches
+* #### 2.4. Model v3.0 training on [512x512] patches
   
   * 2.4.1. Database:
        
@@ -207,6 +207,33 @@
     | 6 | 0.3354 | 0.8631 | 0.3052 | 0.8744 | Callback LR reduction to 0.00001 (1e-5) |
     | 7 | 0.3359 | 0.8638 | **0.2973** | **0.8838** | None |
     | 8 | 0.3336 | 0.8646 | 0.3033 | 0.8785 | Callback LR reduction to 0.000001 (1e-6) |
+
+* #### 2.5. Model v3.0 training on [1024x1024] extracts
+ 
+  * 2.5.1. Database:
+       
+    * Training dataset - CVL database subset of 1415 document images by 283 writers - 14150 image pairs (7075 positive and 7075 negative instances);
+        
+    * Validation dataset - CVL database subset of 189 document images by 27 writers - 646 image pairs (319 positive and 327 negative instances).
+
+  * 2.5.2. Callbacks: 
+  
+    * *Vide* 2.2.2. Callbacks.
+  
+  * 2.5.3. Hyperparameters: 
     
-* #### 2.5. Model training and evaluation on [1024x1024] grayscale extracts
-* #### 2.6. Model training and evaluation on [1024x1024] binarized extracts
+    * *Vide* 2.2.3. Hyperparameters;
+    * Epochs - 3;
+    * Batchsize - 8.
+   
+  * 2.5.4. Training:
+     
+    | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
+    | --- | --- | --- | --- | --- |  --- |
+    | 1 | 0.7105 | 0.6174 | **0.4833** | **0.7724** | None |
+    | 2 | 0.6059 | 0.6739 | 0.5242 | 0.7477 | Callback LR reduction to 0.0001 (1e-4) |
+    | 3 | 0.5786 | 0.6973 | 0.5527 | 0.7183 | Callback LR reduction to 0.00001 (1e-5) |
+
+* #### 2.6. Model v4.0 training *and evaluation* on [256x256] patches
+* #### 2.7. Model v4.0 training *and evaluation* on [1024x1024] grayscale extracts
+* #### 2.8. Model v4.0 training *and evaluation* on [1024x1024] binarized extracts
