@@ -234,6 +234,7 @@
     | 2 | 0.6059 | 0.6739 | 0.5242 | 0.7477 | Callback LR reduction to 0.0001 (1e-4) |
     | 3 | 0.5786 | 0.6973 | 0.5527 | 0.7183 | Callback LR reduction to 0.00001 (1e-5) |
 
-* #### 2.6. Model v3.1 training *and evaluation* on [256x256] patches
-* #### 2.7. Model v3.1 training *and evaluation* on [1024x1024] grayscale extracts
-* #### 2.8. Model v3.1 training *and evaluation* on [1024x1024] binarized extracts
+* #### 2.7. Model v3.1
+* #### 2.8. Model v3.1 training *and evaluation* on [256x256] patches
+* #### 2.9. Model v3.1 training *and evaluation* on [1024x1024] grayscale extracts
+* #### 2.10. Model v3.1 training *and evaluation* on [1024x1024] binarized extracts
