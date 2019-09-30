@@ -88,7 +88,7 @@
         
     * Google Kaggle - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Telsa P100), 65ms/step (27732 steps per epoch).
         
-* #### 2.2. Model training
+* #### 2.2. Model v3.0 training on [256x256] patches
    
   * 2.2.1. Database:
        
@@ -134,7 +134,7 @@
      
 ![loss](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/Model_Loss.png "Model Loss") ![acc](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/Model_Accuracy.png "Model Accuracy")
 
-* #### 2.3. Model v3.0 evaluation
+* #### 2.3. Model v3.0 evaluation on [256x256] patches
    
   * 2.3.1. Database:
       
@@ -235,6 +235,6 @@
     | 3 | 0.5786 | 0.6973 | 0.5527 | 0.7183 | Callback LR reduction to 0.00001 (1e-5) |
 
 * #### 2.7. Model v3.1
-* #### 2.8. Model v3.1 training *and evaluation* on [256x256] patches
-* #### 2.9. Model v3.1 training *and evaluation* on [1024x1024] grayscale extracts
-* #### 2.10. Model v3.1 training *and evaluation* on [1024x1024] binarized extracts
+* #### 2.8. Model v3.1 training on [256x256] patches
+* #### 2.9. Model v3.1 training on [1024x1024] grayscale extracts
+* #### 2.10. Model v3.1 training on [1024x1024] binarized extracts
