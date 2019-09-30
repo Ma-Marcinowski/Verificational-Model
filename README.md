@@ -50,7 +50,7 @@
     * If it were necessary: to force quit (terminate) a running program use a keyboard shortcut `Ctrl + C` in an opened terminal window, or `Ctrl + Z` to suspend a running program, then to resume a paused run, type the command `fg` (works in terminals of most operating systems, *e.g.* macOS, Linux).
              
   
-### 2. Verificational Model
+### 2. Verificational Model v3.0
 
 * #### 2.1. Model v3.0
    
@@ -84,9 +84,9 @@
    
   * 2.1.3. Implementation:
        
-    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 290ms/step (27732 steps per epoch);
+    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 290ms/step (27732 steps per epoch) in case of 2.2 training;
         
-    * Google Kaggle - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Telsa P100), 65ms/step (27732 steps per epoch).
+    * Google Kaggle - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Telsa P100), 65ms/step (27732 steps per epoch) in case of 2.2 training.
         
 * #### 2.2. Model v3.0 training on [256x256] patches
    
@@ -193,7 +193,7 @@
   
   * 2.4.3. Hyperparameters: 
     
-    * *Vide* 2.2.3. Hyperparameters;
+    * *Vide* 2.2.3. Hyperparameters.
    
   * 2.2.4. Training:
      
@@ -234,7 +234,22 @@
     | 2 | 0.6059 | 0.6739 | 0.5242 | 0.7477 | Callback LR reduction to 0.0001 (1e-4) |
     | 3 | 0.5786 | 0.6973 | 0.5527 | 0.7183 | Callback LR reduction to 0.00001 (1e-5) |
 
-* #### 2.7. Model v3.1
-* #### 2.8. Model v3.1 training on [256x256] patches
-* #### 2.9. Model v3.1 training on [1024x1024] grayscale extracts
-* #### 2.10. Model v3.1 training on [1024x1024] binarized extracts
+### 3. Verificational Model v3.1
+
+* #### 3.7. Model v3.1
+  
+  * 3.7.1. Model architecture:
+  
+    * Same as model v3.0, except for slightly bigger receptive fields and strides, also GAP layer applied instead of the last MaxPooling layer (in contrast to application of GAP layer after concatenation of max pooled outputs from core nets).
+    
+  * 3.7.2. Language, libraries and framework / API:
+        
+    * *Vide* 2.1.2.
+   
+  * 3.7.3. Implementation:
+       
+    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 330ms/step (27732 steps per epoch) in case of 3.8 training.    
+  
+* #### 3.8. Model v3.1 training on [256x256] patches
+* #### 3.9. Model v3.1 training on [1024x1024] grayscale extracts
+* #### 3.10. Model v3.1 training on [1024x1024] binarized extracts
