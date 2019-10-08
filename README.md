@@ -256,8 +256,34 @@
    
   * 3.7.3. Implementation:
        
-    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 000ms/step (27732 steps per epoch) in case of model v3.1 training on [256x256] patches.    
+    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 330ms/step (27732 steps per epoch) in case of model v3.1 training on [256x256] patches.    
   
 * #### 3.8. Model v3.1 training on [256x256] patches
+ 
+  * 2.4.1 Database:
+  
+    * *Vide* 2.2.1. Database.
+ 
+  * 2.4.2. Callbacks: 
+  
+    * *Vide* 2.2.2. Callbacks.
+  
+  * 2.4.3. Hyperparameters: 
+    
+    * *Vide* 2.2.3. Hyperparameters;
+    * Epochs - 6 (each one has been run separately);
+    * Learning rate - initial 0.001 (1e-3), then manually adjusted by a factor of 0.1 between every epoch.
+ 
+ * 3.8.4. Training:
+     
+    | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
+    | --- | --- | --- | --- | --- |  --- |
+    | 1 | 0.2169 | 0.9145 | 0.3930 | 0.8612 | None |
+    | 2 | 0.0529 | 0.9832 | 0.1947 | 0.9361 | Manual LR reduction to 0.0001 (1e-4) |
+    | 3 | 0.0307 | 0.9917 | 0.1871 | 0.9408 | Manual LR reduction to 0.00001 (1e-5) |
+    | 4 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.000001 (1e-6) |
+    | 5 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.0000001 (1e-7) |
+    | 6 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.00000001 (1e-8) |
+
 * #### 3.9. Model v3.1 training on [1024x1024] grayscale extracts
 * #### 3.10. Model v3.1 training on [1024x1024] binarized extracts
