@@ -272,7 +272,7 @@
     
     * *Vide* 2.2.3. Hyperparameters;
     * Epochs - 6 (each one has been run separately);
-    * Learning rate - initial 0.001 (1e-3), then manually adjusted by a factor of 0.1 between every epoch.
+    * Learning rate - initial 0.001 (1e-3), then manually adjusted by a factor of 0.1 after every epoch.
  
  * 3.8.4. Training:
      
