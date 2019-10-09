@@ -289,7 +289,7 @@
      
     | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
     | --- | --- | --- | --- | --- |  --- |
-    | Initial: 3 | 0.0307 | 0.9917 | 0.1871 | 0.9408 | None (*ergo* LR was equal 1e-5 during the rerun of fourth epoch) |
+    | Initial: 3 | 0.0307 | 0.9917 | 0.1871 | 0.9408 | None (*ergo* LR was equal to 1e-5 during the rerun of the fourth epoch) |
     | Rerun: 4 | 0. | 0. | 0.| 0. | x |
 
 * #### 3.3. Model v3.1 evaluation on [256x256] patches
