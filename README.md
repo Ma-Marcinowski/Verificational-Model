@@ -280,9 +280,9 @@
     | --- | --- | --- | --- | --- |  --- |
     | 1 | 0.2169 | 0.9145 | 0.3930 | 0.8612 | Manual LR reduction to 0.0001 (1e-4) |
     | 2 | 0.0529 | 0.9832 | 0.1947 | 0.9361 | Manual LR reduction to 0.00001 (1e-5) |
-    | 3 | 0.0307 | 0.9917 | 0.1871 | 0.9408 | Manual LR reduction to 0.000001 (1e-6) |
+    | **3** | 0.0307 | 0.9917 | **0.1871** | **0.9408** | Manual LR reduction to 0.000001 (1e-6) |
     | 4 | 0.0280 | 0.9925 | 0.1856 | 0.9401 | Manual LR reduction to 0.0000001 (1e-7) |
-    | 5 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.00000001 (1e-8) |
+    | 5 | 0.0278 | 0.9927 | 0.1896 | 0.9390 | Manual LR reduction to 0.00000001 (1e-8) |
     | 6 | 0. | 0. | 0. | 0. | None |
 
 * #### 3.3. Model v3.1 evaluation on [256x256] patches
