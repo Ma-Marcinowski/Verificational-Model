@@ -285,12 +285,31 @@
     | 5 | 0.0278 | 0.9927 | 0.1896 | 0.9390 | Manual LR reduction to 0.00000001 (1e-8) |
     | 6 | 0.0277 | 0.9928 | 0.1902 | 0.9398 | None |
 
-* 3.2.5. Training Rerun:
-     
-    | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
-    | --- | --- | --- | --- | --- |  --- |
-    | Initial: 3 | 0.0307 | 0.9917 | 0.1871 | 0.9408 | None (*ergo* LR was equal to 1e-5 during the rerun of the fourth epoch) |
-    | Rerun: 4 | 0. | 0. | 0.| 0. | x |
+![loss]() ![acc]()
 
 * #### 3.3. Model v3.1 evaluation on [256x256] patches
+   
+  * 3.3.1. Database:
+  
+    * *Vide* 2.3.1. Database.
+  
+  * 3.3.2. Metrics:
+  
+    * *Vide* 2.3.2. Metrics.
+  
+  * 3.3.3. CVL evaluation (epochs of model training - EofT - by the best validation result):
+  
+   | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | AUC |
+   | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+   | False | 3 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+   | True | 3 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+  
+  * 3.3.4. IAM evaluation (epochs of model training - EofT - by the best validation result):
+  
+   | Denoised | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | AUC |
+   | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+   | False | 3 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+   | True | 3 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+
 * #### 3.4. Model v3.1 training on [256x256] noised patches
+* #### 3.5. Model v3.1 evaluation on [256x256] noised patches
