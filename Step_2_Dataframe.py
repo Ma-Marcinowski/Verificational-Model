@@ -56,7 +56,7 @@ def Dataframe(mode, in_path, df_path, df_img_path):
 
             print('Done ' + mode + ' negatives: 100%')
 
-    df = pd.read_csv(df_path, header=None, names = ['Leftname', 'Rightname', 'Label'])
+    df = pd.read_csv(df_path, header=None, names=['Leftname', 'Rightname', 'Label'])
 
     df = sklearn.utils.shuffle(df)
 
