@@ -42,12 +42,12 @@ def Preprocessing(mode, in_path, out_path):
 
                     continue
 
-TrainPrep = Preprocessing(mode='train',
-                          in_path='/raw/train/images/input/directory/',
-                          out_path='/preprocessed/train/images/save/directory/')
+TrainPreprocessing = Preprocessing(mode='train',
+                                   in_path='/raw/train/images/input/directory/',
+                                   out_path='/preprocessed/train/images/save/directory/')
 
-TestPrep = Preprocessing(mode='test',
-                         in_path='/raw/test/images/input/directory/',
-                         out_path='/preprocessed/test/images/save/directory/')
+TestPreprocessing = Preprocessing(mode='test',
+                                  in_path='/raw/test/images/input/directory/',
+                                  out_path='/preprocessed/test/images/save/directory/')
 
 print('Preprocessing done.')
