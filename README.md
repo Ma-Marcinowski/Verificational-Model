@@ -285,5 +285,12 @@
     | 5 | 0.0278 | 0.9927 | 0.1896 | 0.9390 | Manual LR reduction to 0.00000001 (1e-8) |
     | 6 | 0. | 0. | 0. | 0. | None |
 
+* 3.2.5. Training Rerun:
+     
+    | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
+    | --- | --- | --- | --- | --- |  --- |
+    | Initial: 3 | 0.0307 | 0.9917 | 0.1871 | 0.9408 | None (*ergo* LR was equal 1e-5 during the rerun of forth epoch |
+    | Rerun: 4 | 0. | 0. | 0.| 0. | x |
+
 * #### 3.3. Model v3.1 evaluation on [256x256] patches
 * #### 3.4. Model v3.1 training on [256x256] noised patches
