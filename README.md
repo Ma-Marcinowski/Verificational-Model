@@ -244,37 +244,37 @@
 
 ### 3. Verificational Model v3.1
 
-* #### 3.7. Model v3.1
+* #### 3.1. Model v3.1
   
-  * 3.7.1. Model architecture:
+  * 3.1.1. Model architecture:
   
     * .
     
-  * 3.7.2. Language, libraries and framework / API:
+  * 3.1.2. Language, libraries and framework / API:
         
     * *Vide* 2.1.2.
    
-  * 3.7.3. Implementation:
+  * 3.1.3. Implementation:
        
     * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 250ms/step (27732 steps per epoch) in case of model v3.1 training on [256x256] patches.    
   
-* #### 3.8. Model v3.1 training on [256x256] patches
+* #### 3.2. Model v3.1 training on [256x256] patches
  
-  * 2.4.1 Database:
+  * 2.2.1 Database:
   
     * *Vide* 2.2.1. Database.
  
-  * 2.4.2. Callbacks: 
+  * 2.2.2. Callbacks: 
   
     * *Vide* 2.2.2. Callbacks.
   
-  * 2.4.3. Hyperparameters: 
+  * 2.2.3. Hyperparameters: 
     
     * *Vide* 2.2.3. Hyperparameters;
     * Epochs - 6 (each one has been run separately);
     * Learning rate - initial 0.001 (1e-3), then manually adjusted by a factor of 0.1 after every epoch.
  
- * 3.8.4. Training:
+ * 3.2.4. Training:
      
     | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
     | --- | --- | --- | --- | --- |  --- |
@@ -285,4 +285,5 @@
     | 5 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.00000001 (1e-8) |
     | 6 | 0. | 0. | 0. | 0. | None |
 
-* #### 3.9. Model v3.1 training on [256x256] noised patches
+* #### 3.3. Model v3.1 evaluation on [256x256] patches
+* #### 3.4. Model v3.1 training on [256x256] noised patches
