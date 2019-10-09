@@ -260,15 +260,15 @@
   
 * #### 3.2. Model v3.1 training on [256x256] patches
  
-  * 2.2.1. Database:
+  * 3.2.1. Database:
   
     * *Vide* 2.2.1. Database.
  
-  * 2.2.2. Callbacks: 
+  * 3.2.2. Callbacks: 
   
     * *Vide* 2.2.2. Callbacks.
   
-  * 2.2.3. Hyperparameters: 
+  * 3.2.3. Hyperparameters: 
     
     * *Vide* 2.2.3. Hyperparameters;
     * Epochs - 6 (six separate runs);
