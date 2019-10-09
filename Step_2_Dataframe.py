@@ -1,66 +1,79 @@
+import glob
 import os
 import csv
-import glob
 import random
 import sklearn
 import pandas as pd
 from tqdm import tqdm
 
-os.chdir('/preprocessed/images/directory/')
+def Dataframe(mode, in_path, df_path, df_img_path):
 
-pngs = glob.glob('*.png')
+    os.chdir(in_path)
 
-with open('/dataframe/directory/Dataframe.csv', 'a+') as f:
+    pngs = glob.glob('*.png')
 
-    writer = csv.writer(f)
+    with open(df_path, 'a+') as f:
 
-    for j in tqdm(pngs, leave=False):
-        for i in pngs:
+        writer = csv.writer(f)
 
-            if j[:4] == i[:4] and j != i:
+        for j in tqdm(pngs, leave=False):
+            for i in pngs:
 
-                pair = ['/preprocessed/images/directory/' + j, '/preprocessed/images/directory/' + i, 1]
+                if j[:8] == i[:8]:
+
+                    pair = [df_img_path + j, df_img_path + i, 1]
+
+                    writer.writerow(pair)
+
+                else:
+
+                    continue
+
+        print('Done ' + mode + ' positives: 100%')
+        g = f.tell()
+        k = 2 * f.tell()
+
+        while g < k:
+
+            j = random.choice(pngs)
+            i = random.choice(pngs)
+
+            if j[:8] != i[:8]:
+
+                pair = [df_img_path + j, df_img_path + i, 0]
 
                 writer.writerow(pair)
+
+                g = f.tell()
+
+                print('%.2f%%'%(100*g/k), end="\r")
 
             else:
 
                 continue
 
-    print('Done positives: 100%')
-
-    g = f.tell()
-    k = 2 * f.tell()
-
-    while g < k:
-
-        j = random.choice(pngs)
-        i = random.choice(pngs)
-
-        if j[:4] != i[:4]:
-
-            pair = ['/preprocessed/images/directory/' + j, '/preprocessed/images/directory/' + i, 0]
-
-            writer.writerow(pair)
-
-            g = f.tell()
-            
-            print('%.2f%%'%(100*g/k), end="\r")
-
         else:
 
-            continue
+            print('Done ' + mode + ' negatives: 100%')
 
-    else:
+    df = pd.read_csv(df_path, header=None, names = ['Leftname', 'Rightname', 'Label'])
 
-        print('Done negatives: 100%')
+    df = sklearn.utils.shuffle(df)
 
-df = pd.read_csv('/dataframe/directory/Dataframe.csv', header=None, names = ['Leftname', 'Rightname', 'Label'])
+    df.columns = ["Leftname", "Rightname", "Label"]
 
-df = sklearn.utils.shuffle(df)
+    df.to_csv(df_path, index=False)
 
-df.columns = ["Leftname", "Rightname", "Label"]
+    print('Done ' + mode + ' dataframe.')
 
-df.to_csv('/dataframe/directory/Dataframe.csv', index=False)
+TrainDataframe = Dataframe(mode='train',
+                           in_path='/preprocessed/train/images/input/directory/',
+                           df_path='/dataframe/save/directory/TrainDataframe.csv',
+                           df_img_path='/preprocessed/train/images/directory/indicated/in/a/dataframe')
 
-print('Dataframe done.') 
+TestDataframe = Dataframe(mode='test',
+                          in_path='/preprocessed/test/images/input/directory/',
+                          df_path='/dataframe/save/directory/TestDataframe.csv',
+                          df_img_path='/preprocessed/test/images/directory/indicated/in/a/dataframe')
+
+print('Dataframes done.')
