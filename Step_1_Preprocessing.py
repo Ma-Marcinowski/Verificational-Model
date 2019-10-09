@@ -1,41 +1,53 @@
-import os 
-import cv2
 import glob
+import os
+import cv2
 import numpy as np
 from tqdm import tqdm
 
-os.chdir('/raw/images/directory/')
+def Preprocessing(mode, in_path, out_path):
 
-tifs = glob.glob('*.tif')
+    os.chdir(in_path)
 
-for j in tqdm(tifs):
+    tifs = glob.glob('*.tif')
 
-    img = cv2.imread(j, 0) 
-    inv = np.bitwise_not(img) 
+    for j in tqdm(tifs, desc=mode+'-loop'):
 
-    y=890
-    x=323
-    h=2280
-    w=2280
+        img = cv2.imread(j, 0)
+        inv = np.bitwise_not(img)
 
-    cropped = inv[y:y+h, x:x+w]
+        y=930
+        x=270
+        h=2048
+        w=2048
 
-    resized = cv2.resize(cropped,(1024,1024))
+        cropped = inv[y:y+h, x:x+w]
 
-    horizontal_split = np.split(resized, 4, axis=1)
+        resized = cv2.resize(cropped,(1024,1024))
 
-    for idx, h in enumerate(horizontal_split, start=1):
-        
-        vertical_split = np.split(h, 4, axis=0)
+        horizontal = np.split(resized, 4, axis=1)
 
-        for ind, v in enumerate(vertical_split, start=1):
+        for idx, h in enumerate(horizontal, start=1):
 
-            mean = v.mean()
+            vertical = np.split(h, 4, axis=0)
 
-            if mean >= 4: 
+            for ind, v in enumerate(vertical, start=1):
 
-                cv2.imwrite('/preprocessed/images/directory/' + j[:-4] + '-' + str(idx) + str(ind) + '.png', v)
+                mean = v.mean()
 
-            else:
+                if mean >= 4:
 
-                continue
+                    cv2.imwrite(out_path + 'cvl-' + j[:-4] + '-' + str(idx) + str(ind) + '.png', v)
+
+                else:
+
+                    continue
+
+TrainPrep = Preprocessing(mode='train',
+                          in_path='/raw/train/images/input/directory/',
+                          out_path='/preprocessed/train/images/save/directory/')
+
+TestPrep = Preprocessing(mode='test',
+                         in_path='/raw/test/images/input/directory/',
+                         out_path='/preprocessed/test/images/save/directory/')
+
+print('Preprocessing done.')
