@@ -285,5 +285,4 @@
     | 5 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.00000001 (1e-8) |
     | 6 | 0. | 0. | 0. | 0. | None |
 
-* #### 3.9. Model v3.1 training on [1024x1024] grayscale extracts
-* #### 3.10. Model v3.1 training on [1024x1024] binarized extracts
+* #### 3.9. Model v3.1 training on [256x256] noised patches
