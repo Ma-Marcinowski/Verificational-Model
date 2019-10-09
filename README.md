@@ -297,14 +297,14 @@
   
     * *Vide* 2.3.2. Metrics.
   
-  * 3.3.3. CVL evaluation (epochs of model training - EofT - by the best validation result):
+  * 3.3.3. CVL evaluation (epochs of model training - EofT - by the best accuracy result):
   
    | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | AUC |
    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-   | False | 3 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+   | False | 3 | 0.1835 | 0.9387 | 0.9301 | 0.9474 | 0.0526 | 0.0699 | 0.9464 | 0.9817 |
    | True | 3 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
   
-  * 3.3.4. IAM evaluation (epochs of model training - EofT - by the best validation result):
+  * 3.3.4. IAM evaluation (epochs of model training - EofT - by the best accuracy result):
   
    | Denoised | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | AUC |
    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
