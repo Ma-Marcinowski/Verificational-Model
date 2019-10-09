@@ -260,7 +260,7 @@
   
 * #### 3.2. Model v3.1 training on [256x256] patches
  
-  * 2.2.1 Database:
+  * 2.2.1. Database:
   
     * *Vide* 2.2.1. Database.
  
