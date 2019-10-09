@@ -116,8 +116,7 @@
     * Loss - Binary Crossentropy;
     * Metrics - Accuracy; 
     * Optimizer - Adam (Adaptive Moment Estimation):
-      * Learning rate (alpha) - epochs 1/4 - 0.001;
-      * Learning rate (alpha) - epochs 5/8 - 0.0001;
+      * Initial learning rate (alpha) - 0.001;
       * Beta_1 , beta_2, epsilon - as recommended by: D. Kingma, J. Ba, *Adam: A Method for Stochastic Optimization*,  arXiv:1412.6980v9 [cs.LG] 2017, p. 2.
     * ReduceLROnPlateau - factor 0.1. 
         
@@ -310,6 +309,34 @@
    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
    | False | 3 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
    | True | 3 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+   
+* #### 3.4. Simplified Model v3.1 training on [256x256] patches
 
+  * 3.4.1. Simplified Model:
+    
+    * .
+
+  * 3.4.2. Database:
+  
+    * *Vide* 2.2.1. Database.
+ 
+  * 3.4.3. Callbacks: 
+  
+    * *Vide* 2.2.2. Callbacks.
+  
+  * 3.4.4. Hyperparameters: 
+    
+    * *Vide* 2.2.3. Hyperparameters;
+    * Epochs - 3 (three separate runs);
+    * Learning rate - initial 0.001 (1e-3), then manually adjusted by a factor of 0.1 after every epoch.
+ 
+  * 3.4.5. Training:
+     
+    | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
+    | --- | --- | --- | --- | --- |  --- |
+    | 1 | 0.4259 | 0.8096 | 0.3368 | 0.8561 | Manual LR reduction to 0.0001 (1e-4) |
+    | **2** | 0.2462 | 0.9095 | **0.2834** | **0.8866** | Manual LR reduction to 0.00001 (1e-5) |
+    | 3 | 0.2069 | 0.9266 | 0.2926 | 0.8831 | None |
+    
 * #### 3.4. Model v3.1 training on [256x256] noised patches
-* #### 3.5. Model v3.1 evaluation on [256x256] noised patches
+* #### 3.6. Model v3.1 evaluation on [256x256] noised patches
