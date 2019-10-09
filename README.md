@@ -134,7 +134,7 @@
     | 7 | 0.1061 | 0.9653 | 0.2328 | 0.9134 | Callback LR reduction to 0.000001 (1e-6) |
     | 8 | 0.1037 | 0.9657 | 0.2347 | 0.9130 | Callback LR reduction to 0.0000001 (1e-7) |
      
-![loss](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/Model_Loss.png "Model Loss") ![acc](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/Model_Accuracy.png "Model Accuracy")
+![loss]("Model Loss") ![acc]("Model Accuracy")
 
 * #### 2.3. Model v3.0 evaluation on [256x256] patches
    
@@ -285,7 +285,7 @@
     | 5 | 0.0278 | 0.9927 | 0.1896 | 0.9390 | Manual LR reduction to 0.00000001 (1e-8) |
     | 6 | 0.0277 | 0.9928 | 0.1902 | 0.9398 | None |
 
-![loss]() ![acc]()
+![loss]("Model Loss") ![acc]("Model Accuracy")
 
 * #### 3.3. Model v3.1 evaluation on [256x256] patches
    
