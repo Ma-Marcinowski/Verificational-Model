@@ -218,7 +218,7 @@
  
   * 2.5.1. Database:
   
-    * Preprocessing v3.0 (except for extracts split into patches);
+    * Preprocessing v3.0 (except for split of extracts into patches);
        
     * Training dataset - CVL database subset of 1415 document images by 283 writers - 14150 image pairs (7075 positive and 7075 negative instances);
         
