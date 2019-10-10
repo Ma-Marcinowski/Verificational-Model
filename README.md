@@ -1,6 +1,6 @@
 ## Verificational Model
 
-### 1. Preprocessing v3.0
+### 1. Preprocessing v2.0
   
 * #### 1.1. Objective, assumptions, database and steps of preprocessing
    
@@ -92,7 +92,7 @@
    
   * 2.2.1. Database:
   
-    * Preprocessing v3.0;
+    * Preprocessing v2.0;
        
     * Training dataset - CVL database subset of 1415 document images by 283 writers - 443704 image pairs (221852 positive and 221852 negative instances);
         
@@ -139,7 +139,7 @@
    
   * 2.3.1. Database:
  
-    * Preprocessing v3.0;
+    * Preprocessing v2.0;
       
     * CVL database:
       
@@ -186,7 +186,7 @@
   
   * 2.4.1. Database:
   
-    * Preprocessing v3.0 ([1024x1024] extracts split into 4 patches instead of 16);
+    * Preprocessing v2.0 ([1024x1024] extracts split into 4 patches instead of 16);
        
     * Training dataset - CVL database subset of 1415 document images by 283 writers - 59868 image pairs (29934 positive and 29934 negative instances);
         
@@ -217,7 +217,7 @@
  
   * 2.5.1. Database:
   
-    * Preprocessing v3.0 (except for split of extracts into patches);
+    * Preprocessing v2.0 (except for split of extracts into patches);
        
     * Training dataset - CVL database subset of 1415 document images by 283 writers - 14150 image pairs (7075 positive and 7075 negative instances);
         
