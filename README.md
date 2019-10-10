@@ -51,7 +51,9 @@
 
 ### 1.2. Preprocessing v2.1
 
-* #### 1.2.1. Exactly the same as v2.0, except for addition of noise to train and test images, also extraction window is slightly shifted to better fit the writing space (number of patches passed through the mean pixel value threshold is therefore greater). 
+* #### 1.2.1. Preprocessing v2.1:
+
+  * Exactly the same as v2.0, except for addition of noise to train and test images, also extraction window is slightly shifted to better fit the writing space (number of patches passed through the mean pixel value threshold is therefore greater). 
   
 ### 2. Verificational Model v3.0
 
