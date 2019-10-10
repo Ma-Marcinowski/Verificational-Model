@@ -1,18 +1,18 @@
 ## Verificational Model
 
-### 1. Preprocessing v2.0
+### 1.1. Preprocessing v2.0
   
-* #### 1.1. Objective, assumptions, database and steps of preprocessing
+* #### 1.1.1. Objective, assumptions, database and steps of preprocessing
    
-  * 1.1.1. The objective of author's repository was to introduce a method of image preprocessing for verification of offline handwritten documents authorship by artificial neural networks (through classification of preprocessed image pairs to positive `same author` or negative `different authors` class).
+  * 1.1.1.1. The objective of author's repository was to introduce a method of image preprocessing for verification of offline handwritten documents authorship by artificial neural networks (through classification of preprocessed image pairs to positive `same author` or negative `different authors` class).
        
-  * 1.1.2. Author's assumptions were that:
+  * 1.1.1.2. Author's assumptions were that:
      
     * Document images will be best processed simultaneously by two separate convolutional neural networks and classified by one multilayer perceptron (fully connected layers);       
     
     * Preprocessing shouldn't drastically affect image quality (*e.g* by image binarization) to preserve most of handwriting features.
             
-  * 1.1.3. Database (9455 documents by 2911 writers):
+  * 1.1.1.3. Database (9455 documents by 2911 writers):
        
     * Dataset of 1604 documents (full page scans) from CVL database (310 writers), by: F. Kleber, S. Fiel, M. Diem, R. Sablatnig, *CVL-Database: An Off-line Database for Writer Retrieval, Writer Identification and Word Spotting*, "In Proc. of the 12th Int. Conference on Document Analysis and Recognition (ICDAR) 2013" 2013, p. 560 - 564;
         
@@ -26,7 +26,7 @@
         
     * Dataset of 1000 documents (cropped page scans) from ICDAR 2013 Competition on Writer Identification database (250 writers), by: G. Louloudis, N. Stamatopoulos, B. Gatos, *ICDAR 2013 Competition on Writer Identification*, "2013 12th International Conference on Document Analysis and Recognition" 2013, p. 1397 - 1041.
             
-  * 1.1.4. Steps of preprocessing:
+  * 1.1.1.4. Steps of preprocessing:
                
     * `Step_1_Preprocessing.py` - conversion of images (scans of whole documents) to grayscale (scale from black = 0 to white = 255), color inversion, extraction of writing space from images, reduction of extracts dimensions to [1024x1024] pixels, division of extracts into [256x256] pixel patches, conversion from the `tif` to `png` format. Patches which do not contain or contain a small amount of text are skipped by the program because of the arbitrary average pixel value threshold - in any case, patches can be sorted by their size and manually removed on that basis;
             
@@ -34,13 +34,13 @@
         
     * Third step - to create a validation dataframe (utilized only for testing of the model during its training, generally after every epoch) simply create a `csv` file in any given spreadsheet program, then copy about 10-20% of (already shuffled by the `Step_2_Dataframe.py` program) instances from the test dataframe (it is most probable that the number of copied positive and negative instances will be effectively equal). Then add column headers to validation dataframe, *e.g.* `left convolutional path, right convolutional path, labels` for columns containing names and labels of image pairs.  
                
-* #### 1.2. Preprocessing programs
+* #### 1.1.2. Preprocessing programs
    		
-  * 1.2.1. Programming language - Python 3.7.3.
+  * 1.1.2.1. Programming language - Python 3.7.3.
   
-  * 1.2.2. Libraries - OpenCV 4.1.0, Numpy 1.16.4, tqdm 4.33.0, and other common python libraries.
+  * 1.1.2.2. Libraries - OpenCV 4.1.0, Numpy 1.16.4, tqdm 4.33.0, and other common python libraries.
   
-  * 1.2.3. To utilize preprocessing programs:
+  * 1.1.2.3. To utilize preprocessing programs:
   
     * Install Python and listed libraries (installation method depends on user's operating system);
     * Download the repository;
@@ -48,7 +48,10 @@
     * Access the directory - which contains a given preprocessing program file - through the terminal / command-line interpreter (method  of access depends on user's operating system);
     * In the terminal type the command `python3 program_name.py` to run the named program;
     * If it were necessary: to force quit (terminate) a running program use a keyboard shortcut `Ctrl + C` in an opened terminal window, or `Ctrl + Z` to suspend a running program, then to resume a paused run, type the command `fg` (works in terminals of most operating systems, *e.g.* macOS, Linux).
-             
+
+### 1.2. Preprocessing v2.1
+
+* #### 1.2.1. Exactly the same as v2.0, except for addition of noise to train and test images, also extraction window is slightly shifted to better fit the writing space (number of patches passed through the mean pixel value threshold is therefore greater). 
   
 ### 2. Verificational Model v3.0
 
