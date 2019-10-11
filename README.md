@@ -167,19 +167,20 @@
         
     * Binary Crossentropy - Loss;
     * Accuracy - Acc;
-    * True Positive Rate / Sensitivity / Recall - `(TP/P)` - TPR;
+    * True Positive Rate / Sensitivity - `(TP/P)` - TPR;
     * True Negative Rate / Specificity - `(TN/N)` - TNR;
     * False Positive Rate - `(FP/N)` - FPR;
     * False Negative Rate - `(FN/P)` - FNR;
-    * Positive Predictive Value / Precision - `(TP/(TP+FP))` - PPV;
+    * Positive Predictive Value - `(TP/(TP+FP))` - PPV;
+    * Negative Predictive Value - `(TN/(TN+FN))` - NPV;
     * Area under the ROC curve - AUC.
       
   * 2.3.3. CVL evaluation (epochs of model training - EofT - by the best validation result):
      
-  | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | AUC |
-  | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-  | False | 5 | 0.2331 | 0.9124 | 0.9207 | 0.9040 | 0.0959 | 0.0792 | 0.9056 | 0.9676 |
-  | **True** | 5 | **0.1795** | **0.9370** | 0.9617 | 0.9123 | 0.0876 | 0.0382 | 0.9164 | 0.9781 |
+  | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+  | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+  | False | 5 | 0.2331 | 0.9124 | 0.9207 | 0.9040 | 0.0959 | 0.0792 | 0.9056 | NC | 0.9676 |
+  | **True** | 5 | **0.1795** | **0.9370** | 0.9617 | 0.9123 | 0.0876 | 0.0382 | 0.9164 | NC | 0.9781 |
               
   * 2.3.4. IAM evaluation (epochs of model training - EofT - by the best validation result):
        
