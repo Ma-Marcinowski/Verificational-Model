@@ -54,14 +54,14 @@ Adam = tf.keras.optimizers.Adam(learning_rate=0.001,
                                 beta_2=0.999, 
                                 epsilon=1e-08)
 
-TPR = tf.keras.metrics.Recall()
+TP  = tf.keras.metrics.TruePositives()
 TN  = tf.keras.metrics.TrueNegatives()
 FP  = tf.keras.metrics.FalsePositives()
 FN  = tf.keras.metrics.FalseNegatives()
 PPV = tf.keras.metrics.Precision()
 AUC = tf.keras.metrics.AUC()
 
-model.compile(optimizer=Adam, loss='binary_crossentropy', metrics=['accuracy', TPR, TN, FP, FN, PPV, AUC])
+model.compile(optimizer=Adam, loss='binary_crossentropy', metrics=['accuracy', TP, TN, FP, FN, PPV, AUC])
 
 tensorboard = tf.keras.callbacks.TensorBoard(log_dir='/path/TestLogs/',
                                              histogram_freq=1,
@@ -77,5 +77,16 @@ evaluation = model.evaluate_generator(generator=TestSeq,
                                       max_queue_size=10,
                                       workers=1,
                                       verbose=1)
-print(evaluation)
-print(model.metrics_names)
+
+print('Loss=', round(evaluation[0], 4))
+print('Acc=', round(evaluation[1], 4))
+TPR = evaluation[2] / (evaluation[2] + evaluation[5])
+print('TPR=', round(TPR, 4))
+TNR = evaluation[3] / (evaluation[3] + evaluation[4])
+print('TNR=', round(TNR,4))
+FPR = evaluation[4] / (evaluation[4] + evaluation[3])
+print('FPR=', round(FPR, 4))
+FNR = evaluation[5] / (evaluation[5] + evaluation[2])
+print('FNR=', round(FNR, 4))
+print('PPV=', round(evaluation[6], 4))
+print('AUC=', round(evaluation[7], 4))
