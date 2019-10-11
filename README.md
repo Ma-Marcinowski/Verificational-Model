@@ -179,7 +179,7 @@
      
   | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
   | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-  | False | 5 | 0.2331 | 0.9124 | 0.9207 | 0.9040 | 0.0959 | 0.0792 | 0.9056 | NC | 0.9676 |
+  | False | 5 | 0.2331 | 0.9124 | 0.9207 | 0.9040 | 0.0959 | 0.0792 | 0.9056 | Not Calculated | 0.9676 |
   | **True** | 5 | **0.1795** | **0.9370** | 0.9617 | 0.9123 | 0.0876 | 0.0382 | 0.9164 | NC | 0.9781 |
               
   * 2.3.4. IAM evaluation (epochs of model training - EofT - by the best validation result):
