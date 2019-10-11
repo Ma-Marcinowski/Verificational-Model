@@ -58,10 +58,9 @@ TP  = tf.keras.metrics.TruePositives()
 TN  = tf.keras.metrics.TrueNegatives()
 FP  = tf.keras.metrics.FalsePositives()
 FN  = tf.keras.metrics.FalseNegatives()
-PPV = tf.keras.metrics.Precision()
 AUC = tf.keras.metrics.AUC()
 
-model.compile(optimizer=Adam, loss='binary_crossentropy', metrics=['accuracy', TP, TN, FP, FN, PPV, AUC])
+model.compile(optimizer=Adam, loss='binary_crossentropy', metrics=['accuracy', TP, TN, FP, FN, AUC])
 
 tensorboard = tf.keras.callbacks.TensorBoard(log_dir='/path/TestLogs/',
                                              histogram_freq=1,
@@ -88,5 +87,8 @@ FPR = evaluation[4] / (evaluation[4] + evaluation[3])
 print('FPR = ', round(FPR, 4))
 FNR = evaluation[5] / (evaluation[5] + evaluation[2])
 print('FNR = ', round(FNR, 4))
-print('PPV = ', round(evaluation[6], 4))
-print('AUC = ', round(evaluation[7], 4))
+PPV = evaluation[2] / (evaluation[2] + evaluation[4])
+print('PPV = ', round(PPV, 4))
+NPV = evaluation[3] / (evaluation[3] + evaluation[5])
+print('NPV = ', round(NPV, 4))
+print('AUC = ', round(evaluation[6], 4))
