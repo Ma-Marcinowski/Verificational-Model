@@ -56,13 +56,11 @@ def Dataframe(mode, img_path, df_path, df_img_path, valid_df_path, valid_fractio
 
             print('Done ' + mode + ' negatives: 100%')
 
-    df = pd.read_csv(df_path, header=None, names=['Leftname', 'Rightname', 'Label'])
+    df = pd.read_csv(df_path, header=None)
 
     df = sklearn.utils.shuffle(df)
 
-    df.columns = ["Leftname", "Rightname", "Label"]
-
-    df.to_csv(df_path, index=False)
+    df.to_csv(df_path, header=["Leftname", "Rightname", "Label"], index=False)
 
     print('Done ' + mode + ' dataframe.')
     
@@ -72,7 +70,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, valid_df_path, valid_fractio
 
         vadf = tedf.sample(frac=valid_fraction, axis=0)
 
-        vadf.to_csv(valid_df_path, header=["Leftname", "Rightname", "Label"], index=False)
+        vadf.to_csv(valid_df_path, index=False)
 
         print('Done validation dataframe.')
 
