@@ -6,9 +6,9 @@ import sklearn
 import pandas as pd
 from tqdm import tqdm
 
-def Dataframe(mode, in_path, df_path, df_img_path):
+def Dataframe(mode, img_path, df_path, df_img_path, valid_df_path, valid_fraction):
 
-    os.chdir(in_path)
+    os.chdir(img_path)
 
     pngs = glob.glob('*.png')
 
@@ -65,29 +65,29 @@ def Dataframe(mode, in_path, df_path, df_img_path):
     df.to_csv(df_path, index=False)
 
     print('Done ' + mode + ' dataframe.')
+    
+    if mode == 'test':
 
-def ValDataframe(valid_df_path, test_df_path, fraction):
+        tedf = pd.read_csv(df_path)
 
-    tedf = pd.read_csv(test_df_path)
+        vadf = tedf.sample(frac=valid_fraction, axis=0)
 
-    vadf = tedf.sample(frac=fraction, axis=0)
+        vadf.to_csv(valid_df_path, header=["Leftname", "Rightname", "Label"], index=False)
 
-    vadf.to_csv(valid_df_path, header=["Leftname", "Rightname", "Label"], index=False)
-
-    print('Done validation dataframe.')
+        print('Done validation dataframe.')
 
 TrainDataframe = Dataframe(mode='train',
-                           in_path='/preprocessed/train/images/directory/',
+                           img_path='/preprocessed/train/images/directory/',
                            df_path='/dataframe/save/directory/TrainDataframe.csv',
-                           df_img_path='/preprocessed/train/images/directory/indicated/in/the/dataframe')
+                           df_img_path='/preprocessed/train/images/directory/indicated/in/the/dataframe',
+                           valid_df_path=None,
+                           valid_fraction=None)
 
 TestDataframe = Dataframe(mode='test',
-                          in_path='/preprocessed/test/images/directory/',
+                          img_path='/preprocessed/test/images/directory/',
                           df_path='/dataframe/save/directory/TestDataframe.csv',
-                          df_img_path='/preprocessed/test/images/directory/indicated/in/the/dataframe')
-
-ValidDataframe = ValDataframe(valid_df_path='/dataframe/save/directory/ValidDataframe.csv',
-                              test_df_path='/test/dataframe/save/directory/TestDataframe.csv',
-                              fraction=0.2) #any float of instances to pull from the test dataframe
+                          df_img_path='/preprocessed/test/images/directory/indicated/in/the/dataframe',
+                          valid_df_path='/dataframe/save/directory/ValidDataframe.csv',
+                          valid_fraction=0.2) #any float of instances to be pulled from the test dataframe
 
 print('Dataframes done.')
