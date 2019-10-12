@@ -77,14 +77,14 @@ def ValDataframe(valid_df_path, test_df_path, fraction):
     print('Done validation dataframe.')
 
 TrainDataframe = Dataframe(mode='train',
-                           in_path='/preprocessed/train/images/input/directory/',
+                           in_path='/preprocessed/train/images/directory/',
                            df_path='/dataframe/save/directory/TrainDataframe.csv',
-                           df_img_path='/preprocessed/train/images/directory/indicated/in/a/dataframe')
+                           df_img_path='/preprocessed/train/images/directory/indicated/in/the/dataframe')
 
 TestDataframe = Dataframe(mode='test',
-                          in_path='/preprocessed/test/images/input/directory/',
+                          in_path='/preprocessed/test/images/directory/',
                           df_path='/dataframe/save/directory/TestDataframe.csv',
-                          df_img_path='/preprocessed/test/images/directory/indicated/in/a/dataframe')
+                          df_img_path='/preprocessed/test/images/directory/indicated/in/the/dataframe')
 
 ValidDataframe = ValDataframe(valid_df_path='/dataframe/save/directory/ValidDataframe.csv',
                               test_df_path='/test/dataframe/save/directory/TestDataframe.csv',
