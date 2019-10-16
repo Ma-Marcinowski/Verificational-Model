@@ -343,5 +343,7 @@
     | **2** | 0.2462 | 0.9095 | **0.2834** | **0.8866** | Manual LR reduction to 0.00001 (1e-5) |
     | 3 | 0.2069 | 0.9266 | 0.2926 | 0.8831 | None |
     
-* #### 3.4. Model v3.1 training on [256x256] noised patches
-* #### 3.6. Model v3.1 evaluation on [256x256] noised patches
+* #### 3.4. Model v3.1 training on [256x256] patches (extended train database - CVL, IAM, ICDAR 2011, ICFHR 2012, ICDAR 2013)
+* #### 3.6. Model v3.1 evaluation on [256x256] patches (extended test database - CVL, IAM, ICDAR 2011, ICFHR 2012, ICDAR 2013)
+
+### 4. Verificational Model v4.0
