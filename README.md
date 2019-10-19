@@ -65,7 +65,7 @@
 
 * #### 1.2.1. Exactly the same as v0.1, except for:
 
-  * Extraction window is slightly shifted to better fit the writing space (number of patches passed through the mean pixel value threshold is therefore greater). 
+  * The extraction window, which is slightly shifted to better fit the writing space (number of patches passed through the mean pixel value threshold is therefore greater). 
   
 ### 2. Verificational Model v1.1.0
 
