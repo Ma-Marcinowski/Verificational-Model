@@ -1,17 +1,17 @@
 ## Verificational Model
 
-### 1.0. Introduction
+### 0. Introduction
 
-* #### 1.0.1. Model version / variant numbering (*e.g* vX.Y.Z):
+* #### 0.1. Model version / method / variant numbering (*e.g* vX.Y.Z):
 
     * X indicates a model number;
     * Y indicates a method of preprocessing;
-    * Z indicates any extra variation of a given X.Y base version.
+    * Z indicates any extra variation of a given X.Y base combination.
 
-* #### 1.0.2. Preprocessing version / variant numbering (*e.g* v0.Y):
+* #### 0.2. Preprocessing method numbering (*e.g* v0.Y):
     
-    * X is zeroed, and Z skipped, to avoid ; 
-    * therefore Y indicates a methon of preprocessing (as stated in 1.0.1).
+    * X is zeroed, and Z skipped, to avoid any confusion of model variants and preprocessing methods; 
+    * Y angain indicates a methon of preprocessing (as stated in 1.0.1).
 
 
 ### 1.1. Preprocessing v0.1
