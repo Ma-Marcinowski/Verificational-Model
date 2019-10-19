@@ -1,6 +1,20 @@
 ## Verificational Model
 
-### 1.1. Preprocessing v2.0
+### 1.0. Introduction
+
+* #### 1.0.1. Model version / variant numbering (*e.g* vX.Y.Z):
+
+    * X indicates a model number;
+    * Y indicates a method of preprocessing;
+    * Z indicates any extra variation of a given X.Y base version.
+
+* #### 1.0.2. Preprocessing version / variant numbering (*e.g* v0.Y):
+    
+    * X is zeroed, and Z skipped, to avoid ; 
+    * therefore Y indicates a methon of preprocessing (as stated in 1.0.1).
+
+
+### 1.1. Preprocessing v0.1
   
 * #### 1.1.1. Objective, assumptions, database and steps of preprocessing
    
@@ -47,16 +61,15 @@
     * In the terminal type the command `python3 program_name.py` to run the named program;
     * If it were necessary: to force quit (terminate) a running program use a keyboard shortcut `Ctrl + C` in an opened terminal window, or `Ctrl + Z` to suspend a running program, then to resume a paused run, type the command `fg` (works in terminals of most operating systems, *e.g.* macOS, Linux).
 
-### 1.2. Preprocessing v2.1
+### 1.2. Preprocessing v0.2
 
-* #### 1.2.1. Exactly the same as v2.0, except for:
+* #### 1.2.1. Exactly the same as v0.1, except for:
 
-  * Addition of noise to train and test images;
-  * Also extraction window is slightly shifted to better fit the writing space (number of patches passed through the mean pixel value threshold is therefore greater). 
+  * Extraction window is slightly shifted to better fit the writing space (number of patches passed through the mean pixel value threshold is therefore greater). 
   
-### 2. Verificational Model v3.0
+### 2. Verificational Model v1.1.0
 
-* #### 2.1. Model v3.0
+* #### 2.1. Model v1.1.0
    
   * 2.1.1. Model architecture:
       
@@ -88,15 +101,13 @@
    
   * 2.1.3. Implementation:
        
-    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 290ms/step (27732 steps per epoch) in case of model v3.0 training on [256x256] patches;
+    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 290ms/step (27732 steps per epoch) in case of model v1.1.0 training on [256x256] patches;
         
-    * Google Kaggle - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Telsa P100), 65ms/step (27732 steps per epoch) in case of model v3.0 training on [256x256] patches.
+    * Google Kaggle - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Telsa P100), 65ms/step (27732 steps per epoch) in case of model v1.1.0 training on [256x256] patches.
         
-* #### 2.2. Model v3.0 training on [256x256] patches
+* #### 2.2. Model v1.1.0 training on [256x256] patches
    
   * 2.2.1. Database:
-  
-    * Preprocessing v2.0;
        
     * Training dataset - CVL database subset of 1415 document images by 283 writers - 443704 image pairs (221852 positive and 221852 negative instances);
         
@@ -139,11 +150,9 @@
      
 ![loss](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/VM_v3.0_Loss.png "Model Loss") ![acc](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/VM_v3.0_Accuracy.png "Model Accuracy")
 
-* #### 2.3. Model v3.0 evaluation on [256x256] patches
+* #### 2.3. Model v1.1.0 evaluation on [256x256] patches
    
   * 2.3.1. Database:
- 
-    * Preprocessing v2.0;
       
     * CVL database:
       
@@ -187,11 +196,11 @@
   | **False** | 5 | 265.3726 | 0.5047 | **0.0113** | **0.9979** | 0.0020 | 0.9886 | 0.8478 | 0.5023 | 0.5058 |
   | True | 5 | 0.3629 | 0.8835 | 0.9661 | 0.8009 | 0.1990 | 0.0338 | 0.8291 | 0.9594 | 0.9603 |
 
-* #### 2.4. Model v3.0 training on [512x512] patches
+* #### 2.4. Model v1.1.1 training on [512x512] patches
   
   * 2.4.1. Database:
   
-    * Preprocessing v2.0 ([1024x1024] extracts split into 4 patches instead of 16);
+    * Preprocessing v0.1 ([1024x1024] extracts split into 4 patches instead of 16);
        
     * Training dataset - CVL database subset of 1415 document images by 283 writers - 59868 image pairs (29934 positive and 29934 negative instances);
         
@@ -218,11 +227,11 @@
     | 7 | 0.3359 | 0.8638 | **0.2973** | **0.8838** | None |
     | 8 | 0.3336 | 0.8646 | 0.3033 | 0.8785 | Callback LR reduction to 0.000001 (1e-6) |
 
-* #### 2.5. Model v3.0 training on [1024x1024] extracts
+* #### 2.5. Model v1.1.2 training on [1024x1024] extracts
  
   * 2.5.1. Database:
   
-    * Preprocessing v2.0 (except for split of extracts into patches);
+    * Preprocessing v0.1 (except for split of extracts into patches);
        
     * Training dataset - CVL database subset of 1415 document images by 283 writers - 14150 image pairs (7075 positive and 7075 negative instances);
         
@@ -246,9 +255,9 @@
     | 2 | 0.6059 | 0.6739 | 0.5242 | 0.7477 | Callback LR reduction to 0.0001 (1e-4) |
     | 3 | 0.5786 | 0.6973 | 0.5527 | 0.7183 | Callback LR reduction to 0.00001 (1e-5) |
 
-### 3. Verificational Model v3.1
+### 3. Verificational Model v2.1.0
 
-* #### 3.1. Model v3.1
+* #### 3.1. Model v2.1.0
   
   * 3.1.1. Model architecture:
   
@@ -262,7 +271,7 @@
        
     * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 250ms/step (27732 steps per epoch) in case of model v3.1 training on [256x256] patches.    
   
-* #### 3.2. Model v3.1 training on [256x256] patches
+* #### 3.2. Model v2.1.0 training on [256x256] patches
  
   * 3.2.1. Database:
   
@@ -291,7 +300,7 @@
 
 ![loss]("Model Loss") ![acc]("Model Accuracy")
 
-* #### 3.3. Model v3.1 evaluation on [256x256] patches
+* #### 3.3. Model v2.1.0 evaluation on [256x256] patches
    
   * 3.3.1. Database:
   
@@ -315,7 +324,7 @@
    | **False** | 3 | 283.7893 | 0.5266 | **0.9883** | **0.0649** | 0.9350 | 0.0116 | 0.5138 | 0.8476 | 0.5269 |
    | True | 3 | 0.6610 | 0.9138 | 0.9867 | 0.8408 | 0.1592 | 0.0133 | 0.8611 | 0.9845 | 0.9510 |
    
-* #### 3.4. Simplified Model v3.1 training on [256x256] patches
+* #### 3.4. Model v2.1.1 training on [256x256] patches (simplified variant of model v2.1.0)
 
   * 3.4.1. Simplified Model:
     
@@ -343,7 +352,7 @@
     | **2** | 0.2462 | 0.9095 | **0.2834** | **0.8866** | Manual LR reduction to 0.00001 (1e-5) |
     | 3 | 0.2069 | 0.9266 | 0.2926 | 0.8831 | None |
     
-* #### 3.5. Model v3.1 training on [256x256] patches (extended train database - CVL, IAM, ICDAR 2011, ICFHR 2012, ICDAR 2013)
-* #### 3.6. Model v3.1 evaluation on [256x256] patches (extended test database - CVL, IAM, ICDAR 2011, ICFHR 2012, ICDAR 2013)
+* #### 3.5. Model v2.2.2 training on [256x256] patches (extended train database - CVL, IAM, ICDAR 2011, ICFHR 2012, ICDAR 2013)
+* #### 3.6. Model v2.2.2 evaluation on [256x256] patches (extended test database - CVL, IAM, ICDAR 2011, ICFHR 2012, ICDAR 2013)
 
-### 4. Verificational Model v4.0
+### 4. Verificational Model v3.2.0
