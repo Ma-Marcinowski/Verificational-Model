@@ -62,9 +62,7 @@
 
 ### 1.2. Preprocessing v0.2
 
-* #### 1.2.1. Exactly the same as v0.1, except for:
-
-  * The extraction window, which is slightly shifted to better fit the writing space (number of patches passed through the mean pixel value threshold is therefore greater). 
+* #### 1.2.1. 
   
 ### 2. Verificational Model v1
 
@@ -351,13 +349,13 @@
     | **2** | 0.2462 | 0.9095 | **0.2834** | **0.8866** | Manual LR reduction to 0.00001 (1e-5) |
     | 3 | 0.2069 | 0.9266 | 0.2926 | 0.8831 | None |
     
-* #### 3.?. Model v2.2.0 training on [256x256] patches (extended train database)
+* #### 3.?. Model v2.1.0 training on [256x256] patches (extended train database)
  
   * 3.?.1. Database:
   
     * CVL, IAM, ICDAR 2011, ICFHR 2012, ICDAR 2013
       
-* #### 3.?. Model v2.2.0 evaluation on [256x256] patches (extended test database)
+* #### 3.?. Model v2.1.0 evaluation on [256x256] patches (extended test database)
 
   * 3.?.2. Database:
   
