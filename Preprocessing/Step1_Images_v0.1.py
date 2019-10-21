@@ -15,7 +15,7 @@ def Preprocessing(mode, in_path, out_path):
         img = cv2.imread(j, 0)
         inv = np.bitwise_not(img)
         
-        y=890
+        y=930
         x=270
         h=2048
         w=2048
