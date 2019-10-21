@@ -64,7 +64,7 @@
 
 * #### 1.2.1. In the case of CVL database, method of preprocessing is exactly the same as v0.1, except for extraction window slightly shifted to better fit the writting space.
 
-* #### 1.2.2. In the case of IAM database, following steps where performed:
+* #### 1.2.2. In the case of IAM database, following steps where applied:
       
     *
     *
