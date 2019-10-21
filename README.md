@@ -295,7 +295,7 @@
     | 5 | 0.0278 | 0.9927 | 0.1896 | 0.9390 | Manual LR reduction to 0.00000001 (1e-8) |
     | 6 | 0.0277 | 0.9928 | 0.1902 | 0.9398 | None |
 
-![loss]("Model Loss") ![acc]("Model Accuracy")
+![loss](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/Plots/VM_v2.1.0_Loss.png "Model Loss") ![acc](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/Plots/VM_v2.1.0_Accuracy.png "Model Accuracy")
 
 * #### 3.3. Model v2.1.0 evaluation on [256x256] patches
    
