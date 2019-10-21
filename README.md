@@ -353,12 +353,12 @@
  
   * 3.?.1. Database:
   
-    * CVL, IAM, ICDAR 2011, ICFHR 2012, ICDAR 2013
+    * CVL, IAM (, ICDAR 2011, ICFHR 2012, ICDAR 2013)
       
 * #### 3.?. Model v2.1.0 evaluation on [256x256] patches (extended test database)
 
   * 3.?.2. Database:
   
-    * CVL, IAM, ICDAR 2011, ICFHR 2012, ICDAR 2013
+    * CVL, IAM (, ICDAR 2011, ICFHR 2012, ICDAR 2013)
 
 ### 4. Verificational Model v3
