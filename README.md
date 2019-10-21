@@ -363,7 +363,7 @@
 
   * 3.?.1. Model v2.2.0:
   
-    * Exactly the same as v2.1.0, except for training on combained IAM and CVL databases, and preprocessing v0.2.
+    * Exactly the same as v2.1.0, except for training on combained IAM and CVL databases.
      
   * 3.?.2. Database:
   
