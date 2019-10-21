@@ -276,7 +276,7 @@
    
   * 3.1.3. Implementation:
        
-    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 250ms/step (27732 steps per epoch) in case of model v3.1 training on [256x256] patches.    
+    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 250ms/step (27732 steps per epoch) in case of model v2.1.0 training on [256x256] patches.    
   
 * #### 3.2. Model v2.1.0 training on [256x256] patches
  
@@ -360,8 +360,12 @@
     | 3 | 0.2069 | 0.9266 | 0.2926 | 0.8831 | None |
     
 * #### 3.?. Model v2.2.0 training on [256x256] patches (extended train database)
- 
-  * 3.?.1. Database:
+
+  * 3.?.1. Model v2.2.0:
+  
+    * Exactly the same as v2.1.0, except for training on combained IAM and CVL databases, and preprocessing v0.2.
+     
+  * 3.?.2. Database:
   
     * Preprocessing v0.2
       
@@ -371,7 +375,7 @@
       
 * #### 3.?. Model v2.2.0 evaluation on [256x256] patches (extended test database)
 
-  * 3.?.2. Database:
+  * 3.?.3. Database:
   
     * Test dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 0 image pairs (0 positive and 0 negative instances).  
 
