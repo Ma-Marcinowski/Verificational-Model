@@ -328,7 +328,7 @@
 
   * 3.4.1. Simplified Model:
     
-    * .
+    * Exactly the same as model v2.1.0, except for additional output neuron and distance layers.
 
   * 3.4.2. Database:
   
@@ -352,7 +352,16 @@
     | **2** | 0.2462 | 0.9095 | **0.2834** | **0.8866** | Manual LR reduction to 0.00001 (1e-5) |
     | 3 | 0.2069 | 0.9266 | 0.2926 | 0.8831 | None |
     
-* #### 3.5. Model v2.2.2 training on [256x256] patches (extended train database - CVL, IAM, ICDAR 2011, ICFHR 2012, ICDAR 2013)
-* #### 3.6. Model v2.2.2 evaluation on [256x256] patches (extended test database - CVL, IAM, ICDAR 2011, ICFHR 2012, ICDAR 2013)
+* #### 3.?. Model v2.2.2 training on [256x256] patches (extended train database)
+ 
+  * 3.?.1. Database:
+  
+    * CVL, IAM, ICDAR 2011, ICFHR 2012, ICDAR 2013
+      
+* #### 3.?. Model v2.2.2 evaluation on [256x256] patches (extended test database)
+
+  * 3.?.2. Database:
+  
+    * CVL, IAM, ICDAR 2011, ICFHR 2012, ICDAR 2013
 
 ### 4. Verificational Model v3.2.0
