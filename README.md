@@ -2,17 +2,16 @@
 
 ### 0. Introduction
 
-* #### 0.1. Model version / method / variant numbering (*e.g* vX.Y.Z):
+* #### 0.1. Experiments version numbering (*e.g* vX.Y.Z):
 
-    * X indicates a model number;
+    * X indicates a model version;
     * Y indicates a method of preprocessing;
     * Z indicates any extra variation of a given X.Y base combination.
 
 * #### 0.2. Preprocessing method numbering (*e.g* v0.Y):
     
-    * X is zeroed, and Z skipped, to avoid any confusion of model variants and preprocessing methods; 
+    * X is zeroed, and Z skipped to avoid any confusion of model versions and preprocessing methods; 
     * Y angain indicates a methon of preprocessing (as stated in 1.0.1).
-
 
 ### 1.1. Preprocessing v0.1
   
