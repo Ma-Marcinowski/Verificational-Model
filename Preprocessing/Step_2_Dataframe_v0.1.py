@@ -77,14 +77,14 @@ def Dataframe(mode, img_path, df_path, df_img_path, valid_df_path, valid_fractio
 TrainDataframe = Dataframe(mode='train',
                            img_path='/preprocessed/train/images/directory/',
                            df_path='/dataframe/save/directory/TrainDataframe.csv',
-                           df_img_path='/preprocessed/train/images/directory/indicated/in/the/dataframe',
+                           df_img_path='/preprocessed/train/images/directory/indicated/in/the/train/dataframe',
                            valid_df_path=None,
                            valid_fraction=None)
 
 TestDataframe = Dataframe(mode='test',
                           img_path='/preprocessed/test/images/directory/',
                           df_path='/dataframe/save/directory/TestDataframe.csv',
-                          df_img_path='/preprocessed/test/images/directory/indicated/in/the/dataframe',
+                          df_img_path='/preprocessed/test/images/directory/indicated/in/the/test/dataframe',
                           valid_df_path='/dataframe/save/directory/ValidDataframe.csv',
                           valid_fraction=0.2) #any float of instances to be pulled from the test dataframe
 
