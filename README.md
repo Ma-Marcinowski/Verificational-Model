@@ -11,7 +11,7 @@
 * #### 0.2. Preprocessing methods numbering (*e.g* v0.Y):
     
     * X is zeroed and Z skipped to avoid any confusion of model versions and preprocessing methods; 
-    * Y indicates a methon of preprocessing (as stated in 1.0.1).
+    * Y indicates a methon of preprocessing (as already stated in 0.1).
 
 ### 1.1. Preprocessing v0.1
   
