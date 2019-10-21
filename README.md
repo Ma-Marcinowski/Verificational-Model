@@ -41,9 +41,9 @@
             
   * 1.1.1.4. Steps of preprocessing in the case of CVL database:
                
-    * `Step1_Images.py` - conversion of images (scans of whole documents) to grayscale (scale from black = 0 to white = 255), color inversion, extraction of writing space from images, reduction of extracts dimensions to [1024x1024] pixels, division of extracts into [256x256] pixel patches, conversion from the `tif` to `png` format. Patches which do not contain or contain a small amount of text are skipped by the program because of the arbitrary average pixel value threshold - in any case, patches can be sorted by their size and manually removed on that basis;
+    * `Step_1_CLV_Images.py` - conversion of images (scans of whole documents) to grayscale (scale from black = 0 to white = 255), color inversion, extraction of writing space from images, reduction of extracts dimensions to [1024x1024] pixels, division of extracts into [256x256] pixel patches, conversion from the `tif` to `png` format. Patches which do not contain or contain a small amount of text are skipped by the program because of the arbitrary average pixel value threshold - in any case, patches can be sorted by their size and manually removed on that basis;
             
-    * `Step2_Dataframe.py` - creation of a dataframe (a `csv` file that can be edited in any spreadsheet program, *e.g.* calc / excel) separately for the test and training subset, by combinatorial paring of image names into the positive class, and a random combinatorial paring of image names into the negative class (the number of possible negative combinations is much greater than the number positive ones, so all positive instances are created first and then the negative instances are randomly combinated until their number is equal to the number of positive instances). Image name pairs and their labels are ordered by rows, according to columns `left convolutional path`, `right convolutional path`, and `label` (labels are determined by the convergence or divergence of author's identifiers - *e.g.* first four digits of a raw image name in the case of a CVL database). Above method requires that the test and training images are kept in different directories during their preprocessing. However, it is not necessary to create manually any of dataframe `csv` files, *i.e.* they will be created by the program (and if any such a file was already created manually, its directory and name has to be indicated in the program code). Validation dataframe (utilized only for testing of the model during its training, generally after every epoch) is also created, by random sampling of the test dataframe instances (fratcion of which to pull has to be specified - usually 0.1 / 0.2 is enough for validation purposes). Due to the randomness of sampling, it is most probable that the number of sampled positive and negative instances will be effectively equal.
+    * `Step_2_Dataframe.py` - creation of a dataframe (a `csv` file that can be edited in any spreadsheet program, *e.g.* calc / excel) separately for the test and training subset, by combinatorial paring of image names into the positive class, and a random combinatorial paring of image names into the negative class (the number of possible negative combinations is much greater than the number positive ones, so all positive instances are created first and then the negative instances are randomly combinated until their number is equal to the number of positive instances). Image name pairs and their labels are ordered by rows, according to columns `left convolutional path`, `right convolutional path`, and `label` (labels are determined by the convergence or divergence of author's identifiers - *e.g.* first four digits of a raw image name in the case of a CVL database). Above method requires that the test and training images are kept in different directories during their preprocessing. However, it is not necessary to create manually any of dataframe `csv` files, *i.e.* they will be created by the program (and if any such a file was already created manually, its directory and name has to be indicated in the program code). Validation dataframe (utilized only for testing of the model during its training, generally after every epoch) is also created, by random sampling of the test dataframe instances (fratcion of which to pull has to be specified - usually 0.1 / 0.2 is enough for validation purposes). Due to the randomness of sampling, it is most probable that the number of sampled positive and negative instances will be effectively equal.
                
 * #### 1.1.2. Preprocessing programs
    		
@@ -62,7 +62,15 @@
 
 ### 1.2. Preprocessing v0.2
 
-* #### 1.2.1. 
+* #### 1.2.1. In the case of CVL database, method of preprocessing is exactly the same as v0.1, except for extraction window slightly shifted to better fit the writting space.
+
+* #### 1.2.2. In the case of IAM database, following steps where performed:
+      
+    *
+    *
+    *
+
+* #### 1.2.3. Method of dataframe creation is exatly the same as in the case of v0.1.
   
 ### 2. Verificational Model v1
 
@@ -105,7 +113,9 @@
 * #### 2.2. Model v1.1.0 training on [256x256] patches
    
   * 2.2.1. Database:
-       
+  
+    * Preprocessing v0.1
+  
     * Training dataset - CVL database subset of 1415 document images by 283 writers - 443704 image pairs (221852 positive and 221852 negative instances);
         
     * Validation dataset - CVL database subset of 189 document images by 27 writers - 12478 image pairs (6300 positive and 6178 negative instances).
@@ -349,16 +359,20 @@
     | **2** | 0.2462 | 0.9095 | **0.2834** | **0.8866** | Manual LR reduction to 0.00001 (1e-5) |
     | 3 | 0.2069 | 0.9266 | 0.2926 | 0.8831 | None |
     
-* #### 3.?. Model v2.1.0 training on [256x256] patches (extended train database)
+* #### 3.?. Model v2.2.0 training on [256x256] patches (extended train database)
  
   * 3.?.1. Database:
   
-    * CVL, IAM (, ICDAR 2011, ICFHR 2012, ICDAR 2013)
+    * Preprocessing v0.2
       
-* #### 3.?. Model v2.1.0 evaluation on [256x256] patches (extended test database)
+    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - 0 image pairs 0 positive and 0 negative instances);
+        
+    * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 0 image pairs (0 positive and 0 negative instances).
+      
+* #### 3.?. Model v2.2.0 evaluation on [256x256] patches (extended test database)
 
   * 3.?.2. Database:
   
-    * CVL, IAM (, ICDAR 2011, ICFHR 2012, ICDAR 2013)
+    * Test dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 0 image pairs (0 positive and 0 negative instances).  
 
 ### 4. Verificational Model v3
