@@ -13,10 +13,15 @@ def Preprocessing(mode, in_path, out_path):
     for j in tqdm(tifs, desc=mode+'-loop'):
 
         img = cv2.imread(j, 0)
-        inv = np.bitwise_not(img)
 
-        y=930
-        x=270
+        blur = cv2.GaussianBlur(img,(5,5),0)
+
+        retv, ots = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+
+        inv = np.bitwise_not(ots)
+
+        y=930 
+        x=270 
         h=2048
         w=2048
 
@@ -34,7 +39,7 @@ def Preprocessing(mode, in_path, out_path):
 
                 mean = v.mean()
 
-                if mean >= 4:
+                if mean >= 8:
 
                     cv2.imwrite(out_path + 'cvl-' + j[:-4] + '-' + str(idx) + str(ind) + '.png', v)
 
