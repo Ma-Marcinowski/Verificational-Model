@@ -2,34 +2,32 @@
 
 ### 0. Introduction
 
-* #### 0.1. Experiments numbering (*e.g* vX.Y.Z):
+* #### 0.1. The objective of author's repository was to introduce a method for verification of offline handwritten documents authorship by artificial neural networks (through classification of preprocessed image pairs to positive `same author` or negative `different authors` class).
 
-    * X indicates a model version;
-    * Y indicates a method of preprocessing;
-    * Z indicates any extra variation of a given X.Y base combination.
-
-* #### 0.2. Model versions numbering (*e.g* vX):
-
-    * X indicates a model version (as already stated in 0.1).
-
-* #### 0.3. Preprocessing methods numbering (*e.g* v0.Y):
-    
-    * X is zeroed and Z skipped to avoid any confusion of model versions and preprocessing methods; 
-    * Y indicates a methon of preprocessing (as already stated in 0.1).    
-
-### 1.1. Preprocessing v0.1 (CVL database, grayscaled images)
-  
-* #### 1.1.1. Objective, assumptions and database and steps of preprocessing
-   
-  * 1.1.1.1. The objective of author's repository was to introduce a method of image preprocessing for verification of offline handwritten documents authorship by artificial neural networks (through classification of preprocessed image pairs to positive `same author` or negative `different authors` class).
-       
-  * 1.1.1.2. Author's assumptions were that:
+* #### 0.2. Author's assumptions were that:
      
     * Document images will be best processed simultaneously by two separate convolutional neural networks and classified by one multilayer perceptron (fully connected layers);       
     
     * Preprocessing shouldn't drastically affect image quality (*e.g* by image binarization) to preserve most of handwriting features.
-            
-  * 1.1.1.3. Database (9455 documents by 2911 writers):
+
+* #### 0.3. Versioning
+
+   * 0.3.1 Experiment identifiers (*e.g* vX.Y.Z):
+
+      * X indicates a model version;
+      * Y indicates a method of preprocessing;
+      * Z indicates any extra variation of a given X.Y base combination.
+
+   * 0.3.2 Model version identifiers (*e.g* vX):
+
+      * X indicates a model version (as already stated in 0.3.1).
+
+   * 0.3.3 Preprocessing method identifiers (*e.g* v0.Y):
+    
+      * X is zeroed and Z skipped to avoid any confusion of model versions and preprocessing methods; 
+      * Y indicates a methon of preprocessing (as already stated in 0.3.1).
+
+* #### 0.3. Database (9455 documents by 2911 writers):
        
     * Dataset of 1604 documents (full page scans) from CVL database (310 writers), by: F. Kleber, S. Fiel, M. Diem, R. Sablatnig, *CVL-Database: An Off-line Database for Writer Retrieval, Writer Identification and Word Spotting*, "In Proc. of the 12th Int. Conference on Document Analysis and Recognition (ICDAR) 2013" 2013, p. 560 - 564;
         
@@ -42,8 +40,10 @@
     * Dataset of 400 documents (cropped page scans) from ICFHR 2012 Competition on Writer Identification (Challenge 1: Latin/Greek Documents) database (100 writers), by: G. Louloudis, N. Stamatopoulos, B. Gatos, *ICFHR2012 Competition on Writer Identification Challenge 1: Latin/Greek Documents*, "2012 International Conference on Frontiers in Handwriting Recognition" 2012, p. 825 - 830;
         
     * Dataset of 1000 documents (cropped page scans) from ICDAR 2013 Competition on Writer Identification database (250 writers), by: G. Louloudis, N. Stamatopoulos, B. Gatos, *ICDAR 2013 Competition on Writer Identification*, "2013 12th International Conference on Document Analysis and Recognition" 2013, p. 1397 - 1041.
-            
-  * 1.1.1.4. Steps of preprocessing in the case of CVL database:
+
+### 1.1. Preprocessing v0.1 (CVL database, grayscaled images)
+              
+* #### 1.1.1. Steps of preprocessing in the case of CVL database:
                
     * Step one `CLV_Images.py` - conversion of images (scans of whole documents) to grayscale (scale from black = 0 to white = 255), color inversion, extraction of writing space from images, reduction of extracts dimensions to [1024x1024] pixels, division of extracts into [256x256] pixel patches, conversion from the `tif` to `png` format. Patches which do not contain or contain a small amount of text are skipped by the program because of the arbitrary average pixel value threshold - in any case, patches can be sorted by their size and manually removed on that basis;
             
