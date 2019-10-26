@@ -374,6 +374,15 @@
     | 3 | 0.2069 | 0.9266 | 0.2926 | 0.8831 | None |
     
 * #### 3.5. Model v2.2.0 training on [256x256] patches (binarized images)
+
+  * 3.5.1. Database:
+  
+    * Preprocessing v0.2
+  
+    * Training dataset - CVL database subset of 1415 document images by 283 writers - ??? image pairs (equal number of positive and negative instances);
+        
+    * Validation dataset - CVL database subset of 189 document images by 27 writers - 20% of test instances.
+
 * #### 3.5. Model v2.2.0 evaluation on [256x256] patches (binarized images)
     
 * #### 3.?. Model v2.3.0 training on [256x256] patches (extended train database)
