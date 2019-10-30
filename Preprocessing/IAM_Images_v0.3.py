@@ -56,11 +56,11 @@ def Preprocessing(mode, in_path, out_path):
     print(mode + ' preprocessing done: 100%')
 
 TrainPreprocessing = Preprocessing(mode='train',
-                                   in_path='/IAM/dataframe/of/raw/train/images/directory.csv',
+                                   in_path='/IAM/dataframe/of/raw/train/images.csv',
                                    out_path='/preprocessed/train/images/save/directory/')
 
 TestPreprocessing = Preprocessing(mode='test',
-                                  in_path='/IAM/dataframe/of/raw/test/images/directory.csv',
+                                  in_path='/IAM/dataframe/of/raw/test/images.csv',
                                   out_path='/preprocessed/test/images/save/directory/')
 
 print('Preprocessing done.')
