@@ -427,7 +427,7 @@
   
     * Preprocessing v0.3
       
-    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - 0 image pairs (equal number of positive and negative instances);
+    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - 991448 image pairs (equal number of positive and negative instances);
         
     * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 20% of test instances.
       
@@ -435,6 +435,6 @@
 
   * 3.?.3. Database:
   
-    * Test dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 0 image pairs (equal number of positive and negative instances).  
+    * Test dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 156600 image pairs (equal number of positive and negative instances).  
 
 ### 4. Verificational Model v3
