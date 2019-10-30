@@ -74,17 +74,17 @@
 
 * #### 1.2.2. Dataframe is generated exatly the same way as in the case of v0.1.
 
-### 1.3. Preprocessing v0.3 (CVL and IAM database, ??? images)
+### 1.3. Preprocessing v0.3 (CVL and IAM database, binarized images)
 
-* #### 1.3.1. In the case of CVL database, method of preprocessing is exactly the same as v0.?.
+* #### 1.3.1. In the case of CVL database, method of preprocessing is exactly the same as v0.2.
 
-* #### 1.3.2. In the case of IAM database, method of preprocessing is exactly the same as v0.?, however following additional steps were applied:
+* #### 1.3.2. In the case of IAM database, method of preprocessing is exactly the same as v0.2, however following additional steps were applied:
       
     *
     *
     *
 
-* #### 1.3.3. Dataframe is generated exatly the same way as in the case of v0.?.
+* #### 1.3.3. Dataframe is generated exatly the same way as in the case of v0.2 and v0.1.
   
 ### 2. Verificational Model v1
 
@@ -383,7 +383,39 @@
         
     * Validation dataset - CVL database subset of 189 document images by 27 writers - 20% of test instances.
 
-* #### 3.5. Model v2.2.0 evaluation on [256x256] patches (binarized images)
+  * 3.5.2. Hyperparameters: 
+    
+    * *Vide* 2.2.3. Hyperparameters;
+    * Epochs - 5 (five separate runs);
+    * Learning rate - initial 0.001 (1e-3), then manually adjusted by a factor of 0.1 after every epoch.
+ 
+  * 3.5.3. Training:
+     
+    | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
+    | --- | --- | --- | --- | --- |  --- |
+    | 1 | 0.2208 | 0.9091 | 0.3238 | 0.9057 | Manual LR reduction to 0.0001 (1e-4) |
+    | 2 | 0.0440 | 0.9862 | 0.2989 | 0.9245 | Manual LR reduction to 0.00001 (1e-5) |
+    | 3 | 0.0220 | 0.9944 | 0.2755 | 0.9276 | Manual LR reduction to 0.00001 (1e-6) |
+    | **4** | 0.0195 | 0.9952 | **0.2728** | **0.9284** | Manual LR reduction to 0.00001 (1e-7) |
+    | 5 | 0.0192 | 0.9953 | 0.2746 | 0.9280 | None |
+
+* #### 3.6. Model v2.2.0 evaluation on [256x256] patches (binarized images)
+
+  * 3.6.1. Database:
+  
+    * Preprocessing v0.2
+    
+    * Test dataset - CVL database subset of 189 document images by 27 writers - ??? image pairs (equal number of positive and negative instances).
+  
+  * 3.6.2. Metrics:
+  
+    * *Vide* 2.3.2. Metrics.
+  
+  * 3.6.3. CVL evaluation (epochs of model training - EofT - by the best accuracy and loss result):
+  
+   | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+   | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+   | 4 | 0.2783 | 0.9275 | 0.8941 | 0.9608 | 0.0392 | 0.1059 | 0.9580 | 0.9007 | 0.9749 |
     
 * #### 3.?. Model v2.3.0 training on [256x256] patches (extended train database)
 
@@ -395,14 +427,14 @@
   
     * Preprocessing v0.3
       
-    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - 0 image pairs 0 positive and 0 negative instances);
+    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - 0 image pairs (equal number of positive and negative instances);
         
-    * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 0 image pairs (0 positive and 0 negative instances).
+    * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 20% of test instances.
       
 * #### 3.?. Model v2.3.0 evaluation on [256x256] patches (extended test database)
 
   * 3.?.3. Database:
   
-    * Test dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 0 image pairs (0 positive and 0 negative instances).  
+    * Test dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 0 image pairs (equal number of positive and negative instances).  
 
 ### 4. Verificational Model v3
