@@ -61,9 +61,9 @@ def Dataframe(mode, img_path, df_path, df_img_path, num_of_train_dfs, valid_df_p
 
     df = sklearn.utils.shuffle(df)
 
-    df.to_csv(df_path, header=["Leftname", "Rightname", "Label"], index=False)
+    df.to_csv(df_path, header=['Leftname', 'Rightname', 'Label'], index=False)
 
-    print('Done ' + mode + ' dataframe.')
+    print('Done ' + mode + ' dataframe: ', df.shape[0], ' image pairs.')
 
     if mode == 'train':
 
@@ -75,7 +75,11 @@ def Dataframe(mode, img_path, df_path, df_img_path, num_of_train_dfs, valid_df_p
 
         for idx, p in enumerate(pdf, start=1):
 
-            p.to_csv(df_path[:-4] + '-' + str(idx) + '.csv', header=['Leftname', 'Rightname', 'Label'], index=False)
+            q = p.dropna(axis=0, how='any')
+
+            q.to_csv(df_path[:-4] + '-' + str(idx) + '.csv', header=['Leftname', 'Rightname', 'Label'], index=False)
+
+            print('Done train dataframe ', str(idx), ': ', q.shape[0], ' image pairs.')
 
         print('Done splitting train dataframes.')
 
@@ -87,7 +91,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, num_of_train_dfs, valid_df_p
 
         vadf.to_csv(valid_df_path, index=False)
 
-        print('Done validation dataframe.')
+        print('Done validation dataframe: ', vadf.shape[0], ' image pairs.')
 
 TrainDataframe = Dataframe(mode='train',
                            img_path='/preprocessed/train/images/directory/',
