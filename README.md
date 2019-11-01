@@ -84,7 +84,7 @@
     *
     *
 
-* #### 1.3.3. Dataframes are generated exatly the same way as in the case of v0.2 and v0.1, except for the optional split of training dataframes into a given number of smaller equal size training dataframes, due to the sheer number of training instances.
+* #### 1.3.3. Dataframes are generated exatly the same way as in the case of v0.2 and v0.1, except for the optional split of training dataframe into a given number of smaller (equal size) training dataframes, due to the sheer number of training instances.
   
 ### 2. Verificational Model v1
 
