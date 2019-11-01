@@ -204,22 +204,22 @@
     * Area under the ROC curve - AUC.
       
   * 2.3.3. CVL evaluation:
-  
-    * Epochs of model training - EofT - by the best validation loss result;
     
   | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
   | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
   | False | 5 | 0.2331 | 0.9124 | 0.9207 | 0.9040 | 0.0959 | 0.0792 | 0.9056 | 0.9194 | 0.9676 |
   | **True** | 5 | **0.1795** | **0.9370** | 0.9617 | 0.9123 | 0.0876 | 0.0382 | 0.9164 | 0.9597 | 0.9781 |
               
-  * 2.3.4. IAM evaluation:
-  
     * Epochs of model training - EofT - by the best validation loss result;
+              
+  * 2.3.4. IAM evaluation:
     
   | Denoised | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
   | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
   | **False** | 5 | 265.3726 | 0.5047 | **0.0113** | **0.9979** | 0.0020 | 0.9886 | 0.8478 | 0.5023 | 0.5058 |
   | True | 5 | 0.3629 | 0.8835 | 0.9661 | 0.8009 | 0.1990 | 0.0338 | 0.8291 | 0.9594 | 0.9603 |
+    
+    * Epochs of model training - EofT - by the best validation loss result;
 
 * #### 2.4. Model v1.1.1 training on [512x512] patches
   
@@ -336,22 +336,22 @@
     * *Vide* 2.3.2. Metrics.
   
   * 3.3.3. CVL evaluation:
-  
-    * Epochs of model training - EofT - by the best validation accuracy result;
     
    | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
    | False | 3 | 0.1835 | 0.9387 | 0.9301 | 0.9474 | 0.0526 | 0.0699 | 0.9464 | 0.9312 | 0.9817 |
    | **True** | 3 | **0.1494** | **0.9506** | 0.9567 | 0.9445 | 0.0555 | 0.0433 | 0.9452 | 0.9561 | 0.9858 |
   
-  * 3.3.4. IAM evaluation:
+    * Epochs of model training - EofT - by the best validation accuracy result; 
   
-    * Epochs of model training - EofT - by the best validation accuracy result;
+  * 3.3.4. IAM evaluation:
   
    | Denoised | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
    | **False** | 3 | 283.7893 | 0.5266 | **0.9883** | **0.0649** | 0.9350 | 0.0116 | 0.5138 | 0.8476 | 0.5269 |
    | True | 3 | 0.6610 | 0.9138 | 0.9867 | 0.8408 | 0.1592 | 0.0133 | 0.8611 | 0.9845 | 0.9510 |
+   
+    * Epochs of model training - EofT - by the best validation accuracy result;   
    
 * #### 3.4. Model v2.1.1 training on [256x256] patches (simplified variant of model v2.1.0)
 
@@ -421,11 +421,11 @@
   
   * 3.6.3. CVL evaluation:
   
-    * Epochs of model training - EofT - by the best validation accuracy and loss result;
-  
    | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
    | 4 | 0.2783 | 0.9275 | 0.8941 | 0.9608 | 0.0392 | 0.1059 | 0.9580 | 0.9007 | 0.9749 |
+   
+    * Epochs of model training - EofT - by the best validation accuracy and loss result;   
     
 * #### 3.?. Model v2.3.0 training on [256x256] patches (extended train database)
 
