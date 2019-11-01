@@ -72,7 +72,7 @@
     
     * Extraction window is slightly shifted to better fit the writting space, hence greater number of image patches is passed through the mean pixel value threshold.
 
-* #### 1.2.2. Dataframe is generated exatly the same way as in the case of v0.1.
+* #### 1.2.2. Dataframes are generated exatly the same way as in the case of v0.1.
 
 ### 1.3. Preprocessing v0.3 (CVL and IAM database, binarized images)
 
@@ -84,7 +84,7 @@
     *
     *
 
-* #### 1.3.3. Dataframe is generated exatly the same way as in the case of v0.2 and v0.1.
+* #### 1.3.3. Dataframes are generated exatly the same way as in the case of v0.2 and v0.1, except for the split of training dataframes into a given number of smaller training dataframes, due to the sheer number of training instances.
   
 ### 2. Verificational Model v1
 
