@@ -439,8 +439,9 @@
  
   * 3.?.4. Training:
   
-    * Each training dataframe part - TDP - utilized for a given epoch of training is indicated by her index;
-     
+    * Each training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;
+    
+    
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
     | --- | --- | --- | --- | --- | --- | --- |
     | 1 | 1/2 | 0. | 0. | 0. | 0. | ? |
