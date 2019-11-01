@@ -16,6 +16,8 @@ def Dataframe(mode, img_path, df_path, df_img_path, valid_df_path, valid_fractio
 
         writer = csv.writer(f)
 
+        pos = 0
+
         for j in tqdm(pngs, leave=False):
             for i in pngs:
 
@@ -25,15 +27,17 @@ def Dataframe(mode, img_path, df_path, df_img_path, valid_df_path, valid_fractio
 
                     writer.writerow(pair)
 
+                    pos += 1
+
                 else:
 
                     continue
 
-        print('Done ' + mode + ' positives: 100%')
-        g = f.tell()
-        k = 2 * f.tell()
+        print('Done ' + mode + ' positives: ', pos, ' instances.')
 
-        while g < k:
+        neg = 0
+
+        while neg < pos:
 
             j = random.choice(pngs)
             i = random.choice(pngs)
@@ -44,9 +48,9 @@ def Dataframe(mode, img_path, df_path, df_img_path, valid_df_path, valid_fractio
 
                 writer.writerow(pair)
 
-                g = f.tell()
+                neg += 1
 
-                print('%.2f%%'%(100*g/k), end="\r")
+                print('%.2f%%'%(100*neg/pos), end="\r")
 
             else:
 
@@ -54,16 +58,16 @@ def Dataframe(mode, img_path, df_path, df_img_path, valid_df_path, valid_fractio
 
         else:
 
-            print('Done ' + mode + ' negatives: 100%')
+            print('Done ' + mode + ' negatives: ', neg, ' instances.')
 
     df = pd.read_csv(df_path, header=None)
 
     df = sklearn.utils.shuffle(df)
 
-    df.to_csv(df_path, header=["Leftname", "Rightname", "Label"], index=False)
+    df.to_csv(df_path, header=['Leftname', 'Rightname', 'Label'], index=False)
 
-    print('Done ' + mode + ' dataframe.')
-    
+    print('Done ' + mode + ' dataframe: ', df.shape[0], ' image pairs.')
+
     if mode == 'test':
 
         tedf = pd.read_csv(df_path)
@@ -72,7 +76,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, valid_df_path, valid_fractio
 
         vadf.to_csv(valid_df_path, index=False)
 
-        print('Done validation dataframe.')
+        print('Done validation dataframe: ', vadf.shape[0], ' image pairs.')
 
 TrainDataframe = Dataframe(mode='train',
                            img_path='/preprocessed/train/images/directory/',
