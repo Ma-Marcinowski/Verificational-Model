@@ -31,6 +31,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, num_of_train_dfs, valid_df_p
                     continue
 
         print('Done ' + mode + ' positives: 100%')
+
         g = f.tell()
         k = 2 * f.tell()
 
@@ -63,7 +64,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, num_of_train_dfs, valid_df_p
 
     df.to_csv(df_path, header=['Leftname', 'Rightname', 'Label'], index=False)
 
-    print('Done ' + mode + ' dataframe: ', df.shape[0], ' image pairs.')
+    print('Done ' + mode + ' dataframe.')
 
     if mode == 'train':
 
@@ -79,7 +80,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, num_of_train_dfs, valid_df_p
 
             q.to_csv(df_path[:-4] + '-' + str(idx) + '.csv', header=['Leftname', 'Rightname', 'Label'], index=False)
 
-            print('Done train dataframe ', str(idx), ': ', q.shape[0], ' image pairs.')
+            print('Done train dataframe part: ', str(idx))
 
         print('Done splitting train dataframes.')
 
@@ -91,7 +92,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, num_of_train_dfs, valid_df_p
 
         vadf.to_csv(valid_df_path, index=False)
 
-        print('Done validation dataframe: ', vadf.shape[0], ' image pairs.')
+        print('Done validation dataframe.')
 
 TrainDataframe = Dataframe(mode='train',
                            img_path='/preprocessed/train/images/directory/',
