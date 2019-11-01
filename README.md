@@ -392,7 +392,7 @@
   * 3.5.3. Training:
      
     | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
-    | --- | --- | --- | --- | --- |  --- |
+    | --- | --- | --- | --- | --- | --- |
     | 1 | 0.2208 | 0.9091 | 0.3238 | 0.9057 | Manual LR reduction to 0.0001 (1e-4) |
     | 2 | 0.0440 | 0.9862 | 0.2989 | 0.9245 | Manual LR reduction to 0.00001 (1e-5) |
     | 3 | 0.0220 | 0.9944 | 0.2755 | 0.9276 | Manual LR reduction to 0.00001 (1e-6) |
@@ -430,6 +430,18 @@
     * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - 3493614 image pairs (equal number of positive and negative instances) split into 2 equal size parts;
         
     * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 20% of test instances.
+    
+  * 3.?.3. Hyperparameters: 
+    
+    * *Vide* 2.2.3. Hyperparameters;
+    * Epochs - one epoch per one training dataframe part (each ran separately);
+    * Learning rate - initial 0.001 (1e-3).
+ 
+  * 3.?.4. Training (each training dataframe part - TDP - utilized for a given epoch of training is indicated by her index):
+     
+    | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
+    | --- | --- | --- | --- | --- | --- | --- |
+    | 1 | 1/2 | 0. | 0. | 0. | 0. | ? |
       
 * #### 3.?. Model v2.3.0 evaluation on [256x256] patches (extended test database)
 
