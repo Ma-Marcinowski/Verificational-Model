@@ -17,6 +17,8 @@ def Dataframe(mode, img_path, df_path, df_img_path, num_of_train_dfs, valid_df_p
 
         writer = csv.writer(f)
 
+        pos = 0
+
         for j in tqdm(pngs, leave=False):
             for i in pngs:
 
@@ -26,16 +28,17 @@ def Dataframe(mode, img_path, df_path, df_img_path, num_of_train_dfs, valid_df_p
 
                     writer.writerow(pair)
 
+                    pos += 1
+
                 else:
 
                     continue
 
-        print('Done ' + mode + ' positives: 100%')
+        print('Done ' + mode + ' positives: ', pos, ' instances.')
 
-        g = f.tell()
-        k = 2 * f.tell()
+        neg = 0
 
-        while g < k:
+        while neg < pos:
 
             j = random.choice(pngs)
             i = random.choice(pngs)
@@ -46,9 +49,9 @@ def Dataframe(mode, img_path, df_path, df_img_path, num_of_train_dfs, valid_df_p
 
                 writer.writerow(pair)
 
-                g = f.tell()
+                neg += 1
 
-                print('%.2f%%'%(100*g/k), end="\r")
+                print('%.2f%%'%(100*neg/pos), end="\r")
 
             else:
 
@@ -56,7 +59,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, num_of_train_dfs, valid_df_p
 
         else:
 
-            print('Done ' + mode + ' negatives: 100%')
+            print('Done ' + mode + ' negatives: ', neg, ' instances.')
 
     df = pd.read_csv(df_path, header=None)
 
@@ -64,11 +67,11 @@ def Dataframe(mode, img_path, df_path, df_img_path, num_of_train_dfs, valid_df_p
 
     df.to_csv(df_path, header=['Leftname', 'Rightname', 'Label'], index=False)
 
-    print('Done ' + mode + ' dataframe.')
+    print('Done ' + mode + ' dataframe: ', df.shape[0], ' image pairs.')
 
     if mode == 'train':
 
-        df = pd.read_csv(df_path, skiprows=[0])
+        df = pd.read_csv(df_path)
 
         n = num_of_train_dfs
 
@@ -77,10 +80,10 @@ def Dataframe(mode, img_path, df_path, df_img_path, num_of_train_dfs, valid_df_p
         for idx, p in enumerate(pdf, start=1):
 
             p.to_csv(df_path[:-4] + '-' + str(idx) + '.csv', header=['Leftname', 'Rightname', 'Label'], index=False)
-            
+
             p.dropna(axis=0, how='any', inplace=True)
 
-            print('Done train dataframe part: ', str(idx))
+            print('Done train dataframe part ', idx, ': ', p.shape[0], ' image pairs.')
 
         print('Done splitting train dataframes.')
 
@@ -92,7 +95,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, num_of_train_dfs, valid_df_p
 
         vadf.to_csv(valid_df_path, index=False)
 
-        print('Done validation dataframe.')
+        print('Done validation dataframe: ', vadf.shape[0], ' image pairs.')
 
 TrainDataframe = Dataframe(mode='train',
                            img_path='/preprocessed/train/images/directory/',
