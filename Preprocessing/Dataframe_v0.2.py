@@ -93,4 +93,3 @@ TestDataframe = Dataframe(mode='test',
                           valid_fraction=0.2) #any float of instances to be pulled from the test dataframe
 
 print('Dataframes done.')
-
