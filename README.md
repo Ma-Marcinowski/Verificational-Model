@@ -437,7 +437,7 @@
     * Epochs - one epoch per one training dataframe part (each ran separately);
     * Learning rate - initial 0.001 (1e-3).
  
-  * 3.?.4. Training (each training dataframe part - TDP - utilized for a given epoch of training is indicated by her index):
+  * 3.?.4. Training (each training dataframe part - TDP - utilized for a given epoch of training, is indicated by her index):
      
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
     | --- | --- | --- | --- | --- | --- | --- |
