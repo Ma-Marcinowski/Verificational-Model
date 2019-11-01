@@ -31,7 +31,6 @@ def Dataframe(mode, img_path, df_path, df_img_path, num_of_train_dfs, valid_df_p
                     continue
 
         print('Done ' + mode + ' positives: 100%')
-        
         g = f.tell()
         k = 2 * f.tell()
 
