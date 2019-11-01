@@ -76,9 +76,9 @@ def Dataframe(mode, img_path, df_path, df_img_path, num_of_train_dfs, valid_df_p
 
         for idx, p in enumerate(pdf, start=1):
 
-            q = p.dropna(axis=0, how='any')
-
-            q.to_csv(df_path[:-4] + '-' + str(idx) + '.csv', header=['Leftname', 'Rightname', 'Label'], index=False)
+            p.to_csv(df_path[:-4] + '-' + str(idx) + '.csv', header=['Leftname', 'Rightname', 'Label'], index=False)
+            
+            p.dropna(axis=0, how='any', inplace=True)
 
             print('Done train dataframe part: ', str(idx))
 
