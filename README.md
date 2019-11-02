@@ -449,16 +449,16 @@
  
   * 3.?.4. Training (dataframe split into two equal size parts):
                                                                                                                                                                                                                 
-    | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
+    | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
     | --- | --- | --- | --- | --- | --- | --- |
-    | 1 | 1/2 | 0.1309 | 0.9497 | 0.1714 | 0.9480 | 0.001 |
-    | 2 | 2/2 | 0. | 0. | 0. | 0. | 0.0001 |
+    | 1 | 1/2 | 0.1309 | 0.9497 | 0.1714 | 0.9480 | Manual LR reduction to 0.0001 (1e-4) |
+    | 2 | 2/2 | 0. | 0. | 0. | 0. | ? |
     
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;  
     
   * 3.?.5. Training (dataframe split into four equal size parts):
                                                                                                                                                                                                                 
-    | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
+    | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
     | --- | --- | --- | --- | --- | --- | --- |
     | 1 | 1/4 | 0. | 0. | 0. | 0. | 0.001 |
     | 2 | 2/4 | 0. | 0. | 0. | 0. | ? |
