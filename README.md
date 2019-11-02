@@ -452,7 +452,7 @@
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
     | --- | --- | --- | --- | --- | --- | --- |
     | 1 | 1/2 | 0.1309 | 0.9497 | 0.1714 | 0.9480 | Manual LR reduction to 0.0001 (1e-4) |
-    | 2 | 2/2 | 0. | 0. | 0. | 0. | ? |
+    | 2 | 2/2 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.00001 (1e-5) |
     
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;  
     
