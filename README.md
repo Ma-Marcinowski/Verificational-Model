@@ -85,6 +85,10 @@
     *
 
 * #### 1.3.3. Dataframes are generated exatly the same way as in the case of v0.1 and v0.2, except for the optional split of training dataframe into a given number of smaller equal size training dataframes, due to the sheer number of training image pairs (3.5 million), to assure a better control over the training process.
+
+### 1.4. Preprocessing v0.4 (CVL and IAM database, grayscaled images)
+
+* #### 1.4.1. Exactly the same as v0.3, except for image conversion to grayscale instead of binarization.
   
 ### 2. Verificational Model v1
 
@@ -427,13 +431,13 @@
    
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
     
-* #### 3.?. Model v2.3.0 training on [256x256] patches (extended train database)
+* #### 3.7. Model v2.3.0 training on [256x256] patches (extended train database)
 
-  * 3.?.1. Model v2.3.0:
+  * 3.7.1. Model v2.3.0:
   
     * Exactly the same as v2.1.0, except for training on combained IAM and CVL databases.
      
-  * 3.?.2. Database:
+  * 3.7.2. Database:
   
     * Preprocessing v0.3
       
@@ -441,13 +445,13 @@
         
     * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 20% of test instances.
     
-  * 3.?.3. Hyperparameters: 
+  * 3.7.3. Hyperparameters: 
     
     * *Vide* 2.2.3. Hyperparameters;
     * Epochs - one epoch per one training dataframe part (each ran separately);
     * Learning rate - initial 0.001 (1e-3).
  
-  * 3.?.4. Training (dataframe split into two equal size parts):
+  * 3.7.4. Training (dataframe split into two equal size parts):
                                                                                                                                                                                                                 
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
     | --- | --- | --- | --- | --- | --- | --- |
@@ -458,7 +462,7 @@
     
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;  
     
-  * 3.?.5. Training (dataframe split into four equal size parts):
+  * 3.7.5. Training (dataframe split into four equal size parts):
                                                                                                                                                                                                                 
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
     | --- | --- | --- | --- | --- | --- | --- |
@@ -469,10 +473,13 @@
     
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;  
       
-* #### 3.?. Model v2.3.0 evaluation on [256x256] patches (extended test database)
+* #### 3.8. Model v2.3.0 evaluation on [256x256] patches (extended test database)
 
-  * 3.?.3. Database:
+  * 3.8.3. Database:
   
-    * Test dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 406548 image pairs (equal number of positive and negative instances).  
+    * Test dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 406548 image pairs (equal number of positive and negative instances).
+
+* #### 3.9. Model v2.4.0 training on [256x256] patches (extended train database)
+* #### 3.10. Model v2.4.0 evaluation on [256x256] patches (extended test database)
 
 ### 4. Verificational Model v3
