@@ -460,9 +460,20 @@
     | 3 | 1/2 | 0.0297 | 0.9907 | 0.1808 | 0.9518 | Manual LR reduction to 0.000001 (1e-6) |
     | 4 | 2/2 | 0. | 0. | 0. | 0. | None |
     
+    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;
+ 
+  * 3.7.5. Training rerun of epochs following the first one (dataframe split into two equal size parts):
+    
+    | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
+    | --- | --- | --- | --- | --- | --- | --- |
+    | 1 | 1/2 | 0.1309 | 0.9497 | 0.1714 | 0.9480 | Manual LR reduction to 0.0001 (1e-5) |
+    | 2 | 2/2 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.00001 (1e-7) |
+    | 3 | 1/2 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.000001 (1e-9) |
+    | 4 | 2/2 | 0. | 0. | 0. | 0. | None |
+    
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;  
     
-  * 3.7.5. Training (dataframe split into four equal size parts):
+  * 3.7.6. Training (dataframe split into four equal size parts):
                                                                                                                                                                                                                 
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
     | --- | --- | --- | --- | --- | --- | --- |
