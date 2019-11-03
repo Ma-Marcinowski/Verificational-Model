@@ -431,7 +431,7 @@
    
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
     
-* #### 3.7. Model v2.3.0 training on [256x256] patches (extended train database)
+* #### 3.7. Model v2.3.0 training on [256x256] patches (extended train database of binarized images)
 
   * 3.7.1. Model v2.3.0:
   
@@ -484,13 +484,13 @@
     
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;  
       
-* #### 3.8. Model v2.3.0 evaluation on [256x256] patches (extended test database)
+* #### 3.8. Model v2.3.0 evaluation on [256x256] patches (extended test database of binarized images)
 
   * 3.8.3. Database:
   
     * Test dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 406548 image pairs (equal number of positive and negative instances).
 
-* #### 3.9. Model v2.4.0 training on [256x256] patches (extended train database)
-* #### 3.10. Model v2.4.0 evaluation on [256x256] patches (extended test database)
+* #### 3.9. Model v2.4.0 training on [256x256] patches (extended train database of grayscaled images)
+* #### 3.10. Model v2.4.0 evaluation on [256x256] patches (extended test database of grayscaled images)
 
 ### 4. Verificational Model v3
