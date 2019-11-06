@@ -441,7 +441,7 @@
   
     * Preprocessing v0.3
       
-    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - 3493614 image pairs (equal number of positive and negative instances). Dataframe split into 2 and 4 equal size parts;
+    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - 3493614 image pairs (equal number of positive and negative instances). Dataframe split into 2 equal size parts;
         
     * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 20% of test instances.
     
@@ -451,18 +451,18 @@
     * Epochs - one epoch per one training dataframe part (each ran separately);
     * Learning rate - initial 0.001 (1e-3).
  
-  * 3.7.4. Training (dataframe split into two equal size parts):
+  * 3.7.4. Training:
                                                                                                                                                                                                                 
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
     | --- | --- | --- | --- | --- | --- | --- |
     | 1 | 1/2 | 0.1309 | 0.9497 | 0.1714 | 0.9480 | Manual LR reduction to 0.0001 (1e-4) |
     | 2 | 2/2 | 0.0510 | 0.9826 | 0.1820 | 0.9482 | Manual LR reduction to 0.00001 (1e-5) |
     | 3 | 1/2 | 0.0297 | 0.9907 | 0.1808 | 0.9518 | Manual LR reduction to 0.000001 (1e-6) |
-    | 4 | 2/2 | 0. | 0. | 0. | 0. | None |
+    | 4 | 2/2 | 0.0304 | 0.9905 | 0.1809 | 0.9520 | None |
     
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;
  
-  * 3.7.5. Training rerun of epochs following the first one (dataframe split into two equal size parts):
+  * 3.7.5. Training rerun of epochs following the first one:
     
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
     | --- | --- | --- | --- | --- | --- | --- |
@@ -470,17 +470,6 @@
     | 2 | 2/2 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.00001 (1e-7) |
     | 3 | 1/2 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.000001 (1e-9) |
     | 4 | 2/2 | 0. | 0. | 0. | 0. | None |
-    
-    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;  
-    
-  * 3.7.6. Training (dataframe split into four equal size parts):
-                                                                                                                                                                                                                
-    | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
-    | --- | --- | --- | --- | --- | --- | --- |
-    | 1 | 1/4 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.0001 (1e-4) |
-    | 2 | 2/4 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.00001 (1e-5) |
-    | 3 | 3/4 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.000001 (1e-6) |
-    | 4 | 4/4 | 0. | 0. | 0. | 0. | None |
     
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;  
       
