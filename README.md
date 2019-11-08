@@ -47,7 +47,7 @@
                
     * Step one `CVL_Images_v0.1.py` - conversion of images (scans of whole documents) to grayscale (scale from black = 0 to white = 255), color inversion, extraction of writing space from images, reduction of extracts dimensions to [1024x1024] pixels, division of extracts into [256x256] pixel patches, conversion from the `tif` to `png` format. Patches which do not contain or contain a small amount of text are skipped by the program because of the arbitrary average pixel value threshold - in any case, patches can be sorted by their size and manually removed on that basis;
             
-    * Step two `Dataframe_v0.1.py` - creation of a dataframe (a `csv` file that can be edited in any spreadsheet program, *e.g.* calc / excel) separately for the test and training subset, by combinatorial paring of image names into the positive class, and a random combinatorial paring of image names into the negative class (the number of possible negative combinations is much greater than the number positive ones, so all positive instances are created first and then the negative instances are randomly combinated until their number is equal to the number of positive instances). Image name pairs and their labels are ordered by rows, according to columns `left convolutional path`, `right convolutional path`, and `label` (labels are determined by the convergence or divergence of author's identifiers - *e.g.* first four digits of a raw image name in the case of a CVL database). Above method requires that the test and training images are kept in different directories during their preprocessing. However, it is not necessary to create manually any of dataframe `csv` files, *i.e.* they will be created by the program (and if any such a file was already created manually, its directory and name has to be indicated in the program code). Validation dataframe (utilized only for testing of the model during its training, generally after every epoch) is also created, by random sampling of the test dataframe instances (fratcion of which to pull has to be specified - usually 0.1 / 0.2 is enough for validation purposes). Due to the randomness of sampling, it is most probable that the number of sampled positive and negative instances will be effectively equal.
+    * Step two `Dataframe_v0.1.py` - creation of a dataframe (a `csv` file that can be edited in any spreadsheet program, *e.g.* calc / excel) separately for the test and training subset, by combinatorial paring of image names into the positive class, and a random combinatorial paring of image names into the negative class (the number of possible negative combinations is much greater than the number positive ones, so all positive instances are created first and then the negative instances are randomly combinated until their number is equal to the number of positive instances). It has to be noted however, that for any given positive `xy` pair, also the reverse pair `yx` will be created (in the case of negative class, there is a possibility that for any randomly generated `xy` also `yx` will be randomly generated). Image name pairs and their labels are ordered by rows, according to columns `left convolutional path`, `right convolutional path`, and `label` (labels are determined by the convergence or divergence of author's identifiers - *e.g.* first four digits of a raw image name in the case of a CVL database). Above method requires that the test and training images are kept in different directories during their preprocessing. However, it is not necessary to create manually any of dataframe `csv` files, *i.e.* they will be created by the program (and if any such a file was already created manually, its directory and name has to be indicated in the program code). Validation dataframe (utilized only for testing of the model during its training, generally after every epoch) is also created, by random sampling of the test dataframe instances (fratcion of which to pull has to be specified - usually 0.1 / 0.2 is enough for validation purposes). Due to the randomness of sampling, it is most probable that the number of sampled positive and negative instances will be effectively equal.
                
 * #### 1.1.2. Preprocessing programs
    		
@@ -84,14 +84,21 @@
     *
     *
     
-
 * #### 1.3.3. In both cases (IAM and CVL) images are either grayscaled (as in the case of v0.1 method) or binarized (as in the case of v0.2 method).
 
 * #### 1.3.4. Dataframes are generated exatly the same way as in the case of v0.1 and v0.2, except for the optional split of training dataframe into a given number of smaller equal size training dataframes, due to the sheer number of training image pairs (3.5 million), to assure a better control over the training process.
 
 ### 1.4. Preprocessing v0.4 (CVL and IAM database, ??? images)
 
-* #### 1.4.1. 
+* #### 1.4.1. Exactly the same as v0.3, however dataframes are generated differently:
+
+    * No reverse pairs are created (neither positive nor negative), *e.g.* if a pair `xy` was already generated, then pair `yx` won't be;
+    
+    * Train and validation dataframes are created under the assumption that the number of positive and negative instances ought to be equall; 
+    
+    * For the purpose of validation, one temporary test dataframe is generated, where the number of positive and negative instances is equall, and divided into `n` validation dataframes;
+    
+    * The test dataframe is generated for the purpose of *evaluation by prediction* (*vide* model v3.4.0), hence all possible negative instances are created (except for pair reverses).
   
 ### 2. Verificational Model v1
 
