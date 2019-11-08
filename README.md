@@ -497,7 +497,11 @@
 * #### 3.11. Model 2.4.0 cumulative evaluation on [256x256] patches (extended train database of binarized images)
 
   * 3.11.1. Method of cumulative evaluation:     
-     
+
+    * 
+    * 
+    * 
+
 * #### 3.12. Model 2.4.1 cumulative evaluation on [256x256] patches (extended train database of grayscaled images)
 
 ### 4. Verificational Model v3
