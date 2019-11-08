@@ -479,9 +479,8 @@
     | 1 | 1/2 | 0.1309 | 0.9497 | 0.1714 | 0.9480 | Manual LR reduction to 0.00001 (1e-5) |
     | 2 | 2/2 | 0.0612 | 0.9789 | 0.1541 | 0.9543 | Manual LR reduction to 0.0000001 (1e-7) |
     | 3 | 1/2 | 0.0430 | 0.9863 | 0.1530 | 0.9547 | Manual LR reduction to 0.000000001 (1e-9) |
-    | 4 | 2/2 | 0.0559 | 0.9808 | 0.1513 | 0.9552 | None |
-    | 5 | 1/2 | 0. | 0. | 0. | 0. | ??? |
-    | 5 | 2/2 | 0. | 0. | 0. | 0. | None |
+    | **4** | 2/2 | 0.0559 | 0.9808 | **0.1513** | **0.9552** | None |
+    | 5 | 1/2 | 0.0429 | 0.9863 | 0.1517 | 0.9552 | None |
     
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;  
       
@@ -497,7 +496,51 @@
 
     * Vide 2.3.2. Metrics.
 
-  * 3.3.3. CVL and IAM evaluation:
+  * 3.8.3. CVL and IAM evaluation:
+  
+    | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | False | 4 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | True | 4 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+       
+    * Epochs of model training - EofT - by the best validation accuracy and loss result;   
+
+* #### 3.9. Model v2.3.1 training on [256x256] patches (extended train database of grayscaled images)
+
+  * 3.9.1. Model v2.3.1:
+  
+    * Exactly the same as v2.3.0, except for grayscaled images.
+  
+  * 3.9.2. Database:
+  
+    * Vide 3.7.1. Database, except for grayscaled images.
+    
+  * 3.9.3. Hyperparameters:
+  
+    * Vide 3.7.3. Hyperparameters.
+  
+  * 3.9.4 Training (learning rate reductions by a factor of 0.01):
+  
+    | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
+    | --- | --- | --- | --- | --- | --- | --- |
+    | 1 | 1/2 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.00001 (1e-5) |
+    | 2 | 2/2 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.0000001 (1e-7) |
+    | 3 | 1/2 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.000000001 (1e-9) |
+    | 4 | 2/2 | 0. | 0. | 0. | 0. | None |
+    
+    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;  
+ 
+* #### 3.10. Model v2.3.1 evaluation on [256x256] patches (extended train database of grayscaled images)
+
+  * 3.10.1. Database:
+  
+    * Vide 3.8.1. Database.
+  
+  * 3.10.2. Metrics:
+  
+    * Vide 2.3.2. Metrics.
+  
+  * 3.10.3. CVL and IAM evaluation:
   
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -505,10 +548,7 @@
     | True | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
-
-* #### 3.9. Model v2.3.1 training on [256x256] patches (extended train database of grayscaled images)
-* #### 3.10. Model v2.3.1 evaluation on [256x256] patches (extended train database of grayscaled images)
-
+  
 * #### 3.11. Model 2.4.0 cumulative evaluation on [256x256] patches (extended train database of binarized images)
 
   * 3.11.1. Method of cumulative evaluation:     
