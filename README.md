@@ -461,7 +461,7 @@
     * Epochs - one epoch per one training dataframe part (each ran separately);
     * Learning rate - initial 0.001 (1e-3).
  
-  * 3.7.4. Training:
+  * 3.7.4. Training (learning rate reductions by a factor of 0.1):
                                                                                                                                                                                                                 
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
     | --- | --- | --- | --- | --- | --- | --- |
@@ -472,7 +472,7 @@
     
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;
  
-  * 3.7.5. Training rerun of epochs following the first one:
+  * 3.7.5. Training rerun of epochs following the first one (learning rate reductions by a factor of 0.01):
     
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
     | --- | --- | --- | --- | --- | --- | --- |
