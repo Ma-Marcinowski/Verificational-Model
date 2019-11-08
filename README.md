@@ -84,11 +84,11 @@
     *
     *
     
-* #### 1.3.3. In both cases (IAM and CVL) images are either grayscaled (as in the case of v0.1 method) or binarized (as in the case of v0.2 method).
+* #### 1.3.3. In both cases (IAM and CVL) images are either grayscaled (as in the case of v0.1 method) or binarized (as in the case of v0.2 method) if needed.
 
 * #### 1.3.4. Dataframes are generated exatly the same way as in the case of v0.1 and v0.2, except for the optional split of training dataframe into a given number of smaller equal size training dataframes, due to the sheer number of training image pairs (3.5 million), to assure a better control over the training process.
 
-### 1.4. Preprocessing v0.4 (CVL and IAM database, ??? images)
+### 1.4. Preprocessing v0.4 (CVL and IAM database, binarized / grayscaled images)
 
 * #### 1.4.1. Exactly the same as v0.3, however dataframes are generated differently:
 
