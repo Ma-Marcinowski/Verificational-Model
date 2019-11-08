@@ -68,7 +68,7 @@
 
 * #### 1.2.1. In the case of CVL database, method of preprocessing is exactly the same as v0.1, except for:
 
-    * Image binarization (Otsu's method), *ergo* higher threshold of mean pixel value is applied;
+    * Image binarization (Otsu's method), hence higher threshold of mean pixel value is applied;
     
     * Extraction window is slightly shifted to better fit the writting space, hence greater number of image patches is passed through the mean pixel value threshold.
 
@@ -78,7 +78,7 @@
 
 * #### 1.3.1. In the case of CVL database, method of preprocessing is exactly the same as v0.2.
 
-* #### 1.3.2. In the case of IAM database, method of preprocessing is exactly the same as v0.2, however following additional steps were applied:
+* #### 1.3.2. In the case of IAM database, method of preprocessing is exactly the same as in the case of CVL database, however following additional steps have to be applied:
       
     *
     *
@@ -92,7 +92,7 @@
 
 * #### 1.4.1. Exactly the same as v0.3, however dataframes are generated differently:
 
-    * No reverse pairs are created (neither positive nor negative), *e.g.* if a pair `xy` was already generated, then pair `yx` will be ommited;
+    * No reverse pairs are created (neither positive nor negative), *e.g.* if a pair `xy` was already generated, then pair a `yx` will be omitted;
     
     * Train and validation dataframes are created under the assumption that the number of positive and negative instances ought to be equall; 
     
