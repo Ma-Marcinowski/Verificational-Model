@@ -487,9 +487,24 @@
       
 * #### 3.8. Model v2.3.0 evaluation on [256x256] patches (extended train database of binarized images)
 
-  * 3.8.3. Database:
+  * 3.8.1. Database:
   
     * Test dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 406548 image pairs (equal number of positive and negative instances).
+    
+    * Custom hard criterion - excluded documents containing the same samlpe text as training documents (*ergo* included documents containing only samlpe texts no. 7 and 8 for CVL database, ??? for IAM database) - ??? image pairs (??? positive and ??? negative instances).
+    
+  * 3.8.2. Metrics:
+
+    * Vide 2.3.2. Metrics.
+
+  * 3.3.3. CVL and IAM evaluation:
+  
+    | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | False | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | True | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+       
+    * Epochs of model training - EofT - by the best validation accuracy and loss result;   
 
 * #### 3.9. Model v2.3.1 training on [256x256] patches (extended train database of grayscaled images)
 * #### 3.10. Model v2.3.1 evaluation on [256x256] patches (extended train database of grayscaled images)
@@ -501,6 +516,20 @@
     * 
     * 
     * 
+
+  * 3.11.2. Database:
+  
+  * 3.11.3. Metrics:
+  
+    * Vide 2.3.2. Metrics, except for Loss and AUC.
+  
+  * 3.11.4. CVL and IAM cumulative evaluation:
+  
+    | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+   
+    * Epochs of model training - EofT - by the best validation accuracy and loss result;  
 
 * #### 3.12. Model 2.4.1 cumulative evaluation on [256x256] patches (extended train database of grayscaled images)
 
