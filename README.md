@@ -25,7 +25,7 @@
    * 0.3.3 Preprocessing method identifiers (*e.g* v0.Y):
     
       * X is zeroed and Z skipped to avoid any confusion of model versions and preprocessing methods; 
-      * Y indicates a methon of preprocessing (as already stated in 0.3.1).
+      * Y indicates a method of preprocessing (as already stated in 0.3.1).
 
 * #### 0.3. Database (9455 documents by 2911 writers):
        
