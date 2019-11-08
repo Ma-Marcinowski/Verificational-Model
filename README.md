@@ -517,7 +517,11 @@
     * 
     * 
 
-  * 3.11.2. Database:
+  * 3.11.2. Test dataset:
+  
+      * A subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM);
+      
+      * ??? image pairs (??? negative and ??? positive instances).
   
   * 3.11.3. Metrics:
   
