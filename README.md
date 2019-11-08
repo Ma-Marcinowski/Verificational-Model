@@ -74,7 +74,7 @@
 
 * #### 1.2.2. Dataframes are generated exatly the same way as in the case of v0.1.
 
-### 1.3. Preprocessing v0.3 (CVL and IAM database, binarized images)
+### 1.3. Preprocessing v0.3 (CVL and IAM database, binarized / grayscaled images)
 
 * #### 1.3.1. In the case of CVL database, method of preprocessing is exactly the same as v0.2.
 
@@ -83,12 +83,15 @@
     *
     *
     *
+    
 
-* #### 1.3.3. Dataframes are generated exatly the same way as in the case of v0.1 and v0.2, except for the optional split of training dataframe into a given number of smaller equal size training dataframes, due to the sheer number of training image pairs (3.5 million), to assure a better control over the training process.
+* #### 1.3.3. In both cases images are either grayscaled (as in the case of v0.1 method) or binarized (as in the case of v0.2 method).
 
-### 1.4. Preprocessing v0.4 (CVL and IAM database, grayscaled images)
+* #### 1.3.4. Dataframes are generated exatly the same way as in the case of v0.1 and v0.2, except for the optional split of training dataframe into a given number of smaller equal size training dataframes, due to the sheer number of training image pairs (3.5 million), to assure a better control over the training process.
 
-* #### 1.4.1. Exactly the same as v0.3, except for image conversion to grayscale instead of binarization.
+### 1.4. Preprocessing v0.4 (CVL and IAM database, ??? images)
+
+* #### 1.4.1. 
   
 ### 2. Verificational Model v1
 
@@ -435,11 +438,11 @@
 
   * 3.7.1. Model v2.3.0:
   
-    * Exactly the same as v2.1.0, except for training on combained IAM and CVL databases.
+    * Exactly the same as v2.1.0, except for training on combained IAM and CVL databases (of binarized images).
      
   * 3.7.2. Database:
   
-    * Preprocessing v0.3
+    * Preprocessing v0.3 (binarized images);
       
     * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - 3493614 image pairs (equal number of positive and negative instances). Dataframe split into 2 equal size parts;
         
@@ -479,7 +482,7 @@
   
     * Test dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 406548 image pairs (equal number of positive and negative instances).
 
-* #### 3.9. Model v2.4.0 training on [256x256] patches (extended train database of grayscaled images)
-* #### 3.10. Model v2.4.0 evaluation on [256x256] patches (extended train database of grayscaled images)
+* #### 3.9. Model v2.3.1 training on [256x256] patches (extended train database of grayscaled images)
+* #### 3.10. Model v2.3.1 evaluation on [256x256] patches (extended train database of grayscaled images)
 
 ### 4. Verificational Model v3
