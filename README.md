@@ -529,9 +529,9 @@
   
   * 3.11.4. CVL and IAM cumulative evaluation:
   
-    | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
-    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | EofT | Acc | TPR | TNR | FPR | FNR | PPV | NPV |
+    | --- | --- | --- | --- | --- | --- | --- | --- 
+    | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
    
     * Epochs of model training - EofT - by the best validation accuracy and loss result;  
 
