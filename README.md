@@ -98,7 +98,7 @@
     
     * For the purpose of validation, one temporary test dataframe is generated, where the number of positive and negative instances is equall, and divided into `n` validation dataframes;
     
-    * The test dataframe is generated for the purpose of *evaluation by prediction* (*vide* model v2.4.0), hence all possible negative instances are created (except for pair reverses).
+    * The test dataframe is generated for the purpose of *evaluation by prediction* (*vide* 3.11.1. Method of evaluation by prediction), hence all possible negative instances are created (except for pair reverses).
   
 ### 2. Verificational Model v1
 
@@ -491,5 +491,11 @@
 
 * #### 3.9. Model v2.3.1 training on [256x256] patches (extended train database of grayscaled images)
 * #### 3.10. Model v2.3.1 evaluation on [256x256] patches (extended train database of grayscaled images)
+
+* #### 3.11. Model 2.4.0 evaluation by prediction on [256x256] patches (extended train database of binarized images)
+
+  * 3.11.1. Method of evaluation by prediction:     
+     
+* #### 3.12. Model 2.4.1 evaluation by prediction on [256x256] patches (extended train database of grayscaled images)
 
 ### 4. Verificational Model v3
