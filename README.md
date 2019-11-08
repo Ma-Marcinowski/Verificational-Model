@@ -2,7 +2,7 @@
 
 ### 0. Introduction
 
-* #### 0.1. The objective of author's repository was to introduce a method for verification of offline handwritten documents authorship by artificial neural networks (through classification of preprocessed image pairs to positive `same author` or negative `different authors` class).
+* #### 0.1. The objective of author's repository was to introduce varying methods for verification of offline handwritten documents authorship by artificial neural networks (through classification of preprocessed image pairs to positive `same author` or negative `different authors` class). The purpose of such methods, models and experiments as decribed below, is to allow empirical background for scientific analysis of machine learning methods developed in the field of computational forensics.
 
 * #### 0.2. Author's assumptions were that:
      
