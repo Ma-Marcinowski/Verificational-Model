@@ -92,13 +92,13 @@
 
 * #### 1.4.1. Exactly the same as v0.3, however dataframes are generated differently:
 
-    * No reverse pairs are created (neither positive nor negative), *e.g.* if a pair `xy` was already generated, then pair `yx` won't be;
+    * No reverse pairs are created (neither positive nor negative), *e.g.* if a pair `xy` was already generated, then pair `yx` will be ommited;
     
     * Train and validation dataframes are created under the assumption that the number of positive and negative instances ought to be equall; 
     
-    * For the purpose of validation, one temporary test dataframe is generated, where the number of positive and negative instances is equall, and divided into `n` validation dataframes;
+    * For the purpose of standard model testing, a validation dataframe is generated to the extent of possible positive instances, where the number of positive and negative instances is equall, and divided into `n` smaller validation dataframes if needed;
     
-    * The test dataframe is generated for the purpose of *cumulative evaluation* (*vide* 3.11.1. Method of cumulative evaluation), hence all possible negative instances are created (except for pair reverses).
+    * The test dataframe is generated for the purpose of *cumulative evaluation* (*vide* 3.11.1. Method of cumulative evaluation), hence all possible negative and positive instances are created (except for pair reverses).
   
 ### 2. Verificational Model v1
 
