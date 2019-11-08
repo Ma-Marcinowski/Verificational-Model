@@ -98,7 +98,7 @@
     
     * For the purpose of validation, one temporary test dataframe is generated, where the number of positive and negative instances is equall, and divided into `n` validation dataframes;
     
-    * The test dataframe is generated for the purpose of *evaluation by prediction* (*vide* model v3.4.0), hence all possible negative instances are created (except for pair reverses).
+    * The test dataframe is generated for the purpose of *evaluation by prediction* (*vide* model v2.4.0), hence all possible negative instances are created (except for pair reverses).
   
 ### 2. Verificational Model v1
 
