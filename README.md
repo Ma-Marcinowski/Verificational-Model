@@ -557,11 +557,11 @@
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | None | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
-    | IAM | 4 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
-    | CVL | 4 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
-    | Hard | 4 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
-    | Negative | 4 | 0. | 0. | None | 0. | 0. | None | None | None | None |
-    | Average | 4 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | IAM | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | CVL | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Hard | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Negative | 0 | 0. | 0. | None | 0. | 0. | None | None | None | None |
+    | Average | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
   
