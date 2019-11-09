@@ -144,7 +144,7 @@
   
     * Preprocessing v0.1
   
-    * Training dataset - CVL database subset of 1415 document images by 283 writers - 443704 image pairs (221852 positive and 221852 negative instances);
+    * Training dataset - CVL database subset of 1415 document images by 283 writers - 443704 image pairs (equal number of positive and negative instances);
         
     * Validation dataset - CVL database subset of 189 document images by 27 writers - 12478 image pairs (6300 positive and 6178 negative instances).
           
@@ -193,17 +193,17 @@
       
       * Test subset of 189 document images by 27 writers;
       
-      * 82476 image pairs (41238 positive and 41238 negative instances);
+      * 82476 image pairs (equal number of positive and negative instances);
       
-      * Custom hard criterion - excluded documents containing the same samlpe text as training documents (*ergo* included documents containing only samlpe texts no. 7 and 8) - 7572 image pairs (3786 positive and 3786 negative instances).
+      * Hard criterion - excluded documents containing the same samlpe text as train documents (*ergo* included documents containing only samlpe texts no. 7 and 8) - 7572 image pairs (equal number of positive and negative instances).
       
     * IAM database:
       
       * Whole database as a test set of 1539 document images by 657 writers;
       
-      * 589274 image pairs only, due to a high background noise and thefore a threshold of mean pixel value >= 16 (294637 positive and 294637 negative instances);
+      * 589274 image pairs only, due to a high background noise and thefore a threshold of mean pixel value >= 16 (equal number of positive and negative instances);
       
-      * 590000 roughly denoised (by thresholding of pixel values lower than 55 to 0) images pairs (295000 positive and 295000 negative instances).
+      * 590000 roughly denoised (by thresholding of pixel values lower than 55 to 0) images pairs (equal number of positive and negative instances).
         
   * 2.3.2. Metrics:
         
@@ -221,8 +221,8 @@
     
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | False | 5 | 0.2331 | 0.9124 | 0.9207 | 0.9040 | 0.0959 | 0.0792 | 0.9056 | 0.9194 | 0.9676 |
-    | **True** | 5 | **0.1795** | **0.9370** | 0.9617 | 0.9123 | 0.0876 | 0.0382 | 0.9164 | 0.9597 | 0.9781 |
+    | None | 5 | 0.2331 | 0.9124 | 0.9207 | 0.9040 | 0.0959 | 0.0792 | 0.9056 | 0.9194 | 0.9676 |
+    | **Hard** | 5 | **0.1795** | **0.9370** | 0.9617 | 0.9123 | 0.0876 | 0.0382 | 0.9164 | 0.9597 | 0.9781 |
               
     * Epochs of model training - EofT - by the best validation loss result;
               
@@ -241,7 +241,7 @@
   
     * Preprocessing v0.1 ([1024x1024] extracts split into 4 patches instead of 16);
        
-    * Training dataset - CVL database subset of 1415 document images by 283 writers - 59868 image pairs (29934 positive and 29934 negative instances);
+    * Training dataset - CVL database subset of 1415 document images by 283 writers - 59868 image pairs (equal number of positive and negative instances);
         
     * Validation dataset - CVL database subset of 189 document images by 27 writers - 2436 image pairs (1201 positive and 1235 negative instances).
 
@@ -272,7 +272,7 @@
   
     * Preprocessing v0.1 (except for split of extracts into patches);
        
-    * Training dataset - CVL database subset of 1415 document images by 283 writers - 14150 image pairs (7075 positive and 7075 negative instances);
+    * Training dataset - CVL database subset of 1415 document images by 283 writers - 14150 image pairs (equal number of positive and negative instances;
         
     * Validation dataset - CVL database subset of 189 document images by 27 writers - 646 image pairs (319 positive and 327 negative instances).
 
@@ -353,8 +353,8 @@
     
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | False | 3 | 0.1835 | 0.9387 | 0.9301 | 0.9474 | 0.0526 | 0.0699 | 0.9464 | 0.9312 | 0.9817 |
-    | **True** | 3 | **0.1494** | **0.9506** | 0.9567 | 0.9445 | 0.0555 | 0.0433 | 0.9452 | 0.9561 | 0.9858 |
+    | None | 3 | 0.1835 | 0.9387 | 0.9301 | 0.9474 | 0.0526 | 0.0699 | 0.9464 | 0.9312 | 0.9817 |
+    | **Hard** | 3 | **0.1494** | **0.9506** | 0.9567 | 0.9445 | 0.0555 | 0.0433 | 0.9452 | 0.9561 | 0.9858 |
   
     * Epochs of model training - EofT - by the best validation accuracy result; 
   
@@ -488,9 +488,9 @@
 
   * 3.8.1. Database:
   
-    * Test dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 406548 image pairs (equal number of positive and negative instances).
+    * Test dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 406548 image pairs (equal number of positive and negative instances);
     
-    * Custom hard criterion - CVL database - excluded documents containing the same samlpe text as training documents (*ergo* included documents containing only samlpe texts no. 7 and 8) - ??? image pairs (??? positive and ??? negative instances). IAM test subset is omitted from the hard criterion test, because already no IAM test documents contain the same samlpe text as IAM training documents.
+    * Hard criterion - excluded documents containing the same samlpe text as train documents (*ergo* included documents containing only samlpe texts no. 7 and 8 in the case of CVL database, and all IAM test documents) - ??? image pairs (equal number of positive and negative instances).
     
   * 3.8.2. Metrics:
 
@@ -500,8 +500,8 @@
   
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | False | 4 | 0.1477 | 0.9566 | 0.9523 | 0.9608 | 0.0392 | 0.0477 | 0.9605 | 0.9527 | 0.9878 |
-    | True | 4 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | None | 4 | 0.1477 | 0.9566 | 0.9523 | 0.9608 | 0.0392 | 0.0477 | 0.9605 | 0.9527 | 0.9878 |
+    | Hard | 4 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
 
