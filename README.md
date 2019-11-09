@@ -490,7 +490,7 @@
   
     * Test dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 406548 image pairs (equal number of positive and negative instances).
     
-    * Custom hard criterion - excluded documents containing the same samlpe text as training documents (*ergo* included documents containing only samlpe texts no. 7 and 8 for CVL database, ??? for IAM database) - ??? image pairs (??? positive and ??? negative instances).
+    * Custom hard criterion - excluded documents containing the same samlpe text as training documents (*ergo* included documents containing only samlpe texts no. 7 and 8 for CVL database, and ??? for IAM database) - ??? image pairs (??? positive and ??? negative instances).
     
   * 3.8.2. Metrics:
 
@@ -500,7 +500,7 @@
   
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | False | 4 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | False | 4 | 0.1477 | 0.9566 | 0.9523 | 0.9608 | 0.0392 | 0.0477 | 0.9605 | 0.9527 | 0.9878 |
     | True | 4 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
