@@ -512,7 +512,7 @@
     | IAM | 4 | 0.1816 | 0.9425 | 0.9488 | 0.9363 | 0.0637 | 0.0512 | 0.9371 | 0.9481 | 0.9824 |
     | CVL | 4 | 0.2180 | 0.9284 | 0.9583 | 0.8985 | 0.1015 | 0.0417 | 0.9042 | 0.9556 | 0.9772 |
     | Hard | 4 | 0.2189 | 0.9290 | 0.9616 | 0.8964 | 0.1036 | 0.0384 | 0.9027 | 0.9589 | 0.9789 |
-    | **Negative** | 4 | **0.0017** | **0.9998** | None | 0.9998 | 0.0002 | None | None | 1.0 | None |
+    | **Negative** | 4 | **0.0017** | **0.9998** | None | 0.9998 | 0.0002 | None | None | None | None |
     | **Average** | 4 | **0.1998** | **0.9354** | 0.9535 | 0.9174 | 0.0826 | 0.0464 | 0.9206 | 0.9518 | 0.9798 |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
@@ -560,7 +560,7 @@
     | IAM | 4 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
     | CVL | 4 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
     | Hard | 4 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
-    | Negative | 4 | 0. | 0. | None | 0. | 0. | None | None | 0. | None |
+    | Negative | 4 | 0. | 0. | None | 0. | 0. | None | None | None | None |
     | Average | 4 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
