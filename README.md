@@ -2,7 +2,7 @@
 
 ### 0. Introduction
 
-* #### 0.1. The objective of author's repository was to introduce varying methods for verification of offline handwritten documents authorship by artificial neural networks (through classification of preprocessed image pairs to positive `same author` or negative `different authors` class). The purpose of such methods, models and experiments as described below, is to create an empirical background for scientific analysis of machine learning tools developed in the field of computational forensics.
+* #### 0.1. The objective of author's repository was to introduce varying methods for verification of offline handwritten documents authorship by artificial neural networks (through classification of preprocessed image pairs to positive `same author` or negative `different authors` class). The purpose of such methods, models and experiments as described below, was to create an empirical background for scientific analysis of machine learning tools developed in the field of computational forensics.
 
 * #### 0.2. Author's assumptions were that:
      
@@ -507,7 +507,7 @@
     | None | 4 | 0.1477 | 0.9566 | 0.9523 | 0.9608 | 0.0392 | 0.0477 | 0.9605 | 0.9527 | 0.9878 |
     | CVL | 4 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
     | IAM | 4 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
-    | Hard | 4 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Hard | 4 | 0.2189 | 0.9290 | 0.9616 | 0.8964 | 0.1036 | 0.0384 | 0.9027 | 0.9589 | 0.9789 |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
 
