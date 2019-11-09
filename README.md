@@ -490,7 +490,7 @@
   
     * Test dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 406548 image pairs (equal number of positive and negative instances).
     
-    * Custom hard criterion - excluded documents containing the same samlpe text as training documents (*ergo* included documents containing only samlpe texts no. 7 and 8 for CVL database, and ??? for IAM database) - ??? image pairs (??? positive and ??? negative instances).
+    * Custom hard criterion - CVL database - excluded documents containing the same samlpe text as training documents (*ergo* included documents containing only samlpe texts no. 7 and 8) - ??? image pairs (??? positive and ??? negative instances). IAM test subset is omitted from the hard criterion test, because already no IAM test documents contain the same samlpe text as IAM training documents.
     
   * 3.8.2. Metrics:
 
