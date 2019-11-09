@@ -492,7 +492,7 @@
         
     * CVL criterion - a test subset of CVL database - 156600 image pairs (equal number of positive and negative instances);
     
-    * IAM criterion - a test subset of IAM database - ??? image pairs (equal number of positive and negative instances);
+    * IAM criterion - a test subset of IAM database - 228172 image pairs (equal number of positive and negative instances);
     
     * Hard criterion - excluded documents containing the same samlpe text as train documents (*ergo* included documents containing only samlpe texts no. 7 and 8 in the case of CVL database) - 30496 image pairs (equal number of positive and negative instances). IAM test subset is omitted, because during the standard and IAM criterion test already no IAM test documents did contain the same samlpe text as IAM train documents;
     
@@ -505,8 +505,8 @@
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | None | 4 | 0.1477 | 0.9566 | 0.9523 | 0.9608 | 0.0392 | 0.0477 | 0.9605 | 0.9527 | 0.9878 |
-    | CVL | 4 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
     | IAM | 4 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | CVL | 4 | 0.2180 | 0.9284 | 0.9583 | 0.8985 | 0.1015 | 0.0417 | 0.9042 | 0.9556 | 0.9772 |
     | Hard | 4 | 0.2189 | 0.9290 | 0.9616 | 0.8964 | 0.1036 | 0.0384 | 0.9027 | 0.9589 | 0.9789 |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
