@@ -97,7 +97,7 @@
  
 ### 1.5. Preprocessing v0.5 (CVL and IAM database, grayscaled images)
 
-* #### 1.5.1. Analogous to v0.?, however:
+* #### 1.5.1. Analogous to v0.4, however:
 
      * Images are grayscaled instead of binarized;
      
