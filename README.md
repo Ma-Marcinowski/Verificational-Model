@@ -74,7 +74,7 @@
 
 * #### 1.2.2. Dataframes are generated exatly the same way as in the case of v0.1.
 
-### 1.3. Preprocessing v0.3 (CVL and IAM database, binarized / grayscaled images)
+### 1.3. Preprocessing v0.3 (CVL and IAM database, binarized images)
 
 * #### 1.3.1. In the case of CVL database, method of preprocessing is exactly the same as v0.2.
 
@@ -83,12 +83,10 @@
     *
     *
     *
-    
-* #### 1.3.3. In both cases (IAM and CVL) images are either grayscaled (as in the case of v0.1 method) or binarized (as in the case of v0.2 method) if needed.
 
-* #### 1.3.4. Dataframes are generated exatly the same way as in the case of v0.1 and v0.2, except for the optional split of training dataframe into a given number of smaller equal size training dataframes, due to the sheer number of training image pairs (3.5 million), to assure a better control over the training process.
+* #### 1.3.3. Dataframes are generated exatly the same way as in the case of v0.1 and v0.2, except for the optional split of training dataframe into a given number of smaller equal size training dataframes, due to the sheer number of training image pairs (3.5 million), to assure a better control over the training process.
 
-### 1.4. Preprocessing v0.4 (CVL and IAM database, binarized / grayscaled images)
+### 1.4. Preprocessing v0.4 (CVL and IAM database, binarized images)
 
 * #### 1.4.1. Exactly the same as v0.3, however:
      
@@ -96,10 +94,18 @@
      
      * Thresholding to zero is applied to both IAM and CVL images, hence the model shouldn't differentiate
  between image sources.
+ 
+### 1.5. Preprocessing v0.5 (CVL and IAM database, grayscaled images)
 
-### 1.5. Preprocessing v0.5 (CVL and IAM database, binarized / grayscaled images)
+* #### 1.5.1. Analogous to v0.?, however:
 
-* #### 1.5.1. Exactly the same as v0.?, however dataframes are generated differently:
+     * Images are grayscaled instead of binarized;
+     
+     * To minimize perturbations (noise present in the case of some IAM images), instead of thresholding to zero, slight noise is added to all images.
+
+### 1.6. Preprocessing v0.6 (CVL and IAM database, ??? images)
+
+* #### 1.6.1. Exactly the same as v0.?, however dataframes are generated differently:
 
     * No reverse pairs are created (neither positive nor negative), *e.g.* if a pair `xy` was already generated, then pair a `yx` will be omitted;
     
@@ -458,7 +464,7 @@
      
   * 3.7.2. Database:
   
-    * Preprocessing v0.3 (binarized images);
+    * Preprocessing v0.3 (binarized images, only IAM images are denoised);
       
     * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - 3493614 image pairs (equal number of positive and negative instances). Dataframe split into 2 equal size parts;
         
@@ -526,17 +532,18 @@
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
     
-* #### 3.9. Model v2.4.0 training on [256x256] patches (extended train database of binarized images)
-* #### 3.10. Model v2.4.0 evaluation on [256x256] patches (extended train database of binarized images)
-* #### 3.11. Model v2.?.1 training on [256x256] patches (extended train database of grayscaled images)
+* #### 3.9. Model v2.4.0 training on [256x256] patches (extended train database of binarized and denoised images)
+* #### 3.10. Model v2.4.0 evaluation on [256x256] patches (extended train database of binarized and denoised images)
 
-  * 3.11.1. Model v2.?.1:
+* #### 3.11. Model v2.5.0 training on [256x256] patches (extended train database of grayscaled and noised images)
+
+  * 3.11.1. Model v2.5.0:
   
-    * Exactly the same as v2.?.0, except for grayscaled images.
+    * Exactly the same as v2.1.0, except for training on extended database of grayscaled and noised images.
   
   * 3.11.2. Database:
   
-    * Vide 3.7.1. Database, except for grayscaled images.
+    * Vide 3.7.1. Database, except for grayscaleing and addition of noise to images (preprocessing v0.5).
     
   * 3.11.3. Hyperparameters:
   
@@ -553,11 +560,11 @@
     
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;  
  
-* #### 3.12. Model v2.?.1 evaluation on [256x256] patches (extended train database of grayscaled images)
+* #### 3.12. Model v2.5.0 evaluation on [256x256] patches (extended train database of grayscaled and noised images)
 
   * 3.12.1. Database:
   
-    * Vide 3.?.1. Database.
+    * Vide 3.8.1. Database.
   
   * 3.12.2. Metrics:
   
@@ -576,7 +583,7 @@
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
   
-* #### 3.13. Model 2.5.0 cumulative evaluation on [256x256] patches (extended train database of binarized images)
+* #### 3.13. Model 2.6.0 cumulative evaluation on [256x256] patches (extended train database of ??? images)
 
   * 3.13.1. Method of cumulative evaluation:     
 
@@ -601,7 +608,5 @@
     | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
    
     * Epochs of model training - EofT - by the best validation accuracy and loss result;  
-
-* #### 3.14. Model 2.5.1 cumulative evaluation on [256x256] patches (extended train database of grayscaled images)
 
 ### 4. Verificational Model v3
