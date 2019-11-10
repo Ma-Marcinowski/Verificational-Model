@@ -315,7 +315,9 @@
   
   * 3.1.1. Model architecture:
   
-    * .
+    * 
+    * 
+    * 
     
   * 3.1.2. Language, libraries and framework / API:
         
@@ -533,7 +535,52 @@
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
     
 * #### 3.9. Model v2.4.0 training on [256x256] patches (extended train database of binarized and denoised images)
+
+  * 3.9.1. Model v2.4.0:
+  
+    * Exactly the same as v2.1.0, except for training on extended database of binarized and denoised images.
+  
+  * 3.9.2. Database:
+  
+    * Vide 3.7.2. Database, except for denoiseing of all images (preprocessing v0.4).
+    
+  * 3.9.3. Hyperparameters:
+  
+    * Vide 3.7.3. Hyperparameters.
+    
+  * 3.9.4 Training (learning rate reductions by a factor of 0.01):
+  
+    | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
+    | --- | --- | --- | --- | --- | --- | --- |
+    | 1 | 1/2 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.00001 (1e-5) |
+    | 2 | 2/2 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.0000001 (1e-7) |
+    | 3 | 1/2 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.000000001 (1e-9) |
+    | 4 | 2/2 | 0. | 0. | 0. | 0. | None |
+    
+    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;  
+  
 * #### 3.10. Model v2.4.0 evaluation on [256x256] patches (extended train database of binarized and denoised images)
+
+  * 3.10.1. Database:
+  
+    * Vide 3.8.1. Database, except for preprocessing v0.4.
+  
+  * 3.10.2. Metrics:
+  
+    * Vide 2.3.2. Metrics.
+  
+  * 3.10.3. CVL and IAM evaluation:
+  
+    | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | None | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | IAM | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | CVL | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Hard | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Negative | 0 | 0. | 0. | None | 0. | 0. | None | None | None | None |
+    | Average | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+       
+    * Epochs of model training - EofT - by the best validation accuracy and loss result;   
 
 * #### 3.11. Model v2.5.0 training on [256x256] patches (extended train database of grayscaled and noised images)
 
@@ -543,7 +590,7 @@
   
   * 3.11.2. Database:
   
-    * Vide 3.7.1. Database, except for grayscaleing and addition of noise to images (preprocessing v0.5).
+    * Vide 3.7.2. Database, except for grayscaleing and addition of noise to images (preprocessing v0.5).
     
   * 3.11.3. Hyperparameters:
   
@@ -564,7 +611,7 @@
 
   * 3.12.1. Database:
   
-    * Vide 3.8.1. Database.
+    * Vide 3.8.1. Database, except for preprocessing v0.5.
   
   * 3.12.2. Metrics:
   
