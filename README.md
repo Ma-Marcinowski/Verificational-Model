@@ -90,7 +90,16 @@
 
 ### 1.4. Preprocessing v0.4 (CVL and IAM database, binarized / grayscaled images)
 
-* #### 1.4.1. Exactly the same as v0.3, however dataframes are generated differently:
+* #### 1.4.1. Exactly the same as v0.3, however:
+     
+     * Threshold of the function thresholding to zero was lowered from 55 to 25;
+     
+     * Thresholding to zero is applied to both IAM and CVL images, hence the model shouldn't differentiate
+ between image sources.
+
+### 1.5. Preprocessing v0.5 (CVL and IAM database, binarized / grayscaled images)
+
+* #### 1.5.1. Exactly the same as v0.?, however dataframes are generated differently:
 
     * No reverse pairs are created (neither positive nor negative), *e.g.* if a pair `xy` was already generated, then pair a `yx` will be omitted;
     
@@ -98,7 +107,7 @@
     
     * For the purpose of standard model testing, a validation dataframe is generated to the extent of possible positive instances, where the number of positive and negative instances is equall, and divided into `n` smaller validation dataframes if needed;
     
-    * The test dataframe is generated for the purpose of *cumulative evaluation* (*vide* 3.11.1. Method of cumulative evaluation), hence all possible negative and positive instances are created (except for pair reverses).
+    * The test dataframe is generated for the purpose of *cumulative evaluation* (*vide* 3.13.1. Method of cumulative evaluation), hence all possible negative and positive instances are created (except for pair reverses).
   
 ### 2. Verificational Model v1
 
@@ -516,22 +525,24 @@
     | **Average** | 4 | **0.1998** | **0.9354** | 0.9535 | 0.9174 | 0.0826 | 0.0464 | 0.9206 | 0.9518 | 0.9798 |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
+    
+* #### 3.9. Model v2.4.0 training on [256x256] patches (extended train database of binarized images)
+* #### 3.10. Model v2.4.0 evaluation on [256x256] patches (extended train database of binarized images)
+* #### 3.11. Model v2.?.1 training on [256x256] patches (extended train database of grayscaled images)
 
-* #### 3.9. Model v2.3.1 training on [256x256] patches (extended train database of grayscaled images)
-
-  * 3.9.1. Model v2.3.1:
+  * 3.11.1. Model v2.?.1:
   
-    * Exactly the same as v2.3.0, except for grayscaled images.
+    * Exactly the same as v2.?.0, except for grayscaled images.
   
-  * 3.9.2. Database:
+  * 3.11.2. Database:
   
     * Vide 3.7.1. Database, except for grayscaled images.
     
-  * 3.9.3. Hyperparameters:
+  * 3.11.3. Hyperparameters:
   
     * Vide 3.7.3. Hyperparameters.
   
-  * 3.9.4 Training (learning rate reductions by a factor of 0.01):
+  * 3.11.4 Training (learning rate reductions by a factor of 0.01):
   
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
     | --- | --- | --- | --- | --- | --- | --- |
@@ -542,17 +553,17 @@
     
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;  
  
-* #### 3.10. Model v2.3.1 evaluation on [256x256] patches (extended train database of grayscaled images)
+* #### 3.12. Model v2.?.1 evaluation on [256x256] patches (extended train database of grayscaled images)
 
-  * 3.10.1. Database:
+  * 3.12.1. Database:
   
-    * Vide 3.8.1. Database.
+    * Vide 3.?.1. Database.
   
-  * 3.10.2. Metrics:
+  * 3.12.2. Metrics:
   
     * Vide 2.3.2. Metrics.
   
-  * 3.10.3. CVL and IAM evaluation:
+  * 3.12.3. CVL and IAM evaluation:
   
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -565,25 +576,25 @@
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
   
-* #### 3.11. Model 2.4.0 cumulative evaluation on [256x256] patches (extended train database of binarized images)
+* #### 3.13. Model 2.5.0 cumulative evaluation on [256x256] patches (extended train database of binarized images)
 
-  * 3.11.1. Method of cumulative evaluation:     
+  * 3.13.1. Method of cumulative evaluation:     
 
     * 
     * 
     * 
 
-  * 3.11.2. Test dataset:
+  * 3.13.2. Test dataset:
   
       * A subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM);
       
       * ??? image pairs (??? negative and ??? positive instances).
   
-  * 3.11.3. Metrics:
+  * 3.13.3. Metrics:
   
     * Vide 2.3.2. Metrics, except for Loss and AUC.
   
-  * 3.11.4. CVL and IAM cumulative evaluation:
+  * 3.13.4. CVL and IAM cumulative evaluation:
   
     | EofT | Acc | TPR | TNR | FPR | FNR | PPV | NPV |
     | --- | --- | --- | --- | --- | --- | --- | --- 
@@ -591,6 +602,6 @@
    
     * Epochs of model training - EofT - by the best validation accuracy and loss result;  
 
-* #### 3.12. Model 2.4.1 cumulative evaluation on [256x256] patches (extended train database of grayscaled images)
+* #### 3.14. Model 2.5.1 cumulative evaluation on [256x256] patches (extended train database of grayscaled images)
 
 ### 4. Verificational Model v3
