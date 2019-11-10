@@ -19,7 +19,9 @@ def Preprocessing(mode, in_path, out_path):
         print('%.2f%%'%(100*k/InitDf.shape[0]), end="\r")
 
         img = cv2.imread(j, 0)
+        
         inv = np.bitwise_not(img)
+        
         th, den = cv2.threshold(inv, 55, 255, cv2.THRESH_TOZERO)
 
         y=730
