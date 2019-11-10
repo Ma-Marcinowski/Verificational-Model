@@ -90,6 +90,6 @@ TestDataframe = Dataframe(mode='test',
                           df_path='/dataframe/save/directory/TestDataframe.csv',
                           df_img_path='/preprocessed/test/images/directory/indicated/in/the/test/dataframe',
                           valid_df_path='/dataframe/save/directory/ValidDataframe.csv',
-                          valid_fraction=0.2) #any float of instances to be pulled from the test dataframe
+                          valid_fraction=0.2) #Any float of instances to be pulled from the test dataframe.
 
 print('Dataframes done.')
