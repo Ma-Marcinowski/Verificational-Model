@@ -113,7 +113,7 @@
     
     * Train and validation dataframes are created under the assumption that the number of positive and negative instances ought to be equal; 
     
-    * For the purpose of standard model testing, a validation dataframe is generated to the extent of possible positive instances, where the number of positive and negative instances is equall, and divided into `n` smaller validation dataframes if needed for validation;
+    * For the purpose of standard model testing, a validation dataframe is generated to the extent of possible positive instances, where the number of positive and negative instances is equall, and divided into `n` smaller validation dataframes utilized for the purpuose of simple testing between epochs;
     
     * The test dataframe is generated for the purpose of *cumulative evaluation* (*vide* 3.13.1. Method of cumulative evaluation), hence all possible negative and positive instances are created (except for pair reverses).
     
@@ -121,13 +121,15 @@
 
 * #### 1.7.1. Exactly the same as v0.6, however:
 
-    * Neither train, test, nor validation dataframes are created under the assumption that the number of positive and negative instances ought to be equal; 
+    * Neither test nor train dataframes are created under the assumption that the number of positive and negative instances ought to be equal; 
     
     * Hence for the purpose of training, a dataframe of all possible negative and positive instances is generated (except for pair reverses) and divided into `m` equal parts;
     
-    * For the purpose of standard testing, a validation dataframe is generated to the extent of all possible positive and negative instances (except for pair reverses), and divided into `n` smaller validation dataframes utilized for the purpuose of simple validation between epochs;
-    
-    * The test dataframe is generated for the purpose of *cumulative evaluation* as in the case of v0.7.
+* #### 1.7.2. Therefore:
+
+    * Validation dataframes are generated the same way as in the case of v0.6;
+     
+    * The test dataframe is generated for the purpose of *cumulative evaluation* exactly as in the case of v0.6.
   
 ### 2. Verificational Model v1
 
