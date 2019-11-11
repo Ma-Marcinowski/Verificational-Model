@@ -632,7 +632,7 @@
 
   * 3.12.1. Database:
   
-    * Vide 3.8.1. Database, except for preprocessing v0.5.
+    * Vide 3.8.1. Database, except for preprocessing v0.5 applied.
   
   * 3.12.2. Metrics:
   
