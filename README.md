@@ -574,8 +574,7 @@
     | 2 | 2/2 | 0.0701 | 0.9750 | 0.1649 | 0.9484 | Manual LR reduction to 0.0000001 (1e-7) |
     | 3 | 1/2 | 0.0502 | 0.9835 | 0.1637 | 0.9480 | Manual LR reduction to 0.000000001 (1e-9) |
     | 4 | 2/2 | 0.0642 | 0.9774 | 0.1622 | 0.9489 | Manual LR reduction to 0.00000000001 (1e-11) |
-    | 5 | 1/2 | 0. | 0. | 0. | 0. | ??? |
-    | 6 | 2/2 | 0. | 0. | 0. | 0. | ??? |
+    | **5** | 1/2 | 0.0502 | 0.9834 | **0.1616** | **0.9489** | None |
     
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;  
   
@@ -593,12 +592,12 @@
   
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | None | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
-    | IAM | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
-    | CVL | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
-    | Hard | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
-    | Negative | 0 | 0. | 0. | None | 0. | 0. | None | None | None | None |
-    | Average | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | None | 5 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | IAM | 5 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | CVL | 5 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Hard | 5 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Negative | 5 | 0. | 0. | None | 0. | 0. | None | None | None | None |
+    | Average | 5 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
 
