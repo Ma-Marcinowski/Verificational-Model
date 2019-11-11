@@ -321,7 +321,7 @@
     
     * Fully connected layers were not modified, however the output neuron of those layers is not utilized as an output neuron of the network, also ReLU activation is applied to that neuron instead of the sigmoid;
     
-    * The output neuron, to which sigmoid activation is applied, is stacked on top of the network and performs the task of classification based on the three following inputs - an output signal from the FCL output neuron, Euclidean distance and Cosine distance of a given feature vectors pair extracted by convolutional networks. 
+    * The output neuron, to which sigmoid activation is applied, is stacked on top of the network and performs the task of classification based on the three following inputs - an output signal from the FCL output neuron, Euclidean distance and Cosine distance of a given feature vectors pair (extracted by convolutional core networks from a given image pair). 
     
   * 3.1.2. Language, libraries and framework / API:
         
