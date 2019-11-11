@@ -10,7 +10,7 @@
     
     * Preprocessing shouldn't drastically affect image quality (*e.g* by image binarization) to preserve most of handwriting features.
     
-    * The number of positive and negative instances ought to be equal for all database subsets.
+    * The number of positive and negative instances (generated for the purpose of model training or testing) ought to be equal.
 
 * #### 0.3. Versioning
 
