@@ -78,11 +78,11 @@
 
 * #### 1.3.1. In the case of CVL database, method of preprocessing is exactly the same as v0.2.
 
-* #### 1.3.2. In the case of IAM database, method of preprocessing is exactly the same as in the case of CVL database, however following additional steps have to be applied:
+* #### 1.3.2. In the case of IAM database, method of preprocessing is exactly the same as in the case of CVL database (extraction window is slightly shifted), however following additional steps have been applied:
       
-    *
-    *
-    *
+    * Before preprocessing - two daraframes of raw IAM images were manually created (consisting of images paths, authors ids and forms ids), one for testset and one for trainset, both were uploaded into the repository (`Dataframes` folder);
+    
+    * During preprocessing - before Otsu's binarization is applied, background noises are removed from the images by thresholding of pixel values below 55 to 0.
 
 * #### 1.3.3. Dataframes are generated exatly the same way as in the case of v0.1 and v0.2, except for the optional split of training dataframe into a given number of smaller equal size training dataframes, due to the sheer number of training image pairs (3.5 million), to assure a better control over the training process.
 
@@ -101,13 +101,13 @@
 
      * Images are grayscaled instead of binarized;
      
-     * To minimize perturbations (noise present in the case of some IAM images), instead of thresholding to zero, slight noise is added to all images.
+     * To minimize perturbations (noise present in the case of some IAM images), instead of thresholding to zero, slight noise is added to all images (both CVL and IAM).
 
 ### 1.6. Preprocessing v0.6 (CVL and IAM database, ??? images)
 
 * #### 1.6.1. Exactly the same as v0.?, however dataframes are generated differently:
 
-    * No reverse pairs are created (neither positive nor negative), *e.g.* if a pair `xy` was already generated, then pair a `yx` will be omitted;
+    * No reverse pairs are created (neither positive nor negative), *e.g.* if a pair `xy` was already generated, then a pair `yx` is omitted;
     
     * Train and validation dataframes are created under the assumption that the number of positive and negative instances ought to be equall; 
     
@@ -313,11 +313,15 @@
 
 * #### 3.1. Model v2.1.0
   
-  * 3.1.1. Model architecture:
+  * 3.1.1. Model architecture is the same as model v1 architecture, however:
   
-    * 
-    * 
-    * 
+    * Globally average pooling layer is not applied to the output of concatenation layer, but at the output level of each core network, i.e. instead of the output max pooling layers (therefore flattening layer is again unncesessary);
+    
+    * Kernel strides and sizes are slightly higher - in the case of first and second level convolutional layers - compared to the v1 model;
+    
+    * Fully connected layers were not modified, however the output neuron of those layers is not utilized as an output neuron of the network, also ReLU activation is applied to that neuron instead of the sigmoid;
+    
+    * The output neuron, to which sigmoid activation is applied, is stacked on top of the network and performs the task of classification based on the three following inputs - an output signal from the FCL output neuron, Euclidean distance and Cosine distance of a given feature vectors pair extracted by convolutional networks. 
     
   * 3.1.2. Language, libraries and framework / API:
         
