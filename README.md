@@ -4,11 +4,13 @@
 
 * #### 0.1. The objective of author's repository was to introduce multiple varying methods for verification of offline handwritten documents authorship by artificial neural networks (through classification of preprocessed image pairs to positive `same author` or negative `different authors` class). The purpose of such methods, models and experiments as described below, was to create an empirical background for scientific analysis of machine learning tools developed in the field of computational forensics.
 
-* #### 0.2. Author's assumptions were that:
+* #### 0.2. Author's original assumptions were that:
      
     * Document images will be best processed simultaneously by two separate convolutional neural networks and classified by one multilayer perceptron (fully connected layers);       
     
     * Preprocessing shouldn't drastically affect image quality (*e.g* by image binarization) to preserve most of handwriting features.
+    
+    * The number of positive and negative instances ought to be equal for all database subsets.
 
 * #### 0.3. Versioning
 
@@ -109,7 +111,7 @@
 
     * No reverse pairs are created (neither positive nor negative), *e.g.* if a pair `xy` was already generated, then a pair `yx` is omitted;
     
-    * Train and validation dataframes are created under the assumption that the number of positive and negative instances ought to be equall; 
+    * Train and validation dataframes are created under the assumption that the number of positive and negative instances ought to be equal; 
     
     * For the purpose of standard model testing, a validation dataframe is generated to the extent of possible positive instances, where the number of positive and negative instances is equall, and divided into `n` smaller validation dataframes if needed;
     
