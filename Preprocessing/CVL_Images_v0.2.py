@@ -46,6 +46,8 @@ def Preprocessing(mode, in_path, out_path):
                 else:
 
                     continue
+                    
+    print(mode + ' preprocessing done: 100%')
 
 TrainPreprocessing = Preprocessing(mode='train',
                                    in_path='/raw/train/images/input/directory/',
