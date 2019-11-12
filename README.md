@@ -103,7 +103,9 @@
 
      * Images are grayscaled instead of binarized;
      
-     * To minimize overfitting and perturbations (due to the noise present in the case of some IAM images), instead of thresholding to zero, slight noise is added to all images (both CVL and IAM);
+     * To minimize overfitting and perturbations (due to the noise present in some cases of IAM images), instead of thresholding to zero, slight noise is added to all images (both CVL and IAM);
+     
+     * Due to the originally present noise, thresholding of empty patches by mean pixel value proves ineffective, therefore another rough method is applied. Image patches which are most probably not empty (based on the usual methods of handwriting, i.e. from left to right and from top to bottom), are hence accepted based on their indexes.
 
 ### 1.6. Preprocessing v0.6 (CVL and IAM database, ??? images)
 
@@ -586,7 +588,7 @@
   
     * Vide 3.8.1. Database, except for preprocessing v0.4;
     
-    * Soft criterion - a test subset of CVL and IAM databases - dataframe is generated over such patches only, which most certainly do not contain any empty (unused by author) writting space. Because thresholding by patch mean pixel value isn't precise enough, another rough method is emloyed, where only left-upper corner patch of any given image is considered suitable for a dataframe. 4474 image pairs (equal number of positive and negative instances).
+    * Soft criterion - a test subset of CVL and IAM databases - dataframe is generated over such patches only, which most certainly do not contain any empty (unused by author) writing space. Because thresholding by patch mean pixel value isn't precise enough, another rough method is employed, where only left-upper corner patch of any given image is considered suitable for a dataframe. 4474 image pairs (equal number of positive and negative instances).
   
   * 3.10.2. Metrics:
   
