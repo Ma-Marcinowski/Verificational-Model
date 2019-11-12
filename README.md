@@ -47,7 +47,7 @@
               
 * #### 1.1.1. Steps of preprocessing in the case of CVL database:
                
-    * Step one `CVL_Images_v0.1.py` - conversion of images (scans of whole documents) to grayscale (scale from black = 0 to white = 255), color inversion, extraction of writing space from images, reduction of extracts dimensions to [1024x1024] pixels, division of extracts into [256x256] pixel patches, conversion from the `tif` to `png` format. Patches which do not contain or contain a small amount of text are skipped by the program because of the arbitrary average pixel value threshold - in any case, patches can be sorted by their size and manually removed on that basis;
+    * Step one `CVL_Images_v0.1.py` - conversion of images (scans of whole documents) to grayscale (scale from black = 0 to white = 255), color inversion, extraction of writing space from images, reduction of extracts dimensions to [1024x1024] pixels, division of extracts into [256x256] pixel patches, conversion from the `tif` to `png` format. Patches which do not contain or contain a small amount of text are omitted by the program, based on the the arbitrary average pixel value threshold - in any case, patches can be sorted by their size and manually removed on that basis;
             
     * Step two `Dataframe_v0.1.py` - creation of a dataframe (*i.e.* of a `csv` file that can be edited in any spreadsheet program, *e.g.* calc / excel) separately for the test and training subsets, by combinatorial pairing of image names into the positive class, and a random combinatorial pairing of image names into the negative class (the number of possible negative combinations is much greater than the number positive ones, so all positive instances are created first and then the negative instances are randomly combinated until their number is equal to the number of positive instances). It has to be noted however, that for any given positive `xy` pair, also the reverse pair `yx` will be created (in the case of negative class, there is a possibility that for any randomly generated `xy` also `yx` will be randomly generated). Image name pairs and their labels are ordered by rows, according to columns `left convolutional path`, `right convolutional path`, and `label` (labels are determined by the convergence or divergence of author's identifiers - *e.g.* first four digits of a raw image name in the case of a CVL database). Above method requires that the test and training images are kept in different directories during their preprocessing. However, it is not necessary to create manually any of dataframe `csv` files, *i.e.* they will be created by the program (and if any such a file was already created manually, its directory and name has to be indicated in the program code). Validation dataframe (utilized only for testing of the model during its training, generally after every epoch) is also created, by random sampling of the test dataframe instances (fratcion of which to pull has to be specified - usually 0.1 / 0.2 is enough for validation purposes). Due to the randomness of sampling, it is most probable that the number of sampled positive and negative instances will be effectively equal.
                
@@ -615,8 +615,12 @@
     * Exactly the same as v2.1.0, except for training on extended database of grayscaled and noised images.
   
   * 3.11.2. Database:
-  
-    * Vide 3.7.2. Database, except for grayscaleing and addition of noise to images (preprocessing v0.5).
+    
+    * Preprocessing v0.5 (grayscaled images, slight noise is added to both CVL and IAM images instead of background thresholding to zero);
+      
+    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - ??? image pairs (equal number of positive and negative instances). Dataframe split into 2 equal size parts;
+        
+    * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 20% of test instances.
     
   * 3.11.3. Hyperparameters:
   
@@ -637,8 +641,20 @@
 
   * 3.12.1. Database:
   
-    * Vide 3.10.1. Database, except for preprocessing v0.5 applied.
-  
+    * Test dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - ??? image pairs (equal number of positive and negative instances);
+    
+    * CVL criterion - a test subset of CVL database - ??? image pairs (equal number of positive and negative instances);
+    
+    * IAM criterion - a test subset of IAM database - ??? image pairs (equal number of positive and negative instances);
+    
+    * Hard criterion - excluded documents containing the same samlpe text as train documents (*ergo* included documents containing only samlpe texts no. 7 and 8 in the case of CVL database) - ??? image pairs (equal number of positive and negative instances). IAM test subset is omitted, because during the standard and IAM criterion test already no IAM test documents did contain the same samlpe text as IAM train documents;
+    
+    * Soft criterion - due to the method of empty images thresholding applied in the case of preprocessing v0.5, which is analogous to the method of the soft criterion, soft criterion is ommited.
+    
+    * Negative criterion - a subset of combined CVL and IAM databases, containg only negative instances of cross databases image pairs, such that for any given `xy` pair, an x belongs to CVL testset and y to IAM testset - ??? image pairs (an arbitrary number);
+    
+    * Average criterion - metrics averaged over separate CVL and IAM tests.
+    
   * 3.12.2. Metrics:
   
     * Vide 2.3.2. Metrics.
@@ -651,7 +667,6 @@
     | IAM | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
     | CVL | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
     | Hard | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
-    | Soft | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
     | Negative | 0 | 0. | 0. | None | 0. | 0. | None | None | None | None |
     | Average | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
        
