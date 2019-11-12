@@ -104,6 +104,8 @@
      * Images are grayscaled instead of binarized;
      
      * To minimize perturbations (noise present in the case of some IAM images), instead of thresholding to zero, slight noise is added to all images (both CVL and IAM).
+     
+     * No cross-databases pairs are created, such that for a given `xy` pair, `x` belongs to CVL and `y` to IAM database (or vice versa).
 
 ### 1.6. Preprocessing v0.6 (CVL and IAM database, ??? images)
 
@@ -635,7 +637,7 @@
 
   * 3.12.1. Database:
   
-    * Vide 3.8.1. Database, except for preprocessing v0.5 applied.
+    * Vide 3.10.1. Database, except for preprocessing v0.5 applied.
   
   * 3.12.2. Metrics:
   
@@ -649,6 +651,7 @@
     | IAM | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
     | CVL | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
     | Hard | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Soft | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
     | Negative | 0 | 0. | 0. | None | 0. | 0. | None | None | None | None |
     | Average | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
        
