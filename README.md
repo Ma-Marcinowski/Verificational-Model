@@ -95,7 +95,7 @@
      * Threshold of the function thresholding to zero was lowered from 55 to 25;
      
      * Thresholding to zero is applied to both IAM and CVL images, hence the model shouldn't differentiate
- between image sources.
+ between image sources (*However it does, as may be concluded from the results of negative criterion test, vide 3.10.3.*).
  
 ### 1.5. Preprocessing v0.5 (CVL and IAM database, grayscaled images)
 
@@ -103,7 +103,7 @@
 
      * Images are grayscaled instead of binarized;
      
-     * To minimize perturbations (noise present in the case of some IAM images), instead of thresholding to zero, slight noise is added to all images (both CVL and IAM);
+     * To minimize overfitting and perturbations (due to the noise present in the case of some IAM images), instead of thresholding to zero, slight noise is added to all images (both CVL and IAM);
 
 ### 1.6. Preprocessing v0.6 (CVL and IAM database, ??? images)
 
