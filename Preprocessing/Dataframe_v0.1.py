@@ -68,7 +68,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, valid_df_path, valid_fractio
 
     print('Done ' + mode + ' dataframe: ', df.shape[0], ' image pairs.')
 
-    if mode == 'test':
+    if mode == 'test' and valid_fraction != None:
 
         tedf = pd.read_csv(df_path)
 
