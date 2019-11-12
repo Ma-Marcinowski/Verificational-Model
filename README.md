@@ -584,7 +584,11 @@
 
   * 3.10.1. Database:
   
-    * Vide 3.8.1. Database, except for preprocessing v0.4.
+    * Vide 3.8.1. Database, except for preprocessing v0.4;
+    
+    * Soft criterion - a test subset of CVL and IAM databases - dataframe is generated over such patches only, which most certainly do not contain any empty (unused by author) writting space. Because thresholding by patch mean pixel value isn't precise enough, another rough method is emloyed, where only left-upper corner patch of any given image is considered suitable for a dataframe. ??? image pairs (equal number of positive and negative instances).
+    
+    * SD - standard deviation calculated for all metrics over all results. 
   
   * 3.10.2. Metrics:
   
@@ -595,11 +599,13 @@
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | None | 5 | 0.1661 | 0.9481 | 0.9330 | 0.9632 | 0.0368 | 0.0670 | 0.9621 | 0.9349 | 0.9859 |
-    | IAM | 5 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | IAM | 5 | 0.1839 | 0.9420 | 0.9323 | 0.9517 | 0.0483 | 0.0677 | 0.9507 | 0.9336 | 0.9833 |
     | CVL | 5 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
     | Hard | 5 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Soft | 5 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
     | Negative | 5 | 0. | 0. | None | 0. | 0. | None | None | None | None |
     | Average | 5 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | SD | 5 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
 
