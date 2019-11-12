@@ -69,7 +69,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, num_of_train_dfs, valid_df_p
 
     print('Done ' + mode + ' dataframe: ', df.shape[0], ' image pairs.')
 
-    if mode == 'train':
+    if mode == 'train' and num_of_train_dfs != None:
 
         df = pd.read_csv(df_path)
 
@@ -87,7 +87,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, num_of_train_dfs, valid_df_p
 
         print('Done splitting train dataframes.')
 
-    elif mode == 'test':
+    elif mode == 'test' and valid_fraction != None:
 
         tedf = pd.read_csv(df_path)
 
