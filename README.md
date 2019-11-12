@@ -586,7 +586,7 @@
   
     * Vide 3.8.1. Database, except for preprocessing v0.4;
     
-    * Soft criterion - a test subset of CVL and IAM databases - dataframe is generated over such patches only, which most certainly do not contain any empty (unused by author) writting space. Because thresholding by patch mean pixel value isn't precise enough, another rough method is emloyed, where only left-upper corner patch of any given image is considered suitable for a dataframe. ??? image pairs (equal number of positive and negative instances).
+    * Soft criterion - a test subset of CVL and IAM databases - dataframe is generated over such patches only, which most certainly do not contain any empty (unused by author) writting space. Because thresholding by patch mean pixel value isn't precise enough, another rough method is emloyed, where only left-upper corner patch of any given image is considered suitable for a dataframe. 4474 image pairs (equal number of positive and negative instances).
     
     * SD - standard deviation calculated for all metrics over all results. 
   
