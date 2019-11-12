@@ -618,7 +618,7 @@
     
     * Preprocessing v0.5 (grayscaled images, slight noise is added to both CVL and IAM images instead of background thresholding to zero);
       
-    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - ??? image pairs (equal number of positive and negative instances). Dataframe split into 2 equal size parts;
+    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - ??? image pairs (equal number of positive and negative instances);
         
     * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 20% of test instances.
     
@@ -628,14 +628,12 @@
   
   * 3.11.4 Training (learning rate reductions by a factor of 0.01):
   
-    | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
-    | --- | --- | --- | --- | --- | --- | --- |
-    | 1 | 1/2 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.00001 (1e-5) |
-    | 2 | 2/2 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.0000001 (1e-7) |
-    | 3 | 1/2 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.000000001 (1e-9) |
-    | 4 | 2/2 | 0. | 0. | 0. | 0. | None |
-    
-    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;  
+    | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
+    | --- | --- | --- | --- | --- | --- |
+    | 1 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.00001 (1e-5) |
+    | 2 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.0000001 (1e-7) |
+    | 3 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.000000001 (1e-9) |
+    | 4 | 0. | 0. | 0. | 0. | None |
  
 * #### 3.12. Model v2.5.0 evaluation on [256x256] patches (extended train database of grayscaled and noised images)
 
