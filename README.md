@@ -105,7 +105,7 @@
      
      * To minimize overfitting and perturbations (due to the noise present in some cases of IAM images), instead of thresholding to zero, slight noise is added to all images (both CVL and IAM);
      
-     * Due to the originally present noise which isn't removed in any way (but covered by added noise), thresholding of empty patches by mean pixel value proves ineffective, therefore another more subtle method is applied, i.e. any given patch is accepted if it's mean of pixel values is higher than or equal to the mean of pixel values of the whole extract (which most certainly is partially empty and has the same quality as any of it's patches). Therefore any given patch of any given extract cannot contain more empty spaces than the extract itself.
+     * Due to the originally present noise which isn't removed in any way (but covered by added noise), thresholding of empty patches by mean pixel value proves ineffective, therefore another more subtle method is applied, i.e. any given patch is accepted if it's mean of pixel values is higher than or equal to 115% of the mean of pixel values of the whole extract (which most certainly is partially empty and has the same quality as any of it's patches). Therefore any given patch of any given extract cannot contain more empty spaces than the extract itself.
 
 ### 1.6. Preprocessing v0.6 (CVL and IAM database, ??? images)
 
@@ -588,7 +588,7 @@
   
     * Vide 3.8.1. Database, except for preprocessing v0.4;
     
-    * Soft criterion - a test subset of CVL and IAM databases - dataframe is generated over such patches only, which most certainly do not contain any empty (unused by author) writing space. Because thresholding by patch mean pixel value isn't precise enough, another rough method is employed, where only left-upper corner patch of any given image is considered suitable for a dataframe. 4474 image pairs (equal number of positive and negative instances).
+    * Soft criterion - a test subset of CVL and IAM databases - dataframe is generated over such patches only, which most certainly do not contain any empty (unused by author) writing space. Because thresholding by patch mean pixel value isn't precise enough, another rough method is employed (based on the usual methods of handwriting, i.e. from left to right and from top to bottom), where only top-left corner patch of any given image is considered suitable for a dataframe based on it's indexes of 1 and 1. 4474 image pairs (equal number of positive and negative instances).
   
   * 3.10.2. Metrics:
   
@@ -647,7 +647,7 @@
     
     * Hard criterion - excluded documents containing the same samlpe text as train documents (*ergo* included documents containing only samlpe texts no. 7 and 8 in the case of CVL database) - ??? image pairs (equal number of positive and negative instances). IAM test subset is omitted, because during the standard and IAM criterion test already no IAM test documents did contain the same samlpe text as IAM train documents;
     
-    * Soft criterion - image patches which are most probably not empty (based on the usual methods of handwriting, i.e. from left to right and from top to bottom), are hence accepted based on their indexes of 1 and 1 (top-left corner patch of any given image). ??? image pairs.
+    * Soft criterion - higher mean pixel value threshold is applied for image patches (1??% of the mean of pixel values of the whole extract), to ensure that no empty or half empty patches are considered. ??? image pairs. 
     
     * Negative criterion - a subset of combined CVL and IAM databases, containg only negative instances of cross databases image pairs, such that for any given `xy` pair, an x belongs to CVL testset and y to IAM testset - ??? image pairs (an arbitrary number);
     
