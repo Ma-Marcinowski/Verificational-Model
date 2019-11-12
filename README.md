@@ -105,7 +105,7 @@
      
      * To minimize overfitting and perturbations (due to the noise present in some cases of IAM images), instead of thresholding to zero, slight noise is added to all images (both CVL and IAM);
      
-     * Due to the originally present noise which isn't removed in any way (but covered by added noise), thresholding of empty patches by mean pixel value proves ineffective, therefore another more subtle method is applied, i.e. any given patch is accepted if it's mean of pixel values is higher than or equal to 115% of the mean of pixel values of the whole extract (which most certainly is partially empty and has the same quality as any of it's patches). Therefore any given patch of any given extract cannot contain more empty spaces than the extract itself.
+     * Due to the originally present noise which isn't removed in any way (but covered by added noise), thresholding of empty patches by mean pixel value proves ineffective, therefore another more subtle method is applied, i.e. any given patch is accepted if it's mean of pixel values is higher than or equal to 115% of the mean of pixel values of the whole extract (which most certainly is partially empty and has the same quality as any of it's patches). Therefore any given patch of any given extract cannot contain more empty spaces than the extract itself. The obvious drawback of such method is that most patches, of extracts which have no empty spaces, are ommitted.
 
 ### 1.6. Preprocessing v0.6 (CVL and IAM database, ??? images)
 
