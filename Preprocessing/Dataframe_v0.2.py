@@ -68,7 +68,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, valid_df_path, valid_fractio
 
     print('Done ' + mode + ' dataframe: ', df.shape[0], ' image pairs.')
 
-    if mode == 'test':
+    if mode == 'test' and valid_fraction != None:
 
         tedf = pd.read_csv(df_path)
 
@@ -90,6 +90,6 @@ TestDataframe = Dataframe(mode='test',
                           df_path='/dataframe/save/directory/TestDataframe.csv',
                           df_img_path='/preprocessed/test/images/directory/indicated/in/the/test/dataframe',
                           valid_df_path='/dataframe/save/directory/ValidDataframe.csv',
-                          valid_fraction=0.2) #Any float of instances to be pulled from the test dataframe.
+                          valid_fraction=0.2) #any float of instances to be pulled from the test dataframe
 
 print('Dataframes done.')
