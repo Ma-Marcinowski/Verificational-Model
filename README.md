@@ -587,8 +587,6 @@
     * Vide 3.8.1. Database, except for preprocessing v0.4;
     
     * Soft criterion - a test subset of CVL and IAM databases - dataframe is generated over such patches only, which most certainly do not contain any empty (unused by author) writting space. Because thresholding by patch mean pixel value isn't precise enough, another rough method is emloyed, where only left-upper corner patch of any given image is considered suitable for a dataframe. 4474 image pairs (equal number of positive and negative instances).
-    
-    * SD - standard deviation calculated for all metrics over all results. 
   
   * 3.10.2. Metrics:
   
@@ -605,7 +603,6 @@
     | **Soft** | 5 | **0.1113** | **0.9616** | 0.9705 | 0.9526 | 0.0474 | 0.0295 | 0.9534 | 0.9700 | 0.9910 |
     | **Negative** | 5 | **0.0209** | **0.9922** | None | 0.9922 | 0.0078 | None | None | None | None |
     | **Average** | 5 | **0.2142** | **0.9286** | 0.9329 | 0.9243 | 0.0757 | 0.0670 | 0.9256 | 0.9323 | 0.9761 |
-    | SD | 5 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
 
