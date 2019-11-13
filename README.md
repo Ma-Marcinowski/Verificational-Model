@@ -97,15 +97,15 @@
      * Thresholding to zero is applied to both IAM and CVL images, hence the model shouldn't differentiate
  between image sources (*however it still does, as may be concluded from the results of negative criterion test, vide 3.10.3.*).
  
-### 1.5. Preprocessing v0.5 (CVL and IAM database, grayscaled images)
+### 1.5. Preprocessing v0.5 (CVL and IAM database, binarized images)
 
 * #### 1.5.1. Analogous to v0.4, however:
-
-     * Images are grayscaled instead of binarized;
      
-     * To minimize overfitting and perturbations (due to the noise present in some cases of IAM images), instead of thresholding to zero, slight noise is added to all images (both CVL and IAM);
+     * No cross-databases pairs are generated;
      
-     * Due to the originally present noise which isn't removed in any way (but covered by added noise), thresholding of empty patches by mean pixel value proves more ineffective than previously, therefore another more subtle method is applied, i.e. any given patch is multiplied by a filter matrix (vide `Examples` folder) and accepted if the sum of all it's elements is higher than a zero. It has to be noted that ultimately four filters are applied, therefore any given patch has to pass the threshold on the basis of every given filter separately;
+     * Thresholding to zero ???;
+     
+     * Because thresholding of empty patches by mean pixel value proved ineffective over time, another more subtle method is applied, i.e. any given patch is multiplied by a filter matrix (vide `Examples` folder) and accepted if the sum of all it's elements is higher than a zero. It has to be noted that ultimately four filters are applied, therefore any given patch has to pass the threshold on the basis of every given filter separately;
 
 ### 1.6. Preprocessing v0.6 (CVL and IAM database, ??? images)
 
@@ -556,7 +556,7 @@
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
     
-* #### 3.9. Model v2.4.0 training on [256x256] patches (extended train database of binarized and denoised images)
+* #### 3.9. Model v2.4.0 training on [256x256] patches (extended train database of binarized images)
 
   * 3.9.1. Model v2.4.0:
   
@@ -582,7 +582,7 @@
     
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;  
   
-* #### 3.10. Model v2.4.0 evaluation on [256x256] patches (extended train database of binarized and denoised images)
+* #### 3.10. Model v2.4.0 evaluation on [256x256] patches (extended train database of binarized images)
 
   * 3.10.1. Database:
   
@@ -608,15 +608,15 @@
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
 
-* #### 3.11. Model v2.5.0 training on [256x256] patches (extended train database of grayscaled and noised images)
+* #### 3.11. Model v2.5.0 training on [256x256] patches
 
   * 3.11.1. Model v2.5.0:
   
-    * Exactly the same as v2.1.0, except for training on extended database of grayscaled and noised images.
+    * Exactly the same as v2.1.0, except for training on a database generated via preprocessing v0.5.
   
   * 3.11.2. Database:
     
-    * Preprocessing v0.5 (grayscaled images, slight noise is added to both CVL and IAM images instead of background thresholding to zero);
+    * Preprocessing v0.5;
       
     * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - ??? image pairs (equal number of positive and negative instances);
         
@@ -635,11 +635,11 @@
     | 3 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.000000001 (1e-9) |
     | 4 | 0. | 0. | 0. | 0. | None |
  
-* #### 3.12. Model v2.5.0 evaluation on [256x256] patches (extended train database of grayscaled and noised images)
+* #### 3.12. Model v2.5.0 evaluation on [256x256] patches (extended train database of binarized images)
 
   * 3.12.1. Database:
-  
-    * Vide 3.10.1. Database;
+    
+    * Vide 3.10.1. Database, except for preprocessing v0.5;
   
     * Test dataset - ??? image pairs (equal number of positive and negative instances);
     
