@@ -82,7 +82,7 @@
 
 * #### 1.3.2. In the case of IAM database, method of preprocessing is exactly the same as in the case of CVL database (extraction window is slightly shifted), however following additional steps have been applied:
       
-    * Before preprocessing - two daraframes of raw IAM images were manually created (consisting of images paths, authors ids and forms ids), one for testset and one for trainset, both were uploaded into the repository (`Dataframes` folder);
+    * Before preprocessing - two daraframes of raw IAM images were manually created (consisting of images paths, authors ids and forms ids), one for testset and one for trainset, both were uploaded into the repository (`Examples` folder);
     
     * During preprocessing - before Otsu's binarization is applied, background noises are removed from the images by thresholding of pixel values below 55 to 0.
 
