@@ -105,7 +105,7 @@
      
      * To minimize overfitting and perturbations (due to the noise present in some cases of IAM images), instead of thresholding to zero, slight noise is added to all images (both CVL and IAM);
      
-     * Due to the originally present noise which isn't removed in any way (but covered by added noise), thresholding of empty patches by mean pixel value proves ineffective, therefore another more subtle method is applied, i.e. any given patch is accepted if it's mean of pixel values is higher than or equal to 115% of the mean of pixel values of the whole extract (which most certainly is partially empty and has the same quality as any of it's patches). Therefore any given patch of any given extract cannot contain more empty spaces than the extract itself. The obvious drawback of such method is that most patches, of extracts which have no empty spaces, are ommitted.
+     * Due to the originally present noise which isn't removed in any way (but covered by added noise), thresholding of empty patches by mean pixel value proves more ineffective than previously, therefore another more subtle method is applied, i.e. any given patch is multiplied by a filter matrix (vide `Examples` folder) and accepted if the sum of all it's elements is higher than a zero. It has to be noted that ultimately four filters are applied, therefore any given patch has to pass the threshold on the basis of every given filter separately;
 
 ### 1.6. Preprocessing v0.6 (CVL and IAM database, ??? images)
 
@@ -588,7 +588,7 @@
   
     * Vide 3.8.1. Database, except for preprocessing v0.4;
     
-    * Soft criterion - a test subset of CVL and IAM databases - dataframe is generated over such patches only, which most certainly do not contain any empty (unused by author) writing space. Because thresholding by patch mean pixel value isn't precise enough, another rough method is employed (based on the usual methods of handwriting, i.e. from left to right and from top to bottom), where only top-left corner patch of any given image is considered suitable for a dataframe based on it's indexes of 1 and 1. 4474 image pairs (equal number of positive and negative instances).
+    * Soft criterion - a test subset of CVL and IAM databases - dataframe is generated over such patches only, which most certainly do not contain any excess of empty (unused by author) writing space. Because thresholding by patch mean pixel value isn't precise enough, more subtle method is employed where patches are accepted on the basis of simple kernel operations (vide preprocessing v0.5). ??? image pairs.
   
   * 3.10.2. Metrics:
   
@@ -602,7 +602,7 @@
     | IAM | 5 | 0.1839 | 0.9420 | 0.9323 | 0.9517 | 0.0483 | 0.0677 | 0.9507 | 0.9336 | 0.9833 |
     | CVL | 5 | 0.2446 | 0.9153 | 0.9336 | 0.8969 | 0.1031 | 0.0664 | 0.9006 | 0.9311 | 0.9689 |
     | Hard | 5 | 0.2429 | 0.9207 | 0.9389 | 0.9025 | 0.0975 | 0.0611 | 0.9060 | 0.9366 | 0.9706 |
-    | **Soft** | 5 | **0.1113** | **0.9616** | 0.9705 | 0.9526 | 0.0474 | 0.0295 | 0.9534 | 0.9700 | 0.9910 |
+    | **Soft** | 5 | **0.** | **0.** | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
     | **Negative** | 5 | **0.0209** | **0.9922** | None | 0.9922 | 0.0078 | None | None | None | None |
     | **Average** | 5 | **0.2142** | **0.9286** | 0.9329 | 0.9243 | 0.0757 | 0.0670 | 0.9256 | 0.9323 | 0.9761 |
        
@@ -618,7 +618,7 @@
     
     * Preprocessing v0.5 (grayscaled images, slight noise is added to both CVL and IAM images instead of background thresholding to zero);
       
-    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - 585794 image pairs (equal number of positive and negative instances);
+    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - ??? image pairs (equal number of positive and negative instances);
         
     * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 20% of test instances.
     
@@ -639,17 +639,19 @@
 
   * 3.12.1. Database:
   
-    * Test dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 102702 image pairs (equal number of positive and negative instances);
+    * Vide 3.10.1. Database;
+  
+    * Test dataset - ??? image pairs (equal number of positive and negative instances);
     
-    * CVL criterion - a test subset of CVL database - ??? image pairs (equal number of positive and negative instances);
+    * CVL criterion - ??? image pairs (equal number of positive and negative instances);
     
-    * IAM criterion - a test subset of IAM database - ??? image pairs (equal number of positive and negative instances);
+    * IAM criterion - ??? image pairs (equal number of positive and negative instances);
     
-    * Hard criterion - excluded documents containing the same samlpe text as train documents (*ergo* included documents containing only samlpe texts no. 7 and 8 in the case of CVL database) - ??? image pairs (equal number of positive and negative instances). IAM test subset is omitted, because during the standard and IAM criterion test already no IAM test documents did contain the same samlpe text as IAM train documents;
+    * Hard criterion -- ??? image pairs (equal number of positive and negative instances);
     
-    * Soft criterion - higher mean pixel value threshold is applied for image patches (1??% of the mean of pixel values of the whole extract), to ensure that no empty or half empty patches are considered. ??? image pairs. 
+    * Soft criterion - ??? image pairs (equal number of positive and negative instances);
     
-    * Negative criterion - a subset of combined CVL and IAM databases, containg only negative instances of cross databases image pairs, such that for any given `xy` pair, an x belongs to CVL testset and y to IAM testset - ??? image pairs (an arbitrary number);
+    * Negative criterion - ??? image pairs (an arbitrary number);
     
     * Average criterion - metrics averaged over separate CVL and IAM tests.
     
