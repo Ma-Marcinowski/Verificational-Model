@@ -101,11 +101,11 @@
 
 * #### 1.5.1. Analogous to v0.4, however:
      
-     * No cross-databases pairs are generated;
+     * No cross-databases pairs are generated, i.e. negative instances of cross databases image pairs, such that for any given `xy` pair, an `x` belongs to CVL testset and `y` to IAM testset;
      
      * Thresholding to zero ???;
      
-     * Because thresholding of empty patches by mean pixel value proved ineffective over time, another more subtle method is applied, i.e. any given patch is multiplied by a filter matrix (vide `Examples` folder) and accepted if the sum of all it's elements is higher than a zero. It has to be noted that ultimately four filters are applied, therefore any given patch has to pass the threshold on the basis of every given filter separately;
+     * Because thresholding of empty patches by mean pixel value proved ineffective over time, another more subtle method is applied, i.e. any given patch is multiplied by a filter matrix (vide `Examples` folder) and accepted if the sum of all it's elements is higher than a zero. It has to be noted that ultimately five filters are applied, therefore any given patch has to pass the threshold on the basis of every given filter;
 
 ### 1.6. Preprocessing v0.6 (CVL and IAM database, ??? images)
 
@@ -113,11 +113,11 @@
 
     * No reverse pairs are created (neither positive nor negative), *e.g.* if a pair `xy` was already generated, then a pair `yx` is omitted;
     
-    * Train and validation dataframes are created under the assumption that the number of positive and negative instances ought to be equal; 
+    * Train and validation dataframes are still created under the assumption that the number of positive and negative instances ought to be equal; 
     
-    * For the purpose of standard model testing, a validation dataframe is generated to the extent of possible positive instances, where the number of positive and negative instances is equall, and divided into `n` smaller validation dataframes utilized for the purpuose of simple testing between epochs;
+    * For the purpose of standard model testing, a validation dataframe is generated to the extent of possible positive instances, where the number of positive and negative instances is equal, and divided into `n` smaller validation dataframes utilized for the purpuose of simple testing between epochs;
     
-    * The test dataframe is generated for the purpose of *cumulative evaluation* (*vide* 3.13.1. Method of cumulative evaluation), hence all possible negative and positive instances are created (except for pair reverses).
+    * The test dataframe is generated for the purpose of *cumulative evaluation* (vide 3.13.1. Method of cumulative evaluation), hence all possible negative and positive instances are created (except for pair reverses).
     
 ### 1.7. Preprocessing v0.7 (CVL and IAM database, ??? images)
 
@@ -535,7 +535,7 @@
     
     * Hard criterion - excluded documents containing the same samlpe text as train documents (*ergo* included documents containing only samlpe texts no. 7 and 8 in the case of CVL database) - 30496 image pairs (equal number of positive and negative instances). IAM test subset is omitted, because during the standard and IAM criterion test already no IAM test documents did contain the same samlpe text as IAM train documents;
     
-    * Negative criterion - a subset of combined CVL and IAM databases, containg only negative instances of cross databases image pairs, such that for any given `xy` pair, an x belongs to CVL testset and y to IAM testset - 200000 image pairs (an arbitrary number);
+    * Negative criterion - a subset of combined CVL and IAM databases, containg only negative instances of cross databases image pairs, such that for any given `xy` pair, an `x` belongs to CVL testset and `y` to IAM testset - 200000 image pairs (an arbitrary number);
     
     * Average criterion - metrics averaged over separate CVL and IAM tests.
     
@@ -647,9 +647,9 @@
     
     * IAM criterion - ??? image pairs (equal number of positive and negative instances);
     
-    * Hard criterion -- ??? image pairs (equal number of positive and negative instances);
+    * Hard criterion - ??? image pairs (equal number of positive and negative instances);
     
-    * Soft criterion - ??? image pairs (equal number of positive and negative instances);
+    * Soft criterion - omitted due to a more precise method of empty images thresholding in the case of preprocessing v0.5;
     
     * Negative criterion - ??? image pairs (an arbitrary number);
     
