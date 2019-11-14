@@ -101,7 +101,7 @@
 
 * #### 1.5.1. Analogous to v0.4, however:
      
-     * No cross-databases pairs are generated, i.e. negative instances of cross databases image pairs, such that for any given `xy` pair, an `x` belongs to CVL testset and `y` to IAM testset;
+     * No cross-databases pairs are generated, i.e. negative instances of cross databases image pairs, such that for any given `xy` pair, an `x` belongs to CVL testset and `y` to IAM testset (or vice versa);
      
      * Thresholding to zero ???;
      
