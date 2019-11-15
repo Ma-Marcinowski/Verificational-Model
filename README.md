@@ -8,23 +8,23 @@
      
     * Document images will be best processed simultaneously by two separate convolutional neural networks and classified by one multilayer perceptron (fully connected layers);       
     
-    * Preprocessing shouldn't drastically affect image quality (*e.g* by image binarization) to preserve most of handwriting features.
+    * Preprocessing shouldn't drastically affect image quality (e.g. by image binarization) to preserve most of handwriting features.
     
     * The number of positive and negative class instances (generated for the purpose of model training / testing) ought to be equal.
 
 * #### 0.3. Versioning
 
-   * 0.3.1 Experiment identifiers (*e.g* vX.Y.Z):
+   * 0.3.1 Experiment identifiers (e.g. vX.Y.Z):
 
       * X indicates a model version;
       * Y indicates a method of preprocessing;
       * Z indicates any extra variation of a given X.Y base combination.
 
-   * 0.3.2 Model version identifiers (*e.g* vX):
+   * 0.3.2 Model version identifiers (e.g. vX):
 
       * X indicates a model version (as already stated in 0.3.1).
 
-   * 0.3.3 Preprocessing method identifiers (*e.g* v0.Y):
+   * 0.3.3 Preprocessing method identifiers (e.g. v0.Y):
     
       * X is zeroed and Z skipped to avoid any confusion of model versions and preprocessing methods; 
       * Y indicates a method of preprocessing (as already stated in 0.3.1).
@@ -49,7 +49,7 @@
                
     * Step one `CVL_Images_v0.1.py` - conversion of images (scans of whole documents) to grayscale (scale from black = 0 to white = 255), color inversion, extraction of writing space from images, reduction of extracts dimensions to [1024x1024] pixels, division of extracts into [256x256] pixel patches, conversion from the `tif` to `png` format. Patches which do not contain or contain a small amount of text are omitted by the program, based on the the arbitrary average pixel value threshold - in any case, patches can be sorted by their size and manually removed on that basis;
             
-    * Step two `Dataframe_v0.1.py` - creation of a dataframe (*i.e.* of a `csv` file that can be edited in any spreadsheet program, *e.g.* calc / excel) separately for the test and training subsets, by combinatorial pairing of image names into the positive class, and a random combinatorial pairing of image names into the negative class (the number of possible negative combinations is much greater than the number positive ones, so all positive instances are created first and then the negative instances are randomly combinated until their number is equal to the number of positive instances). It has to be noted however, that for any given positive `xy` pair, also the reverse pair `yx` will be created (in the case of negative class, there is a possibility that for any randomly generated `xy` also `yx` will be randomly generated). Image name pairs and their labels are ordered by rows, according to columns `left convolutional path`, `right convolutional path`, and `label` (labels are determined by the convergence or divergence of author's identifiers - *e.g.* first four digits of a raw image name in the case of a CVL database). Above method requires that the test and training images are kept in different directories during their preprocessing. However, it is not necessary to create manually any of dataframe `csv` files, *i.e.* they will be created by the program (and if any such a file was already created manually, its directory and name has to be indicated in the program code). Validation dataframe (utilized only for testing of the model during its training, generally after every epoch) is also created, by random sampling of the test dataframe instances (fratcion of which to pull has to be specified - usually 0.1 / 0.2 is enough for validation purposes). Due to the randomness of sampling, it is most probable that the number of sampled positive and negative instances will be effectively equal.
+    * Step two `Dataframe_v0.1.py` - creation of a dataframe (i.e. of a `csv` file that can be edited in any spreadsheet program, e.g. calc / excel) separately for the test and training subsets, by combinatorial pairing of image names into the positive class, and a random combinatorial pairing of image names into the negative class (the number of possible negative combinations is much greater than the number positive ones, so all positive instances are created first and then the negative instances are randomly combinated until their number is equal to the number of positive instances). It has to be noted however, that for any given positive `xy` pair, also the reverse pair `yx` will be created (in the case of negative class, there is a possibility that for any randomly generated `xy` also `yx` will be randomly generated). Image name pairs and their labels are ordered by rows, according to columns `left convolutional path`, `right convolutional path`, and `label` (labels are determined by the convergence or divergence of author's identifiers - e.g. first four digits of a raw image name in the case of a CVL database). Above method requires that the test and training images are kept in different directories during their preprocessing. However, it is not necessary to create manually any of dataframe `csv` files, i.e. they will be created by the program (and if any such a file was already created manually, its directory and name has to be indicated in the program code). Validation dataframe (utilized only for testing of the model during its training, generally after every epoch) is also created, by random sampling of the test dataframe instances (fratcion of which to pull has to be specified - usually 0.1 / 0.2 is enough for validation purposes). Due to the randomness of sampling, it is most probable that the number of sampled positive and negative instances will be effectively equal.
                
 * #### 1.1.2. Preprocessing programs
    		
@@ -64,7 +64,7 @@
     * Using any given text editor, access programs code and edit image/dataframe input/output paths (save the program files in a `py` format); 
     * Access the directory - which contains a given preprocessing program file - through the terminal / command-line interpreter (method  of access depends on user's operating system);
     * In the terminal type the command `python3 program_name.py` to run the named program;
-    * If it were necessary: to force quit (terminate) a running program use a keyboard shortcut `Ctrl + C` in an opened terminal window, or `Ctrl + Z` to suspend a running program, then to resume a paused run, type the command `fg` (works in terminals of most operating systems, *e.g.* macOS, Linux).
+    * If it were necessary: to force quit (terminate) a running program use a keyboard shortcut `Ctrl + C` in an opened terminal window, or `Ctrl + Z` to suspend a running program, then to resume a paused run, type the command `fg` (works in terminals of most operating systems, e.g. macOS, Linux).
 
 ### 1.2. Preprocessing v0.2 (CVL database, binarized images)
 
@@ -113,7 +113,7 @@
 
 * #### 1.6.1. Exactly the same as v0.?, however dataframes are generated differently:
 
-    * No reverse pairs are created (neither positive nor negative), *e.g.* if a pair `xy` was already generated, then a pair `yx` is omitted;
+    * No reverse pairs are created (neither positive nor negative), e.g. if a pair `xy` was already generated, then a pair `yx` is omitted;
     
     * Train and validation dataframes are still created under the assumption that the number of positive and negative instances ought to be equal; 
     
@@ -282,11 +282,11 @@
 
   * 2.4.2. Callbacks: 
   
-    * *Vide* 2.2.2. Callbacks.
+    * Vide 2.2.2. Callbacks.
   
   * 2.4.3. Hyperparameters: 
     
-    * *Vide* 2.2.3. Hyperparameters.
+    * Vide 2.2.3. Hyperparameters.
    
   * 2.2.4. Training:
      
@@ -313,11 +313,11 @@
 
   * 2.5.2. Callbacks: 
   
-    * *Vide* 2.2.2. Callbacks.
+    * Vide 2.2.2. Callbacks.
   
   * 2.5.3. Hyperparameters: 
     
-    * *Vide* 2.2.3. Hyperparameters;
+    * Vide 2.2.3. Hyperparameters;
     * Epochs - 3;
     * Batchsize - 8.
    
@@ -345,7 +345,7 @@
     
   * 3.1.2. Language, libraries and framework / API:
         
-    * *Vide* 2.1.2.
+    * Vide 2.1.2.
    
   * 3.1.3. Implementation:
        
@@ -355,15 +355,15 @@
  
   * 3.2.1. Database:
   
-    * *Vide* 2.2.1. Database.
+    * Vide 2.2.1. Database.
  
   * 3.2.2. Callbacks: 
   
-    * *Vide* 2.2.2. Callbacks.
+    * Vide 2.2.2. Callbacks.
   
   * 3.2.3. Hyperparameters: 
     
-    * *Vide* 2.2.3. Hyperparameters;
+    * Vide 2.2.3. Hyperparameters;
     * Epochs - 6 (six separate runs);
     * Learning rate - initial 0.001 (1e-3), then manually adjusted by a factor of 0.1 after every epoch.
  
@@ -384,11 +384,11 @@
    
   * 3.3.1. Database:
   
-    * *Vide* 2.3.1. Database.
+    * Vide 2.3.1. Database.
   
   * 3.3.2. Metrics:
   
-    * *Vide* 2.3.2. Metrics.
+    * Vide 2.3.2. Metrics.
   
   * 3.3.3. CVL evaluation:
     
@@ -416,15 +416,15 @@
 
   * 3.4.2. Database:
   
-    * *Vide* 2.2.1. Database.
+    * Vide 2.2.1. Database.
  
   * 3.4.3. Callbacks: 
   
-    * *Vide* 2.2.2. Callbacks.
+    * Vide 2.2.2. Callbacks.
   
   * 3.4.4. Hyperparameters: 
     
-    * *Vide* 2.2.3. Hyperparameters;
+    * Vide 2.2.3. Hyperparameters;
     * Epochs - 3 (three separate runs);
     * Learning rate - initial 0.001 (1e-3), then manually adjusted by a factor of 0.1 after every epoch.
  
@@ -448,7 +448,7 @@
 
   * 3.5.2. Hyperparameters: 
     
-    * *Vide* 2.2.3. Hyperparameters;
+    * Vide 2.2.3. Hyperparameters;
     * Epochs - 5 (five separate runs);
     * Learning rate - initial 0.001 (1e-3), then manually adjusted by a factor of 0.1 after every epoch.
  
@@ -472,7 +472,7 @@
   
   * 3.6.2. Metrics:
   
-    * *Vide* 2.3.2. Metrics.
+    * Vide 2.3.2. Metrics.
   
   * 3.6.3. CVL evaluation:
   
@@ -498,7 +498,7 @@
     
   * 3.7.3. Hyperparameters: 
     
-    * *Vide* 2.2.3. Hyperparameters;
+    * Vide 2.2.3. Hyperparameters;
     * Epochs - one epoch per one training dataframe part (each ran separately);
     * Learning rate - initial 0.001 (1e-3).
  
