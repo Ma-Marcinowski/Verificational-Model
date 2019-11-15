@@ -589,8 +589,6 @@
   * 3.10.1. Database:
   
     * Vide 3.8.1. Database, except for preprocessing v0.4;
-    
-    * Soft criterion - a test subset of CVL and IAM databases - dataframe is generated over such patches only, which most certainly do not contain any excess of empty (unused by author) writing space. Because thresholding by patch mean pixel value isn't precise enough, more subtle method is employed where patches are accepted on the basis of simple kernel operations (vide preprocessing v0.5). ??? image pairs.
   
   * 3.10.2. Metrics:
   
@@ -604,7 +602,6 @@
     | IAM | 5 | 0.1839 | 0.9420 | 0.9323 | 0.9517 | 0.0483 | 0.0677 | 0.9507 | 0.9336 | 0.9833 |
     | CVL | 5 | 0.2446 | 0.9153 | 0.9336 | 0.8969 | 0.1031 | 0.0664 | 0.9006 | 0.9311 | 0.9689 |
     | Hard | 5 | 0.2429 | 0.9207 | 0.9389 | 0.9025 | 0.0975 | 0.0611 | 0.9060 | 0.9366 | 0.9706 |
-    | **Soft** | 5 | **0.** | **0.** | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
     | **Negative** | 5 | **0.0209** | **0.9922** | None | 0.9922 | 0.0078 | None | None | None | None |
     | **Average** | 5 | **0.2142** | **0.9286** | 0.9329 | 0.9243 | 0.0757 | 0.0670 | 0.9256 | 0.9323 | 0.9761 |
        
@@ -650,8 +647,6 @@
     * IAM criterion - ??? image pairs (equal number of positive and negative instances);
     
     * Hard criterion - ??? image pairs (equal number of positive and negative instances);
-    
-    * Soft criterion - omitted due to a more precise method of empty images thresholding by the method of preprocessing v0.5;
     
     * Negative criterion - ??? image pairs (an arbitrary number);
     
