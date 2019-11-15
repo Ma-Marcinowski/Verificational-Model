@@ -617,7 +617,7 @@
     
     * Preprocessing v0.5;
       
-    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - ??? image pairs (equal number of positive and negative instances);
+    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - 2928660 image pairs (equal number of positive and negative instances);
         
     * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 20% of test instances.
     
@@ -627,12 +627,14 @@
   
   * 3.11.4 Training (learning rate reductions by a factor of 0.01):
   
-    | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
-    | --- | --- | --- | --- | --- | --- |
-    | 1 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.00001 (1e-5) |
-    | 2 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.0000001 (1e-7) |
-    | 3 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.000000001 (1e-9) |
-    | 4 | 0. | 0. | 0. | 0. | None |
+    | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
+    | --- | --- | --- | --- | --- | --- | --- |
+    | 1 | 1/2 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.00001 (1e-5) |
+    | 2 | 2/2 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.0000001 (1e-7) |
+    | 3 | 1/2 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.000000001 (1e-9) |
+    | 4 | 2/2 | 0. | 0. | 0. | 0. | None |
+    
+    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;  
  
 * #### 3.12. Model v2.5.0 evaluation on [256x256] patches (extended train database of grayscaled and noised images)
 
@@ -640,7 +642,7 @@
     
     * Vide 3.10.1. Database, except for preprocessing v0.5;
   
-    * Test dataset - ??? image pairs (equal number of positive and negative instances);
+    * Test dataset - 325604 image pairs (equal number of positive and negative instances);
     
     * CVL criterion - ??? image pairs (equal number of positive and negative instances);
     
