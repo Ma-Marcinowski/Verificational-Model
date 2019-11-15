@@ -88,7 +88,7 @@
 
 * #### 1.3.3. Dataframes are generated exatly the same way as in the case of v0.1 and v0.2, except for the optional split of training dataframe into a given number of smaller equal size training dataframes, due to the sheer number of training image pairs (3.5 million), to assure a better control over the training process.
 
-### 1.4. Preprocessing v0.4 (CVL and IAM database, binarized images)
+### 1.4. Preprocessing v0.4 (CVL and IAM database, binarized and denoised images)
 
 * #### 1.4.1. Exactly the same as v0.3, however:
      
@@ -97,16 +97,18 @@
      * Thresholding to zero is applied to both IAM and CVL images, hence the model shouldn't differentiate
  between image sources (*however it still does, as may be concluded from the results of negative criterion test, vide 3.10.3.*).
  
-### 1.5. Preprocessing v0.5 (CVL and IAM database, binarized images)
+### 1.5. Preprocessing v0.5 (CVL and IAM database, grayscaled and noised images)
 
 * #### 1.5.1. Analogous to v0.4, however:
-     
-     * No cross-databases pairs are generated, i.e. negative instances of cross databases image pairs, such that for any given `xy` pair, an `x` belongs to CVL testset and `y` to IAM testset (or vice versa);
-     
-     * Thresholding to zero ???;
-     
-     * Because thresholding of empty patches by mean pixel value proved ineffective over time, another more subtle method is applied, i.e. any given patch is multiplied by a filter matrix (vide `Examples` folder) and accepted if the sum of all it's elements is higher than a zero. It has to be noted that ultimately five filters are applied, therefore any given patch has to pass the threshold on the basis of every given filter;
 
+     * Images are grayscaled instead of binarized;
+     
+     * To minimize overfitting and perturbations (due to the noise present in some cases of IAM images), the threshold of a function thresholding to zero is lowered to 15, and slight noise is added to all images (both CVL and IAM);
+     
+     * Because thresholding of empty patches by mean pixel value proved ineffective over time, another more subtle method is applied, i.e. any given patch is multiplied by a filter matrix (vide `Examples` folder) and accepted if the sum of all it's elements is higher than a zero. It has to be noted that ultimately five filters are applied, therefore any given patch effectively has to pass five thresholds;
+     
+     * No cross-databases pairs are generated, i.e. negative instances of cross databases image pairs, such that for any given `xy` pair, an `x` belongs to CVL testset and `y` to IAM testset (or vice versa).     
+     
 ### 1.6. Preprocessing v0.6 (CVL and IAM database, ??? images)
 
 * #### 1.6.1. Exactly the same as v0.?, however dataframes are generated differently:
@@ -556,7 +558,7 @@
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
     
-* #### 3.9. Model v2.4.0 training on [256x256] patches (extended train database of binarized images)
+* #### 3.9. Model v2.4.0 training on [256x256] patches (extended train database of binarized and denoised images)
 
   * 3.9.1. Model v2.4.0:
   
@@ -582,7 +584,7 @@
     
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;  
   
-* #### 3.10. Model v2.4.0 evaluation on [256x256] patches (extended train database of binarized images)
+* #### 3.10. Model v2.4.0 evaluation on [256x256] patches (extended train database of binarized and denoised images)
 
   * 3.10.1. Database:
   
@@ -608,7 +610,7 @@
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
 
-* #### 3.11. Model v2.5.0 training on [256x256] patches
+* #### 3.11. Model v2.5.0 training on [256x256] patches (extended train database of grayscaled and noised images)
 
   * 3.11.1. Model v2.5.0:
   
@@ -635,7 +637,7 @@
     | 3 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.000000001 (1e-9) |
     | 4 | 0. | 0. | 0. | 0. | None |
  
-* #### 3.12. Model v2.5.0 evaluation on [256x256] patches (extended train database of binarized images)
+* #### 3.12. Model v2.5.0 evaluation on [256x256] patches (extended train database of grayscaled and noised images)
 
   * 3.12.1. Database:
     
@@ -649,7 +651,7 @@
     
     * Hard criterion - ??? image pairs (equal number of positive and negative instances);
     
-    * Soft criterion - omitted due to a more precise method of empty images thresholding in the case of preprocessing v0.5;
+    * Soft criterion - omitted due to a more precise method of empty images thresholding by the method of preprocessing v0.5;
     
     * Negative criterion - ??? image pairs (an arbitrary number);
     
