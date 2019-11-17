@@ -107,7 +107,7 @@
      
      * Because thresholding of empty patches by mean pixel value proved ineffective over time, another more subtle method is applied, i.e. any given patch is multiplied by a filter matrix (vide `Examples` folder) and accepted if the sum of all it's elements is higher than a zero. It has to be noted that ultimately five filters are applied, therefore any given patch effectively has to pass five thresholds;
      
-     * No cross-databases pairs are generated, i.e. negative instances of cross databases image pairs, such that for any given `xy` pair, an `x` belongs to CVL testset and `y` to IAM testset (or vice versa).     
+     * No cross-databases pairs are generated, i.e. negative instances of inter databases image pairs, such that for any given `xy` pair, an `x` belongs to CVL testset and `y` to IAM testset (or vice versa).     
      
 ### 1.6. Preprocessing v0.6 (CVL and IAM database, ??? images)
 
