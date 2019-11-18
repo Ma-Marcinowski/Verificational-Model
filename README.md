@@ -695,13 +695,15 @@
   
   * 3.13.4. Metrics:
   
-    * Vide 2.3.2. Metrics, except for Loss and AUC.
+    * Vide 2.3.2. Metrics, except for Loss and AUC;
+    
+    * Rate of unresolved instances - `(Number unresolved instances / total number of instances)` - UNR. 
   
   * 3.13.5. CVL and IAM cumulative evaluation:
   
-    | EofT | Acc | TPR | TNR | FPR | FNR | PPV | NPV |
-    | --- | --- | --- | --- | --- | --- | --- | --- 
-    | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | EofT | Acc | TPR | TNR | FPR | FNR | PPV | NPV | UNR |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
    
     * Epochs of model training - EofT - by the best validation accuracy and loss result;
     
