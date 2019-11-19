@@ -691,7 +691,11 @@
 
   * 3.13.3. Test dataset:
   
-      * A subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM). ??? image pairs (??? negative and ??? positive instances).
+      * Preprocessing v0.6;
+  
+      * A subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM); 
+      
+      * 2935782 image pairs (2852699 negative and 83083 positive instances).
   
   * 3.13.4. Metrics:
   
