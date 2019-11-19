@@ -29,7 +29,17 @@
       * X is zeroed and Z skipped to avoid any confusion of model versions and preprocessing methods; 
       * Y indicates a method of preprocessing (as already stated in 0.3.1).
 
-* #### 0.3. Database (9455 documents by 2911 writers):
+* #### 0.4. Keywords:
+
+    * Computational, statistical, probabilistic; 
+    
+    * Forensics, criminalistics, analysys, examination;
+    
+    * Handwriting, signatures, documents;
+    
+    * Neural, networks, deep, machine, learning, artificial, intelligence, ANN, AI.
+
+* #### 0.5. Database (9455 documents by 2911 writers):
        
     * Dataset of 1604 documents (full page scans) from CVL database (310 writers), by: F. Kleber, S. Fiel, M. Diem, R. Sablatnig, *CVL-Database: An Off-line Database for Writer Retrieval, Writer Identification and Word Spotting*, "In Proc. of the 12th Int. Conference on Document Analysis and Recognition (ICDAR) 2013" 2013, p. 560 - 564;
         
