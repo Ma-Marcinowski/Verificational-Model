@@ -677,7 +677,7 @@
 
     * For a given pair of documents `XY`, the prediction is based on a combination of all possible partial predictions, i.e. predictions of such `xy` patch pairs, that `x` is a patch of an `X` document and `y` is a patch of an `Y` document;
     
-    * Hence all positive and all negative pairs need to be generated (except for reverses);
+    * Hence all positive and all negative pairs need to be generated (except for pair reverses);
     
     * A given partial prediction is positive if the result is higher than 0.75, and negative if the result is lower than 0.25, else patch prediction is unresolved;
     
