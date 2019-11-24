@@ -5,7 +5,7 @@ import cv2
 from tensorflow.keras.layers import Layer
 from tensorflow.keras.models import Model, load_model
 
-def ConvLayerFiltersVis(model_load_path, img_out_path, layer_name):
+def ConvLayerFilters(model_load_path, img_out_path, layer_name):
 
     model = load_model(model_load_path)
 
@@ -41,6 +41,6 @@ def ConvLayerFiltersVis(model_load_path, img_out_path, layer_name):
 
     print(layer_name, ' filters  visualised: ', i)
 
-named_conv_filters_vis = ConvLayerFiltersVis(model_load_path='/saved/model/directory/model.h5',
-                                             img_out_path='/visualised/filters/directory/',
-                                             layer_name='x_conv_layer_to_visualise')
+named_conv_filters_vis = ConvLayerFilters(model_load_path='/saved/model/directory/model.h5',
+                                          img_out_path='/visualised/filters/directory/',
+                                          layer_name='x_conv_layer_to_visualise')
