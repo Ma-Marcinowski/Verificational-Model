@@ -12,17 +12,17 @@ def ConvLayerFilters(model_load_path, img_out_path, layer_name):
     conv_layer = model.get_layer(name=layer_name)
     conv_layer_weights = conv_layer.get_weights()
 
-    f = conv_layer_weights[0].shape[-1]
+    num_of_filters = conv_layer_weights[0].shape[-1]
 
-    nulls = len(str(f))
+    nulls = len(str(num_of_filters))
 
-    print(layer_name, ' filters  to  visualise: ', f)
+    print(layer_name, ' filters  to  visualise: ', num_of_filters)
 
-    i = 0
+    filter_index = 0
 
-    while i < f:
+    while filter_index < num_of_filters:
 
-        filter_matrix = conv_layer_weights[0][:, :, 0, i]
+        filter_matrix = conv_layer_weights[0][:, :, 0, filter_index]
 
         normalized = cv2.normalize(filter_matrix, None, alpha=0, beta=255, norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_32F).astype(np.uint8)
 
@@ -32,14 +32,14 @@ def ConvLayerFilters(model_load_path, img_out_path, layer_name):
 
         retv, ots = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
 
-        i += 1
-        ind = str(i).zfill(nulls)
+        filter_index += 1
+        ind = str(filter_index).zfill(nulls)
 
         cv2.imwrite(img_out_path + layer_name + '_filter_' + ind + '.png', ots)
 
-        print('%.2f%%'%(100*i/f), end="\r")
+        print('%.2f%%'%(100*filter_index/num_of_filters), end="\r")
 
-    print(layer_name, ' filters  visualised: ', i)
+    print(layer_name, ' filters  visualised: ', filter_index)
 
 named_conv_filters_vis = ConvLayerFilters(model_load_path='/saved/model/directory/model.h5',
                                           img_out_path='/visualised/filters/directory/',
