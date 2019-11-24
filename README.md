@@ -92,7 +92,7 @@
 
 * #### 1.3.2. In the case of IAM database, method of preprocessing is exactly the same as in the case of CVL database (extraction window is slightly shifted), however following additional steps have been applied:
       
-    * Before preprocessing - two daraframes of raw IAM images were manually created (consisting of images paths, authors ids and forms ids), one for testset and one for trainset, both were uploaded into the repository (`Examples` folder);
+    * Before preprocessing - two daraframes of raw IAM images were manually created (consisting of images paths, authors ids and forms ids), one for testset and one for trainset, both were uploaded into the repository (vide `/Examples/Dataframes/` folder);
     
     * During preprocessing - before Otsu's binarization is applied, background noises are removed from the images by thresholding of pixel values below 55 to 0.
 
@@ -115,7 +115,7 @@
      
      * To minimize overfitting and perturbations (due to the noise present in some cases of IAM images), the threshold of a function thresholding to zero is lowered to 15, and slight noise is added to all images (both CVL and IAM);
      
-     * Because thresholding of empty patches by mean pixel value proved ineffective over time, another more subtle method is applied, i.e. any given patch is multiplied by a filter matrix (vide `Examples` folder) and accepted if the sum of all it's elements is higher than a zero. It has to be noted that ultimately five filters are applied, therefore any given patch effectively has to pass five thresholds;
+     * Because thresholding of empty patches by mean pixel value proved ineffective over time, another more subtle method is applied, i.e. any given patch is multiplied by a filter matrix (vide `/Examples/Preprocessing-Filters/` folder) and accepted if the sum of all it's elements is higher than a zero. It has to be noted that ultimately five filters are applied, therefore any given patch effectively has to pass five thresholds;
      
      * No cross-databases pairs are generated, i.e. negative instances of inter databases image pairs, such that for any given `xy` pair, an `x` belongs to CVL testset and `y` to IAM testset (or vice versa).     
      
