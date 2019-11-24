@@ -5,7 +5,7 @@ import cv2
 from tensorflow.keras.layers import Layer
 from tensorflow.keras.models import Model, load_model
 
-def ConvLayerWeightsVis(model_load_path, img_out_path, layer_name):
+def ConvLayerFiltersVis(model_load_path, img_out_path, layer_name):
 
     model = load_model(model_load_path)
 
@@ -16,7 +16,7 @@ def ConvLayerWeightsVis(model_load_path, img_out_path, layer_name):
 
     nulls = len(str(f))
 
-    print(layer_name, ' filter  weights  to  visualise: ', f)
+    print(layer_name, ' filters  to  visualise: ', f)
 
     i = 0
 
@@ -35,12 +35,12 @@ def ConvLayerWeightsVis(model_load_path, img_out_path, layer_name):
         i += 1
         ind = str(i).zfill(nulls)
 
-        cv2.imwrite(img_out_path + layer_name + '_filter_weights_' + ind + '.png', ots)
+        cv2.imwrite(img_out_path + layer_name + '_filter_' + ind + '.png', ots)
 
         print('%.2f%%'%(100*i/f), end="\r")
 
-    print(layer_name, ' filter  weights  visualised: ', i)
+    print(layer_name, ' filters  visualised: ', i)
 
-named_conv_weights_vis = ConvLayerWeightsVis(model_load_path='/saved/model/directory/model.h5',
-                                             img_out_path='/visualised/weights/directory/',
+named_conv_filters_vis = ConvLayerFiltersVis(model_load_path='/saved/model/directory/model.h5',
+                                             img_out_path='/visualised/filters/directory/',
                                              layer_name='x_conv_layer_to_visualise')
