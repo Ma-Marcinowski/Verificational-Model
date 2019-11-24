@@ -41,6 +41,6 @@ def ConvLayerFilters(model_load_path, img_out_path, layer_name):
 
     print(layer_name, ' filters  visualised: ', filter_index)
 
-named_conv_filters_vis = ConvLayerFilters(model_load_path='/saved/model/directory/model.h5',
-                                          img_out_path='/visualised/filters/directory/',
-                                          layer_name='x_conv_layer_to_visualise')
+named_conv_layer_filter_weights_visualised = ConvLayerFilters(model_load_path='/saved/model/directory/model.h5',
+                                                              img_out_path='/visualised/filters/directory/',
+                                                              layer_name='x_conv_layer_to_visualise')
