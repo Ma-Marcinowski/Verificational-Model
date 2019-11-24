@@ -90,7 +90,6 @@ output = Dense(1, activation='sigmoid', name='output')(x)
 
 model = Model(inputs=[left_input, right_input], outputs=[output])
 
-#model = load_model('/path/VM/VM-{epoch:02d}-{val_loss:.2f}.h5')
 #model = load_model('/path/VM/VM.h5')
 
 Adam = tf.keras.optimizers.Adam(learning_rate=0.001,
