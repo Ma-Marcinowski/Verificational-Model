@@ -677,7 +677,7 @@
     | IAM | 5 | 0.1261 | 0.9653 | 0.9608 | 0.9697 | 0.0303 | 0.0392 | 0.9694 | 0.9611 | 0.9906 |
     | CVL | 5 | 0.1819 | 0.9459 | 0.9535 | 0.9382 | 0.0618 | 0.0465 | 0.9392 | 0.9528 | 0.9832 |
     | Hard | 5 | 0.1415 | 0.9560 | 0.9696 | 0.9424 | 0.0576 | 0.0304 | 0.9439 | 0.9688 | 0.9881 |
-    | Negative | 5 | 0. | 0. | None | 0. | 0. | None | None | None | None |
+    | Negative | 5 | 0.0476 | 0.9815 | None | 0.9815 | 0.0185 | None | None | None | None |
     | Average | 5 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
