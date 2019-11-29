@@ -728,7 +728,7 @@
     
     * Negative Raw criterion - 200000 image pairs (an arbitrary number);
     
-    * Negative Denoised criterion - 200000 denoised (by thresholding of 55 and below to zero) image pairs (an arbitrary number);
+    * Negative Denoised criterion - 200000 denoised (by thresholding of pixel values lower than 55 to zero) image pairs (an arbitrary number);
     
     * Average criterion - metrics averaged over separate CVL and IAM tests.
     
