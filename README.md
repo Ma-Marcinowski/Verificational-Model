@@ -692,7 +692,7 @@
     
     * Preprocessing v0.5, except for denoising and addition of noise to images (ergo images are simply extracted, grayscaled, inverted, resized and cropped into patches);
       
-    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - ??? image pairs (equal number of positive and negative instances);
+    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - 2928660 image pairs (equal number of positive and negative instances);
         
     * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 20% of test instances.
     
@@ -718,13 +718,13 @@
     
     * Vide 3.10.1. Database, except for preprocessing v0.5;
   
-    * Test dataset - ??? image pairs (equal number of positive and negative instances);
+    * Test dataset - 328824 image pairs (equal number of positive and negative instances);
     
-    * CVL criterion - ??? image pairs (equal number of positive and negative instances);
+    * CVL criterion - 144756 image pairs (equal number of positive and negative instances);
     
-    * IAM criterion - ??? image pairs (equal number of positive and negative instances);
+    * IAM criterion - 184068 image pairs (equal number of positive and negative instances);
     
-    * Hard criterion - ??? image pairs (equal number of positive and negative instances);
+    * Hard criterion - 13304 image pairs (equal number of positive and negative instances);
     
     * Negative criterion - 200000 image pairs (an arbitrary number);
     
