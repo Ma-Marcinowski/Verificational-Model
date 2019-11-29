@@ -101,7 +101,7 @@ named_conv_layer_filter_features_visualised = ConvLayerFeatures(model_load_path=
                                                                 img_out_path='/visualised/features/directory/',
                                                                 input_layer_name='model_input_layer',
                                                                 conv_layer_name='x_conv_layer_to_visualise',
-                                                                num_of_filters=int_of_filters_on_the_named_layer,
+                                                                num_of_filters=1024, #Number of the named layer filters.
                                                                 ascent_steps=100,
                                                                 ascent_rate=0.01,
                                                                 octave_scale=1.1,
