@@ -88,13 +88,13 @@ def ConvLayerFeatures(model_load_path, img_out_path,
   
         normalized = cv2.normalize(img_matrix, None, alpha=0, beta=255, norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_32F).astype(np.uint8)
 
-        #blurred = cv2.GaussianBlur(normalized,(5, 5),0)
-        #retv, ots = cv2.threshold(blurred, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
-
         ind = str(filter_index + 1).zfill(nulls)
 
         cv2.imwrite(img_out_path + conv_layer_name + '_features_' + ind + '.png', normalized)
-        
+
+        #blurred = cv2.GaussianBlur(normalized,(5, 5),0)
+        #retv, ots = cv2.threshold(blurred, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+        #ind = str(filter_index + 1).zfill(nulls)
         #cv2.imwrite(img_out_path + conv_layer_name + '_features_' + ind + '.png', ots)
 
 named_conv_layer_filter_features_visualised = ConvLayerFeatures(model_load_path='/saved/model/directory/model.h5',
