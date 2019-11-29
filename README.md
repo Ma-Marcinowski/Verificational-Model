@@ -816,8 +816,8 @@
   
       * A subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM); 
       
-      * ??? image pairs (??? negative and ??? positive instances).
-      * 2935782 image pairs (2852699 negative and 83083 positive instances).
+      * 2935782 image pairs (2852699 negative and 83083 positive instances). 0
+      * 2970832 image pairs (2886934 negative and 83898 positive instances). 1
   
   * 3.16.4. Metrics:
   
