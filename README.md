@@ -127,7 +127,7 @@
     
     * Train and validation dataframes are still created under the assumption that the number of positive and negative instances ought to be equal; 
     
-    * For the purpose of standard model testing, a validation dataframe is generated to the extent of possible positive instances, where the number of positive and negative instances is equal, and divided into `n` smaller validation dataframes utilized for the purpuose of simple testing between epochs;
+    * For the purpose of standard model testing, a validation dataframe is generated to the extent of possible positive instances, where the number of positive and negative instances is equal, and divided into `n` smaller validation dataframes utilized for the purpuose of rough testing between epochs;
     
     * The test dataframe is generated for the purpose of *combined evaluation* (vide 3.16.1. Method of combined evaluation), hence all possible negative and positive instances are created (except for pair reverses).
     
