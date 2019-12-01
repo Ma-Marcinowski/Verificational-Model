@@ -705,7 +705,7 @@
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
     | --- | --- | --- | --- | --- | --- | --- |
     | 1 | 1/2 | 0.1603 | 0.9419 | 0.3005 | 0.8976 | Manual LR reduction to 0.00001 (1e-5) |
-    | 2 | 2/2 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.0000001 (1e-7) |
+    | 2 | 2/2 | 0.0546 | 0.9808 | 0.1326 | 0.9583 | Manual LR reduction to 0.0000001 (1e-7) |
     | 3 | 1/2 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.000000001 (1e-9) |
     | 4 | 2/2 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.00000000001 (1e-11) |
     | 5 | 1/2 | 0. | 0. | 0. | 0. | None |
