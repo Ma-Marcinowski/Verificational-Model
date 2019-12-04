@@ -708,8 +708,8 @@
     | 2 | 2/2 | 0.0546 | 0.9808 | 0.1326 | 0.9583 | Manual LR reduction to 0.0000001 (1e-7) |
     | 3 | 1/2 | 0.0385 | 0.9876 | 0.1319 | 0.9584 | Manual LR reduction to 0.000000001 (1e-9) |
     | 4 | 2/2 | 0.0492 | 0.9828 | 0.1318 | 0.9579 | Manual LR reduction to 0.00000000001 (1e-11) |
-    | 5 | 1/2 | 0.0384 | 0.9875 | 0.1319 | 0.9587 | Manual LR reduction to 0.00000000001 (1e-13) |
-    | 6 | 2/2 | 0. | 0. | 0. | 0. | None |
+    | 5 | 1/2 | 0.0384 | 0.9875 | 0.1319 | 0.9587 | Manual LR reduction to 0.0000000000001 (1e-13) |
+    | 6 | 2/2 | 0.0493 | 0.9828 | 0.1351 | 0.9581 | None |
 
     
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;  
