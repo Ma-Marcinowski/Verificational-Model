@@ -758,7 +758,7 @@
     
     * Vide 3.14.1. Database, except for evaluation on [1024x1024] document extracts.
   
-    * Test dataset - ??? image pairs (equal number of positive and negative instances);
+    * Test dataset - 4478 image pairs (equal number of positive and negative instances);
     
     * CVL criterion - ??? image pairs (equal number of positive and negative instances);
     
