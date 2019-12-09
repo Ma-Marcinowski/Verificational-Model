@@ -760,15 +760,15 @@
   
     * Test dataset - 4478 image pairs (equal number of positive and negative instances);
     
-    * CVL criterion - ??? image pairs (equal number of positive and negative instances);
+    * CVL criterion - 2646 image pairs (equal number of positive and negative instances);
     
-    * IAM criterion - ??? image pairs (equal number of positive and negative instances);
+    * IAM criterion - 1832 image pairs (equal number of positive and negative instances);
     
-    * Hard criterion - ??? image pairs (equal number of positive and negative instances);
+    * Hard criterion - 216 image pairs (equal number of positive and negative instances);
     
-    * Negative Raw criterion - 200000 image pairs (an arbitrary number);
+    * Negative Raw criterion - 2000 image pairs (an arbitrary number);
     
-    * Negative Denoised criterion - 200000 image pairs (an arbitrary number);
+    * Negative Denoised criterion - 2000 image pairs (an arbitrary number);
     
     * Average criterion - metrics averaged over separate CVL and IAM tests.
     
