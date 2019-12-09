@@ -786,7 +786,7 @@
     | Hard | 5 | 0.2243 | 0.8935 | 0.9815 | 0.8056 | 0.1944 | 0.0185 | 0.8346 | 0.9775 | 0.9851 |
     | Negative Raw | 5 | 0.0226 | 0.9925 | None | 0.9925 | 0.0075 | None | None | None | None |
     | Negative Denoised | 5 | 0.| 0. | None | 0. | 0. | None | None | None | None |
-    | Average | 5 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Average | 5 | 0.1544 | 0.9406 | 0.9688 | 0.9124 | 0.0875 | 0.0312 | 0.9170 | 0.9671 | 0.9854 |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
 
