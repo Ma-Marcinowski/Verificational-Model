@@ -115,7 +115,7 @@
      
      * To minimize overfitting and perturbations (due to the noise present in some cases of IAM images), the threshold of a function thresholding to zero is lowered to 15, and slight noise is added to all images (both CVL and IAM);
      
-     * Because thresholding of empty patches by mean pixel value proved ineffective over time, another more subtle method is applied, i.e. any given patch is multiplied by a filter matrix (vide `/Examples/Preprocessing-Filters/` folder) and accepted if the sum of all it's elements is higher than a zero. It has to be noted that ultimately five filters are applied, therefore any given patch effectively has to pass five thresholds;
+     * Because thresholding of empty patches by a mean of pixel values proved ineffective over time, another more subtle method is applied, i.e. any given patch is multiplied by a filter matrix (vide `/Examples/Preprocessing-Filters/` folder) and accepted if the sum of all it's elements is higher than a zero. It has to be noted that ultimately five filters are applied, therefore any given patch effectively has to pass five thresholds;
      
      * No cross-databases pairs are generated, i.e. negative instances of inter databases image pairs, such that for any given `xy` pair, an `x` belongs to CVL testset and `y` to IAM testset (or vice versa).     
      
@@ -783,7 +783,7 @@
     | None | 5 | 0.1659 | 0.9352 | 0.9647 | 0.9058 | 0.0942 | 0.0353 | 0.9110 | 0.9625 | 0.9838 |
     | IAM | 5 | 0.1116 | 0.9580 | **0.9913** | **0.9247** | 0.0753 | 0.0087 | **0.9294** | **0.9906** | 0.9941 |
     | CVL | 5 | 0.1972 | 0.9233 | 0.9463 | 0.9002 | 0.0998 | 0.0537 | 0.9046 | 0.9437 | 0.9768 |
-    | Hard | 5 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Hard | 5 | 0.2243 | 0.8935 | 0.9815 | 0.8056 | 0.1944 | 0.0185 | 0.8346 | 0.9775 | 0.9851 |
     | Negative Raw | 5 | 0.| 0. | None | 0. | 0. | None | None | None | None |
     | Negative Denoised | 5 | 0.| 0. | None | 0. | 0. | None | None | None | None |
     | Average | 5 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
