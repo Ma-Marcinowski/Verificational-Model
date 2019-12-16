@@ -826,7 +826,7 @@
     
     * Rate of unresolved instances - `(Number unresolved instances / total number of instances)` - UNR. 
   
-  * 3.16.5. CVL and IAM cumulative evaluation of model v2.5.?:
+  * 3.16.5. CVL and IAM cumulative evaluation of model v2.5.1:
   
     | EofT | Acc | TPR | TNR | FPR | FNR | PPV | NPV | UNR |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- |
