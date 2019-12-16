@@ -830,7 +830,7 @@
   
     | EofT | Acc | TPR | TNR | FPR | FNR | PPV | NPV | UNR |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | 0 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | 5 | 0.9899 | 0.9936 | 0.9898 | 0.0102 | 0.0064 | **0.7380** | 0.9998 | 0.0361 |
    
     * Epochs of model training - EofT - by the best validation accuracy and loss result;
     
