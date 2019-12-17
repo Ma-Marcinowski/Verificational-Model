@@ -559,7 +559,7 @@
   
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | None | 4 | 0.1477 | 0.9566 | 0.9523 | 0.9608 | 0.0392 | 0.0477 | 0.9605 | 0.9527 | 0.9878 |
+    | **None** | 4 | **0.1477** | **0.9566** | 0.9523 | 0.9608 | 0.0392 | 0.0477 | 0.9605 | 0.9527 | 0.9878 |
     | IAM | 4 | 0.1816 | 0.9425 | 0.9488 | 0.9363 | 0.0637 | 0.0512 | 0.9371 | 0.9481 | 0.9824 |
     | CVL | 4 | 0.2180 | 0.9284 | 0.9583 | 0.8985 | 0.1015 | 0.0417 | 0.9042 | 0.9556 | 0.9772 |
     | Hard | 4 | 0.2189 | 0.9290 | 0.9616 | 0.8964 | 0.1036 | 0.0384 | 0.9027 | 0.9589 | 0.9789 |
@@ -608,7 +608,7 @@
   
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | None | 5 | 0.1661 | 0.9481 | 0.9330 | 0.9632 | 0.0368 | 0.0670 | 0.9621 | 0.9349 | 0.9859 |
+    | **None** | 5 | **0.1661** | **0.9481** | 0.9330 | 0.9632 | 0.0368 | 0.0670 | 0.9621 | 0.9349 | 0.9859 |
     | IAM | 5 | 0.1839 | 0.9420 | 0.9323 | 0.9517 | 0.0483 | 0.0677 | 0.9507 | 0.9336 | 0.9833 |
     | CVL | 5 | 0.2446 | 0.9153 | 0.9336 | 0.8969 | 0.1031 | 0.0664 | 0.9006 | 0.9311 | 0.9689 |
     | Hard | 5 | 0.2429 | 0.9207 | 0.9389 | 0.9025 | 0.0975 | 0.0611 | 0.9060 | 0.9366 | 0.9706 |
@@ -663,8 +663,6 @@
     
     * Negative criterion - 200000 image pairs (an arbitrary number);
     
-    * Average criterion - metrics averaged over separate CVL and IAM tests.
-    
   * 3.12.2. Metrics:
   
     * Vide 2.3.2. Metrics.
@@ -678,7 +676,6 @@
     | CVL | 5 | 0.1819 | 0.9459 | 0.9535 | 0.9382 | 0.0618 | 0.0465 | 0.9392 | 0.9528 | 0.9832 |
     | Hard | 5 | 0.1415 | 0.9560 | 0.9696 | 0.9424 | 0.0576 | 0.0304 | 0.9439 | 0.9688 | 0.9881 |
     | **Negative** | 5 | 0.0476| **0.9815** | None | 0.9815 | 0.0185 | None | None | None | None |
-    | **Average** | 5 | 0.1540 | **0.9556** | 0.9571 | 0.9539 | 0.0460 | 0.0428 | 0.9543 | 0.9569 | 0.9869 |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;
     
@@ -731,9 +728,7 @@
     * Negative Raw criterion - 200000 image pairs (an arbitrary number);
     
     * Negative Denoised criterion - 200000 denoised (by thresholding of pixel values lower than 55 to zero) image pairs (an arbitrary number);
-    
-    * Average criterion - metrics averaged over separate CVL and IAM tests.
-    
+       
   * 3.14.2. Metrics:
   
     * Vide 2.3.2. Metrics.
@@ -748,7 +743,6 @@
     | Hard | 5 | 0.1284 | 0.9557 | 0.9654 | 0.9459 | 0.0541 | 0.0346 | 0.9469 | 0.9647 | 0.9892 |
     | **Negative Raw** | 5 | 0.0264 | **0.9897** | None | 0.9897 | 0.0103 | None | None | None | None |
     | **Negative Denoised** | 5 | 0.0818 | **0.9736** | None | 0.9736 | 0.0264 | None | None | None | None |
-    | **Average** | 5 | 0.1416 | **0.9553** | 0.9518 | 0.9586 | 0.0413 | 0.0481 | 0.9584 | 0.9521 | 0.9879 |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
     
@@ -770,8 +764,6 @@
     
     * Negative Denoised criterion - 2000 image pairs (an arbitrary number);
     
-    * Average criterion - metrics averaged over separate CVL and IAM tests.
-    
   * 3.15.2. Metrics:
   
     * Vide 2.3.2. Metrics.
@@ -786,11 +778,10 @@
     | Hard | 5 | 0.2243 | 0.8935 | **0.9815** | **0.8056** | 0.1944 | 0.0185 | 0.8346 | 0.9775 | 0.9851 |
     | Negative Raw | 5 | 0.0226 | 0.9925 | None | 0.9925 | 0.0075 | None | None | None | None |
     | Negative Denoised | 5 | 0.0789 | 0.9735 | None | 0.9735 | 0.0265 | None | None | None | None |
-    | Average | 5 | 0.1544 | 0.9406 | 0.9688 | 0.9124 | 0.0875 | 0.0312 | 0.9170 | 0.9671 | 0.9854 |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result;   
 
-* #### 3.16. Model 2.6.0 combined evaluation on [256x256] patches (extended train database of ??? images)
+* #### 3.16. Model 2.6.0 combined evaluation on [256x256] patches (extended train database of raw grayscaled images)
 
   * 3.16.1. Method of combined evaluation:     
 
