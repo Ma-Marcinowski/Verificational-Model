@@ -131,7 +131,7 @@
     
     * The test dataframe is generated for the purpose of *combined evaluation* (vide 3.16.1. Method of combined evaluation), hence all possible negative and positive instances are created (except for pair reverses).
     
-### 1.7. Preprocessing v0.7 (CVL and IAM database, ??? images)
+~~### 1.7. Preprocessing v0.7 (CVL and IAM database, ??? images)
 
 * #### 1.7.1. Exactly the same as v0.6, however:
 
@@ -143,7 +143,7 @@
 
     * Validation dataframes are generated the same way as in the case of v0.6;
      
-    * The test dataframe is generated for the purpose of *combined evaluation* exactly as in the case of v0.6.
+    * The test dataframe is generated for the purpose of *combined evaluation* exactly as in the case of v0.6.~~
   
 ### 2. Verificational Model v1
 
