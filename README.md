@@ -131,19 +131,19 @@
     
     * The test dataframe is generated for the purpose of *combined evaluation* (vide 3.16.1. Method of combined evaluation), hence all possible negative and positive instances are created (except for pair reverses).
     
-~~### 1.7. Preprocessing v0.7 (CVL and IAM database, ??? images)
+### ~~1.7. Preprocessing v0.7 (CVL and IAM database, ??? images)~~
 
-* #### 1.7.1. Exactly the same as v0.6, however:
+* #### ~~1.7.1. Exactly the same as v0.6, however:~~
 
-    * Neither test nor train dataframes are created under the assumption that the number of positive and negative instances ought to be equal; 
+    * ~~Neither test nor train dataframes are created under the assumption that the number of positive and negative instances ought to be equal; ~~
     
-    * Hence for the purpose of training, a dataframe of all possible negative and positive instances is generated (except for pair reverses) and divided into `m` equal parts;
+    * ~~Hence for the purpose of training, a dataframe of all possible negative and positive instances is generated (except for pair reverses) and divided into `m` equal parts;~~
     
-* #### 1.7.2. Therefore:
+* #### ~~1.7.2. Therefore:~~
 
-    * Validation dataframes are generated the same way as in the case of v0.6;
+    * ~~Validation dataframes are generated the same way as in the case of v0.6;~~
      
-    * The test dataframe is generated for the purpose of *combined evaluation* exactly as in the case of v0.6.~~
+    * ~~The test dataframe is generated for the purpose of *combined evaluation* exactly as in the case of v0.6.~~
   
 ### 2. Verificational Model v1
 
@@ -269,7 +269,7 @@
     | None | 5 | 0.2331 | 0.9124 | 0.9207 | 0.9040 | 0.0959 | 0.0792 | 0.9056 | 0.9194 | 0.9676 |
     | **Hard** | 5 | **0.1795** | **0.9370** | 0.9617 | 0.9123 | 0.0876 | 0.0382 | 0.9164 | 0.9597 | 0.9781 |
               
-    * Epochs of model training - EofT - by the best validation loss result;
+    * Epochs of model training - EofT - by the best validation loss result.
               
   * 2.3.4. IAM evaluation:
     
@@ -278,7 +278,7 @@
     | **False** | 5 | 265.3726 | 0.5047 | **0.0113** | **0.9979** | 0.0020 | 0.9886 | 0.8478 | 0.5023 | 0.5058 |
     | True | 5 | 0.3629 | 0.8835 | 0.9661 | 0.8009 | 0.1990 | 0.0338 | 0.8291 | 0.9594 | 0.9603 |
     
-    * Epochs of model training - EofT - by the best validation loss result;
+    * Epochs of model training - EofT - by the best validation loss result.
 
 * #### 2.4. Model v1.1.1 training on [512x512] patches
   
@@ -407,7 +407,7 @@
     | None | 3 | 0.1835 | 0.9387 | 0.9301 | 0.9474 | 0.0526 | 0.0699 | 0.9464 | 0.9312 | 0.9817 |
     | **Hard** | 3 | **0.1494** | **0.9506** | 0.9567 | 0.9445 | 0.0555 | 0.0433 | 0.9452 | 0.9561 | 0.9858 |
   
-    * Epochs of model training - EofT - by the best validation accuracy result; 
+    * Epochs of model training - EofT - by the best validation accuracy result. 
   
   * 3.3.4. IAM evaluation:
   
@@ -416,7 +416,7 @@
     | **False** | 3 | 283.7893 | 0.5266 | **0.9883** | **0.0649** | 0.9350 | 0.0116 | 0.5138 | 0.8476 | 0.5269 |
     | True | 3 | 0.6610 | 0.9138 | 0.9867 | 0.8408 | 0.1592 | 0.0133 | 0.8611 | 0.9845 | 0.9510 |
    
-    * Epochs of model training - EofT - by the best validation accuracy result;   
+    * Epochs of model training - EofT - by the best validation accuracy result.   
    
 * #### 3.4. Model v2.1.1 training on [256x256] patches (simplified variant of model v2.1.0)
 
@@ -490,7 +490,7 @@
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | 4 | 0.2783 | 0.9275 | 0.8941 | 0.9608 | 0.0392 | 0.1059 | 0.9580 | 0.9007 | 0.9749 |
    
-    * Epochs of model training - EofT - by the best validation accuracy and loss result;   
+    * Epochs of model training - EofT - by the best validation accuracy and loss result.   
     
 * #### 3.7. Model v2.3.0 training on [256x256] patches (extended train database of binarized images)
 
@@ -521,7 +521,7 @@
     | 3 | 1/2 | 0.0297 | 0.9907 | 0.1808 | 0.9518 | Manual LR reduction to 0.000001 (1e-6) |
     | 4 | 2/2 | 0.0304 | 0.9905 | 0.1809 | 0.9520 | None |
     
-    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;
+    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
  
   * 3.7.5. Training rerun of epochs following the first one (learning rate reductions by a factor of 0.01):
     
@@ -533,7 +533,7 @@
     | **4** | 2/2 | 0.0559 | 0.9808 | **0.1513** | **0.9552** | None |
     | 5 | 1/2 | 0.0429 | 0.9863 | 0.1517 | 0.9552 | None |
     
-    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;  
+    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.  
       
 * #### 3.8. Model v2.3.0 evaluation on [256x256] patches (extended train database of binarized images)
 
@@ -566,7 +566,7 @@
     | **Negative** | 4 | **0.0017** | **0.9998** | None | 0.9998 | 0.0002 | None | None | None | None |
     | **Average** | 4 | **0.1998** | **0.9354** | 0.9535 | 0.9174 | 0.0826 | 0.0464 | 0.9206 | 0.9518 | 0.9798 |
        
-    * Epochs of model training - EofT - by the best validation accuracy and loss result;   
+    * Epochs of model training - EofT - by the best validation accuracy and loss result.   
     
 * #### 3.9. Model v2.4.0 training on [256x256] patches (extended train database of binarized and denoised images)
 
@@ -592,7 +592,7 @@
     | 4 | 2/2 | 0.0642 | 0.9774 | 0.1622 | 0.9489 | Manual LR reduction to 0.00000000001 (1e-11) |
     | **5** | 1/2 | 0.0502 | 0.9834 | **0.1616** | **0.9489** | None |
     
-    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;  
+    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index. 
   
 * #### 3.10. Model v2.4.0 evaluation on [256x256] patches (extended train database of binarized and denoised images)
 
@@ -615,7 +615,7 @@
     | **Negative** | 5 | **0.0209** | **0.9922** | None | 0.9922 | 0.0078 | None | None | None | None |
     | **Average** | 5 | **0.2142** | **0.9286** | 0.9329 | 0.9243 | 0.0757 | 0.0670 | 0.9256 | 0.9323 | 0.9761 |
        
-    * Epochs of model training - EofT - by the best validation accuracy and loss result;   
+    * Epochs of model training - EofT - by the best validation accuracy and loss result.  
 
 * #### 3.11. Model v2.5.0 training on [256x256] patches (extended train database of grayscaled and noised images)
 
@@ -645,7 +645,7 @@
     | 4 | 2/2 | 0.0607 | 0.9783 | 0.1467 | 0.9583 | Manual LR reduction to 0.00000000001 (1e-11) |
     | **5** | 1/2 | 0.0457 | 0.9849 | **0.1466** | **0.9584** | None |
     
-    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;  
+    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.  
  
 * #### 3.12. Model v2.5.0 evaluation on [256x256] patches (extended train database of grayscaled and noised images)
 
@@ -677,7 +677,7 @@
     | Hard | 5 | 0.1415 | 0.9560 | 0.9696 | 0.9424 | 0.0576 | 0.0304 | 0.9439 | 0.9688 | 0.9881 |
     | **Negative** | 5 | 0.0476| **0.9815** | None | 0.9815 | 0.0185 | None | None | None | None |
        
-    * Epochs of model training - EofT - by the best validation accuracy and loss result;
+    * Epochs of model training - EofT - by the best validation accuracy and loss result.
     
 * #### 3.13. Model v2.5.1 training on [256x256] patches (extended train database of raw grayscaled images)
 
@@ -709,7 +709,7 @@
     | 6 | 2/2 | 0.0493 | 0.9828 | 0.1351 | 0.9581 | None |
 
     
-    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index;  
+    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
  
 * #### 3.14. Model v2.5.1 evaluation on [256x256] patches (extended train database of raw grayscaled images)
 
@@ -727,7 +727,7 @@
     
     * Negative Raw criterion - 200000 image pairs (an arbitrary number);
     
-    * Negative Denoised criterion - 200000 denoised (by thresholding of pixel values lower than 55 to zero) image pairs (an arbitrary number);
+    * Negative Denoised criterion - 200000 denoised (by thresholding of pixel values lower than 55 to zero) image pairs (an arbitrary number).
        
   * 3.14.2. Metrics:
   
@@ -744,7 +744,7 @@
     | **Negative Raw** | 5 | 0.0264 | **0.9897** | None | 0.9897 | 0.0103 | None | None | None | None |
     | **Negative Denoised** | 5 | 0.0818 | **0.9736** | None | 0.9736 | 0.0264 | None | None | None | None |
        
-    * Epochs of model training - EofT - by the best validation accuracy and loss result;   
+    * Epochs of model training - EofT - by the best validation accuracy and loss result.   
     
 * #### 3.15. Model v2.5.1 evaluation on [1024x1024] extracts (extended train database of raw grayscaled images)
 
@@ -762,7 +762,7 @@
     
     * Negative Raw criterion - 2000 image pairs (an arbitrary number);
     
-    * Negative Denoised criterion - 2000 image pairs (an arbitrary number);
+    * Negative Denoised criterion - 2000 image pairs (an arbitrary number).
     
   * 3.15.2. Metrics:
   
@@ -779,7 +779,7 @@
     | Negative Raw | 5 | 0.0226 | 0.9925 | None | 0.9925 | 0.0075 | None | None | None | None |
     | Negative Denoised | 5 | 0.0789 | 0.9735 | None | 0.9735 | 0.0265 | None | None | None | None |
        
-    * Epochs of model training - EofT - by the best validation accuracy and loss result;   
+    * Epochs of model training - EofT - by the best validation accuracy and loss result.   
 
 * #### 3.16. Model 2.6.0 combined evaluation on [256x256] patches (extended train database of raw grayscaled images)
 
@@ -823,10 +823,107 @@
     | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | 5 | 0.9899 | 0.9936 | 0.9898 | 0.0102 | 0.0064 | **0.7380** | 0.9998 | 0.0361 |
    
-    * Epochs of model training - EofT - by the best validation accuracy and loss result;
+    * Epochs of model training - EofT - by the best validation accuracy and loss result.
     
-* #### 3.17. Model 2.7.0 training on [256x256] patches (extended train database of ??? images)
-* #### 3.18. Model 2.7.0 evaluation on [256x256] patches (extended train database of ??? images)
-* #### 3.19. Model 2.7.0 combined evaluation on [256x256] patches (extended train database of ??? images)    
+* #### ~~3.17. Model 2.7.0 training on [256x256] patches (extended train database of ??? images)~~
+* #### ~~3.18. Model 2.7.0 evaluation on [256x256] patches (extended train database of ??? images)~~
+* #### ~~3.19. Model 2.7.0 combined evaluation on [256x256] patches (extended train database of ??? images)~~    
 
 ### 4. Verificational Model v3
+
+* #### 4.1. Model v3.6.0
+  
+  * 4.1.1. Model architecture is the same as model v2 architecture, however:
+  
+    *  
+    
+  * 4.1.2. Language, libraries and framework / API:
+        
+    * Vide 2.1.2.
+   
+  * 4.1.3. Implementation:
+       
+    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), ???ms/step (15503 steps per epoch) in case of model v3.6.0 training on [256x256] patches.   
+    
+* #### 4.1. Model v3.6.0 training on [256x256] patches (extended train database of raw grayscaled images)
+  
+  * 4.1.1. Database:
+  
+    * Vide 3.14.1. Database, except for preprocessing v0.6;
+    
+    * Preprocessing v0.6;
+      
+    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - 2928660 image pairs (equal number of positive and negative instances);
+        
+    * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 2928660 image pairs (equal number of positive and negative instances) divided into six equal validation dataframes;
+    
+  * 4.1.2. Hyperparameters:
+  
+    * Vide 3.13.3. Hyperparameters.
+  
+  * 4.1.3. Training (learning rate reductions by a factor of 0.?1):
+  
+    | Epoch | DfP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
+    | --- | --- | --- | --- | --- | --- | --- |
+    | 1 | 1/6 | 0. | 0. | 0. | 0. | ? |
+    | 2 | 2/6 | 0. | 0. | 0. | 0. | ? |
+    | 3 | 3/6 | 0. | 0. | 0. | 0. | ? |
+    | 4 | 4/6 | 0. | 0. | 0. | 0. | ? |
+    | 5 | 5/6 | 0. | 0. | 0. | 0. | ? |
+    | 6 | 5/6 | 0. | 0. | 0. | 0. | ? |
+    
+    * Dataframe part - DfP - utilized for a given epoch of training and validation is indicated by its index.
+    
+* #### 4.2. Model v3.6.0 evaluation on [256x256] patches (extended train database of raw grayscaled images)
+
+  * 4.2.1. Database:
+    
+    * Vide 3.14.1. Database, except for preprocessing v0.6;
+  
+    * Test dataset - ? image pairs (equal number of positive and negative instances);
+    
+    * CVL criterion - ? image pairs (equal number of positive and negative instances);
+    
+    * IAM criterion - ? image pairs (equal number of positive and negative instances);
+    
+    * Hard criterion - ? image pairs (equal number of positive and negative instances);
+    
+    * Negative criterion - 200000 image pairs (an arbitrary number).
+       
+  * 4.2.2. Metrics:
+  
+    * Vide 2.3.2. Metrics.
+  
+  * 4.2.3. CVL and IAM evaluation:
+  
+    | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | None | ? | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | IAM | ? | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | CVL | ? | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Hard | ? | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Negative | ? | 0. | 0. | None | 0. | 0. | None | None | None | None |
+   
+    * Epochs of model training - EofT - by the best validation accuracy and loss result;   
+    
+* #### 4.3. Model 3.6.0 combined evaluation on [256x256] patches (extended train database of raw grayscaled images)
+
+  * 4.3.1. Test dataset:
+  
+      * Preprocessing v0.6;
+  
+      * A subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM); 
+      
+      * ? image pairs (? negative and ? positive instances).
+  
+  * 4.3.2. Metrics:
+  
+    * Vide 3.16.4. Metrics. 
+  
+  * 4.3.3. CVL and IAM cumulative evaluation:
+  
+    | EofT | Acc | TPR | TNR | FPR | FNR | PPV | NPV | UNR |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | ? | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+   
+    * Epochs of model training - EofT - by the best validation accuracy and loss result.
