@@ -113,7 +113,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, df_parts):
 
             p.dropna(axis=0, how='any', inplace=True)
 
-            print('Done train dataframe part ', idx, ': ', p.shape[0], ' image pairs.')
+            print('Done ' + mode + ' dataframe part ', idx, ': ', p.shape[0], ' image pairs.')
 
         print('Done splitting ' + mode + ' dataframes.')
 
@@ -121,7 +121,7 @@ TrainDataframe = Dataframe(mode='train',
                            img_path='/preprocessed/train/images/directory/',
                            df_path='/dataframe/save/directory/TrainDataframe.csv',
                            df_img_path='/preprocessed/train/images/directory/indicated/in/the/train/dataframe',
-                           df_parts=2) #any number of partial train dataframes to generate
+                           df_parts=6) #any even number of partial train dataframes to generate
 
 TestDataframe = Dataframe(mode='test',
                           img_path='/preprocessed/test/images/directory/',
@@ -133,6 +133,6 @@ ValidDataframe = Dataframe(mode='validation',
                            img_path='/preprocessed/test/images/directory/',
                            df_path='/dataframe/save/directory/ValidDataframe.csv',
                            df_img_path='/preprocessed/test/images/directory/indicated/in/the/validation/dataframe',
-                           df_parts=5) #any number of partial validation dataframes to generate
+                           df_parts=6) #any even number of partial validation dataframes to generate
 
 print('Dataframes done.')
