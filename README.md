@@ -880,13 +880,13 @@
     
     * Vide 3.14.1. Database, except for preprocessing v0.6;
   
-    * Test dataset - ? image pairs (equal number of positive and negative instances);
+    * Test dataset - 167796 image pairs (equal number of positive and negative instances) - de facto undivided validation dataframe;
+        
+    * IAM criterion - 94052 image pairs (equal number of positive and negative instances);
     
-    * CVL criterion - ? image pairs (equal number of positive and negative instances);
+    * CVL criterion - 73744 image pairs (equal number of positive and negative instances);
     
-    * IAM criterion - ? image pairs (equal number of positive and negative instances);
-    
-    * Hard criterion - ? image pairs (equal number of positive and negative instances);
+    * Hard criterion - 7064 image pairs (equal number of positive and negative instances);
     
     * Negative criterion - 200000 image pairs (an arbitrary number).
        
@@ -914,7 +914,7 @@
   
       * A subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM); 
       
-      * ? image pairs (? negative and ? positive instances).
+      * 2970832 image pairs (2886934 negative and 83898 positive instances).
   
   * 4.3.2. Metrics:
   
