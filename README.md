@@ -843,7 +843,7 @@
    
   * 4.1.3. Implementation:
        
-    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), ???ms/step (15503 steps per epoch) in case of model v3.6.0 training on [256x256] patches.   
+    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 132 ms/step (15503 steps per epoch) in case of model v3.6.0 training on [256x256] patches.   
     
 * #### 4.1. Model v3.6.0 training on [256x256] patches (extended train database of raw grayscaled images)
   
@@ -853,19 +853,19 @@
     
     * Preprocessing v0.6;
       
-    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - 2928660 image pairs (equal number of positive and negative instances);
+    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - 1488246 image pairs (equal number of positive and negative instances) divided into six equal training dataframes;
         
-    * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 2928660 image pairs (equal number of positive and negative instances) divided into six equal validation dataframes;
+    * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 167796 image pairs (equal number of positive and negative instances) divided into six equal validation dataframes.
     
   * 4.1.2. Hyperparameters:
   
     * Vide 3.13.3. Hyperparameters.
   
-  * 4.1.3. Training (learning rate reductions by a factor of 0.?1):
+  * 4.1.3. Training:
   
     | Epoch | DfP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
     | --- | --- | --- | --- | --- | --- | --- |
-    | 1 | 1/6 | 0. | 0. | 0. | 0. | ? |
+    | 1 | 1/6 | 0.5199 | 0.7432 | 0.4188 | 0.8187 | None |
     | 2 | 2/6 | 0. | 0. | 0. | 0. | ? |
     | 3 | 3/6 | 0. | 0. | 0. | 0. | ? |
     | 4 | 4/6 | 0. | 0. | 0. | 0. | ? |
@@ -904,7 +904,7 @@
     | Hard | ? | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
     | Negative | ? | 0. | 0. | None | 0. | 0. | None | None | None | None |
    
-    * Epochs of model training - EofT - by the best validation accuracy and loss result;   
+    * Epochs of model training - EofT - by the best validation accuracy and loss result.   
     
 * #### 4.3. Model 3.6.0 combined evaluation on [256x256] patches (extended train database of raw grayscaled images)
 
