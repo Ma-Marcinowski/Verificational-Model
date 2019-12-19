@@ -101,7 +101,7 @@ TrainDataframe = Dataframe(mode='train',
                            img_path='/preprocessed/train/images/directory/',
                            df_path='/dataframe/save/directory/TrainDataframe.csv',
                            df_img_path='/preprocessed/train/images/directory/indicated/in/the/train/dataframe',
-                           num_of_train_dfs=2, #any number of partial train dataframes to generate
+                           num_of_train_dfs=2, #any even number of partial train dataframes to generate
                            valid_df_path=None,
                            valid_fraction=None)
 
