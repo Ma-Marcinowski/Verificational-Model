@@ -26,14 +26,12 @@ def Preprocessing(mode, in_path, out_path, filters_dir):
 
         inv = np.bitwise_not(img)
 
-        th, den = cv2.threshold(inv, 15, 255, cv2.THRESH_TOZERO)
-
         y=730
         x=230
         h=2048
         w=2048
 
-        cropped = den[y:y+h, x:x+w]
+        cropped = inv[y:y+h, x:x+w]
 
         resized = cv2.resize(cropped,(1024,1024))
 
