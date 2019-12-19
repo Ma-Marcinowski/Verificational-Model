@@ -835,7 +835,9 @@
   
   * 4.1.1. Model architecture is the same as model v2 architecture, however:
   
-    *  
+    * Core networks consist only of one convolutional layer each, where strides of 4 and kernels of size 32 are utilized;
+    
+    * Hence no max pooling layer is applied, instead globally average pooling layers are utilized directly after each of the batch normalization layers.
     
   * 4.1.2. Language, libraries and framework / API:
         
