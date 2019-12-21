@@ -877,7 +877,7 @@
     | 8 | 2/6 | 0.2952 | 0.8752 | 0.2642 | 0.9013 | None |
     | 9 | 3/6 | 0.2929 | 0.8757 | 0.2728 | 0.8967 | None |
     | 10 | 4/6 | 0.2932 | 0.8759 | 0.2714 | 0.8956 | Manual LR reduction to 0.0000001 (1e-7) |
-    | 11 | 5/6 | 0. | 0. | 0. | 0. | ? |
+    | 11 | 5/6 | 0. | 0. | 0. | 0. | Manual LR reduction to 0.00000001 (1e-8) |
     | 12 | 6/6 | 0. | 0. | 0. | 0. | ? |
     
     * Dataframe part - DfP - utilized for a given epoch of training and validation is indicated by its index.
