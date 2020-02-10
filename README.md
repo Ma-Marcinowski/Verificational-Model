@@ -135,7 +135,7 @@
 
 * #### ~~1.7.1. Exactly the same as v0.6, however:~~
 
-    * ~~Neither test nor train dataframes are created under the assumption that the number of positive and negative instances ought to be equal; ~~
+    * ~~Neither test nor train dataframes are created under the assumption that the number of positive and negative instances ought to be equal;~~
     
     * ~~Hence for the purpose of training, a dataframe of all possible negative and positive instances is generated (except for pair reverses) and divided into `m` equal parts;~~
     
