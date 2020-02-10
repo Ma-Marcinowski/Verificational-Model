@@ -179,9 +179,9 @@
    
   * 2.1.3. Implementation:
        
-    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 290ms/step (27732 steps per epoch) in case of model v1.1.0 training on [256x256] patches;
+    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 290ms/step (27732 steps per epoch) in the case of model v1.1.0 training on [256x256] patches;
         
-    * Google Kaggle - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Telsa P100), 65ms/step (27732 steps per epoch) in case of model v1.1.0 training on [256x256] patches.
+    * Google Kaggle - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Telsa P100), 65ms/step (27732 steps per epoch) in the case of model v1.1.0 training on [256x256] patches.
         
 * #### 2.2. Model v1.1.0 training on [256x256] patches
    
@@ -359,7 +359,7 @@
    
   * 3.1.3. Implementation:
        
-    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 250ms/step (27732 steps per epoch) in case of model v2.1.0 training on [256x256] patches.    
+    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 250ms/step (27732 steps per epoch) in the case of model v2.1.0 training on [256x256] patches.    
   
 * #### 3.2. Model v2.1.0 training on [256x256] patches
  
@@ -845,7 +845,7 @@
    
   * 4.1.3. Implementation:
        
-    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 130 ms/step (15503 steps per epoch) in case of model v3.6.0 training on [256x256] patches.   
+    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 130 ms/step (15503 steps per epoch) in the case of model v3.6.0 training on [256x256] patches.   
     
 * #### 4.1. Model v3.6.0 training on [256x256] patches (extended train database of raw grayscaled images)
   
