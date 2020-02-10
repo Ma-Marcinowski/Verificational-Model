@@ -2,7 +2,6 @@ import tensorflow as tf
 import numpy as np
 import cv2
 
-from tensorflow.keras.layers import Layer
 from tensorflow.keras.models import Model, load_model
 
 def ConvLayerFilters(model_load_path, img_out_path, layer_name):
