@@ -27,7 +27,6 @@ def CoreNet(ix, path):
 
     return ox
 
-
 left_out = CoreNet(ix=left_input, path='Left')
 right_out = CoreNet(ix=right_input, path='Right')
 
