@@ -879,9 +879,9 @@
        
     * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 130 ms/step (15503 steps per epoch) in the case of model v3.6.0 training on [256x256] patches.   
     
-* #### 4.1. Model v3.6.0 training on [256x256] patches (extended train database of raw grayscaled images)
+* #### 4.2. Model v3.6.0 training on [256x256] patches (extended train database of raw grayscaled images)
   
-  * 4.1.1. Database:
+  * 4.2.1. Database:
   
     * Vide 3.14.1. Database, except for preprocessing v0.6;
     
@@ -891,11 +891,11 @@
         
     * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 167796 image pairs (equal number of positive and negative instances) divided into six equal validation dataframes.
     
-  * 4.1.2. Hyperparameters:
+  * 4.2.2. Hyperparameters:
   
     * Vide 3.13.3. Hyperparameters.
   
-  * 4.1.3. Training:
+  * 4.2.3. Training:
   
     | Epoch | DfP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
     | --- | --- | --- | --- | --- | --- | --- |
@@ -914,9 +914,45 @@
     
     * Dataframe part - DfP - utilized for a given epoch of training and validation is indicated by its index.
     
-* #### 4.2. Model v3.6.0 evaluation on [256x256] patches (extended train database of raw grayscaled images)
+* #### 4.1. Model v3.6.1
+  
+  * 4.1.1. Model architecture is the same as model v2 architecture, however:
+  
+    * Vide model v3.6.0, however, only 32 kernels of size 16, stride 1 and dilatation 2, are utilized;
+    
+    * Also fully connected layers are narrower. 
+    
+  * 4.1.2. Language, libraries and framework / API:
+        
+    * Vide 2.1.2, but for the TensorFlow v2.0.
+   
+  * 4.1.3. Implementation:
+     
+    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), ??? ms/step (??? steps per epoch) in the case of model v3.6.1 training on [256x256] patches.   
+    
+* #### 4.3. Model v3.6.1 training on [256x256] patches (extended train database of raw grayscaled images)
+  
+  * 4.3.1. Database:
+  
+    * Vide 3.2.1. Database.
+    
+  * 4.3.2. Hyperparameters:
+  
+    * Vide 3.13.3. Hyperparameters.
+  
+  * 4.3.3. Training:
+  
+    | Epoch | DfP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
+    | --- | --- | --- | --- | --- | --- | --- |
+    | 1 | 1/6 | 0. | 0. | 0. | 0. | None |
+    | 2 | 2/6 | 0. | 0. | 0. | 0. | None |
+    | 3 | 3/6 | 0. | 0. | 0. | 0. | None |
+    
+     * Dataframe part - DfP - utilized for a given epoch of training and validation is indicated by its index.
+    
+* #### 4.4. Model v3.6.1 evaluation on [256x256] patches (extended train database of raw grayscaled images)
 
-  * 4.2.1. Database:
+  * 4.4.1. Database:
     
     * Vide 3.14.1. Database, except for preprocessing v0.6;
   
@@ -930,11 +966,11 @@
     
     * Negative criterion - 200000 image pairs (an arbitrary number).
        
-  * 4.2.2. Metrics:
+  * 4.4.2. Metrics:
   
     * Vide 2.3.2. Metrics.
   
-  * 4.2.3. CVL and IAM evaluation:
+  * 4.4.3. CVL and IAM evaluation:
   
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -946,9 +982,9 @@
    
     * Epochs of model training - EofT - by the best validation accuracy and loss result.   
     
-* #### 4.3. Model 3.6.0 combined evaluation on [256x256] patches (extended train database of raw grayscaled images)
+* #### 4.5. Model 3.6.1 combined evaluation on [256x256] patches (extended train database of raw grayscaled images)
 
-  * 4.3.1. Test dataset:
+  * 4.5.1. Test dataset:
   
       * Preprocessing v0.6;
   
@@ -956,11 +992,11 @@
       
       * 2970832 image pairs (2886934 negative and 83898 positive instances).
   
-  * 4.3.2. Metrics:
+  * 4.5.2. Metrics:
   
     * Vide 3.16.4. Metrics. 
   
-  * 4.3.3. CVL and IAM cumulative evaluation:
+  * 4.5.3. CVL and IAM cumulative evaluation:
   
     | EofT | Acc | TPR | TNR | FPR | FNR | PPV | NPV | UNR |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- |
