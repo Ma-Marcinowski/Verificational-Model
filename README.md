@@ -919,9 +919,7 @@
   * 4.3.1. Model architecture is the same as model v2 architecture, however:
   
     * Vide model v3.6.0, however, only 32 kernels of size 16, stride 1 and dilatation 2, are utilized;
-    
-    * Insead of cosine distance, cosine similarity layer is applied;
-    
+
     * Also fully connected layers are narrower. 
     
   * 4.3.2. Language, libraries and framework / API:
@@ -936,7 +934,7 @@
   
   * 4.4.1. Database:
   
-    * Vide 3.2.1. Database.
+    * Vide 4.2.1. Database.
     
   * 4.4.2. Hyperparameters:
   
@@ -946,9 +944,12 @@
   
     | Epoch | DfP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
     | --- | --- | --- | --- | --- | --- | --- |
-    | 1 | 1/6 | 0. | 0. | 0. | 0. | None |
-    | 2 | 2/6 | 0. | 0. | 0. | 0. | None |
-    | 3 | 3/6 | 0. | 0. | 0. | 0. | None |
+    | 1 | None | 0. | 0. | 0. | 0. | None |
+    | 2 | None | 0. | 0. | 0. | 0. | None |
+    | 3 | None | 0. | 0. | 0. | 0. | None |
+    | 4 | None | 0. | 0. | 0. | 0. | None |
+    | 5 | None | 0. | 0. | 0. | 0. | None |
+    | 6 | None | 0. | 0. | 0. | 0. | None |
     
      * Dataframe part - DfP - utilized for a given epoch of training and validation is indicated by its index.
     
