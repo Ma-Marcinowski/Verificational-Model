@@ -57,13 +57,7 @@ def Preprocessing(mode, in_path, out_path, filters_dir):
 
                 if 0 not in filtered:
 
-                    vc = v.copy()
-
-                    noise = cv2.randn(vc, 0, 15)
-
-                    vn = v + noise
-
-                    cv2.imwrite(out_path + str(i) + '-' + str(f) + '-' + str(idx) + str(ind) + '.png', vn)
+                    cv2.imwrite(out_path + str(i) + '-' + str(f) + '-' + str(idx) + str(ind) + '.png', v)
 
                 else:
 
