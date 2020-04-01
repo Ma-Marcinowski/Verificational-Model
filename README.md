@@ -916,7 +916,7 @@
   
     * Vide model v3.6.0, however, only 32 kernels of size 16, stride 1 and dilatation 2, are utilized;
 
-    * Also fully connected layers are narrower. 
+    * Also, fully connected layers are half as wide as in the case of the model v3.6.0. 
     
   * 4.3.2. Language, libraries and framework / API:
         
@@ -941,6 +941,29 @@
     | Epoch | DfP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
     | --- | --- | --- | --- | --- | --- | --- |
     | 1 | None | 0.4617 | 0.7689 | 0.4242 | 0.8111 | None |
+    | 2 | None | 0.4059 | 0.8061 | 0.4093 | 0.8211 | None |
+    
+     * Dataframe part - DfP - utilized for a given epoch of training and validation is indicated by its index.
+     
+* #### 4.5. Model v3.6.2
+  
+  * Exactly the same as v3.6.1 model, however the fully connected layers haven't been narrowed down by half. 
+    
+* #### 4.6. Model v3.6.1 training on [256x256] patches (extended train database of raw grayscaled images)
+  
+  * 4.6.1. Database:
+  
+    * Vide 4.2.1. Database.
+    
+  * 4.6.2. Hyperparameters:
+  
+    * Vide 3.13.3. Hyperparameters.
+  
+  * 4.6.3. Training:
+  
+    | Epoch | DfP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
+    | --- | --- | --- | --- | --- | --- | --- |
+    | 1 | None | 0. | 0. | 0. | 0. | None |
     | 2 | None | 0. | 0. | 0. | 0. | None |
     | 3 | None | 0. | 0. | 0. | 0. | None |
     | 4 | None | 0. | 0. | 0. | 0. | None |
@@ -949,9 +972,9 @@
     
      * Dataframe part - DfP - utilized for a given epoch of training and validation is indicated by its index.
     
-* #### 4.5. Model v3.6.1 evaluation on [256x256] patches (extended train database of raw grayscaled images)
+* #### 4.7. Model v3.6.2 evaluation on [256x256] patches (extended train database of raw grayscaled images)
 
-  * 4.5.1. Database:
+  * 4.7.1. Database:
     
     * Vide 3.14.1. Database, except for preprocessing v0.6;
   
@@ -965,11 +988,11 @@
     
     * Negative criterion - 200000 image pairs (an arbitrary number).
        
-  * 4.5.2. Metrics:
+  * 4.7.2. Metrics:
   
     * Vide 2.3.2. Metrics.
   
-  * 4.5.3. CVL and IAM evaluation:
+  * 4.7.3. CVL and IAM evaluation:
   
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -981,9 +1004,9 @@
    
     * Epochs of model training - EofT - by the best validation accuracy and loss result.   
     
-* #### 4.6. Model 3.6.1 combined evaluation on [256x256] patches (extended train database of raw grayscaled images)
+* #### 4.8. Model 3.6.2 combined evaluation on [256x256] patches (extended train database of raw grayscaled images)
 
-  * 4.6.1. Test dataset:
+  * 4.8.1. Test dataset:
   
       * Preprocessing v0.6;
   
@@ -991,11 +1014,11 @@
       
       * 2970832 image pairs (2886934 negative and 83898 positive instances).
   
-  * 4.6.2. Metrics:
+  * 4.8.2. Metrics:
   
     * Vide 3.16.4. Metrics. 
   
-  * 4.6.3. CVL and IAM cumulative evaluation:
+  * 4.8.3. CVL and IAM cumulative evaluation:
   
     | EofT | Acc | TPR | TNR | FPR | FNR | PPV | NPV | UNR |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- |
