@@ -916,7 +916,7 @@
   
     * Vide model v3.6.0, however, only 32 kernels of size 16, stride 1 and dilatation 2, are utilized;
 
-    * Also, fully connected layers are half as wide as in the case of the model v3.6.0. 
+    * Also, fully connected layers are half as wide as in the case of model v3.6.0. 
     
   * 4.3.2. Language, libraries and framework / API:
         
