@@ -932,6 +932,8 @@
   
     * Vide 4.2.1. Database.
     
+    * Because the model is much faster than the v3.6.0, no dataframe needs to be utilized in parts, unless for model tuning.
+    
   * 4.4.2. Hyperparameters:
   
     * Vide 3.13.3. Hyperparameters.
