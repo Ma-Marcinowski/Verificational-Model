@@ -113,7 +113,7 @@
 
      * Images are grayscaled instead of binarized;
      
-     * To minimize overfitting and perturbations (due to the noise present in some cases of IAM images), the threshold of a function thresholding to zero is lowered to 15, and slight noise is added to all images (both CVL and IAM);
+     * To minimize overfitting and perturbations (due to the noise present in some cases of IAM images), threshold of the function thresholding to zero is lowered to 15, and slight noise is added to all images (both CVL and IAM);
      
      * Because thresholding of empty patches by a mean of pixel values proved ineffective over time, another more subtle method is applied, i.e. any given patch is multiplied by a filter matrix (vide `/Examples/Preprocessing-Filters/` folder) and accepted if the sum of all it's elements is higher than a zero. It has to be noted that ultimately five filters are applied, therefore any given patch effectively has to pass five thresholds;
      
@@ -121,7 +121,7 @@
      
 ### 1.6. Preprocessing v0.6 (CVL and IAM database, grayscaled and noised images)
 
-* #### 1.6.1. Exactly the same as v0.5, however dataframes are generated differently:
+* #### 1.6.1. Exactly the same as v0.5, however no noise is added or removed, and dataframes are generated differently:
 
     * No reverse pairs are created (neither positive nor negative), e.g. if a pair `xy` was already generated, then a pair `yx` is omitted;
     
