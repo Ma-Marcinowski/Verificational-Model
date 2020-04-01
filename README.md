@@ -115,35 +115,35 @@
      
      * To minimize overfitting and perturbations (due to the noise present in some cases of IAM images), threshold of the function thresholding to zero is lowered to 15, and slight noise is added to all images (both CVL and IAM);
      
-     * Because thresholding of empty patches by a mean of pixel values proved ineffective over time, another more subtle method is applied, i.e. any given patch is multiplied by a filter matrix (vide `/Examples/Preprocessing-Filters/` folder) and accepted if the sum of all it's elements is higher than a zero. It has to be noted that ultimately five filters are applied, therefore any given patch effectively has to pass five thresholds;
+     * Because thresholding of empty patches by a mean of pixel values proved ineffective over time, another more subtle method is applied, i.e. any given patch is multiplied by a filter matrix (vide `/Examples/Preprocessing-Filters/` folder) and accepted if the sum of all it's elements is higher than a zero. It has to be noted that ultimately five filters are applied, therefore any given patch has to subsequently pass through five thresholds;
      
      * No cross-databases pairs are generated, i.e. negative instances of inter databases image pairs, such that for any given `xy` pair, an `x` belongs to CVL testset and `y` to IAM testset (or vice versa).     
      
-### 1.6. Preprocessing v0.6 (CVL and IAM database, grayscaled and noised images)
+### 1.6. Preprocessing v0.6 (CVL and IAM database, grayscaled and raw images)
 
 * #### 1.6.1. Exactly the same as v0.5, however no noise is added or removed, and dataframes are generated differently:
 
     * No reverse pairs are created (neither positive nor negative), e.g. if a pair `xy` was already generated, then a pair `yx` is omitted;
     
-    * Train and validation dataframes are still created under the assumption that the number of positive and negative instances ought to be equal; 
+    * Train and validation dataframes are nonetheless created under the assumption that the number of positive and negative instances ought to be equal; 
     
     * For the purpose of standard model testing, a validation dataframe is generated to the extent of possible positive instances, where the number of positive and negative instances is equal, and divided into `n` smaller validation dataframes utilized for the purpuose of rough testing between epochs;
     
     * The test dataframe is generated for the purpose of *combined evaluation* (vide 3.17.1. Method of combined evaluation), hence all possible negative and positive instances are created (except for pair reverses).
     
-### ~~1.7. Preprocessing v0.7 (CVL and IAM database, ??? images)~~
+### 1.7. Preprocessing v0.7 (CVL and IAM database, grayscaled and raw images)
 
-* #### ~~1.7.1. Exactly the same as v0.6, however:~~
+* #### 1.7.1. Exactly the same as v0.6, however:
 
-    * ~~Neither test nor train dataframes are created under the assumption that the number of positive and negative instances ought to be equal;~~
+    * Neither test nor train dataframes are created under the assumption that the number of positive and negative instances ought to be equal;
     
-    * ~~Hence for the purpose of training, a dataframe of all possible negative and positive instances is generated (except for pair reverses) and divided into `m` equal parts;~~
+    * Hence for the purpose of training, a dataframe of all possible negative and positive instances is generated (except for pair reverses) and divided into `m` equal parts;
     
-* #### ~~1.7.2. Therefore:~~
+* #### 1.7.2. Therefore:
 
-    * ~~Validation dataframes are generated the same way as in the case of v0.6;~~
+    * Validation dataframes are generated the same way as in the case of v0.6;
      
-    * ~~The test dataframe is generated for the purpose of *combined evaluation* exactly as in the case of v0.6.~~
+    * The test dataframe is generated for the purpose of *combined evaluation* exactly as in the case of v0.6.
   
 ### 2. Verificational Model v1
 
@@ -856,10 +856,6 @@
     | 5 | 0.9899 | 0.9936 | 0.9898 | 0.0102 | 0.0064 | **0.7380** | 0.9998 | 0.0361 |
    
     * Epochs of model training - EofT - by the best validation accuracy and loss result.
-    
-* #### ~~3.18. Model 2.7.0 training on [256x256] patches (extended train database of ??? images)~~
-* #### ~~3.19. Model 2.7.0 evaluation on [256x256] patches (extended train database of ??? images)~~
-* #### ~~3.20. Model 2.7.0 combined evaluation on [256x256] patches (extended train database of ??? images)~~    
 
 ### 4. Verificational Model v3
 
