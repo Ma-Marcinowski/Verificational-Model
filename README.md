@@ -949,7 +949,7 @@
   
   * Exactly the same as v3.6.1 model, however the fully connected layers haven't been narrowed down by half. 
     
-* #### 4.6. Model v3.6.1 training on [256x256] patches (extended train database of raw grayscaled images)
+* #### 4.6. Model v3.6.2 training on [256x256] patches (extended train database of raw grayscaled images)
   
   * 4.6.1. Database:
   
