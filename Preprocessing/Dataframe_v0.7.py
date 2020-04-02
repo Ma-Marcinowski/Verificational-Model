@@ -101,7 +101,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, df_parts):
 
     print('Done ' + mode + ' dataframe: ', df.shape[0], ' image pairs.')
 
-    if mode == 'train' or mode == 'validation' and df_parts != None:
+    if mode == 'train' or mode == 'validation' and df_parts != 0:
 
         df = pd.read_csv(df_path)
 
@@ -127,7 +127,7 @@ TestDataframe = Dataframe(mode='test',
                           img_path='/preprocessed/test/images/directory/',
                           df_path='/dataframe/save/directory/TestDataframe.csv',
                           df_img_path='/preprocessed/test/images/directory/indicated/in/the/test/dataframe/',
-                          df_parts=None)
+                          df_parts=0)
 
 ValidDataframe = Dataframe(mode='validation',
                            img_path='/preprocessed/test/images/directory/',
