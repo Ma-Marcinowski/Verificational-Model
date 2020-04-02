@@ -924,7 +924,7 @@
    
   * 4.3.3. Implementation:
      
-    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 157ms/step (93016 steps per epoch) in the case of model v3.6.1 training on [256x256] patches.   
+    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 90ms/step (93016 steps per epoch) in the case of model v3.6.1 training on [256x256] patches.   
     
 * #### 4.4. Model v3.6.1 training on [256x256] patches (extended train database of raw grayscaled images)
   
