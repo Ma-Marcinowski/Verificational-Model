@@ -69,7 +69,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, num_of_train_dfs, valid_df_p
 
     print('Done ' + mode + ' dataframe: ', df.shape[0], ' image pairs.')
 
-    if mode == 'train' and num_of_train_dfs != None:
+    if mode == 'train' and num_of_train_dfs != 0:
 
         df = pd.read_csv(df_path)
 
@@ -87,7 +87,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, num_of_train_dfs, valid_df_p
 
         print('Done splitting train dataframes.')
 
-    elif mode == 'test' and valid_fraction != None:
+    elif mode == 'test' and valid_fraction != 0:
 
         tedf = pd.read_csv(df_path)
 
@@ -102,14 +102,14 @@ TrainDataframe = Dataframe(mode='train',
                            df_path='/dataframe/save/directory/TrainDataframe.csv',
                            df_img_path='/preprocessed/train/images/directory/indicated/in/the/train/dataframe',
                            num_of_train_dfs=2, #any even number of partial train dataframes to generate
-                           valid_df_path=None,
-                           valid_fraction=None)
+                           valid_df_path=0,
+                           valid_fraction=0)
 
 TestDataframe = Dataframe(mode='test',
                           img_path='/preprocessed/test/images/directory/',
                           df_path='/dataframe/save/directory/TestDataframe.csv',
                           df_img_path='/preprocessed/test/images/directory/indicated/in/the/test/dataframe',
-                          num_of_train_dfs=None,
+                          num_of_train_dfs=0,
                           valid_df_path='/dataframe/save/directory/ValidDataframe.csv',
                           valid_fraction=0.2) #any float of instances to be pulled from the test dataframe
 
