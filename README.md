@@ -992,7 +992,7 @@
      
   * 4.6.4. Errors:
   
-     * During the training epochs 2 through 6, an error in loading the saved (between epochs) optimizer states occured, hence, the optimizer was freshly initialized at the beginning of each of those epochs.
+     * During the training epochs 2 through ???, an error in loading the saved (between epochs) optimizer states occured, hence, the optimizer was freshly initialized at the beginning of each of those epochs.
     
 * #### 4.7. Model v3.6.2 evaluation on [256x256] patches (extended train database of raw grayscaled images)
 
