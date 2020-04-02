@@ -68,7 +68,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, valid_df_path, valid_fractio
 
     print('Done ' + mode + ' dataframe: ', df.shape[0], ' image pairs.')
 
-    if mode == 'test' and valid_fraction != None:
+    if mode == 'test' and valid_fraction != 0:
 
         tedf = pd.read_csv(df_path)
 
@@ -82,8 +82,8 @@ TrainDataframe = Dataframe(mode='train',
                            img_path='/preprocessed/train/images/directory/',
                            df_path='/dataframe/save/directory/TrainDataframe.csv',
                            df_img_path='/preprocessed/train/images/directory/indicated/in/the/train/dataframe',
-                           valid_df_path=None,
-                           valid_fraction=None)
+                           valid_df_path=0,
+                           valid_fraction=0)
 
 TestDataframe = Dataframe(mode='test',
                           img_path='/preprocessed/test/images/directory/',
