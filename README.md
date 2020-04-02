@@ -979,8 +979,8 @@
     | 4 | CVL | None | 0.1865 | 0.9301 | 0.2010 | 0.9207 | Manual LR reduction to 0.00001 (1e-5) |
     | 5 | CVL | None | 0.1846 | 0.9310 | 0.2003 | 0.9209 | Manual LR reset to 0.0001 (1e-4) |
     | 6 | IAM | None | 0.2918 | 0.8903 | 0.2965 | 0.8806 | None |
-    | 7 | IAM | None | 0. | 0. | 0. | 0. | None |
-    | 8 | ? | None | 0. | 0. | 0. | 0. | None |
+    | 7 | IAM | None | 0.2272 | 0.9094 | 0.2924 | 0.8847 | None |
+    | 8 | Both | None | 0. | 0. | 0. | 0. | None |
     | 9 | ? | None | 0. | 0. | 0. | 0. | None |
     | 10 | ? | None | 0. | 0. | 0. | 0. | None |
     | 11 | ? | None | 0. | 0. | 0. | 0. | None |
