@@ -49,7 +49,7 @@ BatchSize = 128
 
 TestSeq = DataSequence(dataframe='/path/TestDataframe.csv', batch_size = BatchSize)
 
-model = load_model('/path/VM_v2.6.0.h5')
+model = load_model('/path/VM_v3.6.0.h5')
 
 Adam = tf.keras.optimizers.Adam(learning_rate=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-08, amsgrad=False)
 
