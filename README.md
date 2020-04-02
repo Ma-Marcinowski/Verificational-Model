@@ -974,7 +974,7 @@
     | Epoch | Database | DfP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
     | --- | --- | --- | --- | --- | --- | --- | --- |
     | 1 | CVL | None | 0.4316 | 0.7995 | 0.2873 | 0.8862 | None |
-    | 2 | CVL | None | 0. | 0. | 0. | 0. | None |
+    | 2 | CVL | None | 0.2279 | 0.9121 | 0.2312 | 0.9079 | None |
     | 3 | CVL | None | 0. | 0. | 0. | 0. | None |
     | 4 | CVL | None | 0. | 0. | 0. | 0. | None |
     | 5 | CVL | None | 0. | 0. | 0. | 0. | None |
