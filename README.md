@@ -949,13 +949,21 @@
      
 * #### 4.5. Model v3.6.2
   
-  * Exactly the same as v3.6.1 model, however the fully connected layers haven't been narrowed down by half. 
-    
-* #### 4.6. Model v3.6.2 training on [256x256] patches (extended train database of raw grayscaled images)
+  * Exactly the same as v3.6.1 model, however it is train by means of databases based transfer learning. 
+     
+* #### 4.6. Model v3.6.2 transfer training on [256x256] patches (extended train database of raw grayscaled images)
   
   * 4.6.1. Database:
   
-    * Vide 4.2.1. Database.
+    * Vide 4.2.1. Database;
+    
+    * CVL training dataset - 456460 image pairs;
+    
+    * CVL validation dataset - 73744 image pairs;
+    
+    * IAM training dataset - 1031786 image pairs;
+    
+    * IAM validation dataset - 94052 image pairs;
     
   * 4.6.2. Hyperparameters:
   
@@ -963,14 +971,14 @@
   
   * 4.6.3. Training:
   
-    | Epoch | DfP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
-    | --- | --- | --- | --- | --- | --- | --- |
-    | 1 | None | 0. | 0. | 0. | 0. | None |
-    | 2 | None | 0. | 0. | 0. | 0. | None |
-    | 3 | None | 0. | 0. | 0. | 0. | None |
-    | 4 | None | 0. | 0. | 0. | 0. | None |
-    | 5 | None | 0. | 0. | 0. | 0. | None |
-    | 6 | None | 0. | 0. | 0. | 0. | None |
+    | Epoch | Database | DfP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+    | 1 | CVL | None | 0. | 0. | 0. | 0. | None |
+    | 2 | CVL | None | 0. | 0. | 0. | 0. | None |
+    | 3 | CVL | None | 0. | 0. | 0. | 0. | None |
+    | 4 | ? | None | 0. | 0. | 0. | 0. | None |
+    | 5 | ? | None | 0. | 0. | 0. | 0. | None |
+    | 6 | ? | None | 0. | 0. | 0. | 0. | None |
     
      * Dataframe part - DfP - utilized for a given epoch of training and validation is indicated by its index.
     
