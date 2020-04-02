@@ -976,21 +976,23 @@
     | 1 | CVL | None | 0.4316 | 0.7995 | 0.2873 | 0.8862 | None |
     | 2 | CVL | None | 0.2279 | 0.9121 | 0.2312 | 0.9079 | None |
     | 3 | CVL | None | 0.2003 | 0.9237 | 0.2253 | 0.9091 | Manual LR reduction to 0.0001 (1e-4) |
-    | 4 | CVL | None | 0. | 0. | 0. | 0. | None |
+    | 4 | CVL | None | 0.1865 | 0.9301 | 0.2010 | 0.9207 | Manual LR reduction to 0.00001 (1e-5) |
     | 5 | CVL | None | 0. | 0. | 0. | 0. | None |
-    | 6 | CVL | None | 0. | 0. | 0. | 0. | None |
-    | 7 | CVL | None | 0. | 0. | 0. | 0. | None |
-    | 8 | CVL | None | 0. | 0. | 0. | 0. | None |
+    | 6 | ? | None | 0. | 0. | 0. | 0. | None |
+    | 7 | ? | None | 0. | 0. | 0. | 0. | None |
+    | 8 | ? | None | 0. | 0. | 0. | 0. | None |
     | 9 | ? | None | 0. | 0. | 0. | 0. | None |
     | 10 | ? | None | 0. | 0. | 0. | 0. | None |
     | 11 | ? | None | 0. | 0. | 0. | 0. | None |
     | 12 | ? | None | 0. | 0. | 0. | 0. | None |
     
+     * Database - utilized for a given epoch of training and validation is indicated by its abbreviation, unless both CVL and IAM databases are utilized combined. 
+    
      * Dataframe part - DfP - utilized for a given epoch of training and validation is indicated by its index.
      
   * 4.6.4. Errors:
   
-     * During the training epochs 2 through 3, an error in loading the saved (between epochs) optimizer states occured, hence, the optimizer was freshly initialized at the beginning of each of those epochs.
+     * During the training epochs 2 through 4, an error in loading the saved (between epochs) optimizer states occured, hence, the optimizer was freshly initialized at the beginning of each of those epochs.
     
 * #### 4.7. Model v3.6.2 evaluation on [256x256] patches (extended train database of raw grayscaled images)
 
