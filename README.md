@@ -976,9 +976,15 @@
     | 1 | CVL | None | 0. | 0. | 0. | 0. | None |
     | 2 | CVL | None | 0. | 0. | 0. | 0. | None |
     | 3 | CVL | None | 0. | 0. | 0. | 0. | None |
-    | 4 | ? | None | 0. | 0. | 0. | 0. | None |
-    | 5 | ? | None | 0. | 0. | 0. | 0. | None |
-    | 6 | ? | None | 0. | 0. | 0. | 0. | None |
+    | 4 | CVL | None | 0. | 0. | 0. | 0. | None |
+    | 5 | CVL | None | 0. | 0. | 0. | 0. | None |
+    | 6 | CVL | None | 0. | 0. | 0. | 0. | None |
+    | 7 | CVL | None | 0. | 0. | 0. | 0. | None |
+    | 8 | CVL | None | 0. | 0. | 0. | 0. | None |
+    | 9 | ? | None | 0. | 0. | 0. | 0. | None |
+    | 10 | ? | None | 0. | 0. | 0. | 0. | None |
+    | 11 | ? | None | 0. | 0. | 0. | 0. | None |
+    | 12 | ? | None | 0. | 0. | 0. | 0. | None |
     
      * Dataframe part - DfP - utilized for a given epoch of training and validation is indicated by its index.
     
