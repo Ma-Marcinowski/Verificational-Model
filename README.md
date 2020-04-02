@@ -955,7 +955,7 @@
   
   * 4.6.1. Database:
   
-    * Vide 4.2.1. Database;
+    * Vide 4.4.1. Database;
     
     * CVL training dataset - 456460 image pairs;
     
