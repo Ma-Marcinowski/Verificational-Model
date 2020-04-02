@@ -949,7 +949,7 @@
      
 * #### 4.5. Model v3.6.2
   
-  * Exactly the same as v3.6.1 model, however it is train by means of databases based transfer learning. 
+  * Exactly the same as v3.6.1 model, however it is trained by means of databases based transfer learning. 
      
 * #### 4.6. Model v3.6.2 transfer training on [256x256] patches (extended train database of raw grayscaled images)
   
