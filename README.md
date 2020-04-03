@@ -977,14 +977,14 @@
     | 2 | CVL | 1/1 | 0.2279 | 0.9121 | 0.2312 | 0.9079 | 0.001 (1e-3) |
     | 3 | CVL | 1/1 | 0.2003 | 0.9237 | 0.2253 | 0.9091 | 0.001 (1e-3) |
     | 4 | CVL | 1/1 | 0.1865 | 0.9301 | 0.2010 | 0.9207 | 0.0001 (1e-4) |
-    | 5 | **CVL** | 1/1 | 0.1846 | 0.9310 | **0.2003** | **0.9209** | 0.00001 (1e-5) |
+    | **5** | **CVL** | 1/1 | 0.1846 | 0.9310 | **0.2003** | **0.9209** | 0.00001 (1e-5) |
     | 6 | IAM | 1/1 | 0.2918 | 0.8903 | 0.2965 | 0.8806 | 0.0001 (1e-4) |
     | 7 | IAM | 1/1 | 0.2272 | 0.9094 | 0.2924 | 0.8847 | 0.0001 (1e-4)) |
-    | 8 | **IAM** | 1/1 | 0.2190 | 0.9131 | **0.2811** | **0.8894** | 0.00001 (1e-5) |
+    | **8** | **IAM** | 1/1 | 0.2190 | 0.9131 | **0.2811** | **0.8894** | 0.00001 (1e-5) |
     | 9 | Both | 1/1 | 0.2601 | 0.8949 | 0.2949 | 0.8797 | 0.0001 (1e-4) |
     | 10 | Both | 1/6 | 0.2520 | 0.8991 | 0.2970 | 0.8776 | 0.00001 (1e-5) |
-    | 11 | Both | 2/6| 0.2523 | 0.8989 | 0.2898 | 0.8819 | 0.000001 (1e-6) |
-    | 12 | Both | 3/6 | 0. | 0. | 0. | 0. | 0.0000001 (1e-7) |
+    | **11** | **Both** | 2/6| 0.2523 | 0.8989 | **0.2898** | **0.8819** | 0.000001 (1e-6) |
+    | 12 | Both | 3/6 | 0.2511 | 0.8992 | 0.2926 | 0.8809 | 0.0000001 (1e-7) |
     
      * Database - utilized for a given epoch of training and validation is indicated by its abbreviation, unless both CVL and IAM databases are utilized combined. 
     
@@ -998,7 +998,7 @@
   
   * Exactly the same as models v3.6.1 and v3.6.2, however its fully connected layers haven't been narrowed down by half (in other words, those are exactly the same as in the case of the v3.6.0 model).
   
-  * Also, the convolutional layers weights of the model v3.6.1 (???th epoch of training), are reused and retrained in the model v3.6.3.
+  * Also, the convolutional layers weights of the model v3.6.1 (11th epoch of training), are reused and retrained in the model v3.6.3.
   
 * #### 4.8. Model v3.6.3 transfer training on [256x256] patches (extended train database of raw grayscaled images)
   
