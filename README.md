@@ -983,7 +983,7 @@
     | 8 | **IAM** | 1/1 | 0.2190 | 0.9131 | **0.2811** | **0.8894** | 0.00001 (1e-5) |
     | 9 | Both | 1/1 | 0.2601 | 0.8949 | 0.2949 | 0.8797 | 0.0001 (1e-4) |
     | 10 | Both | 1/6 | 0.2520 | 0.8991 | 0.2970 | 0.8776 | 0.00001 (1e-5) |
-    | 11 | Both | 2/6| 0. | 0. | 0. | 0. | 0.000001 (1e-6) |
+    | 11 | Both | 2/6| 0.2523 | 0.8989 | 0.2898 | 0.8819 | 0.000001 (1e-6) |
     | 12 | Both | 3/6 | 0. | 0. | 0. | 0. | 0.0000001 (1e-7) |
     
      * Database - utilized for a given epoch of training and validation is indicated by its abbreviation, unless both CVL and IAM databases are utilized combined. 
@@ -992,7 +992,7 @@
      
   * 4.6.4. Errors:
   
-     * During the training epochs 2 through ???, an error in loading the saved (between epochs) optimizer states occured, hence, the optimizer was freshly initialized at the beginning of each of those epochs.
+     * During the training epochs 2 through 12, an error in loading the saved (between epochs) optimizer states occured, hence, the optimizer was freshly initialized at the beginning of each of those epochs.
     
 * #### 4.7. Model v3.6.2 evaluation on [256x256] patches (extended train database of raw grayscaled images)
 
