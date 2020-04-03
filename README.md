@@ -983,8 +983,8 @@
     | 8 | **IAM** | 1/1 | 0.2190 | 0.9131 | **0.2811** | **0.8894** | 0.00001 (1e-5) |
     | 9 | Both | 1/1 | 0.2601 | 0.8949 | 0.2949 | 0.8797 | 0.0001 (1e-4) |
     | 10 | Both | 1/6 | 0. | 0. | 0. | 0. | 0.00001 (1e-5) |
-    | 11 | Both | 2/6| 0. | 0. | 0. | 0. | ? | 0.000001 (1e-6) |
-    | 12 | Both | 3/6 | 0. | 0. | 0. | 0. | ? | 0.0000001 (1e-7) |
+    | 11 | Both | 2/6| 0. | 0. | 0. | 0. | 0.000001 (1e-6) |
+    | 12 | Both | 3/6 | 0. | 0. | 0. | 0. | 0.0000001 (1e-7) |
     
      * Database - utilized for a given epoch of training and validation is indicated by its abbreviation, unless both CVL and IAM databases are utilized combined. 
     
