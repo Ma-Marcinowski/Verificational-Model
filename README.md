@@ -971,7 +971,7 @@
   
   * 4.6.3. Training:
   
-    | Epoch | Database | DfP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate | Dropout |
+    | Epoch | Database | DfP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate | Dropout Rates |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | 1 | CVL | None | 0.4316 | 0.7995 | 0.2873 | 0.8862 | 0.001 (1e-3) | 0.5 |
     | 2 | CVL | None | 0.2279 | 0.9121 | 0.2312 | 0.9079 | 0.001 (1e-3) | 0.5 |
