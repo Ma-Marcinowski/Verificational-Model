@@ -993,10 +993,37 @@
   * 4.6.4. Errors:
   
      * During the training epochs 2 through 12, an error in loading the saved (between epochs) optimizer states occured, hence, the optimizer was freshly initialized at the beginning of each of those epochs.
+     
+ * #### 4.7. Model v3.6.3
+  
+  * Exactly the same as models v3.6.1 and v3.6.2, however its fully connected layers haven't been narrowed down by half (in other words, those are exactly the same as in the case of the v3.6.0 model).
+  
+  * Also, the convolutional layers weights of the model v3.6.1 (???th epoch of training), are reused and retrained in the model v3.6.3.
+  
+* #### 4.8. Model v3.6.3 transfer training on [256x256] patches (extended train database of raw grayscaled images)
+  
+  * 4.8.1. Database:
+  
+    * Vide 4.4.1. Database;
     
-* #### 4.7. Model v3.6.2 evaluation on [256x256] patches (extended train database of raw grayscaled images)
+  * 4.8.2. Hyperparameters:
+  
+    * Vide 3.13.3. Hyperparameters.
+  
+  * 4.8.3. Training:
+  
+    | Epoch | DfP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate | 
+    | --- | --- | --- | --- | --- | --- | --- |
+    | 1 | 1/1 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
+    | 2 | ? | 0. | 0. | 0. | 0. | ? |
+    | 3 | ? | 0. | 0. | 0. | 0. | ? |
+    | 4 | ? | 0. | 0. | 0. | 0. | ? |
+  
+     * Dataframe part - DfP - utilized for a given epoch of training and validation is indicated by its index.
+    
+* #### 4.?. Model v3.6.? evaluation on [256x256] patches (extended train database of raw grayscaled images)
 
-  * 4.7.1. Database:
+  * 4.?.1. Database:
     
     * Vide 3.14.1. Database, except for preprocessing v0.6;
   
@@ -1010,11 +1037,11 @@
     
     * Negative criterion - 200000 image pairs (an arbitrary number).
        
-  * 4.7.2. Metrics:
+  * 4.?.2. Metrics:
   
     * Vide 2.3.2. Metrics.
   
-  * 4.7.3. CVL and IAM evaluation:
+  * 4.?.3. CVL and IAM evaluation:
   
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -1026,9 +1053,9 @@
    
     * Epochs of model training - EofT - by the best validation accuracy and loss result.   
     
-* #### 4.8. Model 3.6.2 combined evaluation on [256x256] patches (extended train database of raw grayscaled images)
+* #### 4.?. Model 3.6.? combined evaluation on [256x256] patches (extended train database of raw grayscaled images)
 
-  * 4.8.1. Test dataset:
+  * 4.?.1. Test dataset:
   
       * Preprocessing v0.6;
   
@@ -1036,11 +1063,11 @@
       
       * 2970832 image pairs (2886934 negative and 83898 positive instances).
   
-  * 4.8.2. Metrics:
+  * 4.?.2. Metrics:
   
     * Vide 3.16.4. Metrics. 
   
-  * 4.8.3. CVL and IAM cumulative evaluation:
+  * 4.?.3. CVL and IAM cumulative evaluation:
   
     | EofT | Acc | TPR | TNR | FPR | FNR | PPV | NPV | UNR |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- |
