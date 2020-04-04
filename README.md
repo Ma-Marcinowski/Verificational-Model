@@ -1015,8 +1015,8 @@
     | Epoch | DfP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate | 
     | --- | --- | --- | --- | --- | --- | --- |
     | 1 | 1/1 | 0.2964 | 0.8710 | 0.2984 | 0.8790 | 0.001 (1e-3) |
-    | 2 | 1/6 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
-    | 3 | ? | 0. | 0. | 0. | 0. | ? |
+    | 2 | 1/6 | 0.2347 | 0.9054 | 0.3150 | 0.8719 | 0.001 (1e-3) |
+    | 3 | 2/6 | 0. | 0. | 0. | 0. | 0.0001 (1e-4) |
     | 4 | ? | 0. | 0. | 0. | 0. | ? |
   
      * Dataframe part - DfP - utilized for a given epoch of training and validation is indicated by its index.
