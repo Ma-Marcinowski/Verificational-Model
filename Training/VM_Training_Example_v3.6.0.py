@@ -102,8 +102,7 @@ output = Dense(1, activation='sigmoid', name='output')(i)
 
 model = Model(inputs=[left_input, right_input], outputs=[output])
 
-#model = load_model('/path/VM/VM-{epoch:02d}-{val_loss:.2f}.h5')
-#model = load_model('/path/VM/VM.h5')
+#model = load_model(filepath='/path/VM/VM.h5', compile=True)
 
 Adam = tf.keras.optimizers.Adam(learning_rate=0.001,
                                 beta_1=0.9,
@@ -150,7 +149,7 @@ history = model.fit(x=TrainSeq,
                     initial_epoch=0,
                     epochs=1)
 
-#model.save('/path/VM.h5', overwrite=True, include_optimizer=True)
+#model.save(filepath='/path/VM.h5', overwrite=True, include_optimizer=True, save_format='h5')
 
 plt.plot(history.history['acc'])
 plt.plot(history.history['val_acc'])
