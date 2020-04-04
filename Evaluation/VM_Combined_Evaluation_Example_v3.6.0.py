@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import csv
 
-from tqdm import tqdm_notebook as tqdm
+from tqdm.notebook import tqdm
 
 from tensorflow.keras.models import Model, load_model
 from tensorflow.keras.losses import binary_crossentropy
@@ -49,7 +49,7 @@ BatchSize = 128
 
 TestSeq = DataSequence(dataframe='/path/TestDataframe.csv', batch_size = BatchSize)
 
-model = load_model('/path/VM_v3.6.0.h5')
+model = load_model(filepath='/path/VM/VM.h5', compile=True)
 
 Adam = tf.keras.optimizers.Adam(learning_rate=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-08, amsgrad=False)
 
