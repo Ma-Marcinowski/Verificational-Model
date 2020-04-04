@@ -2,8 +2,8 @@ import tensorflow as tf
 import numpy as np
 import pandas as pd
 
-from tensorflow.keras.models import Model, load_model
 from tensorflow.keras.losses import binary_crossentropy
+from tensorflow.keras.models import Model, load_model, save_model
 from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, Dense
 from tensorflow.keras.layers import BatchNormalization, GaussianDropout
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
@@ -46,8 +46,7 @@ BatchSize = 16
 
 TestSeq = DataSequence(dataframe='/path/TestDataframe.csv', batch_size = BatchSize)
 
-#model = load_model('/path/VM-{epoch:02d}-{val_loss:.2f}.h5')
-#model = load_model('/path/VM.h5')
+model = load_model(filepath='/path/VM/VM.h5', compile=True)
 
 Adam = tf.keras.optimizers.Adam(learning_rate=0.001,
                                 beta_1=0.9,
