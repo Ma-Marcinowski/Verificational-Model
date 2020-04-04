@@ -2,8 +2,8 @@ import tensorflow as tf
 import numpy as np
 import pandas as pd
 
+from tensorflow.keras.models import Model, load_model
 from tensorflow.keras.losses import binary_crossentropy
-from tensorflow.keras.models import Model, load_model, save_model
 from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, Dense
 from tensorflow.keras.layers import BatchNormalization, GaussianDropout
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
