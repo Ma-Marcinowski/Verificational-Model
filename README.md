@@ -1021,6 +1021,32 @@
     | 5 | 4/6 | 0.2244 | 0.9097 | 0.2644 | 0.8926 | 0.000001 (1e-6) |
   
      * Dataframe part - DfP - utilized for a given epoch of training and validation is indicated by its index.
+     
+* #### 4.9. Model v3.6.4
+  
+  * Exactly the same as the model v3.6.1, however the receptive fields (kernels / filters) are of size 32.
+  
+* #### 4.10. Model v3.6.4 training on [256x256] patches (extended train database of raw grayscaled images)
+  
+  * 4.10.1. Database:
+  
+    * Vide 4.4.1. Database;
+    
+  * 4.10.2. Hyperparameters:
+  
+    * Vide 3.13.3. Hyperparameters.
+  
+  * 4.10.3. Training:
+  
+    | Epoch | DfP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate | 
+    | --- | --- | --- | --- | --- | --- | --- |
+    | 1 | 1/1 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
+    | 2 | ? | 0. | 0. | 0. | 0. | ? |
+    | 3 | ? | 0. | 0. | 0. | 0. | ? |
+    | 4 | ? | 0. | 0. | 0. | 0. | ? |
+    | 5 | ? | 0. | 0. | 0. | 0. | ? |
+  
+     * Dataframe part - DfP - utilized for a given epoch of training and validation is indicated by its index.
     
 * #### 4.?. Model v3.6.? evaluation on [256x256] patches (extended train database of raw grayscaled images)
 
