@@ -894,9 +894,32 @@
     | 1 | 1/1 | 0.1714 | 0.9314 | 0.3468 | 0.8475 | 0.001 (1e-3) |
     | 2 | 1/6 | 0.1002 | 0.9634 | 0.1404 | 0.9507 | 0.0001 (1e-4) |
     | 3 | 2/6 | 0.0977 | 0.9644 | 0.1320 | 0.9546 | 0.00001 (1e-5) |
-    | 4 | 3/6 | 0. | 0. | 0. | 0. | 0.000001 (1e-6) |
-    | 5 | ? | 0. | 0. | 0. | 0. | ? |
-    | 6 | ? | 0. | 0. | 0. | 0. | ? |
+    | 4 | 3/6 | 0.0955 | 0.9653 | 0.1372 | 0.9524 | 0.000001 (1e-6) |
+
+    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
+
+* #### 3.20. Model v2.6.2 training on [256x256] patches (extended train database of raw grayscaled images)
+
+  * 3.20.1 Model:
+  
+    * Exactly the same same model v2.6.1, but for stride and dilation of 2 on the first convolutional layers.
+
+  * 3.20.1. Database:
+    
+    * Vide 3.19.1 Database.
+    
+  * 3.20.2. Hyperparameters:
+  
+    * Vide 3.7.3. Hyperparameters.
+  
+  * 3.20.3 Training (learning rate reductions by a factor of 0.01):
+  
+    | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
+    | --- | --- | --- | --- | --- | --- | --- |
+    | 1 | 1/1 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
+    | 2 | ? | 0. | 0. | 0. | 0. | ? |
+    | 3 | ? | 0. | 0. | 0. | 0. | ? |
+    | 4 | ? | 0. | 0. | 0. | 0. | ? |
 
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
 
