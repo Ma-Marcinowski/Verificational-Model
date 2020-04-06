@@ -869,7 +869,7 @@
    
   * 3.18.3. Implementation:
      
-    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), ???ms/step (93016 steps per epoch) in the case of model v3.6.1 training on [256x256] patches. 
+    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 50ms/step (93016 steps per epoch) in the case of model v3.6.1 training on [256x256] patches. 
     
 * #### 3.19. Model v2.6.1 training on [256x256] patches (extended train database of raw grayscaled images)
 
@@ -892,8 +892,8 @@
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
     | --- | --- | --- | --- | --- | --- | --- |
     | 1 | 1/1 | 0.1714 | 0.9314 | 0.3468 | 0.8475 | 0.001 (1e-3) |
-    | 2 | 1/6 | 0. | 0. | 0. | 0. | 0.0001 (1e-4) |
-    | 3 | ? | 0. | 0. | 0. | 0. | ? |
+    | 2 | 1/6 | 0.1002 | 0.9634 | 0.1404 | 0.9507 | 0.0001 (1e-4) |
+    | 3 | 2/6 | 0. | 0. | 0. | 0. | 0.00001 (1e-5) |
     | 4 | ? | 0. | 0. | 0. | 0. | ? |
     | 5 | ? | 0. | 0. | 0. | 0. | ? |
     | 6 | ? | 0. | 0. | 0. | 0. | ? |
