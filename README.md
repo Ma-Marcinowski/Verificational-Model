@@ -856,6 +856,49 @@
     | 5 | 0.9899 | 0.9936 | 0.9898 | 0.0102 | 0.0064 | **0.7380** | 0.9998 | 0.0361 |
    
     * Epochs of model training - EofT - by the best validation accuracy and loss result.
+    
+* #### 3.18. Model v2.6.1
+  
+  * 3.18.1. Model:
+  
+    * Exactly the same as v2.5.1, except for much smaller number of filters and lower stride. 
+    
+  * 3.18.2. Language, libraries and framework / API:
+        
+    * Vide 2.1.2, but for the TensorFlow v2.1.0.
+   
+  * 3.18.3. Implementation:
+     
+    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), ???ms/step (93016 steps per epoch) in the case of model v3.6.1 training on [256x256] patches. 
+    
+* #### 3.19. Model v2.6.1 training on [256x256] patches (extended train database of raw grayscaled images)
+
+  * 3.19.1. Database:
+    
+    * Preprocessing v0.6;
+      
+    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - 1488246 image pairs (equal number of positive and negative instances) divided into six equal training dataframes;
+        
+    * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 167796 image pairs (equal number of positive and negative instances) divided into six equal validation dataframes.
+    
+     * Because the model is much faster than the v2.5.1, no dataframe needs to be utilized in parts, unless for model tuning.
+    
+  * 3.19.2. Hyperparameters:
+  
+    * Vide 3.7.3. Hyperparameters.
+  
+  * 3.19.3 Training (learning rate reductions by a factor of 0.01):
+  
+    | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
+    | --- | --- | --- | --- | --- | --- | --- |
+    | 1 | 1/1 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
+    | 2 | ? | 0. | 0. | 0. | 0. | ? |
+    | 3 | ? | 0. | 0. | 0. | 0. | ? |
+    | 4 | ? | 0. | 0. | 0. | 0. | ? |
+    | 5 | ? | 0. | 0. | 0. | 0. | ? |
+    | 6 | ? | 0. | 0. | 0. | 0. | ? |
+
+    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
 
 ### 4. Verificational Model v3
 
@@ -893,26 +936,26 @@
   
   * 4.2.3. Training:
   
-    | Epoch | DfP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate Reductions |
+    | Epoch | DfP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
     | --- | --- | --- | --- | --- | --- | --- |
-    | 1 | 1/6 | 0.5199 | 0.7432 | 0.4188 | 0.8187 | None |
-    | 2 | 2/6 | 0.3785 | 0.8264 | 0.3478 | 0.8607 | None |
-    | 3 | 3/6 | 0.3400 | 0.8493 | 0.3032 | 0.8844 | Manual LR reduction to 0.0001 (1e-4) |
-    | 4 | 4/6 | 0.3058 | 0.8691 | 0.2809 | 0.8911 | Manual LR reduction to 0.00001 (1e-5) |
-    | 5 | 5/6 | 0.2971 | 0.8736 | 0.2756 | 0.8949 | None |
-    | 6 | 6/6 | 0.2950 | 0.8751 | 0.2715 | 0.8952 | None |
-    | 7 | 1/6 | 0.2962 | 0.8752 | 0.2740 | 0.8934 | Manual LR reduction to 0.000001 (1e-6) |
-    | **8** | 2/6 | 0.2952 | 0.8752 | **0.2642** | **0.9013** | None |
-    | 9 | 3/6 | 0.2929 | 0.8757 | 0.2728 | 0.8967 | None |
-    | 10 | 4/6 | 0.2932 | 0.8759 | 0.2714 | 0.8956 | Manual LR reduction to 0.0000001 (1e-7) |
-    | 11 | 5/6 | 0.2939 | 0.8758 | 0.2727 | 0.8945 | Manual LR reduction to 0.00000001 (1e-8) |
-    | 12 | 6/6 | 0.2929 | 0.8764 | 0.2701 | 0.8969 | None |
+    | 1 | 1/6 | 0.5199 | 0.7432 | 0.4188 | 0.8187 | 0.001 (1e-3) |
+    | 2 | 2/6 | 0.3785 | 0.8264 | 0.3478 | 0.8607 | 0.001 (1e-3) |
+    | 3 | 3/6 | 0.3400 | 0.8493 | 0.3032 | 0.8844 | 0.001 (1e-3) |
+    | 4 | 4/6 | 0.3058 | 0.8691 | 0.2809 | 0.8911 | 0.0001 (1e-4) |
+    | 5 | 5/6 | 0.2971 | 0.8736 | 0.2756 | 0.8949 | 0.00001 (1e-5) |
+    | 6 | 6/6 | 0.2950 | 0.8751 | 0.2715 | 0.8952 | 0.00001 (1e-5) |
+    | 7 | 1/6 | 0.2962 | 0.8752 | 0.2740 | 0.8934 | 0.00001 (1e-5) |
+    | **8** | 2/6 | 0.2952 | 0.8752 | **0.2642** | **0.9013** | 0.000001 (1e-6) |
+    | 9 | 3/6 | 0.2929 | 0.8757 | 0.2728 | 0.8967 | 0.000001 (1e-6) |
+    | 10 | 4/6 | 0.2932 | 0.8759 | 0.2714 | 0.8956 | 0.000001 (1e-6) |
+    | 11 | 5/6 | 0.2939 | 0.8758 | 0.2727 | 0.8945 | 0.0000001 (1e-7) |
+    | 12 | 6/6 | 0.2929 | 0.8764 | 0.2701 | 0.8969 | 0.00000001 (1e-8) |
     
     * Dataframe part - DfP - utilized for a given epoch of training and validation is indicated by its index.
     
 * #### 4.3. Model v3.6.1
   
-  * 4.3.1. Model architecture is the same as model v2 architecture, however:
+  * 4.3.1. Model:
   
     * Vide model v3.6.0, however, only 32 kernels of size 16, stride 1 and dilatation 2, are utilized;
 
@@ -920,7 +963,7 @@
     
   * 4.3.2. Language, libraries and framework / API:
         
-    * Vide 2.1.2, but for the TensorFlow v2.0.
+    * Vide 2.1.2, but for the TensorFlow v2.1.0.
    
   * 4.3.3. Implementation:
      
