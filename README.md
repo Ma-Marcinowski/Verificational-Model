@@ -1042,10 +1042,8 @@
     | --- | --- | --- | --- | --- | --- | --- |
     | 1 | 1/1 | 0.3490 | 0.8462 | 0.3441 | 0.8581 | 0.001 (1e-3) |
     | 2 | 1/1 | 0.2761 | 0.8861 | 0.3125 | 0.8718 | 0.0001 (1e-4) |
-    | 3 | 1/2 | 0. | 0. | 0. | 0. | 0.00001 (1e-5) |
-    | 4 | ? | 0. | 0. | 0. | 0. | ? |
-    | 5 | ? | 0. | 0. | 0. | 0. | ? |
-  
+    | 3 | 1/2 | 0.2723 | 0.8888 | 0.3132 | 0.8714 | 0.00001 (1e-5) |
+ 
      * Dataframe part - DfP - utilized for a given epoch of training and validation is indicated by its index.
     
 * #### 4.?. Model v3.6.? evaluation on [256x256] patches (extended train database of raw grayscaled images)
