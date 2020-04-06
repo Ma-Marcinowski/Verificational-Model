@@ -902,7 +902,7 @@
 
   * 3.20.1 Model:
   
-    * Exactly the same same model v2.6.1, but for a dilation of 4 and 2, added to the first and the second convolutional layers, after which no pooling layers are applied.
+    * Exactly the same as model v2.6.1, but for a dilation of 4 and 2, added to the first and the second convolutional layers, after which no pooling layers are applied.
 
   * 3.20.1. Database:
     
