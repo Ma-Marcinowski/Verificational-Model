@@ -861,7 +861,7 @@
   
   * 3.18.1. Model:
   
-    * Exactly the same as v2.5.1, except for much smaller number of filters and lower stride. 
+    * Exactly the same as v2.5.1, except for much smaller numbers of filters (16, 32 and 64) and minimal stride (1). 
     
   * 3.18.2. Language, libraries and framework / API:
         
