@@ -902,7 +902,7 @@
 
   * 3.20.1 Model:
   
-    * Exactly the same same model v2.6.1, but for stride and dilation of 2 on the first convolutional layers.
+    * Exactly the same same model v2.6.1, but for a dilation of 4 and 2, added to the first and the second convolutional layers.
 
   * 3.20.1. Database:
     
