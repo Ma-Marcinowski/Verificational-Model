@@ -1,6 +1,6 @@
-import glob
 import os
 import csv
+import glob
 import random
 import sklearn
 import numpy as np
@@ -39,7 +39,7 @@ def Dataframe(img_path, df_path, df_img_path):
 
                     continue
 
-        print('Done ' + mode + ' positives: ', pos, ' instances.')
+        print('Done CVL criterion positives: ', pos, ' instances.')
 
         neg = 0
 
