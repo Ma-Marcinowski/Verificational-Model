@@ -1,6 +1,6 @@
-import glob
 import os
 import csv
+import glob
 import random
 import sklearn
 import numpy as np
