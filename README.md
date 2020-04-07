@@ -887,7 +887,7 @@
   
     * Vide 3.7.3. Hyperparameters.
   
-  * 3.19.3 Training (learning rate reductions by a factor of 0.01):
+  * 3.19.3 Trainin:
   
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
     | --- | --- | --- | --- | --- | --- | --- |
@@ -914,7 +914,7 @@
   
     * Vide 3.7.3. Hyperparameters.
   
-  * 3.20.3 Training (learning rate reductions by a factor of 0.01):
+  * 3.20.3 Training:
   
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate | Dropout Rates |
     | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -923,6 +923,36 @@
     | 3 | 2/6 | 0.1159 | 0.9564 | 0.1556 | 0.9436 | 0.00001 (1e-5) | 0.5 |
     | 4 | 3/6 | 0.1140 | 0.9577 | 0.1594 | 0.9418 | 0.000001 (1e-6) | 0.5 |
     | 5 | 4/6 | 0. | 0. | 0. | 0. | 0.000001 (1e-5) | 0.1 |
+    | 6 | 5/6 | 0. | 0. | 0. | 0. | 0.0000001 (1e-6) | 0.1 |
+    | 7 | 6/6 | 0. | 0. | 0. | 0. | 0.00000001 (1e-7) | 0.1 |
+
+    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
+    
+* #### 3.21. Model v2.6.3 training on [256x256] patches (extended train database of raw grayscaled images)
+
+  * 3.21.1 Model:
+  
+    * Exactly the same as model v2.6.1, but for a stride of 4 and 2, added to the first and the second convolutional layers.
+    
+    * Implemented via Google Colaboratory - (2020) - ???ms/step (93016 steps per epoch) in the case of model v2.6.2 training on [256x256] patches.
+
+  * 3.21.1. Database:
+    
+    * Vide 3.19.1 Database.
+    
+  * 3.21.2. Hyperparameters:
+  
+    * Vide 3.7.3. Hyperparameters.
+  
+  * 3.21.3 Training (learning rate reductions by a factor of 0.01):
+  
+    | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
+    | --- | --- | --- | --- | --- | --- | --- |
+    | 1 | 1/1 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
+    | 2 | ? | 0. | 0. | 0. | 0. | ? |
+    | 3 | ? | 0. | 0. | 0. | 0. | ? |
+    | 4 | ? | 0. | 0. | 0. | 0. | ? |
+    | 5 | ? | 0. | 0. | 0. | 0. | ) |
 
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
 
@@ -1115,9 +1145,9 @@
  
      * Dataframe part - DfP - utilized for a given epoch of training and validation is indicated by its index.
     
-* #### 4.?. Model v3.6.? evaluation on [256x256] patches (extended train database of raw grayscaled images)
+* #### ?.?. Model v?.6.? evaluation on [256x256] patches (extended train database of raw grayscaled images)
 
-  * 4.?.1. Database:
+  * ?.?.1. Database:
     
     * Vide 3.14.1. Database, except for preprocessing v0.6;
   
@@ -1131,11 +1161,11 @@
     
     * Negative criterion - 200000 image pairs (an arbitrary number).
        
-  * 4.?.2. Metrics:
+  * ?.?.2. Metrics:
   
     * Vide 2.3.2. Metrics.
   
-  * 4.?.3. CVL and IAM evaluation:
+  * ?.?.3. CVL and IAM evaluation:
   
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -1147,9 +1177,9 @@
    
     * Epochs of model training - EofT - by the best validation accuracy and loss result.   
     
-* #### 4.?. Model 3.6.? combined evaluation on [256x256] patches (extended train database of raw grayscaled images)
+* #### ?.?. Model ?.6.? combined evaluation on [256x256] patches (extended train database of raw grayscaled images)
 
-  * 4.?.1. Test dataset:
+  * ?.?.1. Test dataset:
   
       * Preprocessing v0.6;
   
@@ -1157,11 +1187,11 @@
       
       * 2970832 image pairs (2886934 negative and 83898 positive instances).
   
-  * 4.?.2. Metrics:
+  * ?.?.2. Metrics:
   
     * Vide 3.16.4. Metrics. 
   
-  * 4.?.3. CVL and IAM cumulative evaluation:
+  * ?.?.3. CVL and IAM cumulative evaluation:
   
     | EofT | Acc | TPR | TNR | FPR | FNR | PPV | NPV | UNR |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- |
