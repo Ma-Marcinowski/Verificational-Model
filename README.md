@@ -904,7 +904,7 @@
   
     * Exactly the same as model v2.6.1, but for a dilation of 4 and 2, added to the first and the second convolutional layers, after which no pooling layers are therefore applied.
     
-    * Implemented via Google Colaboratory - (2020) - ???ms/step (93016 steps per epoch) in the case of model v2.6.2 training on [256x256] patches.
+    * Implemented via Google Colaboratory - (2020) - 160ms/step (93016 steps per epoch) in the case of model v2.6.2 training on [256x256] patches.
 
   * 3.20.1. Database:
     
@@ -919,7 +919,7 @@
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
     | --- | --- | --- | --- | --- | --- | --- |
     | 1 | 1/1 | 0.1855 | 0.9248 | 0.2030 | 0.9213 | 0.001 (1e-3) |
-    | 2 | 1/6 | 0. | 0. | 0. | 0. | 0.0001 (1e-4) |
+    | 2 | 1/6 | 0.1192 | 0.9550 | 0.1580 | 0.9423 | 0.0001 (1e-4) |
     | 3 | 2/6 | 0. | 0. | 0. | 0. | 0.00001 (1e-5) |
     | 4 | 3/6 | 0. | 0. | 0. | 0. | 0.000001 (1e-6) |
 
