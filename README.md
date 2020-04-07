@@ -1097,7 +1097,7 @@
   
   * Exactly the same as models v3.6.1 and v3.6.2, however its fully connected layers haven't been narrowed down by half (in other words, those are exactly the same as in the case of the v3.6.0 model).
   
-  * Also, the convolutional layers weights of the model v3.6.1 (11th epoch of training), are reused and retrained in the model v3.6.3.
+  * Also, the convolutional layers weights of the model v3.6.2 (11th epoch of training), are reused and retrained in the model v3.6.3.
   
 * #### 4.8. Model v3.6.3 transfer training on [256x256] patches (extended train database of raw grayscaled images)
   
