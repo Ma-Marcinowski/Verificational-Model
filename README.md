@@ -869,7 +869,7 @@
    
   * 3.18.3. Implementation:
      
-    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 50ms/step (93016 steps per epoch) in the case of model v3.6.1 training on [256x256] patches. 
+    * Google Colaboratory - (2020) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 50ms/step (93016 steps per epoch) in the case of model v2.6.1 training on [256x256] patches. 
     
 * #### 3.19. Model v2.6.1 training on [256x256] patches (extended train database of raw grayscaled images)
 
@@ -903,6 +903,8 @@
   * 3.20.1 Model:
   
     * Exactly the same as model v2.6.1, but for a dilation of 4 and 2, added to the first and the second convolutional layers, after which no pooling layers are applied.
+    
+    * Implemented via the Google Colaboratory - (2020) - ???ms/step (93016 steps per epoch) in the case of model v2.6.2 training on [256x256] patches.
 
   * 3.20.1. Database:
     
@@ -990,7 +992,7 @@
    
   * 4.3.3. Implementation:
      
-    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 90ms/step (93016 steps per epoch) in the case of model v3.6.1 training on [256x256] patches.   
+    * Google Colaboratory - (2020) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 90ms/step (93016 steps per epoch) in the case of model v3.6.1 training on [256x256] patches.   
     
 * #### 4.4. Model v3.6.1 training on [256x256] patches (extended train database of raw grayscaled images)
   
