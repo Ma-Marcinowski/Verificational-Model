@@ -916,12 +916,13 @@
   
   * 3.20.3 Training (learning rate reductions by a factor of 0.01):
   
-    | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
-    | --- | --- | --- | --- | --- | --- | --- |
-    | 1 | 1/1 | 0.1855 | 0.9248 | 0.2030 | 0.9213 | 0.001 (1e-3) |
-    | 2 | 1/6 | 0.1192 | 0.9550 | 0.1580 | 0.9423 | 0.0001 (1e-4) |
-    | 3 | 2/6 | 0.1159 | 0.9564 | 0.1556 | 0.9436 | 0.00001 (1e-5) |
-    | 4 | 3/6 | 0. | 0. | 0. | 0. | 0.000001 (1e-6) |
+    | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate | Dropout Rates |
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+    | 1 | 1/1 | 0.1855 | 0.9248 | 0.2030 | 0.9213 | 0.001 (1e-3) | 0.5 |
+    | 2 | 1/6 | 0.1192 | 0.9550 | 0.1580 | 0.9423 | 0.0001 (1e-4) | 0.5 |
+    | 3 | 2/6 | 0.1159 | 0.9564 | 0.1556 | 0.9436 | 0.00001 (1e-5) | 0.5 |
+    | 4 | 3/6 | 0. | 0. | 0. | 0. | 0.000001 (1e-6) | 0.5 |
+    | 5 | 4/6 | 0. | 0. | 0. | 0. | 0.000001 (1e-5) | 0.1 |
 
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
 
