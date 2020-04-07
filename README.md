@@ -918,10 +918,10 @@
   
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
     | --- | --- | --- | --- | --- | --- | --- |
-    | 1 | 1/1 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
-    | 2 | ? | 0. | 0. | 0. | 0. | ? |
-    | 3 | ? | 0. | 0. | 0. | 0. | ? |
-    | 4 | ? | 0. | 0. | 0. | 0. | ? |
+    | 1 | 1/1 | 0.1855 | 0.9248 | 0.2030 | 0.9213 | 0.001 (1e-3) |
+    | 2 | 1/6 | 0. | 0. | 0. | 0. | 0.0001 (1e-4) |
+    | 3 | 2/6 | 0. | 0. | 0. | 0. | 0.00001 (1e-5) |
+    | 4 | 3/6 | 0. | 0. | 0. | 0. | 0.000001 (1e-6) |
 
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
 
