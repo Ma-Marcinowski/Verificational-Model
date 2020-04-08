@@ -60,4 +60,4 @@ model = Model(inputs=[left_input, right_input], outputs=[output])
 model.summary(line_length=None,
               positions=None,
               print_fn=None)
-tf.keras.utils.plot_model(model, to_file='/plot/save/path/VM_v3.6.1.png', show_shapes=True, show_layer_names=True, rankdir='TB')
+tf.keras.utils.plot_model(model, to_file='/plot/save/path/VM_v3.6.11.png', show_shapes=True, show_layer_names=True, rankdir='TB')
