@@ -94,7 +94,6 @@ def ConvLayerFeatures(model_load_path, img_out_path,
 
         #blurred = cv2.GaussianBlur(normalized,(5, 5),0)
         #retv, ots = cv2.threshold(blurred, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
-        #ind = str(filter_index + 1).zfill(nulls)
         #cv2.imwrite(img_out_path + conv_layer_name + '_features_' + ind + '.png', ots)
 
 named_conv_layer_filter_features_visualised = ConvLayerFeatures(model_load_path='/saved/model/directory/model.h5',
