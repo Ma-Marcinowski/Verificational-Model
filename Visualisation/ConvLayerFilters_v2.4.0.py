@@ -32,6 +32,7 @@ def ConvLayerFilters(model_load_path, img_out_path, layer_name):
         retv, ots = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
 
         filter_index += 1
+        
         ind = str(filter_index).zfill(nulls)
 
         cv2.imwrite(img_out_path + layer_name + '_filter_' + ind + '.png', ots)
