@@ -17,7 +17,7 @@ def InitializeStillImage(img_path):
 
     return still_tensor4
 
-def InitializeImage():
+def InitializeRandomImage():
 
     random_tensor2 = tf.keras.backend.random_uniform([256, 256], minval=0.0, maxval=1.0, dtype='float32')
     random_tensor3 = tf.keras.backend.expand_dims(random_tensor2, axis=-1)
@@ -88,7 +88,7 @@ def ClassFeaturesVisualisation(model_load_path, img_out_path, images_dir,
     image_paths = [images_dir + n for n in image_names]
     images = zip(image_paths, image_names)
 
-    initial_image = InitializeImage()
+    initial_image = InitializeRandomImage()
 
     for img_path, img_name in tqdm(images, total=len(image_paths), desc='Output ' + class_of_features + ' features mapping:', leave=True):
 
