@@ -944,12 +944,42 @@
   
     * Vide 3.7.3. Hyperparameters.
   
-  * 3.21.3 Training (learning rate reductions by a factor of 0.01):
+  * 3.21.3 Training:
   
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
     | --- | --- | --- | --- | --- | --- | --- |
     | 1 | 1/1 | 0.1914 | 0.9215 | 0.2047 | 0.9235 | 0.001 (1e-3) |
     | 2 | 1/6 | 0.1138 | 0.9576 | 0.1748 | 0.9362 | 0.0001 (1e-4) |
+    | 3 | 2/6 | 0.1119 | 0.9585 | 0.1638 | 0.9376 | 0.000001 (1e-5) |
+    | 4 | 3/6 | 0. | 0. | 0. | 0. | 0.0000001 (1e-6) |
+    | 5 | 4/6 | 0. | 0. | 0. | 0. | 0.00000001 (1e-7) |
+    | 6 | 5/6 | 0. | 0. | 0. | 0. | 0.000000001 (1e-8) |
+    | 7 | 6/6 | 0. | 0. | 0. | 0. | 0.0000000001 (1e-9) |
+
+    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
+    
+* #### 3.22. Model v2.6.4 training on [256x256] patches (extended train database of raw grayscaled images)
+
+  * 3.22.1 Model:
+  
+    * Exactly the same as model v2.6.1, but no max-pooling layers are applied.
+    
+    * Implemented via Google Colaboratory - (2020) - ???ms/step (93016 steps per epoch) in the case of model v2.6.2 training on [256x256] patches.
+
+  * 3.22.1. Database:
+    
+    * Vide 3.19.1 Database.
+    
+  * 3.22.2. Hyperparameters:
+  
+    * Vide 3.7.3. Hyperparameters.
+  
+  * 3.22.3 Training:
+  
+    | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
+    | --- | --- | --- | --- | --- | --- | --- |
+    | 1 | 1/1 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
+    | 2 | 1/6 | 0. | 0. | 0. | 0. | 0.0001 (1e-4) |
     | 3 | 2/6 | 0. | 0. | 0. | 0. | 0.000001 (1e-5) |
     | 4 | 3/6 | 0. | 0. | 0. | 0. | 0.0000001 (1e-6) |
     | 5 | 4/6 | 0. | 0. | 0. | 0. | 0.00000001 (1e-7) |
