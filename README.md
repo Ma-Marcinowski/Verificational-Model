@@ -991,7 +991,7 @@
   
     * Exactly the same as model v2.6.1, but for distances passed to the first fully connected layer (hence, the fourth FC layer is the output one).
     
-    * Implemented via Google Colaboratory - (2020) - ???ms/step (93016 steps per epoch) in the case of model v2.6.2 training on [256x256] patches.
+    * Implemented via Google Colaboratory - (2020) - 50ms/step (93016 steps per epoch) in the case of model v2.6.2 training on [256x256] patches.
 
   * 3.23.1. Database:
     
@@ -1005,14 +1005,15 @@
   
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
     | --- | --- | --- | --- | --- | --- | --- |
-    | 1 | 1/1 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
-    | 2 | 1/6 | 0. | 0. | 0. | 0. | ? |
-    | 3 | 2/6 | 0. | 0. | 0. | 0. | ? |
-    | 4 | 3/6 | 0. | 0. | 0. | 0. | ? |
-    | 5 | 4/6 | 0. | 0. | 0. | 0. | ? |
-    | 6 | 5/6 | 0. | 0. | 0. | 0. | ? |
-    | 7 | 6/6 | 0. | 0. | 0. | 0. | ? |
-
+    | 1 | 1/1 | 0.3157 | 0.8644 | 0.3356 | 0.8480 | 0.001 (1e-3) |
+    | 2 | 1/1 | 0. | 0. | 0. | 0. | 0.0001 (1e-4) |
+    | 3 | 1/6 | 0. | 0. | 0. | 0. | ? |
+    | 4 | 2/6 | 0. | 0. | 0. | 0. | ? |
+    | 5 | 3/6 | 0. | 0. | 0. | 0. | ? |
+    | 6 | 4/6 | 0. | 0. | 0. | 0. | ? |
+    | 7 | 5/6 | 0. | 0. | 0. | 0. | ? |
+    | 8 | 6/6 | 0. | 0. | 0. | 0. | ? |
+    
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
     
 * #### 3.24. Model v2.6.6 training on [256x256] patches (extended train database of raw grayscaled images)
