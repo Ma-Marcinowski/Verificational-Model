@@ -961,7 +961,7 @@
   
     * Exactly the same as model v2.6.1, but no max-pooling layers are applied.
     
-    * Implemented via Google Colaboratory - (2020) - ???ms/step (15503 steps per epoch) in the case of model v2.6.2 training on [256x256] patches.
+    * Implemented via Google Colaboratory - (2020) - 140ms/step (15503 steps per epoch) in the case of model v2.6.2 training on [256x256] patches.
 
   * 3.22.1. Database:
     
