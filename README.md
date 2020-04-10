@@ -981,12 +981,7 @@
     | 4 | 4/6 | 0.1901 | 0.9264 | 0.2092 | 0.9204 | 0.0001 (1e-4) |
     | 5 | 5/6 | 0.1837 | 0.9290 | 0.2068 | 0.9191 | 0.0001 (1e-4) |
     | 6 | 6/6 | 0.1793 | 0.9312 | 0.2107 | 0.9182 | 0.0001 (1e-4) |
-    | 7 | 1/6 | 0. | 0. | 0. | 0. | 0.00001 (1e-5) |
-    | 8 | 2/6 | 0. | 0. | 0. | 0. | 0.000001 (1e-6) |
-    | 9 | 3/6 | 0. | 0. | 0. | 0. | 0.0000001 (1e-7) |
-    | 10 | 4/6 | 0. | 0. | 0. | 0. | 0.00000001 (1e-8) |
-    | 11 | 5/6 | 0. | 0. | 0. | 0. | 0.000000001 (1e-9) |
-    | 12 | 6/6 | 0. | 0. | 0. | 0. | 0.0000000001 (1e-10) |
+    | 7 | 1/6 | 0.1786 | 0.9315 | 0.2117 | 0.9190 | 0.00001 (1e-5) |
 
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
     
@@ -994,7 +989,7 @@
 
   * 3.23.1 Model:
   
-    * Exactly the same as model v2.6.?, but for distances passed to the first fully connected layer (hence, the fourth FC layer is the output one).
+    * Exactly the same as model v2.6.1, but for distances passed to the first fully connected layer (hence, the fourth FC layer is the output one).
     
     * Implemented via Google Colaboratory - (2020) - ???ms/step (15503 steps per epoch) in the case of model v2.6.2 training on [256x256] patches.
 
