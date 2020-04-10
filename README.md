@@ -934,7 +934,7 @@
   
     * Exactly the same as model v2.6.1, but for a stride of 4 and 2, added to the first and the second convolutional layers.
     
-    * Implemented via Google Colaboratory - (2020) - ???ms/step (93016 steps per epoch) in the case of model v2.6.2 training on [256x256] patches.
+    * Implemented via Google Colaboratory - (2020) - 40ms/step (93016 steps per epoch) in the case of model v2.6.2 training on [256x256] patches.
 
   * 3.21.1. Database:
     
@@ -948,8 +948,8 @@
   
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
     | --- | --- | --- | --- | --- | --- | --- |
-    | 1 | 1/1 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
-    | 2 | ? | 0. | 0. | 0. | 0. | ? |
+    | 1 | 1/1 | 0.1914 | 0.9215 | 0.2047 | 0.9235 | 0.001 (1e-3) |
+    | 2 | 1/6 | 0. | 0. | 0. | 0. | 0.0001 (1e-4) |
     | 3 | ? | 0. | 0. | 0. | 0. | ? |
     | 4 | ? | 0. | 0. | 0. | 0. | ? |
     | 5 | ? | 0. | 0. | 0. | 0. | ? |
