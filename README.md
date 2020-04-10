@@ -978,7 +978,7 @@
     | 1 | 1/6 | 0.3474 | 0.8407 | 0.3976 | 0.8236 | 0.001 (1e-3) |
     | 2 | 2/6 | 0.2505 | 0.8965 | 0.4280 | 0.7904 | 0.001 (1e-3) |
     | 3 | 3/6 | 0.2193 | 0.9119 | 0.5572 | 0.7015 | 0.001 (1e-3) |
-    | 4 | 4/6 | 0.1901 | 0.9264 | 0.2092 | 0.9204 | 0.0001 (1e-4) |
+    | **4** | 4/6 | 0.1901 | 0.9264 | **0.2092** | **0.9204** | 0.0001 (1e-4) |
     | 5 | 5/6 | 0.1837 | 0.9290 | 0.2068 | 0.9191 | 0.0001 (1e-4) |
     | 6 | 6/6 | 0.1793 | 0.9312 | 0.2107 | 0.9182 | 0.0001 (1e-4) |
     | 7 | 1/6 | 0.1786 | 0.9315 | 0.2117 | 0.9190 | 0.00001 (1e-5) |
@@ -991,7 +991,7 @@
   
     * Exactly the same as model v2.6.1, but for distances passed to the first fully connected layer (hence, the fourth FC layer is the output one).
     
-    * Implemented via Google Colaboratory - (2020) - ???ms/step (15503 steps per epoch) in the case of model v2.6.2 training on [256x256] patches.
+    * Implemented via Google Colaboratory - (2020) - ???ms/step (93016 steps per epoch) in the case of model v2.6.2 training on [256x256] patches.
 
   * 3.23.1. Database:
     
@@ -1021,7 +1021,7 @@
   
     * Exactly the same as model v2.6.?, but convolutional layers are doubled.
     
-    * Implemented via Google Colaboratory - (2020) - ???ms/step (15503 steps per epoch) in the case of model v2.6.2 training on [256x256] patches.
+    * Implemented via Google Colaboratory - (2020) - ???ms/step (93016 steps per epoch) in the case of model v2.6.2 training on [256x256] patches.
 
   * 3.24.1. Database:
     
