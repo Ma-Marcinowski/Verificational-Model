@@ -1029,9 +1029,11 @@
   
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
     | --- | --- | --- | --- | --- | --- | --- |
-    | 1 | 1/1 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
-    | 2 | 1/1 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
-    | 3 | 1/6 | 0. | 0. | 0. | 0. | 0.0001 (1e-4) |
+    | 1 | 1/1 | 0.2127 | 0.9123 | 0.2327 | 0.9105 | 0.001 (1e-3) |
+    | 2 | 1/6 | 0. | 0. | 0. | 0. | 0.0001 (1e-4) |
+    | 3 | 2/6 | 0. | 0. | 0. | 0. | 0.00001 (1e-5) |
+    | 4 | 3/6 | 0. | 0. | 0. | 0. | 0.000001 (1e-6) |
+
     
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
     
@@ -1039,7 +1041,7 @@
 
   * 3.24.1 Model:
   
-    * Exactly the same as model v2.6.?, but convolutional layers are doubled.
+    * Exactly the same as model v2.6.1, but convolutional layers are doubled.
     
     * Implemented via Google Colaboratory - (2020) - ???ms/step (93016 steps per epoch) in the case of model v2.6.2 training on [256x256] patches.
 
