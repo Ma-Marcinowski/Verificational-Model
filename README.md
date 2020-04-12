@@ -1011,7 +1011,7 @@
     | --- | --- | --- | --- | --- | --- | --- |
     | 1 | 1/1 | 0.3157 | 0.8644 | 0.3356 | 0.8480 | 0.001 (1e-3) |
     | 2 | 1/1 | 0.2464 | 0.9020 | 0.2442 | 0.9032 | 0.001 (1e-3) |
-    | 3 | 1/6 | 0.2207 | 0.9142 | 0.2391 | 0.9042 | 0.001 (1e-4) |
+    | 3 | 1/6 | 0.2207 | 0.9142 | 0.2391 | 0.9042 | 0.0001 (1e-4) |
     
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
     
@@ -1019,9 +1019,9 @@
   
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
     | --- | --- | --- | --- | --- | --- | --- |
-    | 1 | 1/1 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
-    | 2 | ? | 0. | 0. | 0. | 0. | ? |
-    | 3 | ? | 0. | 0. | 0. | 0. | ? |
+    | 1 | 1/1 | 0.3284 | 0.8568 | 0.3004 | 0.8761 | 0.001 (1e-3) |
+    | 2 | 1/1 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
+    | 3 | 1/6 | 0. | 0. | 0. | 0. | 0.0001 (1e-4) |
     
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
     
@@ -1030,8 +1030,8 @@
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
     | --- | --- | --- | --- | --- | --- | --- |
     | 1 | 1/1 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
-    | 2 | ? | 0. | 0. | 0. | 0. | ? |
-    | 3 | ? | 0. | 0. | 0. | 0. | ? |
+    | 2 | 1/1 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
+    | 3 | 1/6 | 0. | 0. | 0. | 0. | 0.0001 (1e-4) |
     
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
     
