@@ -991,9 +991,9 @@
   
     * Model v2.6.5a is exactly the same as model v2.6.1, but for distances passed to the first fully connected layer (hence, the fourth FC layer is the output one), i.e. distances are concatenated with the GAP layers outputs.
     
-    * Model v2.6.5b is exactly the same as model v2.6.1, but for distances passed to the fourth fully connected layer (which is therefore the output one), i.e. distances are concatenated with the third FCL output, before the last dropout layer.
+    * Model v2.6.5b is exactly the same as model v2.6.1, but for distances passed to the fourth fully connected layer (which is therefore the output one), i.e. distances are concatenated with the third FCL outputs, before the last dropout layer.
     
-    * Model v2.6.5c is exactly the same as model v2.6.1, but for distances passed to the fourth fully connected layer (which is therefore the output one), i.e. distances are concatenated with the third FCL output, after the last dropout layer.
+    * Model v2.6.5c is exactly the same as model v2.6.1, but for distances passed to the fourth fully connected layer (which is therefore the output one), i.e. distances are concatenated with the third FCL outputs, after the last dropout layer.
     
     * Implemented via Google Colaboratory - (2020) - 50ms/step (93016 steps per epoch) in the case of model v2.6.2 training on [256x256] patches.
 
@@ -1031,8 +1031,8 @@
     | --- | --- | --- | --- | --- | --- | --- |
     | 1 | 1/1 | 0.2127 | 0.9123 | 0.2327 | 0.9105 | 0.001 (1e-3) |
     | 2 | 1/6 | 0.1298 | 0.9529 | 0.1612 | 0.9415 | 0.0001 (1e-4) |
-    | 3 | 2/6 | 0.1264 | 0.9545 | 0.1536 | 0.9430 | 0.00001 (1e-5) |
-    | 4 | 3/6 | 0. | 0. | 0. | 0. | 0.000001 (1e-6) |
+    | **3** | 2/6 | 0.1264 | 0.9545 | **0.1536** | **0.9430** | 0.00001 (1e-5) |
+    | 4 | 3/6 | 0.1236 | 0.9560 | 0.1672 | 0.9386 | 0.000001 (1e-6) |
 
     
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
