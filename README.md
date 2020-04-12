@@ -989,7 +989,9 @@
 
   * 3.23.1 Model:
   
-    * Exactly the same as model v2.6.1, but for distances passed to the first fully connected layer (hence, the fourth FC layer is the output one).
+    * Model v2.6.5a is exactly the same as model v2.6.1, but for distances passed to the first fully connected layer (hence, the fourth FC layer is the output one).
+    
+    * Model v2.6.5b is exactly the same as model v2.6.1, but for distances passed to the third fully connected layer (hence, the fourth FC layer is the output one).
     
     * Implemented via Google Colaboratory - (2020) - 50ms/step (93016 steps per epoch) in the case of model v2.6.2 training on [256x256] patches.
 
@@ -1001,18 +1003,23 @@
   
     * Vide 3.7.3. Hyperparameters.
   
-  * 3.23.3 Training:
+  * 3.23.3 Model v2.6.5a training:
   
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
     | --- | --- | --- | --- | --- | --- | --- |
     | 1 | 1/1 | 0.3157 | 0.8644 | 0.3356 | 0.8480 | 0.001 (1e-3) |
     | 2 | 1/1 | 0.2464 | 0.9020 | 0.2442 | 0.9032 | 0.001 (1e-3) |
-    | 3 | 1/6 | 0. | 0. | 0. | 0. | 0.001 (1e-4) |
-    | 4 | 2/6 | 0. | 0. | 0. | 0. | ? |
-    | 5 | 3/6 | 0. | 0. | 0. | 0. | ? |
-    | 6 | 4/6 | 0. | 0. | 0. | 0. | ? |
-    | 7 | 5/6 | 0. | 0. | 0. | 0. | ? |
-    | 8 | 6/6 | 0. | 0. | 0. | 0. | ? |
+    | 3 | 1/6 | 0.2207 | 0.9142 | 0.2391 | 0.9042 | 0.001 (1e-4) |
+    
+    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
+    
+  * 3.23.4 Model v2.6.5b training:
+  
+    | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
+    | --- | --- | --- | --- | --- | --- | --- |
+    | 1 | 1/1 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
+    | 2 | ? | 0. | 0. | 0. | 0. | ? |
+    | 3 | ? | 0. | 0. | 0. | 0. | ? |
     
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
     
