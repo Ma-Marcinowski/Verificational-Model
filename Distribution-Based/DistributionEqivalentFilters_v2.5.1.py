@@ -164,7 +164,7 @@ inequivalent = CompareDistributions(cvl_distro_df='/path/to/Average_Features_Dis
                                     filters_to_remove_df='/path/to/Filters_to_Remove_Dataframe.csv')
 
 modified_model = = RemoveFilters(model_load_path='/saved/model/directory/model.h5', 
-                              modified_model_save_path='/modified/model/save/directory/modified_model.h5', 
-                              left_layer_name='3rdConvLeft',
-                              right_layer_name='3rdConvRight',
-                              filters_to_remove_df='/path/to/Filters_to_Remove_Dataframe.csv')
+                                 modified_model_save_path='/modified/model/save/directory/modified_model.h5', 
+                                 left_layer_name='3rdConvLeft',
+                                 right_layer_name='3rdConvRight',
+                                 filters_to_remove_df='/path/to/Filters_to_Remove_Dataframe.csv')
