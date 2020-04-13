@@ -617,17 +617,17 @@
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result.  
     
-  * 3.10.4. Equalization of databases through removal of spurious filters:
+  * 3.10.4. Equalization of databases through removal of spurious filters (vide `Verificational-Model/Distribution-Based/DistributionEqivalentFilters_v2.5.1.py`):
   
      * The average features distributions are calculated separately for IAM and CVL testsets;
      
      * Those distributions are then compared to determine those features, which were highly active in the case of one, but not the other testset (in a sense of the average feature values differences equal to or greater than a threshold of 0.25).
      
-     * Such features (i.e. convolutional filters) are then removed from the model (i.e ??? out of 1024 filters were zeroed).
+     * Such features (i.e. convolutional filters) are then removed from the model (i.e 143 out of 1024 filters were zeroed).
      
      * And the model is tested again (vide 3.10.5. Equalized CVL and IAM evaluation).
     
-  * 3.10.5. Equalized CVL and IAM evaluation:
+  * 3.10.5. CVL and IAM evaluation equalized through removal of spurious filters(vide `Verificational-Model/Distribution-Based/DistributionEqivalentFilters_v2.5.1.py`):
 
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -767,13 +767,13 @@
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result.   
     
-  * 3.14.4. Equalization of databases through removal of spurious filters:
+  * 3.14.4. Equalization of databases through removal of spurious filters (vide `Verificational-Model/Distribution-Based/DistributionEqivalentFilters_v2.5.1.py`):
   
      * Vide 3.10.4 Equalization of databases through removal of spurious filters.
      
      * 89 out of 1024 filters were removed.
     
-  * 3.15.5. Equalized CVL and IAM evaluation:
+  * 3.15.5. CVL and IAM evaluation equalized through removal of spurious filters (vide `Verificational-Model/Distribution-Based/DistributionEqivalentFilters_v2.5.1.py`):
 
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
