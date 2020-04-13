@@ -751,13 +751,13 @@
   
      * The average features distributions are calculated separately for IAM and CVL testsets;
      
-     * Those distributions are then compared to determine those features, which were highly active in the case of one, but not the other testset (in a sense of the average feature values differences equal to or greater than a threshold of 0.25).
+     * Those distributions are then compared to determine those features, which were highly active in the case of one, but not the other testset (in a sense of the average feature values differences equal to or greater than a threshold of 0.25);
      
-     * Such features (i.e. convolutional filters) are then removed from the model (i.e 89 out of 1024 filters were zeroed).
+     * Such features (i.e. convolutional filters) are then removed from the model (i.e 89 out of 1024 filters were zeroed);
      
-     * And the model is tested again (vide 3.10.5. Equalized CVL and IAM evaluation).
+     * And the model is tested again (vide 3.14.5. Equalized CVL and IAM evaluation).
     
-  * 3.15.5. CVL and IAM evaluation equalized through removal of spurious filters:
+  * 3.14.5. CVL and IAM evaluation equalized through removal of spurious filters:
 
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -803,7 +803,38 @@
     | Negative Raw | 5 | 0.0226 | 0.9925 | None | 0.9925 | 0.0075 | None | None | None | None |
     | Negative Denoised | 5 | 0.0789 | 0.9735 | None | 0.9735 | 0.0265 | None | None | None | None |
        
-    * Epochs of model training - EofT - by the best validation accuracy and loss result.   
+    * Epochs of model training - EofT - by the best validation accuracy and loss result. 
+    
+  * 3.15.4. Equalization of results through features distribution equal subsets:
+  
+     * Vide ``
+  
+     * Distributions are calculated separately for every test extract and patch;
+     
+     * Those distributions are then compared to determine pairs of extracts and patches, which are equivalent as to their features distribution and authorship;
+     
+     * Such equivalent patch and extract test subsets are created, in the case of which every patch has at least one equivalent – in terms of features distribution and authorship – extract;
+     
+     * Equivalence is defined as a cosine distance of feature distributions and the threshold of distance is set to a maximum of 0.1;
+     
+     * 2376 pairs of extracts and patches were equivalent (159 extracts and 1035 patches);
+     
+     * And the model is tested again (vide 3.15.5. Equalized CVL and IAM evaluation).
+    
+  * 3.15.5. Patches and Extracts evaluation equalized through features distribution equal subsets:
+
+    | Size | Criterion | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | Patches | **None** | 0.0710 | **0.9770** | 0.9961 | 0.9578 | 0.0422 | 0.0039 | 0.9594 | 0.9959 | 0.9965 |
+    | Extracts | **None** | 0. | **0.** | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Patches | IAM | 0.0706 | 0.9766 | 0.9959 | 0.9573 | 0.0427 | 0.0041 | 0.9589 | 0.9957 | 0.9963 |
+    | Extracts | IAM | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Patches | CVL | 0.0850 | 0.9668 | 0.9971 | 0.9365 | 0.0635 | 0.0029 | 0.9401 | 0.9969 | 0.9976 |
+    | Extracts | CVL | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Patches | Hard | 0.0504 | 0.9764 | 1.0000 | 0.9529 | 0.0471 | 0.0000 | 0.9550 | 1.0000 | 0.9999 |
+    | Extracts | Hard | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Patches | **Negative** | 0.0292 | **0.9888** | None | 0.9888 | 0.0112 | None | None | None | None |
+    | Extracts | **Negative** | 0. | **0.** | None | 0. | 0. | None | None | None | None |
     
 * #### 3.16. Model v2.5.1 evaluation on [256x256] denoised and binarized patches (extended train database of raw grayscaled images)
 
