@@ -617,7 +617,9 @@
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result.  
     
-  * 3.10.4. Equalization of databases through removal of spurious filters (vide `Verificational-Model/Distribution-Based/DistributionEqivalentFilters_v2.5.1.py`):
+  * 3.10.4. Equalization of databases through removal of spurious filters:
+  
+     * Vide `Verificational-Model/Distribution-Based/DistributionEqivalentFilters_v2.5.1.py`
   
      * The average features distributions are calculated separately for IAM and CVL testsets;
      
@@ -627,7 +629,7 @@
      
      * And the model is tested again (vide 3.10.5. Equalized CVL and IAM evaluation).
     
-  * 3.10.5. CVL and IAM evaluation equalized through removal of spurious filters(vide `Verificational-Model/Distribution-Based/DistributionEqivalentFilters_v2.5.1.py`):
+  * 3.10.5. CVL and IAM evaluation equalized through removal of spurious filters:
 
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -635,7 +637,7 @@
     | IAM | 5 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
     | CVL | 5 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
     | Hard | 5 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
-    | **Negative** | 5 | 0. | **0.** | None | 0. | 0. | None | None | None | None |
+    | **Negative** | 5 | 0.0999 | **0.9605** | None | 0.9605 | 0.0395 | None | None | None | None |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result.   
 
@@ -767,13 +769,15 @@
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result.   
     
-  * 3.14.4. Equalization of databases through removal of spurious filters (vide `Verificational-Model/Distribution-Based/DistributionEqivalentFilters_v2.5.1.py`):
+  * 3.14.4. Equalization of databases through removal of spurious filters:
+  
+     * Vide `Verificational-Model/Distribution-Based/DistributionEqivalentFilters_v2.5.1.py`
   
      * Vide 3.10.4 Equalization of databases through removal of spurious filters.
      
      * 89 out of 1024 filters were removed.
     
-  * 3.15.5. CVL and IAM evaluation equalized through removal of spurious filters (vide `Verificational-Model/Distribution-Based/DistributionEqivalentFilters_v2.5.1.py`):
+  * 3.15.5. CVL and IAM evaluation equalized through removal of spurious filters:
 
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
