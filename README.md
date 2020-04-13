@@ -766,6 +766,7 @@
     | CVL | 5 | 0.2109 | 0.9248 | 0.9794 | 0.8703 | 0.1297 | 0.0206 | 0.8830 | 0.9769 | 0.9841 |
     | Hard | 5 | 0.1956 | 0.9292 | 0.9873 | 0.8712 | 0.1288 | 0.0127 | 0.8846 | 0.9856 | 0.9876 |
     | **Negative Raw** | 5 | 0.1002 | **0.9588** | None | 0.9588 | 0.0412 | None | None | None | None |
+    | **Negative Denoised** | 5 | 0.1828 | **0.9428** | None | 0.9428 | 0.0572 | None | None | None | None |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result.   
     
