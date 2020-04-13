@@ -142,14 +142,14 @@ def RemoveFilters(model_load_path, modified_model_save_path, left_layer_name, ri
     print('Modified model saved.')
 
 cvl = AverageFeaturesDistribution(model_load_path='/saved/model/directory/model.h5', 
-                                  img_in_dir='/test/or/train/images/directory/', 
+                                  img_in_dir='/test/images/directory/', 
                                   df_out_path='/path/to/Average_Features_Distribution_CVL.csv',
                                   input_layer_name='model_input', 
                                   output_layer_name='model_features_output',
                                   dataset='cvl')
 
 iam = AverageFeaturesDistribution(model_load_path='/saved/model/directory/model.h5', 
-                                  img_in_dir='/test/or/train/images/directory/', 
+                                  img_in_dir='/test/images/directory/', 
                                   df_out_path='/path/to/Average_Features_Distribution_IAM.csv', 
                                   input_layer_name='model_input', 
                                   output_layer_name='model_features_output',
