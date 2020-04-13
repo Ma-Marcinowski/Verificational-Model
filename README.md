@@ -834,7 +834,7 @@
     | Patches | Hard | 0.0504 | 0.9764 | **1.0000** | 0.9529 | 0.0471 | 0.0000 | 0.9550 | 1.0000 | 0.9999 |
     | Extracts | Hard | 0.2150 | 0.8824 | **1.0000** | 0.7647 | 0.2353 | 0.0000 | 0.8095 | 1.0000 | 1.0000 |
     | Patches | **Negative** | 0.0292 | **0.9888** | None | 0.9888 | 0.0112 | None | None | None | None |
-    | Extracts | **Negative** | 0. | **0.** | None | 0. | 0. | None | None | None | None |
+    | Extracts | **Negative** | 0.0419 | **0.9859** | None | 0.9859 | 0.0141 | None | None | None | None |
     
 * #### 3.16. Model v2.5.1 evaluation on [256x256] denoised and binarized patches (extended train database of raw grayscaled images)
 
