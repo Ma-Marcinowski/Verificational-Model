@@ -45,7 +45,7 @@ def FilterActivationDeconvolution(model_load_path, img_in_path, img_out_path, la
 
     for filter_index in tqdm(range(num_of_filters), desc='Features deconvolution:', leave=True):
 
-        filter_matrix = conv_layer_weights[0][:, :, 0, filter_index]
+        filter_matrix = conv_layer_weights[0][:, :, 0, filter_index] #at the 0th channel
         filter_tensor = tf.keras.backend.expand_dims(tf.keras.backend.expand_dims(filter_matrix, axis=-1), axis=-1)
 
         deconvolved = Deconvolution(filter_tensor=filter_tensor,
