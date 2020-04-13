@@ -807,7 +807,7 @@
     
   * 3.15.4. Equalization of results through features distribution equal subsets:
   
-     * Vide ``
+     * Vide `Verificational-Model/Distribution-Based/DistributionEqivalentImages_v2.5.1.py`
   
      * Distributions are calculated separately for every test extract and patch;
      
