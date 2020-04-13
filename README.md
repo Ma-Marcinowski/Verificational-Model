@@ -805,7 +805,7 @@
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result. 
     
-  * 3.15.4. Equalization of results through features distribution equal subsets:
+  * 3.15.4. Equalization of results through features distribution equivalent subsets:
   
      * Vide `Verificational-Model/Distribution-Based/DistributionEqivalentImages_v2.5.1.py`
   
@@ -821,7 +821,7 @@
      
      * And the model is tested again (vide 3.15.5. Equalized CVL and IAM evaluation).
     
-  * 3.15.5. Patches and Extracts evaluation equalized through features distribution equal subsets:
+  * 3.15.5. Patches and Extracts evaluation equalized through features distribution equivalent subsets:
 
     | Size | Criterion | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
