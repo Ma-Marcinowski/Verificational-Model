@@ -616,6 +616,28 @@
     | **Average** | 5 | **0.2142** | **0.9286** | 0.9329 | 0.9243 | 0.0757 | 0.0670 | 0.9256 | 0.9323 | 0.9761 |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result.  
+    
+  * 3.10.4. Equalization of databases through removal of spurious filters:
+  
+     * The average features distributions are calculated separately for IAM and CVL testsets;
+     
+     * Those distributions are then compared to determine those features, which were highly active in the case of one, but not the other testset (in a sense of the average feature values differences equal to or greater than a threshold of 0.25).
+     
+     * Such features (i.e. convolutional filters) are then removed from the model (i.e ??? out of 1024 filters were zeroed).
+     
+     * And the model is tested again (vide 3.10.5. Equalized CVL and IAM evaluation).
+    
+  * 3.10.5. Equalized CVL and IAM evaluation:
+
+    | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | **None** | 5 | 0. | **0.** | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | IAM | 5 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | CVL | 5 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Hard | 5 | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | **Negative** | 5 | 0. | **0.** | None | 0. | 0. | None | None | None | None |
+       
+    * Epochs of model training - EofT - by the best validation accuracy and loss result.   
 
 * #### 3.11. Model v2.5.0 training on [256x256] patches (extended train database of grayscaled and noised images)
 
@@ -708,7 +730,6 @@
     | **5** | 1/2 | 0.0384 | 0.9875 | **0.1319** | **0.9587** | Manual LR reduction to 0.0000000000001 (1e-13) |
     | 6 | 2/2 | 0.0493 | 0.9828 | 0.1351 | 0.9581 | None |
 
-    
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
  
 * #### 3.14. Model v2.5.1 evaluation on [256x256] patches (extended train database of raw grayscaled images)
@@ -743,6 +764,24 @@
     | Hard | 5 | 0.1284 | 0.9557 | 0.9654 | 0.9459 | 0.0541 | 0.0346 | 0.9469 | 0.9647 | 0.9892 |
     | **Negative Raw** | 5 | 0.0264 | **0.9897** | None | 0.9897 | 0.0103 | None | None | None | None |
     | **Negative Denoised** | 5 | 0.0818 | **0.9736** | None | 0.9736 | 0.0264 | None | None | None | None |
+       
+    * Epochs of model training - EofT - by the best validation accuracy and loss result.   
+    
+  * 3.14.4. Equalization of databases through removal of spurious filters:
+  
+     * Vide 3.10.4 Equalization of databases through removal of spurious filters.
+     
+     * 89 out of 1024 filters were removed.
+    
+  * 3.15.5. Equalized CVL and IAM evaluation:
+
+    | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | **None** | 5 | 0.1640 | **0.9436** | 0.9831 | 0.9041 | 0.0959 | 0.0169 | 0.9111 | 0.9817 | 0.9884 |
+    | IAM | 5 | 0.1400 | 0.9530 | 0.9861 | 0.9198 | 0.0802 | 0.0139 | 0.9248 | 0.9851 | 0.9907 |
+    | CVL | 5 | 0.2109 | 0.9248 | 0.9794 | 0.8703 | 0.1297 | 0.0206 | 0.8830 | 0.9769 | 0.9841 |
+    | Hard | 5 | 0.1956 | 0.9292 | 0.9873 | 0.8712 | 0.1288 | 0.0127 | 0.8846 | 0.9856 | 0.9876 |
+    | **Negative Raw** | 5 | 0.1002 | **0.9588** | None | 0.9588 | 0.0412 | None | None | None | None |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result.   
     
