@@ -21,7 +21,7 @@ def ConvLayerFilters(model_load_path, img_out_path, layer_name):
 
     while filter_index < num_of_filters:
 
-        filter_matrix = conv_layer_weights[0][:, :, 0, filter_index]
+        filter_matrix = conv_layer_weights[0][:, :, 0, filter_index] #at the 0th channel
 
         normalized = cv2.normalize(filter_matrix, None, alpha=0, beta=255, norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_32F).astype(np.uint8)
 
