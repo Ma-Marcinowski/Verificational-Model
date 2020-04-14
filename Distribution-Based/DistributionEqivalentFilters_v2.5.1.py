@@ -57,8 +57,9 @@ def AverageFeaturesDistribution(model_load_path, img_in_dir, df_out_path, input_
     df = pd.DataFrame(avr_of_vectors, index=None, columns=None)
 
     df.to_csv(df_out_path, index=False, header=None)
-    
-def VisualisedFeaturesDistribution(iam_distro_df, cvl_distro_df, img_out_path):
+
+'''
+def VisualisedFeaturesDistribution_One(iam_distro_df, cvl_distro_df, img_out_path):
 
     cvl_df = pd.read_csv(cvl_distro_df)
     iam_df = pd.read_csv(iam_distro_df)
@@ -81,6 +82,36 @@ def VisualisedFeaturesDistribution(iam_distro_df, cvl_distro_df, img_out_path):
     plt.savefig(fname=img_out_path, dpi=150)
     plt.show()
     
+def VisualisedFeaturesDistribution_Two(iam_distro_df, cvl_distro_df, img_out_path):
+
+    cvl_df = pd.read_csv(cvl_distro_df)
+    iam_df = pd.read_csv(iam_distro_df)
+
+    cvl_avr_distro = cvl_df.values.tolist()
+    iam_avr_distro = iam_df.values.tolist()
+
+    cvl_feature_indexes = list(range(len(cvl_avr_distro)))
+    iam_feature_indexes = list(range(len(iam_avr_distro)))
+
+    listed = [cvl_avr_distro, cvl_feature_indexes, iam_avr_distro, iam_feature_indexes]
+    listed_sorted = sort_together(iterables=listed, key_list=(0, ), reverse=False)
+
+    normalized_cvl = normalize(listed_sorted[0], norm='l1', axis=0)
+    normalized_iam = normalize(listed_sorted[2], norm='l1', axis=0)
+
+    plt.rcParams['figure.figsize']=(200, 5)
+    plt.plot(cvl_feature_indexes, normalized_cvl, '^m--', )
+    plt.plot(iam_feature_indexes, normalized_iam, 'ob:', )
+    plt.xticks(np.arange(0, 1024, 1), labels=listed_sorted[1], rotation=90)
+    plt.grid(b=True, axis='x')
+    plt.title('Database Features Distributions')
+    plt.ylabel('Average Feature Value')
+    plt.xlabel('Feature Index')
+    plt.legend(['CVL', 'IAM'], loc='upper left')
+    plt.savefig(fname=img_out_path, dpi=150)
+    plt.show()
+'''
+
 def CompareDistributions(iam_distro_df, cvl_distro_df, filters_to_remove_df):
 
     cvl_df = pd.read_csv(cvl_distro_df)
@@ -154,10 +185,16 @@ iam = AverageFeaturesDistribution(model_load_path='/saved/model/directory/model.
                                   input_layer_name='model_input', 
                                   output_layer_name='model_features_output',
                                   dataset='iam')
-                                              
-image = VisualisedFeaturesDistribution(iam_distro_df='/path/to/Average_Features_Distribution_CVL.csv', 
-                                       cvl_distro_df='/path/to/Average_Features_Distribution_IAM.csv', 
-                                       img_out_path='/path/to/Visualised_Features_Distribution_Image.png')
+
+'''
+image_1 = VisualisedFeaturesDistribution_One(iam_distro_df='/path/to/Average_Features_Distribution_CVL.csv', 
+                                             cvl_distro_df='/path/to/Average_Features_Distribution_IAM.csv', 
+                                             img_out_path='/path/to/Visualised_Features_Distribution_Image.png')
+
+image_2 = VisualisedFeaturesDistribution_Two(iam_distro_df='/path/to/Average_Features_Distribution_CVL.csv', 
+                                             cvl_distro_df='/path/to/Average_Features_Distribution_IAM.csv', 
+                                             img_out_path='/path/to/Visualised_Features_Distribution_Image.png')
+'''
 
 inequivalent = CompareDistributions(cvl_distro_df='/path/to/Average_Features_Distribution_CVL.csv',,
                                     iam_distro_df='/path/to/Average_Features_Distribution_IAM.csv', 
