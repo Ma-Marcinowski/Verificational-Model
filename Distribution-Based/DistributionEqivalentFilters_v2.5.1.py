@@ -6,7 +6,9 @@ import cv2
 import csv
 import os
 
-from tqdm.notebook import tqdm
+from tqdm import tqdm_notebook as tqdm
+from more_itertools import sort_together
+from sklearn.preprocessing import normalize
 
 from tensorflow.keras.models import Model, load_model
 
