@@ -8,6 +8,8 @@ import os
 
 from tqdm import tqdm_notebook as tqdm
 
+from sklearn.preprocessing import normalize
+
 from tensorflow.keras.models import Model, load_model
 
 tf.enable_eager_execution()
@@ -72,9 +74,15 @@ def EquivalentFeaturesDistributions(extracts_distro_df, patches_distro_df, equiv
                     extract_features = extract[1:]
                     patch_features = patch[1:]
 
-                    cosine_distance = scipy.spatial.distance.cosine(extract_features, patch_features)
+                    reshaped_extract = np.array(extract_features).reshape(1024, 1)
+                    reshaped_patch = np.array(patch_features).reshape(1024, 1)
 
-                    if cosine_distance <= 0.1:
+                    normalized_extract = normalize(reshaped_extract, norm='l1', axis=0)
+                    normalized_patch = normalize(reshaped_patch, norm='l1', axis=0)
+
+                    cosine_distance = scipy.spatial.distance.cosine(normalized_extract, normalized_patch)
+
+                    if cosine_distance <= 0.05:
 
                         writer.writerow([extract[0], patch[0], str(cosine_distance)])
 
@@ -105,4 +113,3 @@ patches = AggregateFeaturesDistributions(model_load_path='/saved/model/directory
 equivalent = EquivalentFeaturesDistributions(extracts_distro_df='/path/to/Extracts_Features_Distributions.csv',
                                              patches_distro_df='/path/to/Patches_Features_Distributions.csv',
                                              equiv_distro_df='/path/to/Distributions_Equivalent_Patches_and_Extracts_Dataframe.csv')
- 
