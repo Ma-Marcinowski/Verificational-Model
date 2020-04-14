@@ -805,23 +805,44 @@
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result. 
     
-  * 3.15.4. Equalization of results through features distribution equivalent subsets:
+  * 3.15.4. Equalization of results through features distribution equivalent subsets (threshold 0.05):
   
      * Vide `Verificational-Model/Distribution-Based/DistributionEqivalentImages_v2.5.1.py`
   
      * Distributions are calculated separately for every test extract and patch;
      
-     * Those distributions are then compared to determine pairs of extracts and patches, which are equivalent as to their features distribution and authorship;
+     * Those distributions are then normalized (L1-Norm) and compared (Cosine Distance) to determine pairs of extracts and patches, which are equivalent as to their features distribution and authorship;
      
      * Such equivalent patch and extract test subsets are created, in the case of which every patch has at least one equivalent – in terms of features distribution and authorship – extract;
      
-     * Equivalence is defined as a cosine distance of feature distributions and the threshold of distance is set to a maximum of 0.1;
+     * Equivalence is defined as a cosine distance of feature distributions and the threshold of distance is set to a maximum of 0.05;
      
-     * 2376 pairs of extracts and patches were equivalent (159 extracts and 1035 patches);
+     * 70 pairs of extracts and patches were equivalent (24 extracts and 60 patches);
      
      * And the model is tested again (vide 3.15.5. Equalized CVL and IAM evaluation).
-    
+     
   * 3.15.5. Patches and Extracts evaluation equalized through features distribution equivalent subsets:
+
+    | Size | Criterion | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | Patches | None | 0.0811 | 0.9716 | 0.9784 | 0.9648 | 0.0352 | 0.0216 | 0.9653 | 0.9781 | 0.9952 |
+    | Extracts | None | 0.1174 | 0.9651 | 1.0000 | 0.9302 | 0.0698 | 0.0000 | 0.9348 | 1.0000 | 0.9884 |
+    | Patches | IAM | 0.0516 | 0.9846 | 1.0000 | 0.9691 | 0.0309 | 0.0000 | 0.9700 | 1.0000 | 0.9961 |
+    | Extracts | IAM | 0.0302 | 0.9857 | 1.0000 | 0.9714 | 0.0286 | 0.0000 | 0.9722 | 1.0000 | 1.0000 |
+    | Patches | CVL | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Extracts | CVL | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Patches | Negative | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Extracts | Negative | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+     
+  * 3.15.6. Equalization of results through features distribution equivalent subsets (threshold 0.1):
+  
+     * Vide 3.15.4. Equalization of results through features distribution equivalent subsets (threshold 0.05).
+     
+     * However, the threshold of maximal distance is set to 0.1;
+     
+     * 2376 pairs of equivalent extracts and patches (159 extracts and 1035 patches);
+    
+  * 3.15.7. Patches and Extracts evaluation equalized through features distribution equivalent subsets:
 
     | Size | Criterion | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
