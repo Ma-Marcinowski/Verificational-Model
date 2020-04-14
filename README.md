@@ -832,7 +832,7 @@
     | Patches | CVL | 0.0098 | 0.9924 | 1.0000 | 0.9848 | 0.0152 | 0.0000 | 0.9851 | 1.0000 | 1.0000 |
     | Extracts | CVL | 0.0324 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 |
     | Patches | Negative | 0.0054 | 0.9965 | None | 0.9965 | 0.0035 | None | None | None | None |
-    | Extracts | Negative | 0. | 0. | 0. | 0. | 0. | None | None | None | None |
+    | Extracts | Negative | 0.0436 | 0.9715 | None | 0.9715 | 0.0285 | None | None | None | None |
      
   * 3.15.6. Equalization of results through features distribution equivalent subsets (threshold 0.1):
   
