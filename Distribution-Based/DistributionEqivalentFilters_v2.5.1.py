@@ -105,7 +105,7 @@ def VisualisedFeaturesDistribution_Two(iam_distro_df, cvl_distro_df, img_out_pat
     plt.plot(cvl_feature_indexes, normalized_cvl, '^m--', )
     plt.plot(iam_feature_indexes, normalized_iam, 'ob:', )
     plt.xticks(np.arange(0, 1024, 1), labels=listed_sorted[1], rotation=90)
-    plt.grid(b=True, axis='x')
+    plt.grid(b=True, axis='both')
     plt.title('Database Features Distributions')
     plt.ylabel('Average Feature Value')
     plt.xlabel('Feature Index')
