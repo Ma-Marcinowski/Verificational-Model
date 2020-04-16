@@ -37,7 +37,7 @@ def ConvLayerActivMaps(model_load_path, img_in_path, img_out_path, input_layer_n
         act_matrix = act_tensor[0, :, :]
 
         normalized = cv2.normalize(act_matrix, None, alpha=0, beta=255, norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_32F)
-        resized = cv2.resize(normalized,(1024,1024))
+        resized = cv2.resize(normalized, raw_image.shape)
 
         bgr_act_map = cv2.merge((raw_image, resized, empty_image))
         nnn_act_map = cv2.merge((empty_image, resized, empty_image))
