@@ -28,7 +28,7 @@ def ConvLayerActivMaps(model_load_path, img_in_path, img_out_path, input_layer_n
 
     nulls = len(str(num_of_filters))
 
-    empty_img = np.zeros(raw_image.shape, dtype=np.float32)
+    empty_image = np.zeros(raw_image.shape, dtype=np.float32)
 
     for filter_index in tqdm(range(num_of_filters), desc=conv_layer_name + ' activation maps visualisation:', leave=True):
 
@@ -39,8 +39,8 @@ def ConvLayerActivMaps(model_load_path, img_in_path, img_out_path, input_layer_n
         normalized = cv2.normalize(act_matrix, None, alpha=0, beta=255, norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_32F)
         resized = cv2.resize(normalized,(1024,1024))
 
-        bgr_act_map = cv2.merge((raw_image, resized, empty_img))
-        nnn_act_map = cv2.merge((empty_img, normalized, empty_img))
+        bgr_act_map = cv2.merge((raw_image, resized, empty_image))
+        nnn_act_map = cv2.merge((empty_image, resized, empty_image))
 
         bordered_bgr = cv2.copyMakeBorder(bgr_act_map, top=4, bottom=4, left=2, right=4, borderType=cv2.BORDER_CONSTANT, value=255)
         bordered_nnn = cv2.copyMakeBorder(nnn_act_map, top=4, bottom=4, left=4, right=2, borderType=cv2.BORDER_CONSTANT, value=255)
