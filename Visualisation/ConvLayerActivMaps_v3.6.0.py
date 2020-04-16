@@ -30,7 +30,7 @@ def ConvLayerActivMaps(model_load_path, img_in_path, img_out_path, input_layer_n
 
     empty_image = np.zeros(raw_image.shape, dtype=np.float32)
 
-    for filter_index in tqdm(range(num_of_filters), desc=conv_layer_name + ' activation maps visualisation:', leave=True):
+    for filter_index in tqdm(range(num_of_filters), desc=conv_layer_name + ' activ. maps visualisation:', leave=True):
 
         act_tensor = conv_layer_output[:, :, :, filter_index].numpy()
 
@@ -39,12 +39,13 @@ def ConvLayerActivMaps(model_load_path, img_in_path, img_out_path, input_layer_n
         normalized = cv2.normalize(act_matrix, None, alpha=0, beta=255, norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_32F)
         resized = cv2.resize(normalized, raw_image.shape)
 
-        bgr_act_map = cv2.merge((raw_image, resized, empty_image))
-        nnn_act_map = cv2.merge((empty_image, resized, empty_image))
+        bgr_act_map = cv2.merge((empty_image, resized, empty_image))
+        bgr_raw_img = cv2.merge((raw_image, resized, empty_image))
 
-        bordered_bgr = cv2.copyMakeBorder(bgr_act_map, top=4, bottom=4, left=2, right=4, borderType=cv2.BORDER_CONSTANT, value=255)
-        bordered_nnn = cv2.copyMakeBorder(nnn_act_map, top=4, bottom=4, left=4, right=2, borderType=cv2.BORDER_CONSTANT, value=255)
-        both = np.concatenate((bordered_nnn, bordered_bgr), axis=1)
+        bordered_bgr = cv2.copyMakeBorder(bgr_act_map, top=4, bottom=4, left=4, right=2, borderType=cv2.BORDER_CONSTANT, value=255)
+        bordered_raw = cv2.copyMakeBorder(bgr_raw_img, top=4, bottom=4, left=2, right=4, borderType=cv2.BORDER_CONSTANT, value=255)
+        
+        both = np.concatenate((bordered_bgr, bordered_raw), axis=1)
 
         ind = str(filter_index + 1).zfill(nulls)
 
