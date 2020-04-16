@@ -40,7 +40,7 @@ def ConvLayerActivMaps(model_load_path, img_in_path, img_out_path, input_layer_n
         resized = cv2.resize(normalized,(1024,1024))
 
         bgr_act_map = cv2.merge((raw_image, resized, empty_img))
-        nnn_act_map = cv2.merge((empty_image, normalized, empty_image))
+        nnn_act_map = cv2.merge((empty_img, normalized, empty_img))
 
         bordered_bgr = cv2.copyMakeBorder(bgr_act_map, top=4, bottom=4, left=2, right=4, borderType=cv2.BORDER_CONSTANT, value=255)
         bordered_nnn = cv2.copyMakeBorder(nnn_act_map, top=4, bottom=4, left=4, right=2, borderType=cv2.BORDER_CONSTANT, value=255)
