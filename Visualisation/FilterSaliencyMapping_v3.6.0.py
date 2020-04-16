@@ -52,7 +52,6 @@ def BackpropSaliencyMapping(model_load_path, img_out_path, images_dir, input_lay
     for img_path, img_name in tqdm(images, total=len(image_paths), desc=output_layer_name + ' features mapping:', leave=True):
 
         raw_image, initial_image = InitializeImage(img_path=img_path)
-        #empty_img = np.zeros(raw_image.shape, dtype=np.float32)
 
         for feature_index in tqdm(range(num_of_features), desc='Image features mapping:', leave=False):
 
