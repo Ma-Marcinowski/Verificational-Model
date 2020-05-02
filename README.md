@@ -1384,3 +1384,41 @@
      * Dataframe part - DfP - utilized for a given epoch of training and validation is indicated by its index.
      
  ### 5. Verificational Model v4
+
+* #### 5.1. Model v4.6.0
+  
+  * 5.1.1. Model architecture is the same as model v2 architecture, however:
+  
+    * Nine convolutional layers are applied, and the number of filters is doubled every three layers (i.e. 16, 32, 64);
+    
+    * Kernel size is 3, stride is 1, dilation rate is 2;
+    
+    * No max pooling layers are applied.
+    
+  * 5.1.2. Language, libraries and framework / API:
+        
+    * Vide 2.1.2.
+   
+  * 5.1.3. Implementation:
+       
+    * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), 600 ms/step (15503 steps per epoch) in the case of model v4.6.0 training on [256x256] patches.   
+    
+* #### 5.2. Model v4.6.0 training on [256x256] patches (extended train database of raw grayscaled images)
+  
+  * 5.2.1. Database:
+  
+    * 3.19.1. Database.
+    
+  * 5.2.2. Hyperparameters:
+  
+    * Vide 3.13.3. Hyperparameters.
+  
+  * 5.2.3. Training:
+  
+    | Epoch | DfP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
+    | --- | --- | --- | --- | --- | --- | --- |
+    | 1 | 1/6 | 0.3834 | 0.8166 | 0.4075 | 0.8200 | 0.001 (1e-3) |
+    | 2 | 2/6 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
+    | 3 | 3/6 | 0. | 0. | 0. | 0. | ? |
+        
+    * Dataframe part - DfP - utilized for a given epoch of training and validation is indicated by its index.
