@@ -1140,60 +1140,6 @@
 
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
     
-* #### 3.25. Model v2.6.6 evaluation on [256x256] patches (extended train database of raw grayscaled images)
-
-  * 3.25.1. Database:
-    
-    * Vide 3.14.1. Database, except for preprocessing v0.6;
-  
-    * Test dataset - 167796 image pairs (equal number of positive and negative instances) - de facto undivided validation dataframe;
-        
-    * IAM criterion - 94052 image pairs (equal number of positive and negative instances);
-    
-    * CVL criterion - 73744 image pairs (equal number of positive and negative instances);
-    
-    * Hard criterion - 7064 image pairs (equal number of positive and negative instances);
-    
-    * Negative criterion - 200000 image pairs (an arbitrary number).
-       
-  * 3.25.2. Metrics:
-  
-    * Vide 2.3.2. Metrics.
-  
-  * 3.25.3. CVL and IAM evaluation:
-  
-    | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
-    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | None | ? | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
-    | IAM | ? | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
-    | CVL | ? | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
-    | Hard | ? | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
-    | Negative | ? | 0. | 0. | None | 0. | 0. | None | None | None | None |
-   
-    * Epochs of model training - EofT - by the best validation accuracy and loss result.   
-    
-* #### 2.26. Model 2.6.6 combined evaluation on [256x256] patches (extended train database of raw grayscaled images)
-
-  * 2.26.1. Test dataset:
-  
-      * Preprocessing v0.6;
-  
-      * A subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM); 
-      
-      * 2970832 image pairs (2886934 negative and 83898 positive instances).
-  
-  * 2.26.2. Metrics:
-  
-    * Vide 3.16.4. Metrics. 
-  
-  * 2.26.3. CVL and IAM cumulative evaluation:
-  
-    | EofT | Acc | TPR | TNR | FPR | FNR | PPV | NPV | UNR |
-    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | ? | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
-   
-    * Epochs of model training - EofT - by the best validation accuracy and loss result.
-
 ### 4. Verificational Model v3
 
 * #### 4.1. Model v3.6.0
@@ -1426,3 +1372,57 @@
     | 7 | 1/6 | 0. | 0. | 0. | 0. | 0.0001 (1e-4) |
             
     * Dataframe part - DfP - utilized for a given epoch of training and validation is indicated by its index.
+    
+* #### ?.?. Model v?.6.? evaluation on [256x256] patches (extended train database of raw grayscaled images)
+
+  * ?.?.1. Database:
+    
+    * Vide 3.14.1. Database, except for preprocessing v0.6;
+  
+    * Test dataset - 167796 image pairs (equal number of positive and negative instances) - de facto undivided validation dataframe;
+        
+    * IAM criterion - 94052 image pairs (equal number of positive and negative instances);
+    
+    * CVL criterion - 73744 image pairs (equal number of positive and negative instances);
+    
+    * Hard criterion - 7064 image pairs (equal number of positive and negative instances);
+    
+    * Negative criterion - 200000 image pairs (an arbitrary number).
+       
+  * ?.?.2. Metrics:
+  
+    * Vide 2.3.2. Metrics.
+  
+  * ?.?.3. CVL and IAM evaluation:
+  
+    | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | None | ? | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | IAM | ? | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | CVL | ? | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Hard | ? | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Negative | ? | 0. | 0. | None | 0. | 0. | None | None | None | None |
+   
+    * Epochs of model training - EofT - by the best validation accuracy and loss result.   
+    
+* #### ?.?. Model ?.6.? combined evaluation on [256x256] patches (extended train database of raw grayscaled images)
+
+  * ?.?.1. Test dataset:
+  
+      * Preprocessing v0.6;
+  
+      * A subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM); 
+      
+      * 2970832 image pairs (2886934 negative and 83898 positive instances).
+  
+  * ?.?.2. Metrics:
+  
+    * Vide 3.16.4. Metrics. 
+  
+  * ?.?.3. CVL and IAM cumulative evaluation:
+  
+    | EofT | Acc | TPR | TNR | FPR | FNR | PPV | NPV | UNR |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | ? | 0. | 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+   
+    * Epochs of model training - EofT - by the best validation accuracy and loss result.
