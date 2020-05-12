@@ -1171,7 +1171,7 @@
   * 3.25.3 Training:
   
     | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
-    | --- | --- | --- | --- | --- | --- | --- |
+    | --- | --- | --- | --- | --- | --- |
     | 1 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
     | 2 | 0. | 0. | 0. | 0. | ? |
     | 3 | 0. | 0. | 0. | 0. | ? |
