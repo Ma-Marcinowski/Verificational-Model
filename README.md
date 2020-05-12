@@ -1417,7 +1417,7 @@
 
   * 5.3.1 Model:
   
-     * Analogous to the model v4.6.0, i.e.: 18 convolutional layers are utilized; and the number of filters isn't doubled every three layers, but 16 filters are added every three layers; max pooling layers are utilized instead of dilation.
+     * Analogous to the model v4.6.0, i.e.: 18 convolutional layers are utilized; and the number of filters isn't doubled every three layers, but 16 filters are added every three layers; max pooling layers are utilized every three convolutional layers, instead of dilation.
      
      * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), ??? ms/step (15503 steps per epoch) in the case of model v4.6.1 training on [256x256] patches.
   
