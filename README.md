@@ -131,15 +131,15 @@
     
     * The test dataframe is generated for the purpose of *combined evaluation* (vide 3.17.1. Method of combined evaluation), hence all possible negative and positive instances are created (except for pair reverses).
     
-### 1.?. Preprocessing v0.? (CVL and IAM database, grayscaled and raw images)
+### 1.7. Preprocessing v0.7 (CVL and IAM database, grayscaled and raw images)
 
-* #### 1.?.1. Exactly the same as v0.6, however:
+* #### 1.7.1. Exactly the same as v0.6, however:
 
     * Neither test nor train dataframes are created under the assumption that the number of positive and negative instances ought to be equal;
     
     * Hence for the purpose of training, a dataframe of all possible negative and positive instances is generated (except for pair reverses) and divided into `m` equal parts;
     
-* #### 1.?.2. Therefore:
+* #### 1.7.2. Therefore:
 
     * Validation dataframes are generated the same way as in the case of v0.6;
      
