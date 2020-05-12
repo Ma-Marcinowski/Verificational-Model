@@ -1413,6 +1413,37 @@
             
     * Dataframe part - DfP - utilized for a given epoch of training and validation is indicated by its index.
     
+* #### 5.3. Model v4.6.1 training on [256x256] patches (extended train database of raw grayscaled images)
+
+  * 5.3.1 Model:
+  
+     * Analogous to the model v4.6.0, i.e.: 18 convolutional layers are utilized; and the number of filters isn't doubled every three layers, but 16 filters are added every three layers; max pooling layers are utilized.
+     
+     * Google Colaboratory - (2019) - Python 3 Jupyter Notebook, GPU type runtime (Nvidia Tesla K80), ??? ms/step (15503 steps per epoch) in the case of model v4.6.1 training on [256x256] patches.  
+  
+  * 5.3.2. Database:
+  
+    * 3.19.1. Database.
+    
+  * 5.3.3. Hyperparameters:
+  
+    * Vide 3.13.3. Hyperparameters.
+  
+  * 5.3.4. Training:
+  
+    | Epoch | DfP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
+    | --- | --- | --- | --- | --- | --- | --- |
+    | 1 | 1/6 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
+    | 2 | 2/6 | 0. | 0. | 0. | 0. | ? |
+    | 3 | 3/6 | 0. | 0. | 0. | 0. | ? |
+    | 4 | 4/6 | 0. | 0. | 0. | 0. | ? |
+    | 5 | 5/6 | 0. | 0. | 0. | 0. | ? |
+    | 6 | 6/6 | 0. | 0. | 0. | 0. | ? |
+    | 7 | 1/6 | 0. | 0. | 0. | 0. | ? |
+    | 8 | 2/6 | 0. | 0. | 0. | 0. | ? |
+            
+    * Dataframe part - DfP - utilized for a given epoch of training and validation is indicated by its index.
+    
 * #### ?.?. Model v?.?.? evaluation on ??? patches (extended train database of ??? images)
 
   * ?.?.1. Database:
