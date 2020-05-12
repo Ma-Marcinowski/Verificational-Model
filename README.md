@@ -144,6 +144,12 @@
     * Validation dataframes are generated the same way as in the case of v0.6;
      
     * The test dataframe is generated for the purpose of *combined evaluation* exactly as in the case of v0.6.
+    
+### 1.8. Preprocessing v0.8 (CVL and IAM database, grayscaled and raw images)
+
+* #### 1.8.1. Exactly the same as v0.6, however:
+
+    * Left-channel images are [512 x 512] patches, and right-channel images are [256x256] patches.
   
 ### 2. Verificational Model v1
 
@@ -1010,7 +1016,7 @@
   
     * Exactly the same as model v2.6.1, but for a stride of 4 and 2, added to the first and the second convolutional layers.
     
-    * Implemented via Google Colaboratory - (2020) - 40ms/step (93016 steps per epoch) in the case of model v2.6.2 training on [256x256] patches.
+    * Implemented via Google Colaboratory - (2020) - 40ms/step (93016 steps per epoch) in the case of model v2.6.3 training on [256x256] patches.
 
   * 3.21.1. Database:
     
@@ -1037,7 +1043,7 @@
   
     * Exactly the same as model v2.6.1, but no max-pooling layers are applied.
     
-    * Implemented via Google Colaboratory - (2020) - 140ms/step (15503 steps per epoch) in the case of model v2.6.2 training on [256x256] patches.
+    * Implemented via Google Colaboratory - (2020) - 140ms/step (15503 steps per epoch) in the case of model v2.6.4 training on [256x256] patches.
 
   * 3.22.1. Database:
     
@@ -1071,7 +1077,7 @@
     
     * Model v2.6.5c is exactly the same as model v2.6.1, but for distances passed to the fourth fully connected layer (which is therefore the output one), i.e. distances are concatenated with the third FCL outputs, after the last dropout layer.
     
-    * Implemented via Google Colaboratory - (2020) - 50ms/step (93016 steps per epoch) in the case of model v2.6.2 training on [256x256] patches.
+    * Implemented via Google Colaboratory - (2020) - 50ms/step (93016 steps per epoch) in the case of model v2.6.5 training on [256x256] patches.
 
   * 3.23.1. Database:
     
@@ -1119,7 +1125,7 @@
   
     * Exactly the same as model v2.6.1, but convolutional layers are doubled.
     
-    * Implemented via Google Colaboratory - (2020) - 360ms/step (93016 steps per epoch) in the case of model v2.6.2 training on [256x256] patches.
+    * Implemented via Google Colaboratory - (2020) - 360ms/step (93016 steps per epoch) in the case of model v2.6.6 training on [256x256] patches.
 
   * 3.24.1. Database:
     
@@ -1137,6 +1143,39 @@
     | 2 | 1/6 | 0.1046 | 0.9608 | 0.1554 | 0.9431 | 0.0001 (1e-4) |
     | **3** | 2/6 | 0.1005 | 0.9631 | **0.1475** | **0.9452** | 0.00001 (1e-5) |
     | 4 | 3/6 | 0.0983 | 0.9638 | 0.1551 | 0.9422 | 0.000001 (1e-6) |
+
+    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
+    
+* #### 3.25. Model v2.8.0 training on pairs of [512x512] and [256x256] patches (extended train database of raw grayscaled images)
+
+  * 3.25.1 Model:
+  
+    * Exactly the same as model v2.6.1, but left convolutional channel input is of size [512x512];
+    
+    * In other words, the model is trained on pairs of [512x512] (left-channel) and [256x256] (right-channel) patches;
+    
+    * Implemented via Google Colaboratory - (2020) - ???ms/step (??? steps per epoch) in the case of model v2.8.0 training on pairs of [512x512] and [256x256] patches.
+
+  * 3.25.1. Database:
+  
+    * Preprocessinh v0.8;
+    
+    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - ??? image pairs (equal number of positive and negative instances) divided into six equal training dataframes;
+        
+    * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - ??? image pairs (equal number of positive and negative instances) divided into six equal validation dataframes.
+
+  * 3.25.2. Hyperparameters:
+  
+    * Vide 3.7.3. Hyperparameters.
+  
+  * 3.25.3 Training:
+  
+    | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
+    | --- | --- | --- | --- | --- | --- | --- |
+    | 1 | 1/1 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
+    | 2 | ? | 0. | 0. | 0. | 0. | ? |
+    | 3 | ? | 0. | 0. | 0. | 0. | ? |
+    | 4 | ? | 0. | 0. | 0. | 0. | ? |
 
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
     
