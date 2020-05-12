@@ -1160,9 +1160,9 @@
   
     * Preprocessinh v0.8;
     
-    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - ??? image pairs (equal number of positive and negative instances) divided into six equal training dataframes;
+    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - 588642 image pairs (equal number of positive and negative instances) divided into six equal training dataframes;
         
-    * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - ??? image pairs (equal number of positive and negative instances) divided into six equal validation dataframes.
+    * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 67048 image pairs (equal number of positive and negative instances) divided into six equal validation dataframes.
 
   * 3.25.2. Hyperparameters:
   
@@ -1170,14 +1170,14 @@
   
   * 3.25.3 Training:
   
-    | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
+    | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
     | --- | --- | --- | --- | --- | --- | --- |
-    | 1 | 1/1 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
-    | 2 | ? | 0. | 0. | 0. | 0. | ? |
-    | 3 | ? | 0. | 0. | 0. | 0. | ? |
-    | 4 | ? | 0. | 0. | 0. | 0. | ? |
-
-    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
+    | 1 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
+    | 2 | 0. | 0. | 0. | 0. | ? |
+    | 3 | 0. | 0. | 0. | 0. | ? |
+    | 4 | 0. | 0. | 0. | 0. | ? |
+    | 5 | 0. | 0. | 0. | 0. | ? |
+    | 6 | 0. | 0. | 0. | 0. | ? |
     
 ### 4. Verificational Model v3
 
@@ -1413,21 +1413,21 @@
             
     * Dataframe part - DfP - utilized for a given epoch of training and validation is indicated by its index.
     
-* #### ?.?. Model v?.6.? evaluation on [256x256] patches (extended train database of raw grayscaled images)
+* #### ?.?. Model v?.?.? evaluation on ??? patches (extended train database of ??? images)
 
   * ?.?.1. Database:
     
     * Vide 3.14.1. Database, except for preprocessing v0.6;
   
-    * Test dataset - 167796 image pairs (equal number of positive and negative instances) - de facto undivided validation dataframe;
+    * Test dataset - ??? image pairs (equal number of positive and negative instances);
         
-    * IAM criterion - 94052 image pairs (equal number of positive and negative instances);
+    * IAM criterion - ??? image pairs (equal number of positive and negative instances);
     
-    * CVL criterion - 73744 image pairs (equal number of positive and negative instances);
+    * CVL criterion - ??? image pairs (equal number of positive and negative instances);
     
-    * Hard criterion - 7064 image pairs (equal number of positive and negative instances);
+    * Hard criterion - ??? image pairs (equal number of positive and negative instances);
     
-    * Negative criterion - 200000 image pairs (an arbitrary number).
+    * Negative criterion - ??? image pairs (an arbitrary number).
        
   * ?.?.2. Metrics:
   
@@ -1445,15 +1445,15 @@
    
     * Epochs of model training - EofT - by the best validation accuracy and loss result.   
     
-* #### ?.?. Model ?.6.? combined evaluation on [256x256] patches (extended train database of raw grayscaled images)
+* #### ?.?. Model ?.?.? combined evaluation on ??? patches (extended train database of ??? images)
 
   * ?.?.1. Test dataset:
   
-      * Preprocessing v0.6;
+      * Preprocessing v0.?;
   
       * A subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM); 
       
-      * 2970832 image pairs (2886934 negative and 83898 positive instances).
+      * ??? image pairs (??? negative and ??? positive instances).
   
   * ?.?.2. Metrics:
   
