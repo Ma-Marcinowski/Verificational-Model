@@ -1154,7 +1154,7 @@
     
     * In other words, the model is trained on pairs of [512x512] (left-channel) and [256x256] (right-channel) patches;
     
-    * Implemented via Google Colaboratory - (2020) - 109ms/step (36791 steps per epoch) in the case of model v2.8.0 training on pairs of [512x512] and [256x256] patches.
+    * Implemented via Google Colaboratory - (2020) - 110ms/step (36791 steps per epoch) in the case of model v2.8.0 training on pairs of [512x512] and [256x256] patches.
 
   * 3.25.1. Database:
   
@@ -1173,8 +1173,8 @@
     | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
     | --- | --- | --- | --- | --- | --- |
     | 1 | 0.2791 | 0.8832 | 0.2291 | 0.9181 | 0.001 (1e-3) |
-    | 2 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
-    | 3 | 0. | 0. | 0. | 0. | ? |
+    | 2 | 0.1590 | 0.9430 | 0.2194 | 0.9234 | 0.001 (1e-3) |
+    | 3 | 0. | 0. | 0. | 0. | 0.0001 (1e-4) |
     | 4 | 0. | 0. | 0. | 0. | ? |
     | 5 | 0. | 0. | 0. | 0. | ? |
     | 6 | 0. | 0. | 0. | 0. | ? |
