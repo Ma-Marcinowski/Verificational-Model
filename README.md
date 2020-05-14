@@ -1145,10 +1145,46 @@
     | 4 | 3/6 | 0.0983 | 0.9638 | 0.1551 | 0.9422 | 0.000001 (1e-6) |
 
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
+
     
-* #### 3.25. Model v2.8.0 training on pairs of [512x512] and [256x256] patches (extended train database of raw grayscaled images)
+* #### 3.25. Model v2.7.0 training on [256x256] patches (extended train database of raw grayscaled images)
 
   * 3.25.1 Model:
+  
+    * Exactly the same as model v2.6.1.
+
+  * 3.25.1. Database:
+  
+    * Preprocessinh v0.7;
+    
+    * Positive class weight is equal to 1;
+    
+    * Negative class weight is equal to ??? (i.e. a rounded fraction of positive over netagive instances);
+    
+    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - ??? image pairs (??? positive and ??? negative instances) divided into ??? equal training dataframes;
+        
+    * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - ??? image pairs (??? positive and ??? negative instances) divided into ??? equal validation dataframes.
+
+  * 3.25.2. Hyperparameters:
+  
+    * Vide 3.7.3. Hyperparameters.
+  
+  * 3.25.3 Training:
+  
+    | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
+    | --- | --- | --- | --- | --- | --- | --- |
+    | 1 | 1/? | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
+    | 2 | ? | 0. | 0. | 0. | 0. | ? |
+    | 3 | ? | 0. | 0. | 0. | 0. | ? |
+    | 4 | ? | 0. | 0. | 0. | 0. | ? |
+    | 5 | ? | 0. | 0. | 0. | 0. | ? |
+    | 6 | ? | 0. | 0. | 0. | 0. | ? |
+    
+    * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
+
+* #### 3.26. Model v2.8.0 training on pairs of [512x512] and [256x256] patches (extended train database of raw grayscaled images)
+
+  * 3.26.1 Model:
   
     * Exactly the same as model v2.6.1, but left convolutional channel input is of size [512x512];
     
@@ -1156,19 +1192,19 @@
     
     * Implemented via Google Colaboratory - (2020) - 110ms/step (36791 steps per epoch) in the case of model v2.8.0 training on pairs of [512x512] and [256x256] patches.
 
-  * 3.25.1. Database:
+  * 3.26.1. Database:
   
     * Preprocessinh v0.8;
     
-    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - 588642 image pairs (equal number of positive and negative instances) divided into six equal training dataframes;
+    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - 588642 image pairs (equal number of positive and negative instances);
         
-    * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 67048 image pairs (equal number of positive and negative instances) divided into six equal validation dataframes.
+    * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 67048 image pairs (equal number of positive and negative instances).
 
-  * 3.25.2. Hyperparameters:
+  * 3.26.2. Hyperparameters:
   
     * Vide 3.7.3. Hyperparameters.
   
-  * 3.25.3 Training:
+  * 3.26.3 Training:
   
     | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
     | --- | --- | --- | --- | --- | --- |
