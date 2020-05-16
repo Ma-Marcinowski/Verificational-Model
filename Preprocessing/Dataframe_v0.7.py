@@ -41,11 +41,40 @@ def Dataframe(mode, img_path, df_path, df_img_path, df_parts):
 
         print('Done ' + mode + ' positives: ', pos, ' instances.')
 
-        if mode == 'train' or mode == 'validation':
+        if mode == 'train':
 
             neg = 0
 
             while neg < (pos * 10):
+
+                j = random.choice(pngs)
+                i = random.choice(pngs)
+
+                if j[:8] != i[:8] and j[0] == i[0] and (j, i) not in rev:
+
+                    pair = [df_img_path + j, df_img_path + i, 0]
+
+                    writer.writerow(pair)
+
+                    neg += 1
+
+                    rev.add((i, j))
+
+                    print('%.2f%%'%(100*neg/pos), end="\r")
+
+                else:
+
+                    continue
+
+            else:
+
+                print('Done ' + mode + ' negatives: ', neg, ' instances.')
+                
+        elif mode == 'validation':
+            
+            neg = 0
+
+            while neg < pos:
 
                 j = random.choice(pngs)
                 i = random.choice(pngs)
@@ -105,7 +134,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, df_parts):
 
         df = pd.read_csv(df_path)
 
-        pdf = np.split(df, df_parts, axis=0)
+        pdf = np.array_split(df, df_parts, axis=0)
 
         for idx, p in enumerate(pdf, start=1):
 
@@ -116,7 +145,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, df_parts):
             print('Done ' + mode + ' dataframe part ', idx, ': ', p.shape[0], ' image pairs.')
 
         print('Done splitting ' + mode + ' dataframes.')
-
+        
 TrainDataframe = Dataframe(mode='train',
                            img_path='/preprocessed/train/images/directory/',
                            df_path='/dataframe/save/directory/TrainDataframe.csv',
@@ -133,5 +162,5 @@ ValidDataframe = Dataframe(mode='validation',
                            img_path='/preprocessed/test/images/directory/',
                            df_path='/dataframe/save/directory/ValidDataframe.csv',
                            df_img_path='/preprocessed/test/images/directory/indicated/in/the/validation/dataframe',
-                           df_parts=12) #any number of partial validation dataframes to generate
+                           df_parts=None) #any number of partial validation dataframes to generate
 print('Dataframes done.')
