@@ -121,7 +121,7 @@ TrainDataframe = Dataframe(mode='train',
                            img_path='/preprocessed/train/images/directory/',
                            df_path='/dataframe/save/directory/TrainDataframe.csv',
                            df_img_path='/preprocessed/train/images/directory/indicated/in/the/train/dataframe',
-                           df_parts=6) #any number of partial train dataframes to generate
+                           df_parts=12) #any number of partial train dataframes to generate
 
 TestDataframe = Dataframe(mode='test',
                           img_path='/preprocessed/test/images/directory/',
@@ -133,5 +133,5 @@ ValidDataframe = Dataframe(mode='validation',
                            img_path='/preprocessed/test/images/directory/',
                            df_path='/dataframe/save/directory/ValidDataframe.csv',
                            df_img_path='/preprocessed/test/images/directory/indicated/in/the/validation/dataframe',
-                           df_parts=6) #any number of partial validation dataframes to generate
+                           df_parts=12) #any number of partial validation dataframes to generate
 print('Dataframes done.')
