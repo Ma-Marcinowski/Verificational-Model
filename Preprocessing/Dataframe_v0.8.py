@@ -101,7 +101,7 @@ def Dataframe(mode, imgs_dir_512, imgs_dir_256, df_path, df_img_512_path, df_img
 
         df = pd.read_csv(df_path)
 
-        pdf = np.split(df, df_parts, axis=0)
+        pdf = np.array_split(df, df_parts, axis=0)
 
         for idx, p in enumerate(pdf, start=1):
 
