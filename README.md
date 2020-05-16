@@ -135,9 +135,9 @@
 
 * #### 1.7.1. Exactly the same as v0.6, however:
 
-    * Neither test nor train dataframes are created under the assumption that the number of positive and negative instances ought to be equal;
+    * Neither the test (i.e. combined evaluation) nor train dataframes are created under the assumption that the number of positive and negative instances ought to be equal;
     
-    * Hence for the purpose of training, a dataframe of all possible positive instances and of ten times more negative instances is generated (except for pair reverses) and divided into `m` equal parts;
+    * Hence for the purpose of training, a dataframe of all possible positive instances and of `n` times more negative instances is generated (except for pair reverses) and divided into `m` equal parts;
     
 * #### 1.7.2. Therefore:
 
@@ -1157,17 +1157,19 @@
   
     * Preprocessinh v0.7;
     
-    * Positive class weight is equal to 1;
+    * For the purpose of model training, ten times more negative - than positive - instances are generated. 
     
-    * Negative class weight is equal to 0.1 (i.e. a rounded fraction of positive over netagive instances);
-    
-    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - ??? image pairs (??? positive and ??? negative instances) divided into 12 equal training dataframes;
+    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - 8185353 image pairs (744123 positive and 7441230 negative instances) divided into 12 equal training dataframes;
         
-    * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - ??? image pairs (??? positive and ??? negative instances) divided into 12 equal validation dataframes.
+    * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 167796 image pairs (83898 positive and 83898 negative instances) divided into 12 equal validation dataframes.
 
   * 3.25.2. Hyperparameters:
   
     * Vide 3.7.3. Hyperparameters.
+    
+    * Positive class weight is equal to 1;
+    
+    * Negative class weight is equal to 0.1 (i.e. a rounded fraction of positive over netagive instances);
   
   * 3.25.3 Training:
   
