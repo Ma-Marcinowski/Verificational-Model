@@ -137,7 +137,7 @@
 
     * Neither test nor train dataframes are created under the assumption that the number of positive and negative instances ought to be equal;
     
-    * Hence for the purpose of training, a dataframe of all possible negative and positive instances is generated (except for pair reverses) and divided into `m` equal parts;
+    * Hence for the purpose of training, a dataframe of all possible positive instances and of ten times more negative instances is generated (except for pair reverses) and divided into `m` equal parts;
     
 * #### 1.7.2. Therefore:
 
@@ -1159,11 +1159,11 @@
     
     * Positive class weight is equal to 1;
     
-    * Negative class weight is equal to ??? (i.e. a rounded fraction of positive over netagive instances);
+    * Negative class weight is equal to 0.1 (i.e. a rounded fraction of positive over netagive instances);
     
-    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - ??? image pairs (??? positive and ??? negative instances) divided into ??? equal training dataframes;
+    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - ??? image pairs (??? positive and ??? negative instances) divided into 12 equal training dataframes;
         
-    * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - ??? image pairs (??? positive and ??? negative instances) divided into ??? equal validation dataframes.
+    * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - ??? image pairs (??? positive and ??? negative instances) divided into 12 equal validation dataframes.
 
   * 3.25.2. Hyperparameters:
   
@@ -1173,12 +1173,18 @@
   
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
     | --- | --- | --- | --- | --- | --- | --- |
-    | 1 | 1/? | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
-    | 2 | ? | 0. | 0. | 0. | 0. | ? |
-    | 3 | ? | 0. | 0. | 0. | 0. | ? |
-    | 4 | ? | 0. | 0. | 0. | 0. | ? |
-    | 5 | ? | 0. | 0. | 0. | 0. | ? |
-    | 6 | ? | 0. | 0. | 0. | 0. | ? |
+    | 1 | 1/12 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
+    | 2 | 2/12 | 0. | 0. | 0. | 0. | ? |
+    | 3 | 3/12 | 0. | 0. | 0. | 0. | ? |
+    | 4 | 4/12 | 0. | 0. | 0. | 0. | ? |
+    | 5 | 5/12 | 0. | 0. | 0. | 0. | ? |
+    | 6 | 6/12 | 0. | 0. | 0. | 0. | ? |
+    | 7 | 7/12 | 0. | 0. | 0. | 0. | ? |
+    | 8 | 8/12 | 0. | 0. | 0. | 0. | ? |
+    | 9 | 9/12 | 0. | 0. | 0. | 0. | ? |
+    | 10 | 10/12 | 0. | 0. | 0. | 0. | ? |
+    | 11 | 11/12 | 0. | 0. | 0. | 0. | ? |
+    | 11 | 12/12 | 0. | 0. | 0. | 0. | ? |
     
     * Training dataframe part - TDP - utilized for a given epoch of training is indicated by its index.
 
