@@ -105,7 +105,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, df_parts):
 
         df = pd.read_csv(df_path)
 
-        pdf = np.split(df, df_parts, axis=0)
+        pdf = np.array_split(df, df_parts, axis=0)
 
         for idx, p in enumerate(pdf, start=1):
 
@@ -133,6 +133,6 @@ ValidDataframe = Dataframe(mode='validation',
                            img_path='/preprocessed/test/images/directory/',
                            df_path='/dataframe/save/directory/ValidDataframe.csv',
                            df_img_path='/preprocessed/test/images/directory/indicated/in/the/validation/dataframe',
-                           df_parts=6) #any even number of partial validation dataframes to generate
+                           df_parts=None) #any even number of partial validation dataframes to generate
 
 print('Dataframes done.')
