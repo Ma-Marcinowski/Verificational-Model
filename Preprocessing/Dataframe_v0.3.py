@@ -75,7 +75,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, num_of_train_dfs, valid_df_p
 
         n = num_of_train_dfs
 
-        pdf = np.split(df, n, axis=0)
+        pdf = np.array_split(df, n, axis=0)
 
         for idx, p in enumerate(pdf, start=1):
 
