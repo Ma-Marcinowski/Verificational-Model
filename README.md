@@ -1167,7 +1167,9 @@
   
     * Vide 3.7.3. Hyperparameters.
     
-    * Positive class weight is equal to 1;
+    * Class weights are applied (these are `fit` function arguments) as `class_weight={0: 0.1, 1: 1.0}`;
+
+    * Positive class weight is equal to 1.0;
     
     * Negative class weight is equal to 0.1 (i.e. a rounded fraction of positive over netagive instances);
   
