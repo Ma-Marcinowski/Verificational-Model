@@ -135,9 +135,9 @@
 
 * #### 1.7.1. Exactly the same as v0.6, however:
 
-    * Neither the test (i.e. combined evaluation) nor train dataframes are created under the assumption that the number of positive and negative instances ought to be equal;
+    * Neither the test (i.e. combined evaluation) nor train dataframes are created under the assumption that the number of positive and negative instances ought to be qualitatively equal;
     
-    * Hence for the purpose of training, a dataframe of all possible positive instances and of `n` times more negative instances is generated (except for pair reverses) and divided into `m` equal parts;
+    * Hence for the purpose of training, a dataframe of - ten times all possible positive instances, and of such number of negative instances - is generated (except for pair reverses), then divided into `m` equal parts. In other words, positive and negative subsets are qualitatively exual, but quantitatively there is ten times more negative than positive instances.
     
 * #### 1.7.2. Therefore:
 
@@ -1159,19 +1159,13 @@
     
     * For the purpose of model training, ten times more negative - than positive - instances are generated. 
     
-    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - 8185353 image pairs (744123 positive and 7441230 negative instances) divided into 12 equal training dataframes;
+    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - ??? image pairs (qualitatively equal number of positive and negative instances, but quantitatively ten times more negative than postitive instances) divided into 12 equal training dataframes;
         
     * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 167796 image pairs (equal number of positive and negative instances).
 
   * 3.25.2. Hyperparameters:
   
     * Vide 3.7.3. Hyperparameters.
-    
-    ~~* Class weights are applied (these are `fit` function arguments) as `class_weight={0: 0.1, 1: 1.0}`;~~
-
-    * Positive class weight is equal to 1.0;
-    
-    * Negative class weight is equal to 0.1 (i.e. a rounded fraction of positive over netagive instances);
   
   * 3.25.3 Training:
   
