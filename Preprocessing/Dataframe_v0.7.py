@@ -27,7 +27,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, df_parts):
 
                 if j[:8] == i[:8] and j[0] == i[0] and (j, i) not in rev:
 
-                    pair = [df_img_path + j, df_img_path + i, 1]
+                    pair = [df_img_path + j, df_img_path + i, 1, 1.0]
 
                     writer.writerow(pair)
 
@@ -52,7 +52,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, df_parts):
 
                 if j[:8] != i[:8] and j[0] == i[0] and (j, i) not in rev:
 
-                    pair = [df_img_path + j, df_img_path + i, 0]
+                    pair = [df_img_path + j, df_img_path + i, 0, 0.1]
 
                     writer.writerow(pair)
 
@@ -81,7 +81,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, df_parts):
 
                 if j[:8] != i[:8] and j[0] == i[0] and (j, i) not in rev:
 
-                    pair = [df_img_path + j, df_img_path + i, 0]
+                    pair = [df_img_path + j, df_img_path + i, 0, 0.1]
 
                     writer.writerow(pair)
 
@@ -108,7 +108,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, df_parts):
 
                     if j[:8] != i[:8] and j[0] == i[0] and (j, i) not in rev:
 
-                        pair = [df_img_path + j, df_img_path + i, 0]
+                        pair = [df_img_path + j, df_img_path + i, 0, 0.1]
 
                         writer.writerow(pair)
 
@@ -126,7 +126,7 @@ def Dataframe(mode, img_path, df_path, df_img_path, df_parts):
 
     df = sklearn.utils.shuffle(df)
 
-    df.to_csv(df_path, header=['Leftname', 'Rightname', 'Label'], index=False)
+    df.to_csv(df_path, header=['Leftname', 'Rightname', 'Label', 'Weight'], index=False)
 
     print('Done ' + mode + ' dataframe: ', df.shape[0], ' image pairs.')
 
@@ -138,14 +138,14 @@ def Dataframe(mode, img_path, df_path, df_img_path, df_parts):
 
         for idx, p in enumerate(pdf, start=1):
 
-            p.to_csv(df_path[:-4] + '-' + str(idx) + '.csv', header=['Leftname', 'Rightname', 'Label'], index=False)
+            p.to_csv(df_path[:-4] + '-' + str(idx) + '.csv', header=['Leftname', 'Rightname', 'Label', 'Weight'], index=False)
 
             p.dropna(axis=0, how='any', inplace=True)
 
             print('Done ' + mode + ' dataframe part ', idx, ': ', p.shape[0], ' image pairs.')
 
         print('Done splitting ' + mode + ' dataframes.')
-        
+
 TrainDataframe = Dataframe(mode='train',
                            img_path='/preprocessed/train/images/directory/',
                            df_path='/dataframe/save/directory/TrainDataframe.csv',
