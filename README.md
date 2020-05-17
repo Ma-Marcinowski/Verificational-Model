@@ -1159,7 +1159,7 @@
     
     * For the purpose of model training, ten times more negative - than positive - instances are generated. 
     
-    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - ??? image pairs (qualitatively equal number of positive and negative instances, but quantitatively ten times more negative than postitive instances) divided into 12 equal training dataframes;
+    * Training dataset - a subset of combined CVL and IAM databases, containing 2740 document images (1415 from CVL and 1325 from IAM) by 822 writers (283 from CVL and 539 from IAM) - 14882460 image pairs (qualitatively equal number of positive and negative instances, but quantitatively ten times more negative than postitive instances) divided into 12 equal training dataframes;
         
     * Validation dataset - a subset of combined CVL and IAM databases, containing 403 document images (189 from CVL and 214 from IAM) by 145 writers (27 from CVL and 118 from IAM) - 167796 image pairs (equal number of positive and negative instances).
 
