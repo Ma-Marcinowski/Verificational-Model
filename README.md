@@ -1169,15 +1169,15 @@
     
     ~~* Class weights are applied (these are `fit` function arguments) as `class_weight={0: 0.1, 1: 1.0}`;~~
 
-    ~~* Positive class weight is equal to 1.0;~~
+    * Positive class weight is equal to 1.0;
     
-    ~~* Negative class weight is equal to 0.1 (i.e. a rounded fraction of positive over netagive instances);~~
+    * Negative class weight is equal to 0.1 (i.e. a rounded fraction of positive over netagive instances);
   
   * 3.25.3 Training:
   
     | Epoch | TDP | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy | Learning Rate |
     | --- | --- | --- | --- | --- | --- | --- |
-    | 1 | 1/12 | 0.1329 | 0.9489 | 1.3238 | 0.5714 | 0.001 (1e-3) |
+    | 1 | 1/12 | 0. | 0. | 0. | 0. | 0.001 (1e-3) |
     | 2 | 2/12 | 0. | 0. | 0. | 0. | ? |
     | 3 | 3/12 | 0. | 0. | 0. | 0. | ? |
     | 4 | 4/12 | 0. | 0. | 0. | 0. | ? |
