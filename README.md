@@ -774,8 +774,35 @@
     | **Negative Raw** | 5 | 0.1002 | **0.9588** | None | 0.9588 | 0.0412 | None | None | None | None |
     | **Negative Denoised** | 5 | 0.1828 | **0.9428** | None | 0.9428 | 0.0572 | None | None | None | None |
        
-    * Epochs of model training - EofT - by the best validation accuracy and loss result.   
+    * Epochs of model training - EofT - by the best validation accuracy and loss result. 
     
+  * 3.14.6. Categorized database:
+  
+     * Vide ` Verificational-Model/Categories/CVL_Test_Categorized.csv`;
+     
+     * Vide ` Verificational-Model/Categories/IAM_Test_Categorized.csv`.
+  
+  * 3.14.7. Model v2.5.1 categorized evaluation on [256x256] patches (extended train database of raw grayscaled images)
+
+    | Category | Sample size | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | Feminine | ? | 0. | 0.| 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Masculine | ? | 0. | 0.| 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Random | ? | 0. | 0.| 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Random | ? | 0. | 0.| 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Sinistral | ? | 0. | 0.| 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Dextral | ? | 0. | 0.| 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Random | ? | 0. | 0.| 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Random | ? | 0. | 0.| 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Feminine sinistral | ? | 0. | 0.| 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Feminine dextral | ? | 0. | 0.| 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Random | ? | 0. | 0.| 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Random | ? | 0. | 0.| 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Masculine sinistral | ? | 0. | 0.| 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Masculine dextral | ? | 0. | 0.| 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Random | ? | 0. | 0.| 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+    | Random | ? | 0. | 0.| 0. | 0. | 0. | 0. | 0. | 0. | 0. |
+
 * #### 3.15. Model v2.5.1 evaluation on [1024x1024] extracts (extended train database of raw grayscaled images)
 
   * 3.15.1. Database:
@@ -893,7 +920,7 @@
     | Hard | 5 | 28.6659 | 0.5007 | 1.0000 | 0.0014 | 0.9986 | 0.0000 | 0.5004 | 1.0000 | 0.5013 |
     | **Negative** | 5 | 41.0964 | **0.0044** | **None** | **0.0044** | **0.9956** | None | None | None | None |
        
-    * Epochs of model training - EofT - by the best validation accuracy and loss result.   
+    * Epochs of model training - EofT - by the best validation accuracy and loss result.
 
 * #### 3.17. Model 2.6.0 combined evaluation on [256x256] patches (extended train database of raw grayscaled images)
 
