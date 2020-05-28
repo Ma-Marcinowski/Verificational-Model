@@ -816,7 +816,7 @@
        
   * 3.14.9. Model v2.5.1 categorized evaluation on [256x256] patches (extended train database of raw grayscaled images)
 
-    | Acc probability | Authors sample |  Category | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+    | Probability of the given Acc occuring | Authors sample |  Category | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | 1.0000 | 145 | **None** | **0.1319** | **0.9582** | **0.9529** | **0.9636** | 0.0364 | 0.0471 | 0.9632 | 0.9534 | 0.9891 |
     | 0.2380 | 66 | Feminine | 0.1672 | 0.9487 | 0.9414 | 0.9560 | 0.0440 | 0.0586 | 0.9553 | 0.9422 | 0.9843 |
