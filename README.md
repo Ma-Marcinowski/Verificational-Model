@@ -802,15 +802,15 @@
      
      * Masculine Dextral category - 65 authors, 69730 image pairs (equal number of positive and negative instances);
        
- * 3.14.8. The probability of evaluation results
+ * 3.14.8. The probability of the evaluation results occuring
   
-     * Vide ` Verificational-Model/Evaluation/VM_Sample_Acc_Probability_Example_v.2.5.1.py`;
+     * Vide ` Verificational-Model/Evaluation/VM_Sample_Acc_Probability_v.2.5.1.py`;
   
-     * To estimate the quality of the following - and any - evaluation, it may be usefull to calculate the probability of observing some results of interest, given some evaluation crieteria or category, and range of these results;
+     * To estimate the quality of the following - and any - evaluation category or crieteria, it may be usefull to calculate the probability of randomly observing the results of interest, given some sample size (determined by the given category or criterion), and some arbitrary range of these results;
      
-     * Here, the author calculated probabilities of observing the accuracy results - which were achieved during the following categorized evaluation (vide 3.14.9. evaluation) - given the samples of authors belonging to the given categories;
+     * Here, the author calculated probabilities of observing the accuracy results, which were achieved during the following categorized evaluation (vide 3.14.9. evaluation);
      
-     * The range of the expected results was set to plus and minus 0.50 of the observed results;
+     * The range of the expected results was set to plus-minus 0.50 of the observed results;
      
      * The limit of combinations (without repetition, where `n` is equal to the number of authors, and `k` is the authors sample) was set to a 1000 random combinations.
        
@@ -818,15 +818,15 @@
 
     | Probability of the Acc occuring | Authors sample |  Category | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | 1.0000 | 145 | **None** | **0.1319** | **0.9582** | **0.9529** | **0.9636** | 0.0364 | 0.0471 | 0.9632 | 0.9534 | 0.9891 |
+    | **1.0000** | 145 | **None** | **0.1319** | **0.9582** | **0.9529** | **0.9636** | 0.0364 | 0.0471 | 0.9632 | 0.9534 | 0.9891 |
     | 0.2380 | 66 | Feminine | 0.1672 | 0.9487 | 0.9414 | 0.9560 | 0.0440 | 0.0586 | 0.9553 | 0.9422 | 0.9843 |
-    | --- | 79 | Masculine | 0.1094 | 0.9634 | 0.9655 | 0.9614 | 0.0386 | 0.0345 | 0.9616 | 0.9653 | 0.9918 |
-    | --- | 23 | Sinistral | 0.1894 | 0.9383 | 0.9360 | 0.9405 | 0.0595 | 0.0640 | 0.9403 | 0.9363 | 0.9807 |
-    | --- | 122 | Dextral | 0.1267 | 0.9592 | 0.9587 | 0.9597 | 0.0403 | 0.0413 | 0.9597 | 0.9587 | 0.9895 |
-    | --- | 9 | **Feminine Sinistral** | **0.3308** | **0.9151** | **0.8419** | **0.9883** | 0.0117 | 0.1581 | 0.9863 | 0.8621 | 0.9717 |
-    | --- | 14 | **Masculine Sinistral** | **0.1289** | **0.9485** | **0.9806** | **0.9165** | 0.0835 | 0.0194 | 0.9215 | 0.9792 | 0.9911 | 
-    | --- | 57 | Feminine Dextral | 0.1517 | 0.9495 | 0.9565 | 0.9426 | 0.0574 | 0.0435 | 0.9434 | 0.9559 | 0.9862 |
-    | --- | 65 | Masculine Dextral | 0.1272 | 0.9578 | 0.9608 | 0.9547 | 0.0453 | 0.0392 | 0.9550 | 0.9606 | 0.9895 |
+    | 0.7580 | 79 | Masculine | 0.1094 | 0.9634 | 0.9655 | 0.9614 | 0.0386 | 0.0345 | 0.9616 | 0.9653 | 0.9918 |
+    | 0.1050 | 23 | Sinistral | 0.1894 | 0.9383 | 0.9360 | 0.9405 | 0.0595 | 0.0640 | 0.9403 | 0.9363 | 0.9807 |
+    | 0.5530 | 122 | Dextral | 0.1267 | 0.9592 | 0.9587 | 0.9597 | 0.0403 | 0.0413 | 0.9597 | 0.9587 | 0.9895 |
+    | **0.0530** | 9 | **Feminine Sinistral** | **0.3308** | **0.9151** | **0.8419** | **0.9883** | 0.0117 | 0.1581 | 0.9863 | 0.8621 | 0.9717 |
+    | **0.0320** | 14 | **Masculine Sinistral** | **0.1289** | **0.9485** | **0.9806** | **0.9165** | 0.0835 | 0.0194 | 0.9215 | 0.9792 | 0.9911 | 
+    | 0.2172 | 57 | Feminine Dextral | 0.1517 | 0.9495 | 0.9565 | 0.9426 | 0.0574 | 0.0435 | 0.9434 | 0.9559 | 0.9862 |
+    | 0.3610 | 65 | Masculine Dextral | 0.1272 | 0.9578 | 0.9608 | 0.9547 | 0.0453 | 0.0392 | 0.9550 | 0.9606 | 0.9895 |
 
 * #### 3.15. Model v2.5.1 evaluation on [1024x1024] extracts (extended train database of raw grayscaled images)
 
