@@ -828,7 +828,7 @@
     | 0.2172 | 57 | Feminine Dextral | 0.1517 | 0.9495 | 0.9565 | 0.9426 | 0.0574 | 0.0435 | 0.9434 | 0.9559 | 0.9862 |
     | 0.3610 | 65 | Masculine Dextral | 0.1272 | 0.9578 | 0.9608 | 0.9547 | 0.0453 | 0.0392 | 0.9550 | 0.9606 | 0.9895 |
     
-    * Probability of the given Acc randomly occuring - PARO - given the authors sample size and the range of the expected Acc (±0.50).
+    * Probability of the given Acc Randomly Occuring - PARO - given the authors sample size and the range of the expected Acc (±0.50).
 
 * #### 3.15. Model v2.5.1 evaluation on [1024x1024] extracts (extended train database of raw grayscaled images)
 
