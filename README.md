@@ -802,7 +802,7 @@
      
      * Masculine Dextral category - 65 authors, 69730 image pairs (equal number of positive and negative instances);
        
- * 3.14.8. Probability of the evaluation results occuring
+ * 3.14.8. Probability of the given Acc results occuring (model v2.5.1 example)
   
      * Vide ` Verificational-Model/Evaluation/VM_Given_Acc_Probability_v.2.5.1.py`;
   
@@ -815,9 +815,7 @@
      * The limit of combinations (without repetition, where `n` is equal to the number of authors, and `k` is the authors sample) was set to a 1000 random combinations, hence, it is just an estimation of the given probability;
      
      * To allow for some background, all 1000 Acc results (depend on the limit of combinations) are turned into percents and rounded to intigers, then their dominant value is found, and the probability of such most observed Acc randomly occuring is calculated;
-     
-     * Overall, it is more usefull to calculate such probabilities for all possible Acc results given some step, and for all sample sizes given some step, i.e. discrete probability distributions, vide `Verificational-Model/Evaluation/VM_Every_Acc_Probability_v.2.5.1.py`. 
-       
+            
   * 3.14.9. Model v2.5.1 categorized evaluation on [256x256] patches (extended train database of raw grayscaled images)
 
     | PCARO | PDARO | Authors sample | Category | Loss | Category Acc | Dominant Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
@@ -835,6 +833,20 @@
     * Probability of the given Category Acc Randomly Occuring - PCARO - given the authors sample size and the range of the expected Acc (±0.50).
     
     * Probability of the given Dominant Acc Randomly Occuring - PDARO - given the authors sample size and the range of the unexpected Acc (every result is multiplied by 100 and rounded to an intiger).
+    
+ * 3.14.10. Probability of all the Acc results occuring (model v2.5.1 example)
+ 
+     * Vide `Verificational-Model/Evaluation/VM_Every_Acc_Probability_v.2.5.1.py`. 
+ 
+     * Overall, it is more usefull - compared to 3.14.8 - to calculate the probability of random occuracne for all possible Acc results given some step, and all sample sizes given some step; 
+     
+     * Five authors' sample sizes were arbitrarily speicifed [8, 16, 32, 64, 128];
+     
+     * 1000 combinations - of authors - limit was set for every authors' sample size;
+     
+     * Per combination Acc results were multipied by 100 (turned into percents) and rounded to intigers, therefore there were 100 possible Acc values, i.e. the step was equal to one;
+     
+     * Results of such approximations are discrete probability distributions (as opposed to the continous PDFs).
 
 * #### 3.15. Model v2.5.1 evaluation on [1024x1024] extracts (extended train database of raw grayscaled images)
 
