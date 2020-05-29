@@ -5,7 +5,6 @@ import random
 import csv
 
 from tqdm import tqdm_notebook as tqdm
-from scipy.special import comb
 from scipy.stats import mode
 
 from tensorflow.keras.models import Model, load_model
@@ -136,17 +135,7 @@ def Given_Acc_Probability(full_results_df, authors_sample, expected_acc_min, exp
 
     accs = set()
 
-    total_combinations = comb(N=len(authors_ids), k=authors_sample, repetition=False)
-        
-    if total_combinations > combinations_limit:
-
-        steps_to_realize = round(combinations_limit, 0)
-
-    else:
-
-       steps_to_realize = round(total_combinations, 0)
-
-    for step in tqdm(range(steps_to_realize), desc='Evaluating samples', leave=True):
+    for step in tqdm(range(combinations_limit), desc='Evaluating samples', leave=True):
 
         sample = random.choices(authors_ids, k=authors_sample)
         
@@ -195,14 +184,14 @@ def Given_Acc_Probability(full_results_df, authors_sample, expected_acc_min, exp
     round_acc_events = [round(a*100, 0) for a in accs ]
     mode_array, most_acc_events = mode(round_acc_events, axis=0, nan_policy='omit')
 
-    ground_acc_probability = round(most_acc_events / known_acc_events, 4) 
+    dominant_acc_probability = round(most_acc_events / known_acc_events, 4) 
 
     print('Authors sample: ', authors_sample)
     print('Acc lower range: ', expected_acc_min)
     print('Acc upper range: ', expected_acc_max)
     print('The probability for the Acc observed is: ', sample_acc_probability)
     print('The most randomly observed Acc is: ', (mode_array[0] / 100))
-    print('The probability for the most observed Acc is: ', ground_acc_probability)
+    print('The probability for the most observed Acc is: ', dominant_acc_probability)
 
 results = Specified_Results(partial_results_df='/path/Partial_Results.csv',
                             full_results_df='/path/Specified_Results.csv')
