@@ -820,7 +820,7 @@
        
   * 3.14.9. Model v2.5.1 categorized evaluation on [256x256] patches (extended train database of raw grayscaled images)
 
-    | PARO | PDARO | Authors sample | Category | Loss | Category Acc | Dominant Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+    | PCARO | PDARO | Authors sample | Category | Loss | Category Acc | Dominant Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | **1.0000** | 1.0000 | 145 | **None** | **0.1319** | **0.9582** | 0.9500 | **0.9529** | **0.9636** | 0.0364 | 0.0471 | 0.9632 | 0.9534 | 0.9891 |
     | 0.2380 | 0.3440 | 66 | Feminine | 0.1672 | 0.9487 | 0.9500 | 0.9414 | 0.9560 | 0.0440 | 0.0586 | 0.9553 | 0.9422 | 0.9843 |
@@ -832,9 +832,9 @@
     | 0.2172 | 0.3120 | 57 | Feminine Dextral | 0.1517 | 0.9495 | 0.9500 | 0.9565 | 0.9426 | 0.0574 | 0.0435 | 0.9434 | 0.9559 | 0.9862 |
     | 0.3610 | 0.3420 | 65 | Masculine Dextral | 0.1272 | 0.9578 | 0.9500 | 0.9608 | 0.9547 | 0.0453 | 0.0392 | 0.9550 | 0.9606 | 0.9895 |
     
-    * Probability of the given Acc Randomly Occuring - PARO - given the authors sample size and the range of the expected Acc (±0.50).
+    * Probability of the given Category Acc Randomly Occuring - PCARO - given the authors sample size and the range of the expected Acc (±0.50).
     
-    * Probability of the Dominant Acc Randomly Occuring - PDARO - given the authors sample size and the range of the expected Acc (every result is multiplied by 100 and rounded to an intiger).
+    * Probability of the given Dominant Acc Randomly Occuring - PDARO - given the authors sample size and the range of the expected Acc (every result is multiplied by 100 and rounded to an intiger).
 
 * #### 3.15. Model v2.5.1 evaluation on [1024x1024] extracts (extended train database of raw grayscaled images)
 
