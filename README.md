@@ -846,7 +846,7 @@
      
      * Per combination Acc results were multipied by 100 (turned into percents) and rounded to intigers, therefore there were 100 possible Acc values, i.e. the step was equal to one;
      
-     * Results of such approximations are discrete probability distributions (as opposed to the continous PDFs).
+     * Results of such approximations are discrete probability distributions (as opposed to the continuous PDFs).
 
 * #### 3.15. Model v2.5.1 evaluation on [1024x1024] extracts (extended train database of raw grayscaled images)
 
