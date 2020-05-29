@@ -184,7 +184,7 @@ def Given_Acc_Probability(full_results_df, authors_sample, expected_acc_min, exp
     round_acc_events = [round(a*100, 0) for a in accs ]
     mode_array, most_acc_events = mode(round_acc_events, axis=0, nan_policy='omit')
 
-    dominant_acc_probability = round(most_acc_events / known_acc_events, 4) 
+    dominant_acc_probability = round(most_acc_events[0] / known_acc_events, 4) 
 
     print('Authors sample: ', authors_sample)
     print('Acc lower range: ', expected_acc_min)
