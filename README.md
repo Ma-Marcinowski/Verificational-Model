@@ -834,7 +834,7 @@
     
     * Probability of the given Category Acc Randomly Occuring - PCARO - given the authors sample size and the range of the expected Acc (±0.50).
     
-    * Probability of the given Dominant Acc Randomly Occuring - PDARO - given the authors sample size and the range of the expected Acc (every result is multiplied by 100 and rounded to an intiger).
+    * Probability of the given Dominant Acc Randomly Occuring - PDARO - given the authors sample size and the range of the unexpected Acc (every result is multiplied by 100 and rounded to an intiger).
 
 * #### 3.15. Model v2.5.1 evaluation on [1024x1024] extracts (extended train database of raw grayscaled images)
 
