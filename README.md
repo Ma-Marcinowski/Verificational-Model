@@ -816,7 +816,7 @@
      
      * To allow for some background, all 1000 Acc results (depend on the limit of combinations) are turned into percents and rounded to intigers, then their dominant value is found, and the probability of such most observed Acc randomly occuring is calculated;
      
-     * Overall, it is more usefull to calculate such probabilities for all Accs given some step, and all sample sizes given some step, vide `Verificational-Model/Evaluation/`. 
+     * Overall, it is more usefull to calculate such probabilities for all possible Acc results given some step, and all sample sizes given some step, vide `Verificational-Model/Evaluation/VM_Every_Acc_Probability_v.2.5.1.py`. 
        
   * 3.14.9. Model v2.5.1 categorized evaluation on [256x256] patches (extended train database of raw grayscaled images)
 
