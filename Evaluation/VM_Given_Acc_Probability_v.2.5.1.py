@@ -6,6 +6,7 @@ import csv
 
 from tqdm import tqdm_notebook as tqdm
 from scipy.special import comb
+from scipy.stats import mode
 
 from tensorflow.keras.models import Model, load_model
 from tensorflow.keras.losses import binary_crossentropy
@@ -121,7 +122,7 @@ def Specified_Results(partial_results_df, full_results_df):
 
     res.to_csv(full_results_df, header=['LeftAuthor', 'RightAuthor', 'Leftname', 'Rightname', 'Label', 'Prediction', 'Result'], index=False)
 
-def Sample_Acc_Probability(full_results_df, authors_sample, expected_acc_min, expected_acc_max, combinations_limit):
+def Given_Acc_Probability(full_results_df, authors_sample, expected_acc_min, expected_acc_max, combinations_limit):
 
     df = pd.read_csv(full_results_df)
 
@@ -191,16 +192,23 @@ def Sample_Acc_Probability(full_results_df, authors_sample, expected_acc_min, ex
 
     sample_acc_probability = round(expected_acc_events / known_acc_events, 4)
 
+    round_acc_events = [int(a*100) for a in accs ]
+    mode_array, most_acc_events = mode(round_acc_events, axis=0, nan_policy='omit')
+
+    ground_acc_probability = round(int(most_acc_events) / known_acc_events, 4) 
+
     print('Authors sample: ', authors_sample)
     print('Acc lower range: ', expected_acc_min)
     print('Acc upper range: ', expected_acc_max)
     print('The probability for the Acc observed is: ', sample_acc_probability)
+    print('The most randomly observed Acc is: ', (mode_array[0] / 100))
+    print('The probability for the most observed Acc is: ', ground_acc_probability)
 
 results = Specified_Results(partial_results_df='/path/Partial_Results.csv',
                             full_results_df='/path/Specified_Results.csv')
 
-probability = Sample_Acc_Probability(full_results_df='/path/Specified_Results.csv',
-                                     authors_sample=10, #any number of authors to sample
-                                     expected_acc_min=0.9100, #any lower range of the expected acc
-                                     expected_acc_max=0.9200, #any upper range of the expected acc
-                                     combinations_limit=1000) #any limit of random combinations to utilize
+probability = Given_Acc_Probability(full_results_df='/path/Specified_Results.csv',
+                                    authors_sample=10, #any number of authors to sample
+                                    expected_acc_min=0.9100, #any lower range of the expected acc
+                                    expected_acc_max=0.9200, #any upper range of the expected acc
+                                    combinations_limit=1000) #any limit of random combinations to utilize
