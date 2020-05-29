@@ -840,13 +840,13 @@
  
      * Overall, it is more usefull - compared to 3.14.8 - to calculate the probability of random occuracne for all possible Acc results given some step, and all sample sizes given some step; 
      
-     * Five authors' sample sizes were arbitrarily speicifed [8, 16, 32, 64, 128];
+     * Five authors' sample sizes were arbitrarily speicifed [4, 8, 16, 32, 64, 128];
      
      * 1000 combinations - of authors - limit was set for every authors' sample size;
      
      * Per combination Acc results were multipied by 100 (turned into percents) and rounded to intigers, therefore there were 100 possible Acc values, i.e. the step was equal to one;
      
-     * Results of such approximations are discrete probability distributions (as opposed to the continuous PDFs).
+     * Results of such probability approximations are discrete probability distributions (as opposed to the continuous PDFs).
 
 * #### 3.15. Model v2.5.1 evaluation on [1024x1024] extracts (extended train database of raw grayscaled images)
 
