@@ -200,7 +200,7 @@ def Every_Acc_Probability(full_results_df, author_samples, combinations_limit, p
         ax.set_yticks(np.arange(0.0, 1.1, 0.1))
         ax.set(xlabel='Accuracy', ylabel='Probability')
 
-    plt.savefig(fname=plot_out_path + 'VM_v2.5.1_Acc_Probability Distributions.png', dpi=150)
+    plt.savefig(fname=plot_out_path + 'VM_v2.5.1_Acc_Probability_Distributions.png', dpi=150)
     plt.show()
 
 results = Specified_Results(partial_results_df='/path/Partial_Results.csv',
