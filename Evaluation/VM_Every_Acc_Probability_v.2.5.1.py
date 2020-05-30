@@ -5,6 +5,9 @@ import pandas as pd
 import random
 import csv
 
+from more_itertools import sort_together #Import for the function: Every_Acc_Probability_3D()
+from mpl_toolkits.mplot3d import Axes3D #Import for the function: Every_Acc_Probability_3D()
+from scipy.interpolate import griddata #Import for the function: Every_Acc_Probability_3D()
 from tqdm import tqdm_notebook as tqdm
 
 from tensorflow.keras.models import Model, load_model
@@ -121,7 +124,7 @@ def Specified_Results(partial_results_df, full_results_df):
 
     res.to_csv(full_results_df, header=['LeftAuthor', 'RightAuthor', 'Leftname', 'Rightname', 'Label', 'Prediction', 'Result'], index=False)
 
-def Every_Acc_Probability(full_results_df, author_samples, combinations_limit, plot_out_path):
+def Every_Acc_Probability_2D(full_results_df, author_samples, combinations_limit, plot_out_path):
 
     df = pd.read_csv(full_results_df)
 
@@ -134,7 +137,7 @@ def Every_Acc_Probability(full_results_df, author_samples, combinations_limit, p
     authors_ids = list(set(lefts))
 
     bar_plots = []
-    
+
     for sample_step in tqdm(author_samples, desc='Evaluating samples', leave=True):
 
         accs = []
@@ -190,23 +193,115 @@ def Every_Acc_Probability(full_results_df, author_samples, combinations_limit, p
     dim = int(np.sqrt(len(bar_plots)))
 
     fig, axs = plt.subplots(dim, dim, figsize=(20,20))
-    fig.suptitle('Acc Probability Distributions')
+    fig.suptitle('Acc Discrete Probability Distributions', fontsize=16, fontweight='bold')
     
     for ind, ax in enumerate(axs.flat):
 
         ax.bar(x=bar_plots[ind][0], height=bar_plots[ind][1], width=1)
-        ax.set_title('Authors Sample Size ' + str(author_samples[ind]))
+        ax.set_title('Authors Sample Size ' + str(author_samples[ind]), )
         ax.set_xticks(np.arange(0, 101, 5))
         ax.set_yticks(np.arange(0.0, 1.1, 0.1))
         ax.set(xlabel='Accuracy', ylabel='Probability')
 
-    plt.savefig(fname=plot_out_path + 'VM_v2.5.1_Acc_Probability_Distributions.png', dpi=150)
+    plt.savefig(fname=plot_out_path + 'VM_v2.5.1_Acc_Probability_Distributions_Bars.png', dpi=150)
     plt.show()
+'''
+def Every_Acc_Probability_3D(full_results_df, sample_size_limit, sample_size_step, combinations_limit, plot_out_path):
 
+    df = pd.read_csv(full_results_df)
+
+    lefts = df['LeftAuthor'].tolist()
+    rights = df['RightAuthor'].tolist()
+    results = df['Result'].tolist()
+
+    listed = tuple(zip(lefts, rights, results)) #Zip is turned into a tuple, so it won't be exhausted by the outer loops' first step.
+
+    authors_ids = list(set(lefts))
+
+    author_samples = range(2, (sample_size_limit + 1), sample_size_step)
+
+    X = []
+    Y = []
+    Z = []
+
+    for sample_ind, sample_step in enumerate(tqdm(author_samples, desc='Evaluating samples', leave=True), start=1):
+
+        accs = []
+
+        for comb_step in tqdm(range(combinations_limit), desc='Sample size ' + str(sample_step), leave=False):
+
+            sample = random.choices(authors_ids, k=sample_step)
+            
+            corrects = 0
+            incorrects = 0
+
+            for left_id, right_id, result in listed:
+
+                  if result == 1 and left_id in sample and right_id in sample:
+
+                      corrects += 1
+
+                  elif result == 0 and left_id in sample and right_id in sample:
+
+                      incorrects += 1
+
+                  else:
+
+                    continue
+
+            if (corrects + incorrects) > 0:
+
+                acc = corrects / (corrects + incorrects)
+
+                accs.append(acc)
+
+            else:
+
+                continue
+
+        known_acc_events = len(accs)
+        round_acc_events = [round(a*100, 0) for a in accs]
+
+        for acc_step in range(100):
+
+            expected_acc_events = round_acc_events.count(acc_step)
+
+            acc_prob = round(expected_acc_events / known_acc_events, 4)
+            
+            X.append(acc_step)
+            Y.append(sample_ind)
+            Z.append(acc_prob)
+
+    space = [X, Y, Z]
+    sorted_space = sort_together(iterables=space, key_list=(0, ), reverse=False)
+    space_x, space_y = np.meshgrid(sorted_space[0], sorted_space[1])
+    space_z = griddata(points=(sorted_space[0], sorted_space[1]), values=sorted_space[2], xi=(space_x, space_y), method='linear')
+
+    fig = plt.figure(figsize=(10,10))
+    ax = Axes3D(fig)
+    ax.plot_surface(space_x, space_y, space_z, rstride=1, cstride=1, cmap='plasma')
+    ax.set_xticks(np.arange(0, 101, 5))
+    ax.set_yticks(np.arange(1, (len(author_samples) + 1), 1))
+    ax.set_yticklabels(author_samples)
+    ax.set_title('Acc Discrete Probability Distribution')
+    ax.set_xlabel('Accuracy')
+    ax.set_ylabel('Sample Size')
+    ax.set_zlabel('Probability')
+    ax.view_init(elev=None, azim=130)
+    plt.savefig(fname=plot_out_path + 'VM_v2.5.1_Acc_Probability_Distributions_Surface.png', dpi=150)
+    plt.show()
+'''
 results = Specified_Results(partial_results_df='/path/Partial_Results.csv',
                             full_results_df='/path/Specified_Results.csv')
 
-probability = Given_Acc_Probability(full_results_df='/path/Specified_Results.csv',
-                                    author_samples=[2, 4, 8, 16, 32, 64, 128, 136, 144], #any list of author sample sizes
-                                    combinations_limit=1000, #any limit of random combinations to utilize
-                                    plot_out_path='plot/images/directory/') 
+probability_2d = Every_Acc_Probability_2D(full_results_df='/path/Specified_Results.csv',
+                                          author_samples=[2, 4, 8, 16, 32, 64, 128, 136, 144], #any list of author sample sizes
+                                          combinations_limit=1000, #any limit of random combinations to utilize
+                                          plot_out_path='plot/images/directory/') 
+'''
+probability_3d = Every_Acc_Probability_3D(full_results_df='/path/Specified_Results.csv',
+                                         sample_size_limit=144, #any range of author sample sizes
+                                         sample_size_step=1, #any step of author sample sizes
+                                         combinations_limit=1000, #any limit of random combinations to utilize
+                                         plot_out_path='plot/images/directory/')
+'''
