@@ -195,7 +195,7 @@ def Every_Acc_Probability(full_results_df, author_samples, combinations_limit, p
     for ind, ax in enumerate(axs.flat):
 
         ax.bar(x=bar_plots[ind][0], height=bar_plots[ind][1], width=1)
-        ax.set_title('Authors Sample Size ' + str(author_samples[ind]) + ')')
+        ax.set_title('Authors Sample Size ' + str(author_samples[ind]))
         ax.set_xticks(np.arange(0, 101, 5))
         ax.set_yticks(np.arange(0.0, 1.1, 0.1))
         ax.set(xlabel='Accuracy', ylabel='Probability')
