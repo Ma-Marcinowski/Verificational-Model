@@ -848,7 +848,7 @@
      
      * Results of such probability approximations are discrete probability distributions (as opposed to the continuous PDFs).
      
-![Probability_Distributions_VM_v2.5.1.](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/Plots/VM_v2.5.1_Acc_Probability_Distributions.png "Model v.2.5.1 Acc Probability Distributions")
+![Probability_Distributions_VM_v2.5.1.](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/Plots/VM_v2.5.1_Acc_Probability_Distributions.png "Model v2.5.1 Acc Probability Distributions")
 
 * #### 3.15. Model v2.5.1 evaluation on [1024x1024] extracts (extended train database of raw grayscaled images)
 
