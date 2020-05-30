@@ -840,13 +840,15 @@
  
      * Overall, it is more usefull - compared to 3.14.8 - to calculate the probability of random occuracne for all possible Acc results given some step, and all sample sizes given some step; 
      
-     * Five authors' sample sizes were arbitrarily speicifed [4, 8, 16, 32, 64, 128];
+     * Five authors' sample sizes were arbitrarily speicifed [2, 4, 8, 16, 32, 64, 128, 136, 144];
      
      * 1000 combinations - of authors - limit was set for every authors' sample size;
      
      * Per combination Acc results were multipied by 100 (turned into percents) and rounded to intigers, therefore there were 100 possible Acc values, i.e. the step was equal to one;
      
      * Results of such probability approximations are discrete probability distributions (as opposed to the continuous PDFs).
+     
+![Probability_Distributions_VM_v2.5.1.](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/Plots/VM_v2.5.1_Acc_Probability_Distributions.png "Model v.2.5.1 Acc Probability Distributions")
 
 * #### 3.15. Model v2.5.1 evaluation on [1024x1024] extracts (extended train database of raw grayscaled images)
 
