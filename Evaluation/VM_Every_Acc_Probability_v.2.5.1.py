@@ -134,12 +134,12 @@ def Every_Acc_Probability(full_results_df, author_samples, combinations_limit, p
     authors_ids = list(set(lefts))
 
     bar_plots = []
-
-    for sample_step in author_samples:
+    
+    for sample_step in tqdm(author_samples, desc='Evaluating samples', leave=True):
 
         accs = []
 
-        for comb_step in tqdm(range(combinations_limit), desc='Evaluating samples', leave=True):
+        for comb_step in tqdm(range(combinations_limit), desc='Sample size ' + str(sample_step), leave=False):
 
             sample = random.choices(authors_ids, k=sample_step)
             
