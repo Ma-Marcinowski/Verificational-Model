@@ -282,7 +282,7 @@ def Every_Acc_Probability_3D(full_results_df, sample_size_limit, sample_size_ste
     ax.set_yticks(author_samples[::y_step])
     ax.set_title('Acc Discrete Probability Distribution', fontsize=16, fontweight='bold')
     ax.set_xlabel('Accuracy')
-    ax.set_ylabel('Sample Size')
+    ax.set_ylabel('Authors Sample Size')
     ax.set_zlabel('Probability')
     ax.view_init(elev=None, azim=130)
     plt.savefig(fname=plot_out_path + 'VM_v2.5.1_Acc_Probability_Distributions_3D.png', dpi=150)
