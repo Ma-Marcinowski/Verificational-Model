@@ -840,15 +840,29 @@
  
      * Overall, it is more usefull - compared to 3.14.8 - to calculate the probability of random occuracne for all possible Acc results given some step, and all sample sizes given some step; 
      
-     * Five authors' sample sizes were arbitrarily speicifed [2, 4, 8, 16, 32, 64, 128, 136, 144];
+     * The two dimensional visualisation:
      
-     * 1000 combinations - of authors - limit was set for every authors' sample size;
-     
-     * Per combination Acc results were multipied by 100 (turned into percents) and rounded to intigers, therefore there were 100 possible Acc values, i.e. the step was equal to one;
+          * Five authors' sample sizes were arbitrarily speicifed [2, 4, 8, 16, 32, 64, 128, 136, 144];
+
+          * 1000 combinations - of authors - limit was set for every authors' sample size;
+
+          * Per combination Acc results were multipied by 100 (turned into percents) and rounded to intigers, therefore there were 100 possible Acc values, i.e. the step was equal to one.
+          
+     * The three dimensional visualisation:
+          
+          * Given 145 authors, the maximal 144 limit of authors' sample sizes was speicifed;
+          
+          * Sample sizes step was set to one;
+          
+          * The limit of author combinations was set to 100;
+          
+          * There were 100 possible Acc values (all Acc results were multipied by 100 and rounded to intigers).
      
      * Results of such probability approximations are discrete probability distributions (as opposed to the continuous PDFs).
      
-![Probability_Distributions_VM_v2.5.1_Bars](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/Plots/VM_v2.5.1_Acc_Probability_Distributions_Bars.png "Model v2.5.1 Acc Probability Distributions Bars")
+![Probability_Distributions_VM_v2.5.1_2D](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/Plots/VM_v2.5.1_Acc_Probability_Distributions_2D.png "Model v2.5.1 Acc Probability Distributions 2D")
+
+![Probability_Distributions_VM_v2.5.1_3D](https://github.com/Ma-Marcinowski/Verificational-Model/blob/master/Plots/VM_v2.5.1_Acc_Probability_Distributions_3D.png "Model v2.5.1 Acc Probability Distributions 3D")
 
 * #### 3.15. Model v2.5.1 evaluation on [1024x1024] extracts (extended train database of raw grayscaled images)
 
