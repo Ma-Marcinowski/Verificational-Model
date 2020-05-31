@@ -5,9 +5,7 @@ import pandas as pd
 import random
 import csv
 
-from more_itertools import sort_together #Import for the function: Every_Acc_Probability_3D()
 from mpl_toolkits.mplot3d import Axes3D #Import for the function: Every_Acc_Probability_3D()
-from scipy.interpolate import griddata #Import for the function: Every_Acc_Probability_3D()
 from tqdm import tqdm_notebook as tqdm
 
 from tensorflow.keras.models import Model, load_model
@@ -203,7 +201,7 @@ def Every_Acc_Probability_2D(full_results_df, author_samples, combinations_limit
         ax.set_yticks(np.arange(0.0, 1.1, 0.1))
         ax.set(xlabel='Accuracy', ylabel='Probability')
 
-    plt.savefig(fname=plot_out_path + 'VM_v2.5.1_Acc_Probability_Distributions_Bars.png', dpi=150)
+    plt.savefig(fname=plot_out_path + 'VM_v2.5.1_Acc_Probability_Distributions_2D.png', dpi=150)
     plt.show()
 '''
 def Every_Acc_Probability_3D(full_results_df, sample_size_limit, sample_size_step, combinations_limit, plot_out_path):
@@ -272,23 +270,22 @@ def Every_Acc_Probability_3D(full_results_df, sample_size_limit, sample_size_ste
             Y.append(sample_ind)
             Z.append(acc_prob)
 
-    space = [X, Y, Z]
-    sorted_space = sort_together(iterables=space, key_list=(0, ), reverse=False)
-    space_x, space_y = np.meshgrid(sorted_space[0], sorted_space[1])
-    space_z = griddata(points=(sorted_space[0], sorted_space[1]), values=sorted_space[2], xi=(space_x, space_y), method='linear')
+    if sample_size_limit < 20:
+        y_step = 1
+    else:
+        y_step = int(sample_size_limit / 20)
 
-    fig = plt.figure(figsize=(10,10))
+    fig = plt.figure(figsize=(20,20))
     ax = Axes3D(fig)
-    ax.plot_surface(space_x, space_y, space_z, rstride=1, cstride=1, cmap='plasma')
+    ax.bar3d(x=X, y=Y, z=np.zeros_like(Z), dx=1, dy=1, dz=Z, shade=True)
     ax.set_xticks(np.arange(0, 101, 5))
-    ax.set_yticks(np.arange(1, (len(author_samples) + 1), 1))
-    ax.set_yticklabels(author_samples)
-    ax.set_title('Acc Discrete Probability Distribution')
+    ax.set_yticks(author_samples[::y_step])
+    ax.set_title('Acc Discrete Probability Distribution', fontsize=16, fontweight='bold')
     ax.set_xlabel('Accuracy')
     ax.set_ylabel('Sample Size')
     ax.set_zlabel('Probability')
     ax.view_init(elev=None, azim=130)
-    plt.savefig(fname=plot_out_path + 'VM_v2.5.1_Acc_Probability_Distributions_Surface.png', dpi=150)
+    plt.savefig(fname=plot_out_path + 'VM_v2.5.1_Acc_Probability_Distributions_3D.png', dpi=150)
     plt.show()
 '''
 results = Specified_Results(partial_results_df='/path/Partial_Results.csv',
@@ -300,8 +297,8 @@ probability_2d = Every_Acc_Probability_2D(full_results_df='/path/Specified_Resul
                                           plot_out_path='plot/images/directory/') 
 '''
 probability_3d = Every_Acc_Probability_3D(full_results_df='/path/Specified_Results.csv',
-                                         sample_size_limit=144, #any range of author sample sizes
-                                         sample_size_step=1, #any step of author sample sizes
-                                         combinations_limit=1000, #any limit of random combinations to utilize
-                                         plot_out_path='plot/images/directory/')
+                                          sample_size_limit=144, #any range of author sample sizes
+                                          sample_size_step=1, #any step of author sample sizes
+                                          combinations_limit=1000, #any limit of random combinations to utilize
+                                          plot_out_path='plot/images/directory/')
 '''
