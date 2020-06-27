@@ -17,7 +17,7 @@
    * 0.3.1 Experiment identifiers (e.g. vX.Y.Z):
 
       * X indicates the model version;
-      * Y indicates a method of preprocessing;
+      * Y indicates the method of preprocessing;
       * Z indicates any extra variation of a given X.Y base combination.
 
    * 0.3.2 Model version identifiers (e.g. vX):
@@ -27,7 +27,7 @@
    * 0.3.3 Preprocessing method identifiers (e.g. v0.Y):
     
       * X is zeroed and Z skipped to avoid any confusion of model versions and preprocessing methods; 
-      * Y indicates a method of preprocessing (as already stated in 0.3.1).
+      * Y indicates the method of preprocessing (as already stated in 0.3.1).
 
 * #### 0.4. Keywords:
 
