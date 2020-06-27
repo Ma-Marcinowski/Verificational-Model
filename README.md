@@ -16,13 +16,13 @@
 
    * 0.3.1 Experiment identifiers (e.g. vX.Y.Z):
 
-      * X indicates a model version;
+      * X indicates the model version;
       * Y indicates a method of preprocessing;
       * Z indicates any extra variation of a given X.Y base combination.
 
    * 0.3.2 Model version identifiers (e.g. vX):
 
-      * X indicates a model version (as already stated in 0.3.1).
+      * X indicates the model version (as already stated in 0.3.1).
 
    * 0.3.3 Preprocessing method identifiers (e.g. v0.Y):
     
@@ -854,7 +854,7 @@
           
           * Sample sizes step was set to one;
           
-          * The limit of author combinations was set to 100;
+          * The limit of author combinations was set to 101;
           
           * There were 100 possible Acc values (all Acc results were multipied by 100 and rounded to intigers).
      
