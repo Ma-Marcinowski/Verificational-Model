@@ -277,7 +277,7 @@ def Every_Acc_Probability_3D(full_results_df, sample_size_limit, sample_size_ste
 
     fig = plt.figure(figsize=(20,20))
     ax = Axes3D(fig)
-    ax.bar3d(x=X, y=Y, z=np.zeros_like(Z), dx=1, dy=1, dz=Z, shade=True)
+    ax.bar3d(x=X, y=Y, z=np.zeros_like(Z), dx=1, dy=1, dz=Z, shade=True, zsort='max')
     ax.set_xticks(np.arange(0, 101, 5))
     ax.set_yticks(author_samples[::y_step])
     ax.set_title('Acc Discrete Probability Distribution', fontsize=16, fontweight='bold')
@@ -297,8 +297,8 @@ probability_2d = Every_Acc_Probability_2D(full_results_df='/path/Specified_Resul
                                           plot_out_path='plot/images/directory/') 
 '''
 probability_3d = Every_Acc_Probability_3D(full_results_df='/path/Specified_Results.csv',
-                                          sample_size_limit=144, #any range of author sample sizes
+                                          sample_size_limit=145, #any range of author sample sizes
                                           sample_size_step=1, #any step of author sample sizes
-                                          combinations_limit=1000, #any limit of random combinations to utilize
+                                          combinations_limit=100, #any limit of random combinations to utilize
                                           plot_out_path='plot/images/directory/')
 '''
