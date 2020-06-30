@@ -846,17 +846,17 @@
 
           * 1000 combinations - of authors - limit was set for every authors' sample size;
 
-          * Per combination Acc results were multipied by 100 (turned into percents) and rounded to intigers, therefore there were 100 possible Acc values, i.e. the step was equal to one.
+          * Per combination Acc results were multipied by 100 (turned into percents) and rounded to intigers, therefore there were 101 possible Acc values, i.e. the step was set to one.
           
      * The three dimensional visualisation:
           
-          * Given 145 authors, the maximal 144 limit of authors' sample sizes was speicifed;
+          * Given 145 authors, the maximal 145 limit of authors' sample sizes was speicifed;
           
           * Sample sizes step was set to one;
           
-          * The limit of author combinations was set to 101;
+          * The limit of author combinations was set to 100;
           
-          * There were 100 possible Acc values (all Acc results were multipied by 100 and rounded to intigers).
+          * There were 101 possible Acc values (all Acc results were multipied by 100 and rounded to intigers).
      
      * Results of such probability approximations are discrete probability distributions (as opposed to the continuous PDFs).
      
