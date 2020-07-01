@@ -277,7 +277,7 @@ def Every_Acc_Probability_3D(full_results_df, sample_size_limit, sample_size_ste
 
     fig = plt.figure(figsize=(20,20))
     ax = Axes3D(fig)
-    ax.bar3d(x=X, y=Y, z=np.zeros_like(Z), dx=1, dy=1, dz=Z, shade=True, color='0.50', zsort='max')
+    ax.bar3d(x=X, y=Y, z=np.zeros_like(Z), dx=1, dy=1, dz=Z, shade=True, zsort='max')
     ax.set_xticks(np.arange(0, 101, 5))
     ax.set_yticks(author_samples[::y_step])
     ax.set_xticklabels(np.round(np.divide(np.arange(0, 101, 5), 100), decimals=2))
