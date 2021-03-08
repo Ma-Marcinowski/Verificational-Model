@@ -2,7 +2,7 @@
 
 ### 0. Introduction
 
-* #### 0.1. The objective of author's repository was to introduce multiple varying methods for verification of offline handwritten documents authorship by artificial neural networks (through classification of preprocessed image pairs to positive `same author` or negative `different authors` class). The purpose of such methods, models and experiments as described below, was to create an empirical background for scientific analysis of machine learning tools developed in the field of computational forensics.
+* #### 0.1. Objective of the author's repository was to introduce multiple varying methods for verification of offline handwritten documents authorship by artificial neural networks (through classification of preprocessed image pairs to positive `same author` or negative `different authors` class). The purpose of such methods, models and experiments as described below, was to create an empirical background for scientific analysis of machine learning tools developed in the field of computational forensics.
 
 * #### 0.2. Author's original assumptions were that:
      
@@ -37,7 +37,9 @@
     
     * Handwriting, signatures, documents;
     
-    * Neural, networks, deep, machine, learning, artificial, intelligence, ANN, AI.
+    * Neural, networks, deep, machine, learning, artificial, intelligence, ANN, AI;
+
+    * Methods, criteria, categories, evaluation, falsification, veryfication. 
 
 * #### 0.5. Database (9455 documents by 2911 writers):
        
