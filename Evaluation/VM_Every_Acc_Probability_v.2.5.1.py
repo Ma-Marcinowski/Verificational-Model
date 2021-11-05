@@ -300,6 +300,6 @@ probability_2d = Every_Acc_Probability_2D(full_results_df='/path/Specified_Resul
 probability_3d = Every_Acc_Probability_3D(full_results_df='/path/Specified_Results.csv',
                                           sample_size_limit=145, #any range of author sample sizes
                                           sample_size_step=1, #any step of author sample sizes
-                                          combinations_limit=100, #any limit of random combinations to utilize
+                                          combinations_limit=500, #any limit of random combinations to utilize
                                           plot_out_path='plot/images/directory/')
 '''
