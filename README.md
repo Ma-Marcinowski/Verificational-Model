@@ -856,7 +856,7 @@
           
           * Sample sizes step was set to one;
           
-          * The limit of author combinations was set to 100;
+          * The limit of author combinations was set to 500;
           
           * There were 101 possible Acc values (all Acc results were multipied by 100 and rounded to intigers).
      
