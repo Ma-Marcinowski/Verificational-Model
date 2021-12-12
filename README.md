@@ -1029,11 +1029,70 @@
     |  | CVL | 5 | 0.1640 | 0.9445 | 0.9419 | 0.9472 | 0.0528 | 0.0581 | 0.9469 | 0.9422 | 0.9844 |
     |  | IAM | 5 | 0.1164 | 0.9656 | 0.9598 | 0.9714 | 0.0286 | 0.0402 | 0.9711 | 0.9603 | 0.9910 |
     |  | Hard | 5 | 0.1296 | 0.9560 | 0.9631 | 0.9489 | 0.0511 | 0.0369 | 0.9496 | 0.9626 | 0.9890 |
-    | Documents | None | 5 |  |  |  |  |  |  |  |  |  |
+    | Documents | None | 5 | 0.1294 | 0.9613 | 0.9468 | 0.9757 | 0.0243 | 0.0532 | 0.9750 | 0.9483 | 0.9902 |
     |  | CVL | 5 |  |  |  |  |  |  |  |  |  |
     |  | IAM | 5 |  |  |  |  |  |  |  |  |  |
     |  | Hard | 5 |  |  |  |  |  |  |  |  |  |
     | Languages | None / CVL | 5 |  |  |  |  |  |  |  |  |  |
+    |  | Hard | 5 |  |  |  |  |  |  |  |  |  |
+       
+    * Epochs of model training - EofT - by the best validation accuracy and loss result.
+
+* #### 3.16aa. Model v2.5.1 evaluation on identical instances ([256x256] patches, extended train database of raw grayscaled images)
+
+  * 3.16aa.1. Database:
+    
+    * Vide 3.10.1. Database, except for preprocessing v0.5.
+
+    * Test on identical patches:
+  
+         * Test dataset -  image pairs (equal number of positive and negative instances);
+    
+         * CVL criterion -  image pairs (equal number of positive and negative instances);
+    
+         * IAM criterion -  image pairs (equal number of positive and negative instances);
+    
+         * Hard criterion -  image pairs (equal number of positive and negative instances).
+       
+    * Test on patches from identical documents:
+
+         * Test dataset -  image pairs (equal number of positive and negative instances);
+   
+         * CVL criterion -  image pairs (equal number of positive and negative instances);
+   
+         * IAM criterion -  image pairs (equal number of positive and negative instances);
+    
+         * Hard criterion -  image pairs (equal number of positive and negative instances).
+    
+    * Test on patches from identical documents and in identical languages:
+
+         * Test dataset  -  image pairs (equal number of positive and negative instances);
+         
+         * CVL criterion -  image pairs (equal number of positive and negative instances);
+   
+         * IAM criterion -  image pairs (equal number of positive and negative instances);
+    
+         * Hard criterion  -  image pairs (equal number of positive and negative instances).
+
+  * 3.16aa.2. Metrics:
+  
+    * Vide 2.3.2. Metrics.
+  
+  * 3.16aa.3. CVL and IAM evaluation:
+  
+    | Identical | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | Patches | None | 5 |  |  |  |  |  |  |  |  |  |
+    |  | CVL | 5 |  |  |  |  |  |  |  |  |  |
+    |  | IAM | 5 |  |  |  |  |  |  |  |  |  |
+    |  | Hard | 5 |  |  |  |  |  |  |  |  |  |
+    | Documents | None | 5 |  |  |  |  |  |  |  |  |  |
+    |  | CVL | 5 |  |  |  |  |  |  |  |  |  |
+    |  | IAM | 5 |  |  |  |  |  |  |  |  |  |
+    |  | Hard | 5 |  |  |  |  |  |  |  |  |  |
+    | Languages | None | 5 |  |  |  |  |  |  |  |  |  |
+    |  | CVL | 5 |  |  |  |  |  |  |  |  |  |
+    |  | IAM | 5 |  |  |  |  |  |  |  |  |  |
     |  | Hard | 5 |  |  |  |  |  |  |  |  |  |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result.
