@@ -985,6 +985,55 @@
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result.
 
+* #### 3.17. Model v2.5.1 evaluation on non-identical instances ([256x256] patches, extended train database of raw grayscaled images)
+
+  * 3.17.1. Database:
+    
+    * Vide 3.10.1. Database, except for preprocessing v0.5.
+
+    * Non-identical patches:
+  
+          * Test dataset - 322056 image pairs (equal number of positive and negative instances);
+    
+          * CVL criterion - 142024 image pairs (equal number of positive and negative instances);
+    
+          * IAM criterion - 180032 image pairs (equal number of positive and negative instances);
+    
+          * Hard criterion - 12480 image pairs (equal number of positive and negative instances);
+       
+    * Patches from different documents:
+
+          * Test dataset - 264832 image pairs (equal number of positive and negative instances);
+    
+          * CVL criterion - 122564 image pairs (equal number of positive and negative instances);
+    
+          * IAM criterion - 142268 image pairs (equal number of positive and negative instances);
+    
+          * Hard criterion - 6568 image pairs (equal number of positive and negative instances);
+    
+    * Patches in different languages:
+
+          * Test dataset / CVL criterion - 28538 image pairs (equal number of positive and negative instances);
+    
+          * Hard criterion  - 11826 image pairs (equal number of positive and negative instances);
+
+  * 3.17.2. Metrics:
+  
+    * Vide 2.3.2. Metrics.
+  
+  * 3.17.3. CVL and IAM evaluation:
+  
+    | Different | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | Patches |  | 5 |  |  |  |  |  |  |  |  |  |
+    |  |  | 5 |  |  |  |  |  |  |  |  |  |
+    | Documents |  | 5 |  |  |  |  |  |  |  |  |  |
+    |  |  | 5 |  |  |  |  |  |  |  |  |  |
+    | Languages |  | 5 |  |  |  |  |  |  |  |  |  |
+    |  |  | 5 |  |  |  |  |  |  |  |  |  |
+       
+    * Epochs of model training - EofT - by the best validation accuracy and loss result.
+
 * #### 3.17. Model 2.6.0 combined evaluation on [256x256] patches (extended train database of raw grayscaled images)
 
   * 3.17.1. Method of combined evaluation:     
