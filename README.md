@@ -991,7 +991,7 @@
     
     * Vide 3.10.1. Database, except for preprocessing v0.5.
 
-    * Non-identical patches:
+    * Test on non-identical patches:
   
          * Test dataset - 322056 image pairs (equal number of positive and negative instances);
     
@@ -1001,7 +1001,7 @@
     
          * Hard criterion - 12480 image pairs (equal number of positive and negative instances).
        
-    * Patches from different documents:
+    * Test on non-identical patches from different documents:
 
          * Test dataset - 264832 image pairs (equal number of positive and negative instances);
    
@@ -1011,7 +1011,7 @@
     
          * Hard criterion - 6568 image pairs (equal number of positive and negative instances).
     
-    * Patches in different languages:
+    * Test on non-identical patches from different documents and in different languages:
 
          * Test dataset / CVL criterion - 28538 image pairs (equal number of positive and negative instances);
     
@@ -1025,12 +1025,16 @@
   
     | Different | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | Patches |  | 5 |  |  |  |  |  |  |  |  |  |
-    |  |  | 5 |  |  |  |  |  |  |  |  |  |
-    | Documents |  | 5 |  |  |  |  |  |  |  |  |  |
-    |  |  | 5 |  |  |  |  |  |  |  |  |  |
-    | Languages |  | 5 |  |  |  |  |  |  |  |  |  |
-    |  |  | 5 |  |  |  |  |  |  |  |  |  |
+    | Patches | None | 5 |  |  |  |  |  |  |  |  |  |
+    | Patches | CVL | 5 |  |  |  |  |  |  |  |  |  |
+    | Patches | IAM | 5 |  |  |  |  |  |  |  |  |  |
+    | Patches | Hard | 5 |  |  |  |  |  |  |  |  |  |
+    | Documents | None | 5 |  |  |  |  |  |  |  |  |  |
+    | Documents | CVL | 5 |  |  |  |  |  |  |  |  |  |
+    | Documents | IAM | 5 |  |  |  |  |  |  |  |  |  |
+    | Documents | Hard | 5 |  |  |  |  |  |  |  |  |  |
+    | Languages | None / CVL | 5 |  |  |  |  |  |  |  |  |  |
+    | Languages | Hard | 5 |  |  |  |  |  |  |  |  |  |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result.
 
@@ -1058,11 +1062,11 @@
   
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    |  | 5 |  |  |  |  |  |  |  |  |  |
-    |  | 5 |  |  |  |  |  |  |  |  |  |
-    |  | 5 |  |  |  |  |  |  |  |  |  |
-    |  | 5 |  |  |  |  |  |  |  |  |  |
-    |  | 5 |  |  |  |  |  |  |  |  |  |
+    | None | 5 |  |  |  |  |  |  |  |  |  |
+    | CVL | 5 |  |  |  |  |  |  |  |  |  |
+    | IAM | 5 |  |  |  |  |  |  |  |  |  |
+    | Hard | 5 |  |  |  |  |  |  |  |  |  |
+    | Negative | 5 |  |  |  |  |  |  |  |  |  |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result.
 
