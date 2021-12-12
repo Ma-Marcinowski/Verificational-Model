@@ -985,9 +985,9 @@
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result.
 
-* #### 3.17. Model v2.5.1 evaluation on non-identical instances ([256x256] patches, extended train database of raw grayscaled images)
+* #### 3.16a. Model v2.5.1 evaluation on non-identical instances ([256x256] patches, extended train database of raw grayscaled images)
 
-  * 3.17.1. Database:
+  * 3.16a.1. Database:
     
     * Vide 3.10.1. Database, except for preprocessing v0.5.
 
@@ -1017,11 +1017,11 @@
     
          * Hard criterion  - 11826 image pairs (equal number of positive and negative instances).
 
-  * 3.17.2. Metrics:
+  * 3.16a.2. Metrics:
   
     * Vide 2.3.2. Metrics.
   
-  * 3.17.3. CVL and IAM evaluation:
+  * 3.16a.3. CVL and IAM evaluation:
   
     | Different | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -1031,6 +1031,38 @@
     |  |  | 5 |  |  |  |  |  |  |  |  |  |
     | Languages |  | 5 |  |  |  |  |  |  |  |  |  |
     |  |  | 5 |  |  |  |  |  |  |  |  |  |
+       
+    * Epochs of model training - EofT - by the best validation accuracy and loss result.
+
+* #### 3.16b. Model v2.5.1 evaluation on [256x256] patches with added grid lines (extended train database of raw grayscaled images)
+
+  * 3.16b.1. Database:
+    
+    * Vide 3.10.1. Database, except for preprocessing v0.5 and addition of grid lines (vide ???);
+  
+    * Test dataset - 326922 image pairs (equal number of positive and negative instances);
+    
+    * CVL criterion - 144684 image pairs (equal number of positive and negative instances);
+    
+    * IAM criterion - 182238 image pairs (equal number of positive and negative instances);
+    
+    * Hard criterion - 12480 image pairs (equal number of positive and negative instances);
+    
+    * Negative criterion - 200000 image pairs (an arbitrary number).
+       
+  * 3.16b.2. Metrics:
+  
+    * Vide 2.3.2. Metrics.
+  
+  * 3.16b.3. CVL and IAM evaluation:
+  
+    | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    |  | 5 |  |  |  |  |  |  |  |  |  |
+    |  | 5 |  |  |  |  |  |  |  |  |  |
+    |  | 5 |  |  |  |  |  |  |  |  |  |
+    |  | 5 |  |  |  |  |  |  |  |  |  |
+    |  | 5 |  |  |  |  |  |  |  |  |  |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result.
 
