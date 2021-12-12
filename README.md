@@ -1003,19 +1003,19 @@
        
     * Patches from different documents:
 
-          * Test dataset - 264832 image pairs (equal number of positive and negative instances);
+         * Test dataset - 264832 image pairs (equal number of positive and negative instances);
+   
+         * CVL criterion - 122564 image pairs (equal number of positive and negative instances);
+   
+         * IAM criterion - 142268 image pairs (equal number of positive and negative instances);
     
-          * CVL criterion - 122564 image pairs (equal number of positive and negative instances);
-    
-          * IAM criterion - 142268 image pairs (equal number of positive and negative instances);
-    
-          * Hard criterion - 6568 image pairs (equal number of positive and negative instances).
+         * Hard criterion - 6568 image pairs (equal number of positive and negative instances).
     
     * Patches in different languages:
 
-          * Test dataset / CVL criterion - 28538 image pairs (equal number of positive and negative instances);
+         * Test dataset / CVL criterion - 28538 image pairs (equal number of positive and negative instances);
     
-          * Hard criterion  - 11826 image pairs (equal number of positive and negative instances).
+         * Hard criterion  - 11826 image pairs (equal number of positive and negative instances).
 
   * 3.17.2. Metrics:
   
