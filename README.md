@@ -1037,66 +1037,7 @@
     |  | Hard | 5 | 0.2137 | 0.9320 | 0.9188 | 0.9452 | 0.0548 | 0.0812 | 0.9437 | 0.9209 | 0.9774 |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result.
-
-* #### 3.16aa. Model v2.5.1 evaluation on identical instances ([256x256] patches, extended train database of raw grayscaled images)
-
-  * 3.16aa.1. Database:
-    
-    * Vide 3.10.1. Database, except for preprocessing v0.5.
-
-    * Test on identical patches:
-  
-         * Test dataset -  image pairs (equal number of positive and negative instances);
-    
-         * CVL criterion -  image pairs (equal number of positive and negative instances);
-    
-         * IAM criterion -  image pairs (equal number of positive and negative instances);
-    
-         * Hard criterion -  image pairs (equal number of positive and negative instances).
        
-    * Test on patches from identical documents:
-
-         * Test dataset -  image pairs (equal number of positive and negative instances);
-   
-         * CVL criterion -  image pairs (equal number of positive and negative instances);
-   
-         * IAM criterion -  image pairs (equal number of positive and negative instances);
-    
-         * Hard criterion -  image pairs (equal number of positive and negative instances).
-    
-    * Test on patches from identical documents and in identical languages:
-
-         * Test dataset  -  image pairs (equal number of positive and negative instances);
-         
-         * CVL criterion -  image pairs (equal number of positive and negative instances);
-   
-         * IAM criterion -  image pairs (equal number of positive and negative instances);
-    
-         * Hard criterion  -  image pairs (equal number of positive and negative instances).
-
-  * 3.16aa.2. Metrics:
-  
-    * Vide 2.3.2. Metrics.
-  
-  * 3.16aa.3. CVL and IAM evaluation:
-  
-    | Identical | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
-    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | Patches | None | 5 |  |  |  |  |  |  |  |  |  |
-    |  | CVL | 5 |  |  |  |  |  |  |  |  |  |
-    |  | IAM | 5 |  |  |  |  |  |  |  |  |  |
-    |  | Hard | 5 |  |  |  |  |  |  |  |  |  |
-    | Documents | None | 5 |  |  |  |  |  |  |  |  |  |
-    |  | CVL | 5 |  |  |  |  |  |  |  |  |  |
-    |  | IAM | 5 |  |  |  |  |  |  |  |  |  |
-    |  | Hard | 5 |  |  |  |  |  |  |  |  |  |
-    | Languages | None | 5 |  |  |  |  |  |  |  |  |  |
-    |  | CVL | 5 |  |  |  |  |  |  |  |  |  |
-    |  | IAM | 5 |  |  |  |  |  |  |  |  |  |
-    |  | Hard | 5 |  |  |  |  |  |  |  |  |  |
-       
-    * Epochs of model training - EofT - by the best validation accuracy and loss result.
-
 * #### 3.16b. Model v2.5.1 evaluation on [256x256] patches with added grid lines (extended train database of raw grayscaled images)
 
   * 3.16b.1. Database:
@@ -1124,7 +1065,7 @@
     | None | 5 |  |  |  |  |  |  |  |  |  |
     | CVL | 5 |  |  |  |  |  |  |  |  |  |
     | IAM | 5 |  |  |  |  |  |  |  |  |  |
-    | Hard | 5 |  |  |  |  |  |  |  |  |  |
+    | Hard | 5 | 2.5697 | 0.6539 | 0.9741 | 0.3337 | 0.6663 | 0.0259 | 0.5938 | 0.9281 | 0.7335 |
     | Negative | 5 |  |  |  |  |  |  |  |  |  |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result.
