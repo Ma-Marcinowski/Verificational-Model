@@ -1023,9 +1023,9 @@
   
   * 3.16a.3. CVL and IAM evaluation:
   
-    | Different | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+    | Non-identical | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | Patches | None | 5 |  |  |  |  |  |  |  |  |  |
+    | Patches | None | 5 | 0.1182 | 0.9642 | 0.9519 | 0.9764 | 0.0236 | 0.0481 | 0.9758 | 0.9531 | 0.9914 |
     | Patches | CVL | 5 |  |  |  |  |  |  |  |  |  |
     | Patches | IAM | 5 |  |  |  |  |  |  |  |  |  |
     | Patches | Hard | 5 |  |  |  |  |  |  |  |  |  |
