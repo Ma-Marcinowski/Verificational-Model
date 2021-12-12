@@ -1026,15 +1026,15 @@
     | Non-identical | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | Patches | None | 5 | 0.1182 | 0.9642 | 0.9519 | 0.9764 | 0.0236 | 0.0481 | 0.9758 | 0.9531 | 0.9914 |
-    | Patches | CVL | 5 | 0.1640 | 0.9445 | 0.9419 | 0.9472 | 0.0528 | 0.0581 | 0.9469 | 0.9422 | 0.9844 |
-    | Patches | IAM | 5 | 0.1164 | 0.9656 | 0.9598 | 0.9714 | 0.0286 | 0.0402 | 0.9711 | 0.9603 | 0.9910 |
-    | Patches | Hard | 5 |  |  |  |  |  |  |  |  |  |
+    |  | CVL | 5 | 0.1640 | 0.9445 | 0.9419 | 0.9472 | 0.0528 | 0.0581 | 0.9469 | 0.9422 | 0.9844 |
+    |  | IAM | 5 | 0.1164 | 0.9656 | 0.9598 | 0.9714 | 0.0286 | 0.0402 | 0.9711 | 0.9603 | 0.9910 |
+    |  | Hard | 5 |  |  |  |  |  |  |  |  |  |
     | Documents | None | 5 |  |  |  |  |  |  |  |  |  |
-    | Documents | CVL | 5 |  |  |  |  |  |  |  |  |  |
-    | Documents | IAM | 5 |  |  |  |  |  |  |  |  |  |
-    | Documents | Hard | 5 |  |  |  |  |  |  |  |  |  |
+    |  | CVL | 5 |  |  |  |  |  |  |  |  |  |
+    |  | IAM | 5 |  |  |  |  |  |  |  |  |  |
+    |  | Hard | 5 |  |  |  |  |  |  |  |  |  |
     | Languages | None / CVL | 5 |  |  |  |  |  |  |  |  |  |
-    | Languages | Hard | 5 |  |  |  |  |  |  |  |  |  |
+    |  | Hard | 5 |  |  |  |  |  |  |  |  |  |
        
     * Epochs of model training - EofT - by the best validation accuracy and loss result.
 
