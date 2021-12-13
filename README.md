@@ -1017,6 +1017,8 @@
     
          * Hard criterion  - 11826 image pairs (equal number of positive and negative instances).
 
+         * Negative criterion - 200000 image pairs (an arbitrary number).
+
   * 3.16a.2. Metrics:
   
     * Vide 2.3.2. Metrics.
@@ -1063,8 +1065,8 @@
     | Criterion | EofT | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | None | 5 | 1.2496 | 0.7833 | 0.8537 | 0.7129 | 0.2871 | 0.1463 | 0.7483 | 0.8297 | 0.8309 |
-    | CVL | 5 |  |  |  |  |  |  |  |  |  |
-    | IAM | 5 |  |  |  |  |  |  |  |  |  |
+    | CVL | 5 | 2.7225 | 0.6538 | 0.9509 | 0.3566 | 0.6434 | 0.0491 | 0.5965 | 0.8790 | 0.7125 |
+    | IAM | 5 | 0.6368 | 0.8261 | 0.7773 | 0.8748 | 0.1252 | 0.2227 | 0.8613 | 0.7971 | 0.9001 |
     | Hard | 5 | 2.5697 | 0.6539 | 0.9741 | 0.3337 | 0.6663 | 0.0259 | 0.5938 | 0.9281 | 0.7335 |
     | Negative | 5 |  |  |  |  |  |  |  |  |  |
        
